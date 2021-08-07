@@ -12,6 +12,7 @@ SOURCES += \
     cattlebuyscreen.cpp \
     cattlemanagementscreen.cpp \
     cattleregisterscreen.cpp \
+    cattleremovescreen.cpp \
     homescreen.cpp \
     lib/src.cpp \
     main.cpp \
@@ -22,6 +23,7 @@ HEADERS += \
     cattlebuyscreen.h \
     cattlemanagementscreen.h \
     cattleregisterscreen.h \
+    cattleremovescreen.h \
     homescreen.h \
     test/unit/unit_cattle.h
 
@@ -29,6 +31,7 @@ FORMS += \
     cattlebuyscreen.ui \
     cattlemanagementscreen.ui \
     cattleregisterscreen.ui \
+    cattleremovescreen.ui \
     homescreen.ui
 
 # Default rules for deployment.
