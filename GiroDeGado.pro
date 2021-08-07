@@ -29,6 +29,7 @@ HEADERS += \
 
 FORMS += \
     cattlebirthscreen.ui \
+    cattleremovescreen.ui \
     cattlemanagementscreen.ui \
     cattleregisterscreen.ui \
     cattleremovescreen.ui \
