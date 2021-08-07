@@ -1,42 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CattleRegisterScreen</class>
- <widget class="QDialog" name="CattleRegisterScreen">
+ <class>CattleManagementScreen</class>
+ <widget class="QDialog" name="CattleManagementScreen">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>666</width>
-    <height>348</height>
+    <width>759</width>
+    <height>505</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Tela de Cadastro de Gado</string>
+   <string>Tela de Gerencia</string>
   </property>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>195</y>
+     <width>531</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Consulta</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>295</y>
+     <width>531</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Atualização</string>
+   </property>
+  </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>100</x>
      <y>95</y>
      <width>531</width>
      <height>71</height>
     </rect>
    </property>
    <property name="text">
-    <string>Compra</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_3">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>240</y>
-     <width>531</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Parto</string>
+    <string>Cadastro</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -55,6 +68,19 @@
    </property>
    <property name="text">
     <string>Giro de Gado</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>400</y>
+     <width>531</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exclusão</string>
    </property>
   </widget>
  </widget>
