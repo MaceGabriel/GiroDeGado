@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     cattlebirthscreen.cpp \
+    cattlebuyscreen.cpp \
     cattlemanagementscreen.cpp \
     cattleregisterscreen.cpp \
     cattleremovescreen.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
 
 HEADERS += \
     cattlebirthscreen.h \
+    cattlebuyscreen.h \
     cattlemanagementscreen.h \
     cattleregisterscreen.h \
     cattleremovescreen.h \
@@ -29,6 +31,7 @@ HEADERS += \
 
 FORMS += \
     cattlebirthscreen.ui \
+    cattlebuyscreen.ui \
     cattleremovescreen.ui \
     cattlemanagementscreen.ui \
     cattleregisterscreen.ui \
