@@ -12,11 +12,14 @@ SOURCES += \
     homescreen.cpp \
     lib/src.cpp \
     main.cpp \
-    mainwindow.cpp \   
+    mainwindow.cpp \
+    test/unit/main.cpp \  
+    test/unit/unit_cattle.cpp \
     test/unit/unit_test.c
 
 HEADERS += \
     homescreen.h \
+    test/unit/unit_cattle.h \
     mainwindow.h
 
 FORMS += \
