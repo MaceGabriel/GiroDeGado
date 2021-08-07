@@ -13,10 +13,13 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     src/src.c \
+    test/unit/main.cpp \
+    test/unit/unit_cattle.cpp \
     test/unit/unit_test.c
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    test/unit/unit_cattle.h
 
 FORMS += \
     mainwindow.ui
