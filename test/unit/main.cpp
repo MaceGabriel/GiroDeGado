@@ -1,4 +1,4 @@
-#ifndef MAIN_UNIT_TESTS
+/*#ifndef MAIN_UNIT_TESTS
 #define MAIN_UNIT_TESTS
 
 #include "./unit_cattle.h"
@@ -21,4 +21,4 @@ int main(){
     return 0;
 }
 
-#endif
+#endif*/

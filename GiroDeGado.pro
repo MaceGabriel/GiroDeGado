@@ -12,19 +12,15 @@ SOURCES += \
     homescreen.cpp \
     lib/src.cpp \
     main.cpp \
-    mainwindow.cpp \
-    test/unit/main.cpp \  
-    test/unit/unit_cattle.cpp \
-    test/unit/unit_test.c
+    #test/unit/main.cpp \
+    test/unit/unit_cattle.cpp
 
 HEADERS += \
     homescreen.h \
-    test/unit/unit_cattle.h \
-    mainwindow.h
+    test/unit/unit_cattle.h
 
 FORMS += \
-    homescreen.ui \
-    mainwindow.ui
+    homescreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
