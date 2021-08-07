@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    cattlemanagementscreen.cpp \
     homescreen.cpp \
     lib/src.cpp \
     main.cpp \
@@ -16,10 +17,12 @@ SOURCES += \
     test/unit/unit_cattle.cpp
 
 HEADERS += \
+    cattlemanagementscreen.h \
     homescreen.h \
     test/unit/unit_cattle.h
 
 FORMS += \
+    cattlemanagementscreen.ui \
     homescreen.ui
 
 # Default rules for deployment.
