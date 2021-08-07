@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     cattlemanagementscreen.cpp \
     cattleregisterscreen.cpp \
+    cattleremovescreen.cpp \
     homescreen.cpp \
     lib/src.cpp \
     main.cpp \
@@ -20,12 +21,14 @@ SOURCES += \
 HEADERS += \
     cattlemanagementscreen.h \
     cattleregisterscreen.h \
+    cattleremovescreen.h \
     homescreen.h \
     test/unit/unit_cattle.h
 
 FORMS += \
     cattlemanagementscreen.ui \
     cattleregisterscreen.ui \
+    cattleremovescreen.ui \
     homescreen.ui
 
 # Default rules for deployment.
