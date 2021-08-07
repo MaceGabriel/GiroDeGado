@@ -9,17 +9,24 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    lib/src.c \
+    cattlemanagementscreen.cpp \
+    cattleregisterscreen.cpp \
+    homescreen.cpp \
+    lib/src.cpp \
     main.cpp \
-    mainwindow.cpp \
-    src/src.c \
-    test/unit/unit_test.c
+    #test/unit/main.cpp \
+    test/unit/unit_cattle.cpp
 
 HEADERS += \
-    mainwindow.h
+    cattlemanagementscreen.h \
+    cattleregisterscreen.h \
+    homescreen.h \
+    test/unit/unit_cattle.h
 
 FORMS += \
-    mainwindow.ui
+    cattlemanagementscreen.ui \
+    cattleregisterscreen.ui \
+    homescreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
