@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    cattlebirthscreen.cpp \
     cattlebuyscreen.cpp \
     cattlemanagementscreen.cpp \
     cattleregisterscreen.cpp \
@@ -18,19 +19,26 @@ SOURCES += \
     lib/src.cpp \
     main.cpp \
     #test/unit/main.cpp \
-    test/unit/unit_cattle.cpp
+    test/unit/unit_cattle.cpp \
+    test/unit/unit_farm.cpp \
+    test/unit/unit_transaction.cpp
 
 HEADERS += \
+    cattlebirthscreen.h \
     cattlebuyscreen.h \
     cattlemanagementscreen.h \
     cattleregisterscreen.h \
     cattleremovescreen.h \
     financialrecordscreen.h \
     homescreen.h \
-    test/unit/unit_cattle.h
+    test/unit/unit_cattle.h \
+    test/unit/unit_farm.h \
+    test/unit/unit_transaction.h
 
 FORMS += \
+    cattlebirthscreen.ui \
     cattlebuyscreen.ui \
+    cattleremovescreen.ui \
     cattlemanagementscreen.ui \
     cattleregisterscreen.ui \
     cattleremovescreen.ui \
