@@ -89,7 +89,23 @@
 // void unit_Cattle_destructor(){
 //     cout << "TEST 4 - Default destructor of the Cattle class" << endl;
 
-//     // code for the destructor
+//     MEMORYSTATUSEX memInfoBefore;
+//     memInfoBefore.dwLength = sizeof(MEMORYSTATUSEX);
+//     GlobalMemoryStatusEx(&memInfoBefore);
+//     DWORDLONG virtualMemUsedBefore = memInfoBefore.ullTotalPageFile - memInfoBefore.ullAvailPageFile;
+
+//     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+
+//     delete cattle;
+
+//     MEMORYSTATUSEX memInfoAfter;
+//     memInfoAfter.dwLength = sizeof(MEMORYSTATUSEX);
+//     GlobalMemoryStatusEx(&memInfoAfter);
+//     DWORDLONG virtualMemUsedAfter = memInfoAfter.ullTotalPageFile - memInfoAfter.ullAvailPageFile;
+
+//     // Making assertion to verify if the memory usage after the creation and deletion
+//     // is the same as before the creation of Cattle object.
+//     assert(virtualMemUsedBefore == virtualMemUsedAfter);
 
 //     cout << "OK!" << endl;
 // }

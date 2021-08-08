@@ -18,7 +18,8 @@ SOURCES += \
     lib/src.cpp \
     main.cpp \
     #test/unit/main.cpp \
-    test/unit/unit_cattle.cpp
+    test/unit/unit_cattle.cpp \
+    test/unit/unit_transaction.cpp
 
 HEADERS += \
     cattlebirthscreen.h \
@@ -27,7 +28,8 @@ HEADERS += \
     cattleregisterscreen.h \
     cattleremovescreen.h \
     homescreen.h \
-    test/unit/unit_cattle.h
+    test/unit/unit_cattle.h \
+    test/unit/unit_transaction.h
 
 FORMS += \
     cattlebirthscreen.ui \
