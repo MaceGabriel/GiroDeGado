@@ -1,12 +1,12 @@
 #include "homescreen.h"
-#include "cattlebirthscreen.h"
+#include "financialrecordscreen.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    CattleBirthScreen w;
+    FinancialRecordScreen w;
     w.show();
     return a.exec();
 }
