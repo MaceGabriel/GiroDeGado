@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>694</width>
-    <height>450</height>
+    <height>550</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,10 +18,15 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>90</y>
+      <y>130</y>
       <width>531</width>
       <height>71</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Gado</string>
@@ -31,10 +36,15 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>290</y>
+      <y>330</y>
       <width>531</width>
       <height>71</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Sair</string>
@@ -44,10 +54,15 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>190</y>
+      <y>230</y>
       <width>531</width>
       <height>71</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Financeiro</string>

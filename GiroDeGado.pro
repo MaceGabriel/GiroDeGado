@@ -13,6 +13,7 @@ SOURCES += \
     cattlemanagementscreen.cpp \
     cattleregisterscreen.cpp \
     cattleremovescreen.cpp \
+    financialrecordscreen.cpp \
     homescreen.cpp \
     lib/src.cpp \
     main.cpp \
@@ -24,6 +25,7 @@ HEADERS += \
     cattlemanagementscreen.h \
     cattleregisterscreen.h \
     cattleremovescreen.h \
+    financialrecordscreen.h \
     homescreen.h \
     test/unit/unit_cattle.h
 
@@ -32,6 +34,7 @@ FORMS += \
     cattlemanagementscreen.ui \
     cattleregisterscreen.ui \
     cattleremovescreen.ui \
+    financialrecordscreen.ui \
     homescreen.ui
 
 # Default rules for deployment.
