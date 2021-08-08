@@ -2,6 +2,8 @@
 #define MAIN_UNIT_TESTS
 
 #include "./unit_cattle.h"
+#include "./unit_transaction.h"
+#include "./unit_farm.h"
 
 #define DEBUGING
 #ifdef DEBUGING
@@ -15,6 +17,14 @@ int main(){
 
     cout << "\n========== Testes unitarios da Classe Cattle ===========\n" << endl;
     run_unit_tests_cattle();
+    assert(numHandleCreated == numHandleDeleted);
+    assert(numBodyCreated == numBodyDeleted);
+    cout << "\n========== Testes unitarios da Classe Transaction ===========\n" << endl;
+    run_unit_tests_transaction();
+    assert(numHandleCreated == numHandleDeleted);
+    assert(numBodyCreated == numBodyDeleted);
+    cout << "\n========== Testes unitarios da Classe Farm ===========\n" << endl;
+    run_unit_tests_farm();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 

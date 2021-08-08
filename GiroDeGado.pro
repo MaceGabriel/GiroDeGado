@@ -19,6 +19,7 @@ SOURCES += \
     main.cpp \
     #test/unit/main.cpp \
     test/unit/unit_cattle.cpp \
+    test/unit/unit_farm.cpp \
     test/unit/unit_transaction.cpp
 
 HEADERS += \
@@ -29,6 +30,7 @@ HEADERS += \
     cattleremovescreen.h \
     homescreen.h \
     test/unit/unit_cattle.h \
+    test/unit/unit_farm.h \
     test/unit/unit_transaction.h
 
 FORMS += \
