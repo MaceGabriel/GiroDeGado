@@ -12,11 +12,17 @@ class CattleManagementScreen : public QDialog
     Q_OBJECT
 
 public:
-    explicit CattleManagementScreen(QWidget *parent = nullptr);
+    explicit CattleManagementScreen(QWidget* parent = nullptr, QWidget* backScreen = nullptr);
     ~CattleManagementScreen();
 
+private slots:
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_clicked();
+
 private:
-    Ui::CattleManagementScreen *ui;
+    Ui::CattleManagementScreen* ui;
+    QWidget* backScreen;
 };
 
 #endif // CATTLEMANAGEMENTSCREEN_H

@@ -12,11 +12,12 @@ class CattleRemoveScreen : public QDialog
     Q_OBJECT
 
 public:
-    explicit CattleRemoveScreen(QWidget *parent = nullptr);
+    explicit CattleRemoveScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr);
     ~CattleRemoveScreen();
 
 private:
     Ui::CattleRemoveScreen *ui;
+    QWidget* backScreen;
 };
 
 #endif // CATTLEREMOVESCREEN_H
