@@ -16,13 +16,13 @@ HomeScreen::~HomeScreen()
 }
 
 
-void HomeScreen::on_pushButton_3_clicked()
+void HomeScreen::on_exitButton_clicked()
 {
     this->close();
 }
 
 
-void HomeScreen::on_pushButton_clicked()
+void HomeScreen::on_cattleButton_clicked()
 {
     CattleManagementScreen* cattleManagement = new CattleManagementScreen(nullptr, this);
     this->hide();
@@ -30,7 +30,7 @@ void HomeScreen::on_pushButton_clicked()
 }
 
 
-void HomeScreen::on_pushButton_2_clicked()
+void HomeScreen::on_financialButton_clicked()
 {
     FinancialManagementScreen* financialManagement = new FinancialManagementScreen(nullptr, this);
     this->hide();

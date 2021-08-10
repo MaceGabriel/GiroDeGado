@@ -2,6 +2,7 @@
 #define CATTLEMANAGEMENTSCREEN_H
 
 #include <QDialog>
+#include "homescreen.h"
 
 namespace Ui {
 class CattleManagementScreen;
@@ -16,9 +17,15 @@ public:
     ~CattleManagementScreen();
 
 private slots:
-    void on_pushButton_5_clicked();
+    void on_backButton_clicked();
 
-    void on_pushButton_clicked();
+    void on_registerButton_clicked();
+
+    void on_queryButton_clicked();
+
+    void on_updateButton_clicked();
+
+    void on_removeButton_clicked();
 
 private:
     Ui::CattleManagementScreen* ui;

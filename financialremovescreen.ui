@@ -69,7 +69,7 @@
     <string>Giro de Gado</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="okButton">
    <property name="geometry">
     <rect>
      <x>590</x>
@@ -180,7 +180,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -198,7 +198,7 @@
     <string>Voltar</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="removeButton">
    <property name="geometry">
     <rect>
      <x>20</x>

@@ -16,11 +16,11 @@ public:
     ~HomeScreen();
 
 private slots:
-    void on_pushButton_3_clicked();
+    void on_exitButton_clicked();
 
-    void on_pushButton_clicked();
+    void on_cattleButton_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_financialButton_clicked();
 
 private:
     Ui::HomeScreen *ui;

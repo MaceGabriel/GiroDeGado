@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Tela de Cadastro Financeiro</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="registerButton">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -79,7 +79,7 @@
     <string>Data</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
      <x>450</x>

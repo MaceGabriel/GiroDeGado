@@ -14,7 +14,7 @@
    <string>Tela Inicial</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="cattleButton">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -32,7 +32,7 @@
      <string>Gado</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -50,7 +50,7 @@
      <string>Sair</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="financialButton">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -93,7 +93,7 @@
      <x>0</x>
      <y>0</y>
      <width>694</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

@@ -13,3 +13,16 @@ FinancialRemoveScreen::~FinancialRemoveScreen()
 {
     delete ui;
 }
+
+void FinancialRemoveScreen::on_backButton_clicked()
+{
+    backScreen->show();
+    this->close();
+}
+
+
+void FinancialRemoveScreen::on_removeButton_clicked()
+{
+
+}
+

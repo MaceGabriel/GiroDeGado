@@ -16,7 +16,9 @@ public:
     ~CattleBuyScreen();
 
 private slots:
-    void on_pushButton_2_clicked();
+    void on_backButton_clicked();
+
+    void on_registerButton_clicked();
 
 private:
     Ui::CattleBuyScreen *ui;

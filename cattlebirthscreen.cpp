@@ -13,3 +13,16 @@ CattleBirthScreen::~CattleBirthScreen()
 {
     delete ui;
 }
+
+void CattleBirthScreen::on_backButton_clicked()
+{
+    backScreen->show();
+    this->close();
+}
+
+
+void CattleBirthScreen::on_registerButton_clicked()
+{
+
+}
+

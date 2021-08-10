@@ -1,8 +1,9 @@
 #include "cattleregisterscreen.h"
 #include "cattlebuyscreen.h"
+#include "cattlebirthscreen.h"
 #include "ui_cattleregisterscreen.h"
 
-CattleRegisterScreen::CattleRegisterScreen(QWidget *parent, CattleManagementScreen* backScreen) :
+CattleRegisterScreen::CattleRegisterScreen(QWidget *parent, QWidget* backScreen) :
     QDialog(parent),
     ui(new Ui::CattleRegisterScreen)
 {
@@ -15,17 +16,25 @@ CattleRegisterScreen::~CattleRegisterScreen()
     delete ui;
 }
 
-void CattleRegisterScreen::on_pushButton_clicked()
+void CattleRegisterScreen::on_buyButton_clicked()
 {
     CattleBuyScreen* buy = new CattleBuyScreen(nullptr, this);
     this->hide();
-    buy->exec();
+    buy->show();
 }
 
 
-void CattleRegisterScreen::on_pushButton_4_clicked()
+void CattleRegisterScreen::on_backButton_clicked()
 {
     backScreen->show();
     this->close();
+}
+
+
+void CattleRegisterScreen::on_birthButton_clicked()
+{
+    CattleBirthScreen* birth = new CattleBirthScreen(nullptr, this);
+    this->hide();
+    birth->show();
 }
 

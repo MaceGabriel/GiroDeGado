@@ -16,7 +16,15 @@ public:
     ~FinancialManagementScreen();
 
 private slots:
-    void on_pushButton_5_clicked();
+    void on_backButton_clicked();
+
+    void on_registerButton_clicked();
+
+    void on_queryButton_clicked();
+
+    void on_removeButton_clicked();
+
+    void on_reportButton_clicked();
 
 private:
     Ui::FinancialManagementScreen *ui;

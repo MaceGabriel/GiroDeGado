@@ -13,3 +13,16 @@ FinancialRecordScreen::~FinancialRecordScreen()
 {
     delete ui;
 }
+
+void FinancialRecordScreen::on_backButton_clicked()
+{
+    backScreen->show();
+    this->close();
+}
+
+
+void FinancialRecordScreen::on_registerButton_clicked()
+{
+
+}
+

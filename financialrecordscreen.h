@@ -15,6 +15,11 @@ public:
     explicit FinancialRecordScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr);
     ~FinancialRecordScreen();
 
+private slots:
+    void on_backButton_clicked();
+
+    void on_registerButton_clicked();
+
 private:
     Ui::FinancialRecordScreen *ui;
     QWidget* backScreen;

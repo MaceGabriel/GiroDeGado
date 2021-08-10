@@ -14,9 +14,15 @@ CattleBuyScreen::~CattleBuyScreen()
     delete ui;
 }
 
-void CattleBuyScreen::on_pushButton_2_clicked()
+void CattleBuyScreen::on_backButton_clicked()
 {
     backScreen->show();
     this->close();
+}
+
+
+void CattleBuyScreen::on_registerButton_clicked()
+{
+
 }
 
