@@ -18,12 +18,12 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="inputIdTransaction">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>130</y>
-     <width>201</width>
+     <width>551</width>
      <height>41</height>
     </rect>
    </property>
@@ -33,10 +33,10 @@
     </font>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="labelIdTransaction">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>110</y>
      <width>91</width>
      <height>16</height>
@@ -51,7 +51,7 @@
     <string>ID da transação</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_7">
+  <widget class="QLabel" name="labelTitle">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -69,10 +69,10 @@
     <string>Giro de Gado</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="okButton">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>590</x>
      <y>130</y>
      <width>75</width>
      <height>41</height>
@@ -85,11 +85,16 @@
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>60</x>
      <y>190</y>
      <width>571</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
    </property>
    <row>
     <property name="text">
@@ -102,6 +107,11 @@
    <column>
     <property name="text">
      <string>ID</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
    </column>
    <column>
@@ -154,20 +164,26 @@
     </property>
    </item>
    <item row="0" column="3">
+    <property name="text">
+     <string/>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
    </item>
    <item row="0" column="4">
+    <property name="text">
+     <string/>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
    </item>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>370</x>
      <y>470</y>
      <width>301</width>
      <height>51</height>
@@ -182,10 +198,10 @@
     <string>Voltar</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="removeButton">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>470</y>
      <width>301</width>
      <height>51</height>

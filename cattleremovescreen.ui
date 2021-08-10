@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Tela de Exclusão de Gado</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="labelTitle">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -43,7 +43,7 @@
    <property name="title">
     <string/>
    </property>
-   <widget class="QRadioButton" name="radioButton">
+   <widget class="QRadioButton" name="radioButtonDeath">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -61,7 +61,7 @@
      <string>Morte</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_2">
+   <widget class="QRadioButton" name="radioButtonSell">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -79,7 +79,7 @@
      <string>Venda</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="inputPrice">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -89,7 +89,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="labelPrice">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -107,7 +107,7 @@
      <string>Valor</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="labelReason">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -126,7 +126,7 @@
     </property>
    </widget>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="removeButton">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -144,7 +144,7 @@
     <string>Remover</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -166,9 +166,9 @@
  <resources/>
  <connections>
   <connection>
-   <sender>radioButton_2</sender>
+   <sender>radioButtonSell</sender>
    <signal>toggled(bool)</signal>
-   <receiver>textEdit</receiver>
+   <receiver>inputPrice</receiver>
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -182,9 +182,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton_2</sender>
+   <sender>radioButtonSell</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_2</receiver>
+   <receiver>labelPrice</receiver>
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">

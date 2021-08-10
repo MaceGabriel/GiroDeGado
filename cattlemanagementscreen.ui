@@ -11,9 +11,9 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tela de Gerenciamento de Gado</string>
   </property>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="queryButton">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -31,7 +31,7 @@
     <string>Consulta</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="updateButton">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -49,7 +49,7 @@
     <string>Atualização</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="registerButton">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -67,7 +67,7 @@
     <string>Cadastro</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="labelTitle">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -85,7 +85,7 @@
     <string>Giro de Gado</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="removeButton">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -103,7 +103,7 @@
     <string>Exclusão</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
      <x>80</x>

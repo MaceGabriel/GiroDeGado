@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Tela de Cadastro Financeiro</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="registerButton">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -31,7 +31,7 @@
     <string>Cadastrar</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="inputBrinco">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -46,7 +46,7 @@
     </font>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="inputPrice">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -61,7 +61,7 @@
     </font>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="labelDate">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -79,7 +79,7 @@
     <string>Data</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
      <x>450</x>
@@ -97,7 +97,7 @@
     <string>Voltar</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="inputDate">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -112,7 +112,7 @@
     </font>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="labelPrice">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -130,7 +130,7 @@
     <string>Valor</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_7">
+  <widget class="QLabel" name="labelTitle">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -148,7 +148,7 @@
     <string>Giro de Gado</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="labelTransaction">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -166,7 +166,7 @@
     <string>ID da transação: </string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="labelBrinco">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -184,7 +184,7 @@
     <string>Brinco</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QTextEdit" name="inputDescription">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -194,7 +194,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="labelDescription">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -212,7 +212,7 @@
     <string>Descrição</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_6">
+  <widget class="QLabel" name="labelIdTransaction">
    <property name="geometry">
     <rect>
      <x>160</x>

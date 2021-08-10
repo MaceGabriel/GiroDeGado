@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Tela de Compra de Gado</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="labelBrinco">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -31,7 +31,7 @@
     <string>Brinco</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="labelBreed">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -49,7 +49,7 @@
     <string>Raça</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="labelDateA">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -67,7 +67,7 @@
     <string>Data de aquisição</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="labelDateB">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -85,7 +85,7 @@
     <string>Data de nascimento</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="labelWeight">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -103,7 +103,7 @@
     <string>Peso</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_6">
+  <widget class="QLabel" name="labelPrice">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -121,7 +121,7 @@
     <string>Valor</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_7">
+  <widget class="QLabel" name="labelTitle">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -139,7 +139,7 @@
     <string>Giro de Gado</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="registerButton">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -148,11 +148,16 @@
      <height>51</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>Cadastrar</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
      <x>450</x>
@@ -161,11 +166,16 @@
      <height>51</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>Sair</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="inputBrinco">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -180,7 +190,7 @@
     </font>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="inputBreed">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -195,7 +205,7 @@
     </font>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="inputDateA">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -210,7 +220,7 @@
     </font>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="inputDateB">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -225,7 +235,7 @@
     </font>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QLineEdit" name="inputWeight">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -240,7 +250,7 @@
     </font>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_6">
+  <widget class="QLineEdit" name="inputPrice">
    <property name="geometry">
     <rect>
      <x>350</x>
