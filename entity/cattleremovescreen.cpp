@@ -5,6 +5,7 @@ CattleRemoveScreen::CattleRemoveScreen(QWidget *parent, QWidget* backScreen) :
     QDialog(parent),
     ui(new Ui::CattleRemoveScreen)
 {
+    setFixedSize(694, 550);
     this->backScreen = backScreen;
     ui->setupUi(this);
 }
