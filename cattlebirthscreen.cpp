@@ -1,4 +1,5 @@
 #include "cattlebirthscreen.h"
+#include "homescreen.h"
 #include "ui_cattlebirthscreen.h"
 
 CattleBirthScreen::CattleBirthScreen(QWidget *parent, QWidget* backScreen) :

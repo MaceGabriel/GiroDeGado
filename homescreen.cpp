@@ -18,7 +18,17 @@ HomeScreen::~HomeScreen()
 
 void HomeScreen::on_exitButton_clicked()
 {
-    this->close();
+
+}
+
+
+void HomeScreen::on_pushButton_clicked()
+{
+    CattleManagementScreen *c = new CattleManagementScreen(nullptr,this);
+    this->hide();
+    c->exec();
+
+
 }
 
 
