@@ -15,6 +15,9 @@ public:
     explicit CattleBirthScreen(QWidget *parent = nullptr);
     ~CattleBirthScreen();
 
+private slots:
+    void on_pushButton_4_clicked();
+
 private:
     Ui::CattleBirthScreen *ui;
 };

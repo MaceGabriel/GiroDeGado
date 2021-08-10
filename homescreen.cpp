@@ -1,4 +1,5 @@
 #include "homescreen.h"
+#include "cattlemanagementscreen.h"
 #include "ui_homescreen.h"
 
 HomeScreen::HomeScreen(QWidget *parent)
@@ -16,6 +17,16 @@ HomeScreen::~HomeScreen()
 
 void HomeScreen::on_pushButton_3_clicked()
 {
-    this->close();
+
+}
+
+
+void HomeScreen::on_pushButton_clicked()
+{
+    CattleManagementScreen *c = new CattleManagementScreen(nullptr,this);
+    this->hide();
+    c->exec();
+
+
 }
 
