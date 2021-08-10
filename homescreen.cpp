@@ -15,23 +15,6 @@ HomeScreen::~HomeScreen()
     delete ui;
 }
 
-
-void HomeScreen::on_exitButton_clicked()
-{
-
-}
-
-
-void HomeScreen::on_pushButton_clicked()
-{
-    CattleManagementScreen *c = new CattleManagementScreen(nullptr,this);
-    this->hide();
-    c->exec();
-
-
-}
-
-
 void HomeScreen::on_cattleButton_clicked()
 {
     CattleManagementScreen* cattleManagement = new CattleManagementScreen(nullptr, this);
@@ -45,5 +28,11 @@ void HomeScreen::on_financialButton_clicked()
     FinancialManagementScreen* financialManagement = new FinancialManagementScreen(nullptr, this);
     this->hide();
     financialManagement->exec();
+}
+
+
+void HomeScreen::on_exitButton_clicked()
+{
+    this->close();
 }
 

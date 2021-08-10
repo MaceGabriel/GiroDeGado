@@ -15,14 +15,13 @@ public:
     HomeScreen(QWidget *parent = nullptr);
     ~HomeScreen();
 
-private slots:
-    void on_exitButton_clicked();
+private slots:    
 
     void on_cattleButton_clicked();
 
     void on_financialButton_clicked();
 
-    void on_pushButton_clicked();
+    void on_exitButton_clicked();
 
 private:
     Ui::HomeScreen *ui;
