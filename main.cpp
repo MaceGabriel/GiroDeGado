@@ -1,5 +1,5 @@
-#include "homescreen.h"
-#include "homescreen.h"
+#include "./entity/homescreen.h"
+#include "./entity/homescreen.h"
 
 #include <QApplication>
 

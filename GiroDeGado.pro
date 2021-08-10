@@ -9,16 +9,18 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    cattlebirthscreen.cpp \
-    cattlebuyscreen.cpp \
-    cattlemanagementscreen.cpp \
-    cattleregisterscreen.cpp \
-    cattleremovescreen.cpp \
-    financialmanagementscreen.cpp \
-    financialrecordscreen.cpp \
-    financialremovescreen.cpp \
-    homescreen.cpp \
-    lib/src.cpp \
+    entity/cattlebirthscreen.cpp \
+    entity/cattlebuyscreen.cpp \
+    entity/cattlemanagementscreen.cpp \
+    entity/cattleregisterscreen.cpp \
+    entity/cattleremovescreen.cpp \
+    entity/financialmanagementscreen.cpp \
+    entity/financialrecordscreen.cpp \
+    entity/financialremovescreen.cpp \
+    entity/homescreen.cpp \
+    lib/cattleImpl.cpp \
+    lib/farmImpl.cpp \
+    lib/transactionImpl.cpp \
     main.cpp \
     #test/unit/main.cpp \
     test/unit/unit_cattle.cpp \
@@ -26,30 +28,35 @@ SOURCES += \
     test/unit/unit_transaction.cpp
 
 HEADERS += \
-    cattlebirthscreen.h \
-    cattlebuyscreen.h \
-    cattlemanagementscreen.h \
-    cattleregisterscreen.h \
-    cattleremovescreen.h \
-    financialmanagementscreen.h \
-    financialrecordscreen.h \
-    financialremovescreen.h \
-    homescreen.h \
+    entity/cattlebirthscreen.h \
+    entity/cattlebuyscreen.h \
+    entity/cattlemanagementscreen.h \
+    entity/cattleregisterscreen.h \
+    entity/cattleremovescreen.h \
+    entity/financialmanagementscreen.h \
+    entity/financialrecordscreen.h \
+    entity/financialremovescreen.h \
+    entity/homescreen.h \
+    includes/cattle.h \
+    includes/cattleImpl.h \
+    includes/farm.h \
+    includes/farmImpl.h \
+    includes/transaction.h \
+    includes/transactionImpl.h \
     test/unit/unit_cattle.h \
     test/unit/unit_farm.h \
     test/unit/unit_transaction.h
 
 FORMS += \
-    cattlebirthscreen.ui \
-    cattlebuyscreen.ui \
-    cattleremovescreen.ui \
-    cattlemanagementscreen.ui \
-    cattleregisterscreen.ui \
-    cattleremovescreen.ui \
-    financialmanagementscreen.ui \
-    financialrecordscreen.ui \
-    financialremovescreen.ui \
-    homescreen.ui
+    views/cattlebirthscreen.ui \
+    views/cattlebuyscreen.ui \
+    views/cattlemanagementscreen.ui \
+    views/cattleregisterscreen.ui \
+    views/cattleremovescreen.ui \
+    views/financialmanagementscreen.ui \
+    views/financialrecordscreen.ui \
+    views/financialremovescreen.ui \
+    views/homescreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
