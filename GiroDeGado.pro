@@ -22,7 +22,7 @@ SOURCES += \
     lib/farmImpl.cpp \
     lib/transactionImpl.cpp \
     main.cpp \
-    #test/unit/main.cpp \
+    # test/unit/main.cpp \
     test/unit/unit_cattle.cpp \
     test/unit/unit_farm.cpp \
     test/unit/unit_transaction.cpp
@@ -41,6 +41,7 @@ HEADERS += \
     includes/cattleImpl.h \
     includes/farm.h \
     includes/farmImpl.h \
+    includes/handlebody.h \
     includes/transaction.h \
     includes/transactionImpl.h \
     test/unit/unit_cattle.h \

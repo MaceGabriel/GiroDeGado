@@ -1,4 +1,4 @@
-/*#ifndef MAIN_UNIT_TESTS
+#ifndef MAIN_UNIT_TESTS
 #define MAIN_UNIT_TESTS
 
 #include "./unit_cattle.h"
@@ -19,6 +19,7 @@ int main(){
     run_unit_tests_cattle();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
+    /*
     cout << "\n========== Testes unitarios da Classe Transaction ===========\n" << endl;
     run_unit_tests_transaction();
     assert(numHandleCreated == numHandleDeleted);
@@ -26,9 +27,9 @@ int main(){
     cout << "\n========== Testes unitarios da Classe Farm ===========\n" << endl;
     run_unit_tests_farm();
     assert(numHandleCreated == numHandleDeleted);
-    assert(numBodyCreated == numBodyDeleted);
+    assert(numBodyCreated == numBodyDeleted);*/
 
     return 0;
 }
 
-#endif*/
+#endif

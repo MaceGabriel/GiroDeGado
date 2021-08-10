@@ -1,81 +1,81 @@
-// #include "../include/cattleImpl.h"
+#include "../includes/cattleImpl.h"
 
-// using namespace std;
+using namespace std;
 
-// CattleBody::CattleBody(string earring = "", string breed = "", string acquisition_date = "", string birth_date = "",
-//                        string father = "", string mother = "", double weight = 0.0,  double value = 0.0){
-//     setEarring(earring);
-//     setBreed(breed);
-//     setAcquisitionDate(acquisition_date);
-//     setBirthDate(birth_date);
-//     setFather(father);
-//     setMother(mother);
-//     setWeight(weight);
-//     setValue(value);
-// }
+CattleBody::CattleBody(string earring, string breed, string acquisition_date, string birth_date,
+                       string father, string mother, double weight,  double value){
+    setEarring(earring);
+    setBreed(breed);
+    setAcquisitionDate(acquisition_date);
+    setBirthDate(birth_date);
+    setFather(father);
+    setMother(mother);
+    setWeight(weight);
+    setValue(value);
+}
 
-// virtual CattleBody::~CattleBody(){}
+CattleBody::~CattleBody(){}
 
-// void CattleBody::setEarring(string cattle_earring){
-//     earring_ = cattle_earring;
-// }
+void CattleBody::setEarring(string cattle_earring){
+    earring_ = cattle_earring;
+}
 
-// string CattleBody::getEarring() const{
-//     return earring_;
-// }
+string CattleBody::getEarring() const{
+    return earring_;
+}
 
-// void CattleBody::setBreed(string cattle_breed){
-//     breed_ = cattle_breed;
-// }
+void CattleBody::setBreed(string cattle_breed){
+    breed_ = cattle_breed;
+}
 
-// string CattleBody::getBreed() const{
-//     return breed_;
-// }
+string CattleBody::getBreed() const{
+    return breed_;
+}
 
-// void CattleBody::setAcquisitionDate(string cattle_acquisition_date){
-//     acquisition_date_ = cattle_acquisition_date;
-// }
+void CattleBody::setAcquisitionDate(string cattle_acquisition_date){
+    acquisition_date_ = cattle_acquisition_date;
+}
 
-// string CattleBody::getAcquisitionDate() const{
-//     return acquisition_date_;
-// }
+string CattleBody::getAcquisitionDate() const{
+    return acquisition_date_;
+}
 
-// void CattleBody::setBirthDate(string cattle_birth_date){
-//     birth_date_ = cattle_birth_date;
-// }
+void CattleBody::setBirthDate(string cattle_birth_date){
+    birth_date_ = cattle_birth_date;
+}
 
-// string CattleBody::getBirthDate() const{
-//     return birth_date_;
-// }
+string CattleBody::getBirthDate() const{
+    return birth_date_;
+}
 
-// void CattleBody::setFather(string cattle_father){
-//     father_ = cattle_father;
-// }
+void CattleBody::setFather(string cattle_father){
+    father_ = cattle_father;
+}
 
-// string CattleBody::getFather() const{
-//     return father_;
-// }
+string CattleBody::getFather() const{
+    return father_;
+}
 
-// void CattleBody::setMother(string cattle_mother){
-//     mother_ = cattle_mother;
-// }
+void CattleBody::setMother(string cattle_mother){
+    mother_ = cattle_mother;
+}
 
-// string CattleBody::getMother() const{
-//     return mother_;
-// }
+string CattleBody::getMother() const{
+    return mother_;
+}
 
-// void CattleBody::setWeight(double cattle_weight){
-//     weight_ = cattle_weight;
-// }
+void CattleBody::setWeight(double cattle_weight){
+    weight_ = cattle_weight;
+}
 
-// double CattleBody::getWeight() const{
-//     return weight_;
-// }
+double CattleBody::getWeight() const{
+    return weight_;
+}
 
-// void CattleBody::setValue(double cattle_value){
-//     value_ = cattle_value;
-// }
+void CattleBody::setValue(double cattle_value){
+    value_ = cattle_value;
+}
 
-// double CattleBody::getValue() const{
-//     return value_;
-// }
+double CattleBody::getValue() const{
+    return value_;
+}
