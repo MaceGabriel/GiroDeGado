@@ -3,6 +3,7 @@
 
 #include <assert.h>
 #include <windows.h>
+#include <math.h>
 #include "../../includes/cattleImpl.h"
 
 //! Unit tests 
@@ -113,6 +114,6 @@ void unit_cattle_assingmentOperator();
 /*!
   Function prototype for the function that runs all the unit tests of the Cattle class.
 */
-void run_unit_tests_Cattle();
+void run_unit_tests_cattle();
 
 #endif

@@ -22,7 +22,7 @@ SOURCES += \
     lib/farmImpl.cpp \
     lib/transactionImpl.cpp \
     main.cpp \
-    # test/unit/main.cpp \
+    test/unit/main_unit_test.cpp \
     test/unit/unit_cattle.cpp \
     test/unit/unit_farm.cpp \
     test/unit/unit_transaction.cpp
