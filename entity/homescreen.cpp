@@ -7,6 +7,7 @@ HomeScreen::HomeScreen(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::HomeScreen)
 {
+    setFixedSize(694, 550);
     ui->setupUi(this);
 }
 

@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tela de Exclusão Financeira</string>
   </property>
   <widget class="QLineEdit" name="inputIdTransaction">
    <property name="geometry">

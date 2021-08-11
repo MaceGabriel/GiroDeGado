@@ -5,6 +5,7 @@ FinancialRemoveScreen::FinancialRemoveScreen(QWidget *parent, QWidget* backScree
     QDialog(parent),
     ui(new Ui::FinancialRemoveScreen)
 {
+    setFixedSize(694, 550);
     this-> backScreen = backScreen;
     ui->setupUi(this);
 }

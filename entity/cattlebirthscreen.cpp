@@ -6,6 +6,7 @@ CattleBirthScreen::CattleBirthScreen(QWidget *parent, QWidget* backScreen) :
     QDialog(parent),
     ui(new Ui::CattleBirthScreen)
 {
+    setFixedSize(694, 550);
     this->backScreen = backScreen;
     ui->setupUi(this);
 }
