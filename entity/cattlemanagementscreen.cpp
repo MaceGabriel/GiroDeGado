@@ -4,11 +4,12 @@
 #include "homescreen.h"
 #include "ui_cattlemanagementscreen.h"
 
-CattleManagementScreen::CattleManagementScreen(QWidget* parent, QWidget* backScreen) :
+CattleManagementScreen::CattleManagementScreen(QWidget* parent, QWidget* backScreen, Farm* f) :
     QDialog(parent),
     ui(new Ui::CattleManagementScreen)
 {
     setFixedSize(694, 550);
+    farm = f;
     this->backScreen = backScreen;
     ui->setupUi(this);
 }
@@ -26,7 +27,15 @@ void CattleManagementScreen::on_backButton_clicked()
 
 void CattleManagementScreen::on_registerButton_clicked()
 {
-    CattleRegisterScreen* cattleRegister = new CattleRegisterScreen(nullptr, this);
+    CattleRegisterScreen* cattleRegister = new CattleRegisterScreen(nullptr, this, getFarm());
+
+    // TESTE
+    if(farm->beginCattleContainer() != farm->endCattleContainer()){
+        auto it = farm->beginCattleContainer();
+        std::cout << "Breed: " << (*it)->getBreed() << std::endl;
+    }
+    // TESTE
+
     this->hide();
     cattleRegister->show();
 }
@@ -51,3 +60,7 @@ void CattleManagementScreen::on_removeButton_clicked()
     remove->show();
 }
 
+Farm* CattleManagementScreen::getFarm()
+{
+    return farm;
+}

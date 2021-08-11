@@ -64,7 +64,7 @@
     </font>
    </property>
   </widget>
-  <widget class="QLabel" name="labelBrinco">
+  <widget class="QLabel" name="labelEarring">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -82,7 +82,7 @@
     <string>Brinco</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="inputBrinco">
+  <widget class="QLineEdit" name="inputEarring">
    <property name="geometry">
     <rect>
      <x>60</x>

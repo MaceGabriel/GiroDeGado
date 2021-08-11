@@ -31,7 +31,7 @@
     <string>Cadastrar</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="inputBrinco">
+  <widget class="QLineEdit" name="inputEarring">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -166,7 +166,7 @@
     <string>ID da transação: </string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelBrinco">
+  <widget class="QLabel" name="labelEarring">
    <property name="geometry">
     <rect>
      <x>50</x>

@@ -1,11 +1,12 @@
 #include "financialremovescreen.h"
 #include "ui_financialremovescreen.h"
 
-FinancialRemoveScreen::FinancialRemoveScreen(QWidget *parent, QWidget* backScreen) :
+FinancialRemoveScreen::FinancialRemoveScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
     QDialog(parent),
     ui(new Ui::FinancialRemoveScreen)
 {
     setFixedSize(694, 550);
+    farm = f;
     this-> backScreen = backScreen;
     ui->setupUi(this);
 }
@@ -27,3 +28,7 @@ void FinancialRemoveScreen::on_removeButton_clicked()
 
 }
 
+Farm* FinancialRemoveScreen::getFarm()
+{
+    return farm;
+}

@@ -6,8 +6,6 @@
 #include "./cattle.h"
 #include "./transaction.h"
 
-using namespace std;
-
 //! Class Farm
 /**
 * This Class represents a Farm for the GiroDeGado software implemented in this code.
@@ -17,16 +15,16 @@ class Farm{
     public:
         friend class UnitFarm; /*!< This Class is used to do some unit tests of the Farm class. */
 
-        typedef vector<Cattle*>::iterator cattleIterator;
-        typedef vector<Transaction*>::iterator transactionIterator;
-        typedef vector<Farm*>::iterator farmIterator;
+        typedef std::vector<Cattle*>::iterator cattleIterator;
+        typedef std::vector<Transaction*>::iterator transactionIterator;
+        typedef std::vector<Farm*>::iterator farmIterator;
         
         virtual cattleIterator beginCattleContainer() = 0; /*!< Returns the iterator to the beginning of the cattle container attribute. */
         virtual cattleIterator endCattleContainer() = 0; /*!< Returns the iterator to the end of the cattle container attribute. */
         virtual transactionIterator beginTransactionContainer() = 0; /*!< Returns the iterator to the beginning of the transaction container attribute. */
         virtual transactionIterator endTransactionContainer() = 0; /*!< Returns the iterator to the end of the transaction container attribute. */
-        virtual farmIterator beginFarmContainer() = 0; /*!< Returns the iterator to the beginning of the global farm container vector. */
-        virtual farmIterator endFarmContainer() = 0; /*!< Returns the iterator to the end of the global farm container vector. */
+        virtual farmIterator beginFarmContainer() = 0; /*!< Returns the iterator to the beginning of the global farm container std::vector. */
+        virtual farmIterator endFarmContainer() = 0; /*!< Returns the iterator to the end of the global farm container std::vector. */
 
         /*!
             This is the default destructor for the Farm Class.
@@ -45,8 +43,8 @@ class Farm{
             \param value the value of the Cattle.
             \return Cattle - a Cattle Class object.
         */
-        virtual Cattle* createCattle(string earring = "", string breed = "", string acquisition_date = "", 
-                                     string birth_date = "", string father = "", string mother = "",
+        virtual Cattle* createCattle(std::string earring = "", std::string breed = "", std::string acquisition_date = "", 
+                                     std::string birth_date = "", std::string father = "", std::string mother = "",
                                      double weight = 0.0,  double value = 0.0) = 0;
 
         /*!
@@ -58,8 +56,8 @@ class Farm{
             \param cattle_earring the cattle's earring of the Transaction.
             \return Transaction - a Transaction Class object.
         */
-        virtual Transaction* createTransaction(int id = 0, double value = 0.0, string description = "", 
-                                               string date = "", string cattle_earring = "") = 0;
+        virtual Transaction* createTransaction(int id = 0, double value = 0.0, std::string description = "", 
+                                               std::string date = "", std::string cattle_earring = "") = 0;
 
         /*!
             Creates a Farm and returns it's pointer.
@@ -84,84 +82,84 @@ class Farm{
             \param cattle the Cattle at matter.
             \param cattle_earring which will be set to the current Cattle.
         */
-        virtual void setEarring(Cattle* cattle, string cattle_earring) = 0;
+        virtual void setEarring(Cattle* cattle, std::string cattle_earring) = 0;
 
         /*!
             Returns the earring attribute of a cattle.
             \param cattle the Cattle at matter.
-            \return string - the content earring attribute.  
+            \return std::string - the content earring attribute.  
         */
-        virtual string getEarring(Cattle* cattle) const = 0;
+        virtual std::string getEarring(Cattle* cattle) const = 0;
         
         /*!
             Sets the breed attribute of a cattle.
             \param cattle the Cattle at matter.
             \param cattle_breed which will be set to the current Cattle.
         */
-        virtual void setBreed(Cattle* cattle, string cattle_breed) = 0;
+        virtual void setBreed(Cattle* cattle, std::string cattle_breed) = 0;
 
         /*!
             Returns the breed attribute of a cattle.
             \param cattle the Cattle at matter.
-            \return string - the content Breed attribute.  
+            \return std::string - the content Breed attribute.  
         */
-        virtual string getBreed(Cattle* cattle) const = 0;
+        virtual std::string getBreed(Cattle* cattle) const = 0;
 
         /*!
             Sets the acquisition date attribute of a cattle.
             \param cattle the Cattle at matter.
             \param cattle_acquisition_date which will be set to the current Cattle.
         */
-        virtual void setAcquisitionDate(Cattle* cattle, string cattle_acquisition_date) = 0;
+        virtual void setAcquisitionDate(Cattle* cattle, std::string cattle_acquisition_date) = 0;
 
         /*!
             Returns the acquisition date attribute of a cattle.
             \param cattle the Cattle at matter.
-            \return string - the content acquisition date attribute.  
+            \return std::string - the content acquisition date attribute.  
         */
-        virtual string getAcquisitionDate(Cattle* cattle) const = 0;
+        virtual std::string getAcquisitionDate(Cattle* cattle) const = 0;
 
         /*!
             Sets the birth date attribute of a cattle.
             \param cattle the Cattle at matter.
             \param cattle_birth_date which will be set to the current Cattle.
         */
-        virtual void setBirthDate(Cattle* cattle, string cattle_birth_date) = 0;
+        virtual void setBirthDate(Cattle* cattle, std::string cattle_birth_date) = 0;
 
         /*!
             Returns the birth date attribute of a cattle.
             \param cattle the Cattle at matter.
-            \return string - the content birth date attribute.  
+            \return std::string - the content birth date attribute.  
         */
-        virtual string getBirthDate(Cattle* cattle) const = 0;
+        virtual std::string getBirthDate(Cattle* cattle) const = 0;
 
         /*!
             Sets the father attribute of a cattle.
             \param cattle the Cattle at matter.
             \param cattle_father which will be set to the current Cattle.
         */
-        virtual void setFather(Cattle* cattle, string cattle_father) = 0;
+        virtual void setFather(Cattle* cattle, std::string cattle_father) = 0;
 
         /*!
             Returns the father attribute of a cattle.
             \param cattle the Cattle at matter.
-            \return string - the content father attribute.  
+            \return std::string - the content father attribute.  
         */
-        virtual string getFather(Cattle* cattle) const = 0;
+        virtual std::string getFather(Cattle* cattle) const = 0;
 
         /*!
             Sets the mother attribute of a cattle.
             \param cattle the Cattle at matter.
             \param cattle_mother which will be set to the current Cattle.
         */
-        virtual void setMother(Cattle* cattle, string cattle_mother) = 0;
+        virtual void setMother(Cattle* cattle, std::string cattle_mother) = 0;
 
         /*!
             Returns the mother attribute of a cattle.
             \param cattle the Cattle at matter.
-            \return string - the content mother attribute.  
+            \return std::string - the content mother attribute.  
         */
-        virtual string getMother(Cattle* cattle) const = 0;
+        virtual std::string getMother(Cattle* cattle) const = 0;
 
         /*!
             Sets the weight attribute of a cattle.
@@ -201,7 +199,7 @@ class Farm{
         /*!
             Returns the id attribute of a transaction.
             \param transaction the Transaction at matter.
-            \return string - the content id attribute.  
+            \return std::string - the content id attribute.  
         */
         virtual int getId(Transaction* transaction) const = 0;
 
@@ -215,7 +213,7 @@ class Farm{
         /*!
             Returns the value attribute of a transaction.
             \param transaction the Transaction at matter.
-            \return string - the content value attribute.  
+            \return std::string - the content value attribute.  
         */
         virtual double getValue(Transaction* transaction) const = 0;
         
@@ -224,42 +222,54 @@ class Farm{
             \param transaction the Transaction at matter.
             \param transaction_description which will be set to the current Transaction.
         */
-        virtual void setDescription(Transaction* transaction, string transaction_description) = 0;
+        virtual void setDescription(Transaction* transaction, std::string transaction_description) = 0;
 
         /*!
             Returns the description attribute of a transaction.
             \param transaction the Transaction at matter.
-            \return string - the content description attribute.  
+            \return std::string - the content description attribute.  
         */
-        virtual string getDescription(Transaction* transaction) const = 0;
+        virtual std::string getDescription(Transaction* transaction) const = 0;
 
         /*!
             Sets the date attribute of a transaction.
             \param transaction the Transaction at matter.
             \param transaction_date which will be set to the current Transaction.
         */
-        virtual void setDate(Transaction* transaction, string transaction_date) = 0;
+        virtual void setDate(Transaction* transaction, std::string transaction_date) = 0;
 
         /*!
             Returns the date attribute of a transaction.
             \param transaction the Transaction at matter.
-            \return string - the content date attribute.  
+            \return std::string - the content date attribute.  
         */
-        virtual string getDate(Transaction* transaction) const = 0;
+        virtual std::string getDate(Transaction* transaction) const = 0;
 
         /*!
             Sets the cattle earring attribute of a transaction.
             \param transaction the Transaction at matter.
             \param transaction_cattle_earring which will be set to the current Transaction.
         */
-        virtual void setCattleEarring(Transaction* transaction, string transaction_cattle_earring) = 0;
+        virtual void setCattleEarring(Transaction* transaction, std::string transaction_cattle_earring) = 0;
 
         /*!
             Returns the cattle earring attribute of a transaction.
             \param transaction the Transaction at matter.
-            \return string - the content cattle earring attribute.  
+            \return std::string - the content cattle earring attribute.  
         */
-        virtual string getCattleEarring(Transaction* transaction) const = 0;
+        virtual std::string getCattleEarring(Transaction* transaction) const = 0;
+
+        /*!
+            Returns a Cattle with a determined earring on the cattle container.
+            \return Cattle* - a Cattle with a determined earring on the cattle container.
+        */
+        virtual Cattle* getCattle(std::string earring) = 0;
+
+        /*!
+            Returns a Transaction with a determined id on the transaction container.
+            \return Transaction* - a Transaction with a determined id on the transaction container.
+        */
+        virtual Transaction* getTransaction(int id) = 0;
 
     protected:
         /*!

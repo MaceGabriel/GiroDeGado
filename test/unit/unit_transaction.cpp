@@ -4,7 +4,7 @@ using namespace std;
 
 // Function for Transaction class's constructor unit test.
 void unit_transaction_constructor(){
-    cout << "TEST 1 - Default constructor of the Transaction class without passing parameters" << endl;
+    std::cout << "TEST 1 - Default constructor of the Transaction class without passing parameters" << std::endl;
     
     Transaction* transaction1 = new TransactionHandle();
     // Making assertion to verify if the id property was initialized with the default data.
@@ -19,9 +19,9 @@ void unit_transaction_constructor(){
     assert(transaction1->getCattleEarring() == "");
 
     delete transaction1;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 
-    cout << "TEST 2 - Default constructor of the Transaction class with passing parameters" << endl; 
+    std::cout << "TEST 2 - Default constructor of the Transaction class with passing parameters" << std::endl; 
     
     Transaction* transaction2 = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     // Making assertion to verify if the id property was initialized with the parameter specified.
@@ -36,12 +36,12 @@ void unit_transaction_constructor(){
     assert(transaction2->getCattleEarring() == "039");
 
     delete transaction2;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for TransactionHandle class's copy constructor unit test.
 void unit_transaction_copy_constructor(){
-    cout << "TEST 3 - Copy constructor of the TransactionHandle class" << endl;
+    std::cout << "TEST 3 - Copy constructor of the TransactionHandle class" << std::endl;
     
     TransactionHandle* transaction1 = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     Transaction* transaction2 = new TransactionHandle(*transaction1);
@@ -63,12 +63,12 @@ void unit_transaction_copy_constructor(){
 
     assert(numHandleDeleted == numBodyDeleted+2);
 
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Transaction class' destructor unit test.
 void unit_transaction_destructor(){
-    cout << "TEST 4 - Default destructor of the Transaction class" << endl;
+    std::cout << "TEST 4 - Default destructor of the Transaction class" << std::endl;
     
     MEMORYSTATUSEX memInfoBefore;
     memInfoBefore.dwLength = sizeof(MEMORYSTATUSEX);
@@ -88,12 +88,12 @@ void unit_transaction_destructor(){
     // is the same as before the creation of Transaction object.
     assert(virtualMemUsedBefore == virtualMemUsedAfter);
 
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Transaction class' method getId() unit test.
 void unit_transaction_getId(){
-    cout << "TEST 5 - Transaction class's getId() method" << endl;
+    std::cout << "TEST 5 - Transaction class's getId() method" << std::endl;
     
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
@@ -102,12 +102,12 @@ void unit_transaction_getId(){
     assert(transaction->getId() == 20);
 
     delete transaction;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Transaction class' method setId() unit test.
 void unit_transaction_setId(){
-    cout << "TEST 6 - Transaction class's setId() method" << endl;
+    std::cout << "TEST 6 - Transaction class's setId() method" << std::endl;
     
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     transaction->setId(21);
@@ -116,12 +116,12 @@ void unit_transaction_setId(){
     assert(transaction->getId() == 21);
 
     delete transaction;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Transaction class' method getValue() unit test.
 void unit_transaction_getValue(){
-    cout << "TEST 7 - Transaction class's getValue() method" << endl;
+    std::cout << "TEST 7 - Transaction class's getValue() method" << std::endl;
 
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
@@ -130,12 +130,12 @@ void unit_transaction_getValue(){
     assert(transaction->getValue() == 2000.0);
 
     delete transaction;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Transaction class' method setValue() unit test.
 void unit_transaction_setValue(){
-    cout << "TEST 8 - Transaction class's setValue() method" << endl;
+    std::cout << "TEST 8 - Transaction class's setValue() method" << std::endl;
 
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     transaction->setValue(2500.0);
@@ -144,12 +144,12 @@ void unit_transaction_setValue(){
     assert(transaction->getValue() == 2500.0);
 
     delete transaction;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Transaction class' method getDescription() unit test.
 void unit_transaction_getDescription(){
-    cout << "TEST 9 - Transaction class's getDescription() method" << endl;
+    std::cout << "TEST 9 - Transaction class's getDescription() method" << std::endl;
 
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
@@ -158,12 +158,12 @@ void unit_transaction_getDescription(){
     assert(transaction->getDescription() == "Venda de Gado");
 
     delete transaction;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Transaction class' method setDescription() unit test.
 void unit_transaction_setDescription(){
-    cout << "TEST 10 - Transaction class's setDescription() method" << endl;
+    std::cout << "TEST 10 - Transaction class's setDescription() method" << std::endl;
 
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     transaction->setDescription("Compra de Gado");
@@ -172,12 +172,12 @@ void unit_transaction_setDescription(){
     assert(transaction->getDescription() == "Compra de Gado");
 
     delete transaction;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Transaction class' method getDate() unit test.
 void unit_transaction_getDate(){
-    cout << "TEST 11 - Transaction class's getDate() method" << endl;
+    std::cout << "TEST 11 - Transaction class's getDate() method" << std::endl;
 
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
@@ -186,12 +186,12 @@ void unit_transaction_getDate(){
     assert(transaction->getDate() == "02/02/1990");
 
     delete transaction;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Transaction class' method setDate() unit test.
 void unit_transaction_setDate(){
-    cout << "TEST 12 - Transaction class's setDate() method" << endl;
+    std::cout << "TEST 12 - Transaction class's setDate() method" << std::endl;
 
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     transaction->setDate("03/02/1991");
@@ -200,12 +200,12 @@ void unit_transaction_setDate(){
     assert(transaction->getDate() == "03/02/1991");
 
     delete transaction;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Transaction class' method getCattleEarring() unit test.
 void unit_transaction_getCattleEarring(){
-    cout << "TEST 13 - Transaction class's getCattleEarring() method" << endl;
+    std::cout << "TEST 13 - Transaction class's getCattleEarring() method" << std::endl;
 
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
@@ -214,12 +214,12 @@ void unit_transaction_getCattleEarring(){
     assert(transaction->getCattleEarring() == "039");
 
     delete transaction;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Transaction class' method setCattleEarring() unit test.
 void unit_transaction_setCattleEarring(){
-    cout << "TEST 14 - Transaction class's setCattleEarring() method" << endl;
+    std::cout << "TEST 14 - Transaction class's setCattleEarring() method" << std::endl;
 
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     transaction->setCattleEarring("040");
@@ -228,12 +228,12 @@ void unit_transaction_setCattleEarring(){
     assert(transaction->getCattleEarring() == "040");
 
     delete transaction;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for TransactionHandle class' assingment operator unit test.
 void unit_transaction_assingmentOperator(){
-    cout << "TEST 15 - TransactionHandle class assignment operator" << endl;
+    std::cout << "TEST 15 - TransactionHandle class assignment operator" << std::endl;
     
     TransactionHandle* transaction1 = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     TransactionHandle* transaction2 = new TransactionHandle();
@@ -253,7 +253,7 @@ void unit_transaction_assingmentOperator(){
     delete transaction1;
     delete transaction2;
 
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function to run all the Transaction class' unit tests.

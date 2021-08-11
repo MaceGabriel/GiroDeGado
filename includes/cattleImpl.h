@@ -4,8 +4,6 @@
 #include "./cattle.h"
 #include "./handlebody.h"
 
-using namespace std;
-
 //! Class CattleBody
 /**
 * This Class represents the body of a Handle/Body idiom of a cattle for the GiroDeGado software implemented in this code.
@@ -13,12 +11,12 @@ using namespace std;
 class CattleBody : public Body{
 
     protected:
-        string earring_; /*!< This attribute contains the earring for the CattleBody. */
-        string breed_; /*!< This attribute contains the breed for the CattleBody. */
-        string acquisition_date_; /*!< This attribute contains the acquisition date for the CattleBody. */
-        string birth_date_; /*!< This attribute contains the birth date for the CattleBody. */
-        string father_; /*!< This attribute contains the father's earring for the CattleBody. */
-        string mother_; /*!< This attribute contains the mother's earring for the CattleBody. */
+        std::string earring_; /*!< This attribute contains the earring for the CattleBody. */
+        std::string breed_; /*!< This attribute contains the breed for the CattleBody. */
+        std::string acquisition_date_; /*!< This attribute contains the acquisition date for the CattleBody. */
+        std::string birth_date_; /*!< This attribute contains the birth date for the CattleBody. */
+        std::string father_; /*!< This attribute contains the father's earring for the CattleBody. */
+        std::string mother_; /*!< This attribute contains the mother's earring for the CattleBody. */
         double weight_; /*!< This attribute contains the weight of the CattleBody. */
         double value_; /*!< This attribute contains the value of the CattleBody. */
 
@@ -50,8 +48,8 @@ class CattleBody : public Body{
             \param value the value of the CattleBody.
             \return CattleBody - a CattleBody Class object.
         */
-        CattleBody(string earring = "", string breed = "", string acquisition_date = "", string birth_date = "",
-                   string father = "", string mother = "", double weight = 0.0,  double value = 0.0);
+        CattleBody(std::string earring = "", std::string breed = "", std::string acquisition_date = "", std::string birth_date = "",
+                   std::string father = "", std::string mother = "", double weight = 0.0,  double value = 0.0);
 
         /*!
             This is the default destructor for the CattleBody Class.
@@ -62,73 +60,73 @@ class CattleBody : public Body{
             Sets the earring attribute in the CattleBody Class.
             \param cattle_earring which will be set to the current CattleBody.
         */
-        void setEarring(string cattle_earring);
+        void setEarring(std::string cattle_earring);
 
         /*!
             Returns the earring attribute in the CattleBody Class.
             \return string - the content earring attribute.  
         */
-        string getEarring() const;
+        std::string getEarring() const;
         
         /*!
             Sets the breed attribute in the CattleBody Class.
             \param cattle_breed which will be set to the current CattleBody.
         */
-        void setBreed(string cattle_breed);
+        void setBreed(std::string cattle_breed);
 
         /*!
             Returns the breed attribute in the CattleBody Class.
             \return string - the content Breed attribute.  
         */
-        string getBreed() const;
+        std::string getBreed() const;
 
         /*!
             Sets the acquisition date attribute in the CattleBody Class.
             \param cattle_acquisition_date which will be set to the current CattleBody.
         */
-        void setAcquisitionDate(string cattle_acquisition_date);
+        void setAcquisitionDate(std::string cattle_acquisition_date);
 
         /*!
             Returns the acquisition date attribute in the CattleBody Class.
             \return string - the content acquisition date attribute.  
         */
-        string getAcquisitionDate() const;
+        std::string getAcquisitionDate() const;
 
         /*!
             Sets the birth date attribute in the CattleBody Class.
             \param cattle_birth_date which will be set to the current CattleBody.
         */
-        void setBirthDate(string cattle_birth_date);
+        void setBirthDate(std::string cattle_birth_date);
 
         /*!
             Returns the birth date attribute in the CattleBody Class.
             \return string - the content birth date attribute.  
         */
-        string getBirthDate() const;
+        std::string getBirthDate() const;
 
         /*!
             Sets the father attribute in the CattleBody Class.
             \param cattle_father which will be set to the current CattleBody.
         */
-        void setFather(string cattle_father);
+        void setFather(std::string cattle_father);
 
         /*!
             Returns the father attribute in the CattleBody Class.
             \return string - the content father attribute.  
         */
-        string getFather() const;
+        std::string getFather() const;
 
         /*!
             Sets the mother attribute in the CattleBody Class.
             \param cattle_mother which will be set to the current CattleBody.
         */
-        void setMother(string cattle_mother);
+        void setMother(std::string cattle_mother);
 
         /*!
             Returns the mother attribute in the CattleBody Class.
             \return string - the content mother attribute.  
         */
-        string getMother() const;
+        std::string getMother() const;
 
         /*!
             Sets the weight attribute in the CattleBody Class.
@@ -175,8 +173,8 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             \param value the value of the CattleHandle.
             \return CattleHandle - a CattleHandle Class object.
         */
-        CattleHandle(string earring = "", string breed = "", string acquisition_date = "", string birth_date = "",
-                     string father = "", string mother = "", double weight = 0.0,  double value = 0.0){
+        CattleHandle(std::string earring = "", std::string breed = "", std::string acquisition_date = "", std::string birth_date = "",
+                     std::string father = "", std::string mother = "", double weight = 0.0,  double value = 0.0){
             pImpl_->setEarring(earring);
             pImpl_->setBreed(breed);
             pImpl_->setAcquisitionDate(acquisition_date);
@@ -196,7 +194,7 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             Calls the setEarring() method implemented in the CattleBody Class.
             \param cattle_earring which will be set to the current CattleBody.
         */
-        void setEarring(string cattle_earring){
+        void setEarring(std::string cattle_earring){
             pImpl_->setEarring(cattle_earring);
         }
 
@@ -204,7 +202,7 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             Calls the getEarring() method implemented in the CattleBody Class.
             \return string - the content earring attribute.  
         */
-        string getEarring() const{
+        std::string getEarring() const{
             return pImpl_->getEarring();
         }
         
@@ -212,7 +210,7 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             Calls the setBreed() method implemented in the CattleBody Class.
             \param cattle_breed which will be set to the current CattleBody.
         */
-        void setBreed(string cattle_breed){
+        void setBreed(std::string cattle_breed){
             pImpl_->setBreed(cattle_breed);
         }
 
@@ -220,7 +218,7 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             Calls the getBreed() method implemented in the CattleBody Class.
             \return string - the content Breed attribute.  
         */
-        string getBreed() const{
+        std::string getBreed() const{
             return pImpl_->getBreed();
         }
 
@@ -228,7 +226,7 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             Calls the setAcquisitionDate() method implemented in the CattleBody Class.
             \param cattle_acquisition_date which will be set to the current CattleBody.
         */
-        void setAcquisitionDate(string cattle_acquisition_date){
+        void setAcquisitionDate(std::string cattle_acquisition_date){
             pImpl_->setAcquisitionDate(cattle_acquisition_date);
         }
 
@@ -236,7 +234,7 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             Calls the getAcquisitionDate() method implemented in the CattleBody Class.
             \return string - the content acquisition date attribute.  
         */
-        string getAcquisitionDate() const{
+        std::string getAcquisitionDate() const{
             return pImpl_->getAcquisitionDate();
         }
 
@@ -244,7 +242,7 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             Calls the setBirthDate() method implemented in the CattleBody Class.
             \param cattle_birth_date which will be set to the current CattleBody.
         */
-        void setBirthDate(string cattle_birth_date){
+        void setBirthDate(std::string cattle_birth_date){
             pImpl_->setBirthDate(cattle_birth_date);
         }
 
@@ -252,7 +250,7 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             Calls the getBirthDate() method implemented in the CattleBody Class.
             \return string - the content birth date attribute.  
         */
-        string getBirthDate() const{
+        std::string getBirthDate() const{
             return pImpl_->getBirthDate();
         }
 
@@ -260,7 +258,7 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             Calls the setFather() method implemented in the CattleBody Class.
             \param cattle_father which will be set to the current CattleBody.
         */
-        void setFather(string cattle_father){
+        void setFather(std::string cattle_father){
             pImpl_->setFather(cattle_father);
         }
 
@@ -268,7 +266,7 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             Calls the getFather() method implemented in the CattleBody Class.
             \return string - the content father attribute.  
         */
-        string getFather() const{
+        std::string getFather() const{
             return pImpl_->getFather();
         }
 
@@ -276,7 +274,7 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             Calls the setMother() method implemented in the CattleBody Class.
             \param cattle_mother which will be set to the current CattleBody.
         */
-        void setMother(string cattle_mother){
+        void setMother(std::string cattle_mother){
             pImpl_->setMother(cattle_mother);
         }
 
@@ -284,7 +282,7 @@ class CattleHandle : public Handle<CattleBody>, public Cattle{
             Calls the getMother() method implemented in the CattleBody Class.
             \return string - the content mother attribute.  
         */
-        string getMother() const{
+        std::string getMother() const{
             return pImpl_->getMother();
         }
 

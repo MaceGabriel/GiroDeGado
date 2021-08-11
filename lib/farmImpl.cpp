@@ -38,14 +38,14 @@ FarmBody::~FarmBody(){
     }
 }
 
-Cattle* FarmBody::createCattle(string earring, string breed, string acquisition_date, string birth_date, 
-                               string father, string mother, double weight,  double value){
+Cattle* FarmBody::createCattle(std::string earring, std::string breed, std::string acquisition_date, std::string birth_date, 
+                               std::string father, std::string mother, double weight,  double value){
     Cattle* cattle = new CattleHandle(earring, breed, acquisition_date, birth_date, father, mother, weight, value);
     add(cattle);
     return cattle;
 }
 
-Transaction* FarmBody::createTransaction(int id, double value, string description, string date, string cattle_earring){
+Transaction* FarmBody::createTransaction(int id, double value, std::string description, std::string date, std::string cattle_earring){
     Transaction* transaction = new TransactionHandle(id, value, description, date, cattle_earring);
     add(transaction);
     return transaction;
@@ -91,51 +91,51 @@ void FarmBody::remove(Transaction* transaction){
     }
 }
 
-void FarmBody::setEarring(Cattle* cattle, string cattle_earring){
+void FarmBody::setEarring(Cattle* cattle, std::string cattle_earring){
     cattle->setEarring(cattle_earring);
 }
 
-string FarmBody::getEarring(Cattle* cattle) const{
+std::string FarmBody::getEarring(Cattle* cattle) const{
     return cattle->getEarring();
 }
 
-void FarmBody::setBreed(Cattle* cattle, string cattle_breed){
+void FarmBody::setBreed(Cattle* cattle, std::string cattle_breed){
     cattle->setBreed(cattle_breed);
 }
 
-string FarmBody::getBreed(Cattle* cattle) const{
+std::string FarmBody::getBreed(Cattle* cattle) const{
     return cattle->getBreed();
 }
 
-void FarmBody::setAcquisitionDate(Cattle* cattle, string cattle_acquisition_date){
+void FarmBody::setAcquisitionDate(Cattle* cattle, std::string cattle_acquisition_date){
     cattle->setAcquisitionDate(cattle_acquisition_date);
 }
 
-string FarmBody::getAcquisitionDate(Cattle* cattle) const{
+std::string FarmBody::getAcquisitionDate(Cattle* cattle) const{
     return cattle->getAcquisitionDate();
 }
 
-void FarmBody::setBirthDate(Cattle* cattle, string cattle_birth_date){
+void FarmBody::setBirthDate(Cattle* cattle, std::string cattle_birth_date){
     cattle->setBirthDate(cattle_birth_date);
 }
 
-string FarmBody::getBirthDate(Cattle* cattle) const{
+std::string FarmBody::getBirthDate(Cattle* cattle) const{
     return cattle->getBirthDate();
 }
 
-void FarmBody::setFather(Cattle* cattle, string cattle_father){
+void FarmBody::setFather(Cattle* cattle, std::string cattle_father){
     cattle->setFather(cattle_father);
 }
 
-string FarmBody::getFather(Cattle* cattle) const{
+std::string FarmBody::getFather(Cattle* cattle) const{
     return cattle->getFather();
 }
 
-void FarmBody::setMother(Cattle* cattle, string cattle_mother){
+void FarmBody::setMother(Cattle* cattle, std::string cattle_mother){
     cattle->setMother(cattle_mother);
 }
 
-string FarmBody::getMother(Cattle* cattle) const{
+std::string FarmBody::getMother(Cattle* cattle) const{
     return cattle->getMother();
 }
 
@@ -171,26 +171,58 @@ double FarmBody::getValue(Transaction* transaction) const{
     return transaction->getValue();
 }
 
-void FarmBody::setDescription(Transaction* transaction, string transaction_description){
+void FarmBody::setDescription(Transaction* transaction, std::string transaction_description){
     transaction->setDescription(transaction_description);
 }
 
-string FarmBody::getDescription(Transaction* transaction) const{
+std::string FarmBody::getDescription(Transaction* transaction) const{
     return transaction->getDescription();
 }
 
-void FarmBody::setDate(Transaction* transaction, string transaction_date){
+void FarmBody::setDate(Transaction* transaction, std::string transaction_date){
     transaction->setDate(transaction_date);
 }
 
-string FarmBody::getDate(Transaction* transaction) const{
+std::string FarmBody::getDate(Transaction* transaction) const{
     return transaction->getDate();
 }
 
-void FarmBody::setCattleEarring(Transaction* transaction, string transaction_cattle_earring){
+void FarmBody::setCattleEarring(Transaction* transaction, std::string transaction_cattle_earring){
     transaction->setCattleEarring(transaction_cattle_earring);
 }
 
-string FarmBody::getCattleEarring(Transaction* transaction) const{
+std::string FarmBody::getCattleEarring(Transaction* transaction) const{
     return transaction->getCattleEarring();
+}
+
+Cattle* FarmBody::getCattle(std::string earring){
+    int cont = 0;
+    std::string current_earring;
+
+    for(cattleIterator it = beginCattleContainer(); it < endCattleContainer(); ++it){
+        current_earring = (*it)->getEarring();
+
+        if(current_earring == earring){
+            return cattle_container_[cont];
+        }
+        cont++;
+    }
+    
+    return NULL;
+}
+
+Transaction* FarmBody::getTransaction(int id){
+    int cont = 0;
+    int current_id;
+
+    for(transactionIterator it = beginTransactionContainer(); it < endTransactionContainer(); ++it){
+        current_id = (*it)->getId();
+
+        if(current_id == id){
+            return transaction_container_[cont];
+        }
+        cont++;
+    }
+    
+    return NULL;
 }

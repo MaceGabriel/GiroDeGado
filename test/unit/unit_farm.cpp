@@ -4,7 +4,7 @@ using namespace std;
 
 // Function for Farm class's constructor unit test.
 void unit_farm_constructor(){
-    cout << "TEST 1 - Default constructor of the Farm class" << endl;
+    std::cout << "TEST 1 - Default constructor of the Farm class" << std::endl;
 
     Farm* farm = Farm::createFarm();
 
@@ -31,12 +31,12 @@ void unit_farm_constructor(){
     }
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for FarmHandle class's copy constructor unit test.
 void UnitFarm::unit_farm_copy_constructor(){
-    cout << "TEST 2 - Copy constructor of the FarmHandle class" << endl;
+    std::cout << "TEST 2 - Copy constructor of the FarmHandle class" << std::endl;
 
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -69,12 +69,12 @@ void UnitFarm::unit_farm_copy_constructor(){
 
     assert(numHandleDeleted == numBodyDeleted+3);
 
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' destructor unit test.
 void unit_farm_destructor(){
-    cout << "TEST 4 - Default destructor of the Farm class" << endl;
+    std::cout << "TEST 4 - Default destructor of the Farm class" << std::endl;
     
     MEMORYSTATUSEX memInfoBefore;
     memInfoBefore.dwLength = sizeof(MEMORYSTATUSEX);
@@ -96,12 +96,12 @@ void unit_farm_destructor(){
     // is the same as before the creation of Farm object.
     assert(virtualMemUsedBefore == virtualMemUsedAfter);
 
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' addCattle() method unit test.
 void UnitFarm::unit_farm_addCattle(){
-    cout << "TEST 5 - Farm class' addCattle() method" << endl;
+    std::cout << "TEST 5 - Farm class' addCattle() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -112,12 +112,12 @@ void UnitFarm::unit_farm_addCattle(){
     assert((*(farm->beginCattleContainer()))->getEarring() == cattle->getEarring());
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' removeCattle() method unit test.
 void unit_farm_removeCattle(){
-    cout << "TEST 6 - Farm class' removeCattle() method" << endl;
+    std::cout << "TEST 6 - Farm class' removeCattle() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -129,12 +129,12 @@ void unit_farm_removeCattle(){
 
     delete cattle;
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' addTransaction() method unit test.
 void UnitFarm::unit_farm_addTransaction(){
-    cout << "TEST 7 - Farm class' addTransaction() method" << endl;
+    std::cout << "TEST 7 - Farm class' addTransaction() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -145,12 +145,12 @@ void UnitFarm::unit_farm_addTransaction(){
     assert((*(farm->beginTransactionContainer()))->getId() == transaction->getId());
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' removeTransaction() method unit test.
 void unit_farm_removeTransaction(){
-    cout << "TEST 8 - Farm class' removeTransaction() method" << endl;
+    std::cout << "TEST 8 - Farm class' removeTransaction() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -162,12 +162,12 @@ void unit_farm_removeTransaction(){
 
     delete transaction;
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getEarring() method unit test.
 void unit_farm_getEarring(){
-    cout << "TEST 9 - Farm class' getEarring() method" << endl;
+    std::cout << "TEST 9 - Farm class' getEarring() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -177,12 +177,12 @@ void unit_farm_getEarring(){
     assert(farm->getEarring(cattle) == "003");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setEarring() method unit test.
 void unit_farm_setEarring(){
-    cout << "TEST 10 - Farm class' setEarring() method" << endl;
+    std::cout << "TEST 10 - Farm class' setEarring() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -192,12 +192,12 @@ void unit_farm_setEarring(){
     assert(farm->getEarring(cattle) == "004");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getBreed() method unit test.
 void unit_farm_getBreed(){
-    cout << "TEST 11 - Farm class' getBreed() method" << endl;
+    std::cout << "TEST 11 - Farm class' getBreed() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -207,12 +207,12 @@ void unit_farm_getBreed(){
     assert(farm->getBreed(cattle) == "Angus");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setBreed() method unit test.
 void unit_farm_setBreed(){
-    cout << "TEST 12 - Farm class' setBreed() method" << endl;
+    std::cout << "TEST 12 - Farm class' setBreed() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -222,12 +222,12 @@ void unit_farm_setBreed(){
     assert(farm->getBreed(cattle) == "Brangus");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getAcquisitionDate() method unit test.
 void unit_farm_getAcquisitionDate(){
-    cout << "TEST 13 - Farm class' getAcquisitionDate() method" << endl;
+    std::cout << "TEST 13 - Farm class' getAcquisitionDate() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -237,12 +237,12 @@ void unit_farm_getAcquisitionDate(){
     assert(farm->getAcquisitionDate(cattle) == "01/04/1990");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setAcquisitionDate() method unit test.
 void unit_farm_setAcquisitionDate(){
-    cout << "TEST 14 - Farm class' setAcquisitionDate() method" << endl;
+    std::cout << "TEST 14 - Farm class' setAcquisitionDate() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -252,12 +252,12 @@ void unit_farm_setAcquisitionDate(){
     assert(farm->getAcquisitionDate(cattle) == "02/04/1991");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getBirthDate() method unit test.
 void unit_farm_getBirthDate(){
-    cout << "TEST 15 - Farm class' getBirthDate() method" << endl;
+    std::cout << "TEST 15 - Farm class' getBirthDate() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -267,12 +267,12 @@ void unit_farm_getBirthDate(){
     assert(farm->getBirthDate(cattle) == "01/01/1990");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setBirthDate() method unit test.
 void unit_farm_setBirthDate(){
-    cout << "TEST 16 - Farm class' setBirthDate() method" << endl;
+    std::cout << "TEST 16 - Farm class' setBirthDate() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -282,12 +282,12 @@ void unit_farm_setBirthDate(){
     assert(farm->getBirthDate(cattle) == "02/01/1991");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getFather() method unit test.
 void unit_farm_getFather(){
-    cout << "TEST 17 - Farm class' getFather() method" << endl;
+    std::cout << "TEST 17 - Farm class' getFather() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -297,12 +297,12 @@ void unit_farm_getFather(){
     assert(farm->getFather(cattle) == "001");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setFather() method unit test.
 void unit_farm_setFather(){
-    cout << "TEST 18 - Farm class' setFather() method" << endl;
+    std::cout << "TEST 18 - Farm class' setFather() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -312,12 +312,12 @@ void unit_farm_setFather(){
     assert(farm->getFather(cattle) == "005");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getMother() method unit test.
 void unit_farm_getMother(){
-    cout << "TEST 19 - Farm class' getMother() method" << endl;
+    std::cout << "TEST 19 - Farm class' getMother() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -327,12 +327,12 @@ void unit_farm_getMother(){
     assert(farm->getMother(cattle) == "002");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setMother() method unit test.
 void unit_farm_setMother(){
-    cout << "TEST 20 - Farm class' setMother() method" << endl;
+    std::cout << "TEST 20 - Farm class' setMother() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -342,12 +342,12 @@ void unit_farm_setMother(){
     assert(farm->getMother(cattle) == "006");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getWeight() method unit test.
 void unit_farm_getWeight(){
-    cout << "TEST 21 - Farm class' getWeight() method" << endl;
+    std::cout << "TEST 21 - Farm class' getWeight() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -357,12 +357,12 @@ void unit_farm_getWeight(){
     assert(fabs(farm->getWeight(cattle) - 250.0) < 0.0001);
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setWeight() method unit test.
 void unit_farm_setWeight(){
-    cout << "TEST 22 - Farm class' setWeight() method" << endl;
+    std::cout << "TEST 22 - Farm class' setWeight() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -372,12 +372,12 @@ void unit_farm_setWeight(){
     assert(fabs(farm->getWeight(cattle) - 300.0) < 0.0001);
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getValue() method unit test, while passing a Cattle as an argument.
 void unit_farm_cattle_getValue(){
-    cout << "TEST 23 - Farm class' getValue() method" << endl;
+    std::cout << "TEST 23 - Farm class' getValue() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -387,12 +387,12 @@ void unit_farm_cattle_getValue(){
     assert(fabs(farm->getValue(cattle) - 2400.0) < 0.0001);
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setValue() method unit test, while passing a Cattle as an argument.
 void unit_farm_cattle_setValue(){
-    cout << "TEST 24 - Farm class' setValue() method" << endl;
+    std::cout << "TEST 24 - Farm class' setValue() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
@@ -402,12 +402,12 @@ void unit_farm_cattle_setValue(){
     assert(fabs(farm->getValue(cattle) - 3000.0) < 0.0001);
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getId() method unit test.
 void unit_farm_getId(){
-    cout << "TEST 25 - Farm class' getId() method" << endl;
+    std::cout << "TEST 25 - Farm class' getId() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -417,12 +417,12 @@ void unit_farm_getId(){
     assert(farm->getId(transaction) == 20);
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setId() method unit test.
 void unit_farm_setId(){
-    cout << "TEST 26 - Farm class' setId() method" << endl;
+    std::cout << "TEST 26 - Farm class' setId() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -432,12 +432,12 @@ void unit_farm_setId(){
     assert(farm->getId(transaction) == 21);
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getValue() method unit test, while passing a Transaction as an argument.
 void unit_farm_transaction_getValue(){
-    cout << "TEST 27 - Farm class' getValue() method" << endl;
+    std::cout << "TEST 27 - Farm class' getValue() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -447,12 +447,12 @@ void unit_farm_transaction_getValue(){
     assert(fabs(farm->getValue(transaction) - 2000.0) < 0.0001);
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setValue() method unit test, while passing a Transaction as an argument.
 void unit_farm_transaction_setValue(){
-    cout << "TEST 28 - Farm class' setValue() method" << endl;
+    std::cout << "TEST 28 - Farm class' setValue() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -462,12 +462,12 @@ void unit_farm_transaction_setValue(){
     assert(fabs(farm->getValue(transaction) - 2500.0) < 0.0001);
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getDescription() method unit test.
 void unit_farm_getDescription(){
-    cout << "TEST 29 - Farm class' getDescription() method" << endl;
+    std::cout << "TEST 29 - Farm class' getDescription() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -477,12 +477,12 @@ void unit_farm_getDescription(){
     assert(farm->getDescription(transaction) == "Venda de Gado");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setDescription() method unit test.
 void unit_farm_setDescription(){
-    cout << "TEST 30 - Farm class' setDescription() method" << endl;
+    std::cout << "TEST 30 - Farm class' setDescription() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -492,12 +492,12 @@ void unit_farm_setDescription(){
     assert(farm->getDescription(transaction) == "Compra de Gado");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getDate() method unit test, while passing a Transaction as an argument.
 void unit_farm_getDate(){
-    cout << "TEST 31 - Farm class' getDate() method" << endl;
+    std::cout << "TEST 31 - Farm class' getDate() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -507,12 +507,12 @@ void unit_farm_getDate(){
     assert(farm->getDate(transaction) == "02/02/1990");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setDate() method unit test, while passing a Transaction as an argument.
 void unit_farm_setDate(){
-    cout << "TEST 32 - Farm class' setDate() method" << endl;
+    std::cout << "TEST 32 - Farm class' setDate() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -522,12 +522,12 @@ void unit_farm_setDate(){
     assert(farm->getDate(transaction) == "03/02/1991");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' getCattleEarring() method unit test, while passing a Transaction as an argument.
 void unit_farm_getCattleEarring(){
-    cout << "TEST 33 - Farm class' getCattleEarring() method" << endl;
+    std::cout << "TEST 33 - Farm class' getCattleEarring() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -537,12 +537,12 @@ void unit_farm_getCattleEarring(){
     assert(farm->getCattleEarring(transaction) == "039");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Farm class' setCattleEarring() method unit test, while passing a Transaction as an argument.
 void unit_farm_setCattleEarring(){
-    cout << "TEST 34 - Farm class' setCattleEarring() method" << endl;
+    std::cout << "TEST 34 - Farm class' setCattleEarring() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -552,12 +552,12 @@ void unit_farm_setCattleEarring(){
     assert(farm->getCattleEarring(transaction) == "040");
 
     delete farm;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 //Function for FarmHandle class' assingment operator unit test.
 void UnitFarm::unit_farm_assingmentOperator(){
-    cout << "TEST 35 - FarmHandle class' assignment operator" << endl;
+    std::cout << "TEST 35 - FarmHandle class' assignment operator" << std::endl;
 
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
@@ -586,7 +586,7 @@ void UnitFarm::unit_farm_assingmentOperator(){
     delete farm1;
     delete farm2;
 
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function to run all the Farm class' unit tests.

@@ -3,11 +3,12 @@
 #include "financialremovescreen.h"
 #include "ui_financialmanagementscreen.h"
 
-FinancialManagementScreen::FinancialManagementScreen(QWidget *parent, QWidget *backScreen) :
+FinancialManagementScreen::FinancialManagementScreen(QWidget *parent, QWidget *backScreen, Farm* f) :
     QDialog(parent),
     ui(new Ui::FinancialManagementScreen)
 {
     setFixedSize(694, 550);
+    farm = f;
     this->backScreen = backScreen;
     ui->setupUi(this);
 }
@@ -26,7 +27,7 @@ void FinancialManagementScreen::on_backButton_clicked()
 
 void FinancialManagementScreen::on_registerButton_clicked()
 {
-    FinancialRecordScreen* record = new FinancialRecordScreen(nullptr, this);
+    FinancialRecordScreen* record = new FinancialRecordScreen(nullptr, this, getFarm());
     this->hide();
     record->show();
 }
@@ -40,7 +41,7 @@ void FinancialManagementScreen::on_queryButton_clicked()
 
 void FinancialManagementScreen::on_removeButton_clicked()
 {
-    FinancialRemoveScreen* remove = new FinancialRemoveScreen(nullptr, this);
+    FinancialRemoveScreen* remove = new FinancialRemoveScreen(nullptr, this, getFarm());
     this->hide();
     remove->show();
 }
@@ -51,3 +52,7 @@ void FinancialManagementScreen::on_reportButton_clicked()
 
 }
 
+Farm* FinancialManagementScreen::getFarm()
+{
+    return farm;
+}

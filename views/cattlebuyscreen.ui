@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Tela de Compra de Gado</string>
   </property>
-  <widget class="QLabel" name="labelBrinco">
+  <widget class="QLabel" name="labelEarring">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -175,7 +175,7 @@
     <string>Sair</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="inputBrinco">
+  <widget class="QLineEdit" name="inputEarring">
    <property name="geometry">
     <rect>
      <x>50</x>
