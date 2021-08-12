@@ -26,7 +26,7 @@ void unit_farm_constructor(){
     counter = 0;    
     for (auto t = farm->beginTransactionContainer(); t != farm->endTransactionContainer(); ++t){
         // Making assertion to verify if the transactions were added to the transaction container property.
-        assert((*t)->getId() == transactionVector[counter]->getId());
+        assert((*t)->getNumber() == transactionVector[counter]->getNumber());
         counter++;
     }
 
@@ -57,7 +57,7 @@ void UnitFarm::unit_farm_copy_constructor(){
     auto t1 = farm1->beginTransactionContainer();
     for (auto t2 = farm2->beginTransactionContainer(); t2 != farm2->endTransactionContainer(); ++t2){
         // Making assertion to verify if the transactions were added to the transaction container property.
-        assert((*t1)->getId() == (*t2)->getId());
+        assert((*t1)->getNumber() == (*t2)->getNumber());
         t1++;
     }
 
@@ -142,7 +142,7 @@ void UnitFarm::unit_farm_addTransaction(){
     farm->add(transaction);
     
     // Making assertion to verify if the transaction has been added to the transaction container property.
-    assert((*(farm->beginTransactionContainer()))->getId() == transaction->getId());
+    assert((*(farm->beginTransactionContainer()))->getNumber() == transaction->getNumber());
 
     delete farm;
     std::cout << "OK!" << std::endl;
@@ -405,31 +405,31 @@ void unit_farm_cattle_setValue(){
     std::cout << "OK!" << std::endl;
 }
 
-// Function for the Farm class' getId() method unit test.
-void unit_farm_getId(){
-    std::cout << "TEST 25 - Farm class' getId() method" << std::endl;
+// Function for the Farm class' getNumber() method unit test.
+void unit_farm_getNumber(){
+    std::cout << "TEST 25 - Farm class' getNumber() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
-    // Making assertion to verify if the method returns the added transaction's Id and if it's
+    // Making assertion to verify if the method returns the added transaction's number and if it's
     // equal to the parameter previously passed. 
-    assert(farm->getId(transaction) == 20);
+    assert(farm->getNumber(transaction) == 20);
 
     delete farm;
     std::cout << "OK!" << std::endl;
 }
 
-// Function for the Farm class' setId() method unit test.
-void unit_farm_setId(){
-    std::cout << "TEST 26 - Farm class' setId() method" << std::endl;
+// Function for the Farm class' setNumber() method unit test.
+void unit_farm_setNumber(){
+    std::cout << "TEST 26 - Farm class' setNumber() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
     Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
-    farm->setId(transaction, 21);
+    farm->setNumber(transaction, 21);
 
-    // Making assertion to verify if the data of the added transaction's Id has been altered.
-    assert(farm->getId(transaction) == 21);
+    // Making assertion to verify if the data of the added transaction's number has been altered.
+    assert(farm->getNumber(transaction) == 21);
 
     delete farm;
     std::cout << "OK!" << std::endl;
@@ -579,7 +579,7 @@ void UnitFarm::unit_farm_assingmentOperator(){
     auto t1 = farm1->beginTransactionContainer();
     for (auto t2 = farm2->beginTransactionContainer(); t2 != farm2->endTransactionContainer(); ++t2){
         // Making assertion to verify if the transactions were added to the transaction container property.
-        assert((*t1)->getId() == (*t2)->getId());
+        assert((*t1)->getNumber() == (*t2)->getNumber());
         t1++;
     }
     
@@ -627,7 +627,7 @@ void unit_farm_getTransaction(){
     Transaction* t = farm->getTransaction(20);
 
     // Making assertion to verify if the correct transaction was returned from the search
-    assert(t->getId() == 20);
+    assert(t->getNumber() == 20);
     assert(fabs(t->getValue() - 2000.0) < 0.0001);
     assert(t->getDescription() == "Venda de Gado");
     assert(t->getDate() == "02/02/1990");
@@ -639,28 +639,28 @@ void unit_farm_getTransaction(){
 }
 
 
-//Function prototype for the Farm class' method getLastIdAvailable() unit test.
-void unit_farm_getLastIdAvailable(){
-    std::cout << "TEST 38 - Farm class' getLastIdAvailable() method" << std::endl;
+//Function prototype for the Farm class' method getLastNumberAvailable() unit test.
+void unit_farm_getLastNumberAvailable(){
+    std::cout << "TEST 38 - Farm class' getLastNumberAvailable() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    int id = farm->getLastIdAvailable();
+    int id = farm->getLastNumberAvailable();
     assert(id == 1);
 
     Transaction* transaction1 = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
-    id = farm->getLastIdAvailable();
+    id = farm->getLastNumberAvailable();
     assert(id == 21);
 
     Transaction* transaction2 = farm->createTransaction(21, -2100.0, "Compra de Gado", "03/02/1990", "040");
-    id = farm->getLastIdAvailable();
+    id = farm->getLastNumberAvailable();
     assert(id == 22);
 
     farm->remove(transaction2);
-    id = farm->getLastIdAvailable();
+    id = farm->getLastNumberAvailable();
     assert(id == 21);
 
     farm->remove(transaction1);
-    id = farm->getLastIdAvailable();
+    id = farm->getLastNumberAvailable();
     assert(id == 1);
 
     delete transaction1;
@@ -768,11 +768,11 @@ void run_unit_tests_farm(){
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 
-    unit_farm_getId();
+    unit_farm_getNumber();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 
-    unit_farm_setId();
+    unit_farm_setNumber();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 
@@ -820,7 +820,7 @@ void run_unit_tests_farm(){
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 
-    unit_farm_getLastIdAvailable();
+    unit_farm_getLastNumberAvailable();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 

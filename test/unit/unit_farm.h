@@ -140,14 +140,14 @@ void unit_farm_cattle_getValue();
 void unit_farm_cattle_setValue();
 
 /*!
-  Function prototype for the Farm class' method getId() unit test.
+  Function prototype for the Farm class' method getNumber() unit test.
 */
-void unit_farm_getId();
+void unit_farm_getNumber();
 
 /*!
-  Function prototype for the Farm class' method setId() unit test.
+  Function prototype for the Farm class' method setNumber() unit test.
 */
-void unit_farm_setId();
+void unit_farm_setNumber();
 
 /*!
   Function prototype for the Farm class' method getValue() unit test, while passing a Transaction as an argument.
@@ -200,9 +200,9 @@ void unit_farm_getCattle();
 void unit_farm_getTransaction();
 
 /*!
-  Function prototype for the Farm class' method getLastIdAvailable() unit test.
+  Function prototype for the Farm class' method getLastNumberAvailable() unit test.
 */
-void unit_farm_getLastIdAvailable();
+void unit_farm_getLastNumberAvailable();
 
 /*!
   Function prototype for the function that runs all the unit tests of the Farm class.

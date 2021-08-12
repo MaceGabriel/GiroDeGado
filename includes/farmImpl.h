@@ -72,14 +72,14 @@ class FarmBody : public Body{
 
         /*!
             Creates a transaction and returns it's pointer.
-            \param id the id of the Transaction.
+            \param number the number of the Transaction.
             \param value the value of the Transaction.
             \param description the description of the Transaction.
             \param date the date of the Transaction.
             \param cattle_earring the cattle's earring of the Transaction.
             \return Transaction - a Transaction Class object.
         */
-        Transaction* createTransaction(int id = 0, double value = 0.0, std::string description = "", 
+        Transaction* createTransaction(int number = 0, double value = 0.0, std::string description = "",
                                        std::string date = "", std::string cattle_earring = "");
 
         /*!
@@ -225,18 +225,18 @@ class FarmBody : public Body{
         double getValue(Cattle* cattle) const;
 
         /*!
-            Sets the id attribute of a transaction.
+            Sets the number attribute of a transaction.
             \param transaction the Transaction at matter.
-            \param transaction_id which will be set to the current Transaction.
+            \param transaction_number which will be set to the current Transaction.
         */
-        void setId(Transaction* transaction, int transaction_id);
+        void setNumber(Transaction* transaction, int transaction_number);
 
         /*!
-            Returns the id attribute of a transaction.
+            Returns the number attribute of a transaction.
             \param transaction the Transaction at matter.
-            \return std::string - the content id attribute.  
+            \return int - the content number attribute.
         */
-        int getId(Transaction* transaction) const;
+        int getNumber(Transaction* transaction) const;
 
         /*!
             Sets the value attribute of a transaction.
@@ -301,16 +301,16 @@ class FarmBody : public Body{
         Cattle* getCattle(std::string earring);
 
         /*!
-            Returns a Transaction with a determined id on the transaction container.
-            \return Transaction* - a Transaction with a determined id on the transaction container.
+            Returns a Transaction with a determined number on the transaction container.
+            \return Transaction* - a Transaction with a determined number on the transaction container.
         */
-        Transaction* getTransaction(int id);
+        Transaction* getTransaction(int number);
 
         /*!
-            Returns the last available id on the transaction container.
-            \return int - the last available id on the transaction container.
+            Returns the last available number on the transaction container.
+            \return int - the last available number on the transaction container.
         */
-        int getLastIdAvailable();
+        int getLastNumberAvailable();
 
 };
 
@@ -381,16 +381,16 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
 
         /*!
             Calls the createTransaction() method implemented in the FarmBody Class.
-            \param id the id of the Transaction.
+            \param number the number of the Transaction.
             \param value the value of the Transaction.
             \param description the description of the Transaction.
             \param date the date of the Transaction.
             \param cattle_earring the cattle's earring of the Transaction.
             \return Transaction - a Transaction Class object.
         */
-        Transaction* createTransaction(int id = 0, double value = 0.0, std::string description = "", 
+        Transaction* createTransaction(int number = 0, double value = 0.0, std::string description = "",
                                        std::string date = "", std::string cattle_earring = ""){
-            return pImpl_->createTransaction(id, value, description, date, cattle_earring);
+            return pImpl_->createTransaction(number, value, description, date, cattle_earring);
         }
 
         /*!
@@ -562,21 +562,21 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
-            Calls the setId() method implemented in the FarmBody Class.
+            Calls the setNumber() method implemented in the FarmBody Class.
             \param transaction the Transaction at matter.
-            \param transaction_id which will be set to the current Transaction.
+            \param transaction_number which will be set to the current Transaction.
         */
-        void setId(Transaction* transaction, int transaction_id){
-            pImpl_->setId(transaction, transaction_id);
+        void setNumber(Transaction* transaction, int transaction_number){
+            pImpl_->setNumber(transaction, transaction_number);
         }
 
         /*!
-            Calls the getId() method implemented in the FarmBody Class.
+            Calls the getNumber() method implemented in the FarmBody Class.
             \param transaction the Transaction at matter.
-            \return std::string - the content id attribute.  
+            \return int - the content number attribute.
         */
-        int getId(Transaction* transaction) const{
-            return pImpl_->getId(transaction);
+        int getNumber(Transaction* transaction) const{
+            return pImpl_->getNumber(transaction);
         }
 
         /*!
@@ -668,11 +668,11 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
-            Calls the getLastIdAvailable() method implemented in the FarmBody Class.
-            \return int - the last available id on the transaction container.
+            Calls the getLastNumberAvailable() method implemented in the FarmBody Class.
+            \return int - the last available number on the transaction container.
         */
-        int getLastIdAvailable(){
-            return pImpl_->getLastIdAvailable();
+        int getLastNumberAvailable(){
+            return pImpl_->getLastNumberAvailable();
         }
 
 };
