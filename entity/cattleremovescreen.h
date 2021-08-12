@@ -13,10 +13,11 @@ class CattleRemoveScreen : public QDialog
     Q_OBJECT
 
 public:
-    explicit CattleRemoveScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, Farm* f = nullptr);
+    explicit CattleRemoveScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, Farm* f = nullptr, QSqlQuery* query = nullptr);
     ~CattleRemoveScreen();
 
     Farm* getFarm();
+    QSqlQuery* getQuery();
 
 private slots:
     void on_backButton_clicked();
@@ -33,6 +34,7 @@ private:
     Ui::CattleRemoveScreen *ui;
     QWidget* backScreen;
     Farm* farm;
+    QSqlQuery* query;
 };
 
 #endif // CATTLEREMOVESCREEN_H

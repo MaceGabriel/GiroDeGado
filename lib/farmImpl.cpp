@@ -51,6 +51,17 @@ Transaction* FarmBody::createTransaction(int id, double value, std::string descr
     return transaction;
 }
 
+void FarmBody::createTransaction2(QSqlQuery* query, int number, double value, std::string description, std::string date, std::string cattle_earring){
+    query->prepare("insert into financial (number, value, description, date, cattle_earring)"
+                   "values (:number, :value, :description, :date, :cattle_earring)");
+    query->bindValue(":number", number);
+    query->bindValue(":value", value);
+    query->bindValue(":description", QString::fromStdString(description));
+    query->bindValue(":date", QString::fromStdString(date));
+    query->bindValue(":cattle_earring", QString::fromStdString(cattle_earring));
+    query->exec();
+}
+
 Farm* Farm::createFarm(){
     return FarmHandle::createFarm();
 }

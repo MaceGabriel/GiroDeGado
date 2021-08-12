@@ -1,12 +1,13 @@
 #include "cattlebuyscreen.h"
 #include "ui_cattlebuyscreen.h"
 
-CattleBuyScreen::CattleBuyScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+CattleBuyScreen::CattleBuyScreen(QWidget *parent, QWidget* backScreen, Farm* f, QSqlQuery* q) :
     QDialog(parent),
     ui(new Ui::CattleBuyScreen)
 {
     setFixedSize(900, 600);
     farm = f;
+    query = q;
     this->backScreen = backScreen;
     ui->setupUi(this);
 }
@@ -73,4 +74,9 @@ void CattleBuyScreen::on_registerButton_clicked()
 Farm* CattleBuyScreen::getFarm()
 {
     return farm;
+}
+
+QSqlQuery* CattleBuyScreen::getQuery()
+{
+    return query;
 }

@@ -2,6 +2,7 @@
 #define FARM_H
 
 #include <vector>
+#include <QtSql>
 
 #include "./cattle.h"
 #include "./transaction.h"
@@ -276,6 +277,10 @@ class Farm{
             \return int - the last available number on the transaction container.
         */
         virtual int getLastNumberAvailable() = 0;
+
+
+        //Teste
+        virtual void createTransaction2(QSqlQuery* query, int number, double value, std::string description, std::string date, std::string cattle_earring) = 0;
 
     protected:
         /*!

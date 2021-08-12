@@ -1,12 +1,13 @@
 #include "cattleremovescreen.h"
 #include "ui_cattleremovescreen.h"
 
-CattleRemoveScreen::CattleRemoveScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+CattleRemoveScreen::CattleRemoveScreen(QWidget *parent, QWidget* backScreen, Farm* f, QSqlQuery* q) :
     QDialog(parent),
     ui(new Ui::CattleRemoveScreen)
 {
     setFixedSize(900, 600);
     farm = f;
+    query = q;
     this->backScreen = backScreen;
     ui->setupUi(this);
 }
@@ -112,5 +113,10 @@ void CattleRemoveScreen::on_radioButtonSell_clicked()
     ui->inputPrice->setVisible(true);
     ui->labelPrice->setVisible(true);
     ui->inputPrice->setText("0");
+}
+
+QSqlQuery* CattleRemoveScreen::getQuery()
+{
+    return query;
 }
 

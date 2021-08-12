@@ -14,10 +14,11 @@ class HomeScreen : public QMainWindow
     Q_OBJECT
 
 public:
-    HomeScreen(QWidget *parent = nullptr, Farm* f = nullptr);
+    HomeScreen(QWidget *parent = nullptr, Farm* f = nullptr, QSqlQuery* query = nullptr);
     ~HomeScreen();
 
     Farm* getFarm();
+    QSqlQuery* getQuery();
 
 private slots:    
 
@@ -30,5 +31,6 @@ private slots:
 private:
     Ui::HomeScreen *ui;
     Farm* farm;
+    QSqlQuery* query;
 };
 #endif // HOMESCREEN_H

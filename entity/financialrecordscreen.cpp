@@ -1,12 +1,13 @@
 #include "financialrecordscreen.h"
 #include "ui_financialrecordscreen.h"
 
-FinancialRecordScreen::FinancialRecordScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+FinancialRecordScreen::FinancialRecordScreen(QWidget *parent, QWidget* backScreen, Farm* f, QSqlQuery* q) :
     QDialog(parent),
     ui(new Ui::FinancialRecordScreen)
 {
     setFixedSize(900, 600);
     farm = f;
+    query = q;
     this->backScreen = backScreen;
     ui->setupUi(this);
 
@@ -46,8 +47,9 @@ void FinancialRecordScreen::on_registerButton_clicked()
 
     if(price_2 != 0){
         Farm* f = getFarm();
-        f->createTransaction(id, price_2, description_2, date_2, earring_2);
-
+        QSqlQuery* q = getQuery();
+        //f->createTransaction(id, price_2, description_2, date_2, earring_2);
+        f->createTransaction2(q, id, price_2, description_2, date_2, earring_2);
         backScreen->show();
         this->close();
     }
@@ -69,4 +71,9 @@ void FinancialRecordScreen::on_registerButton_clicked()
 Farm* FinancialRecordScreen::getFarm()
 {
     return farm;
+}
+
+QSqlQuery* FinancialRecordScreen::getQuery()
+{
+    return query;
 }

@@ -1,6 +1,7 @@
 #ifndef TRANSACTIONIMPL_H
 #define TRANSACTIONIMPL_H
 
+#include <QtSql>
 #include "./transaction.h"
 #include "./handlebody.h"
 

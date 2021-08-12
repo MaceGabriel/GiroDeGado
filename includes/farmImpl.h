@@ -312,6 +312,9 @@ class FarmBody : public Body{
         */
         int getLastNumberAvailable();
 
+        //Teste
+        void createTransaction2(QSqlQuery* query, int number, double value, std::string description, std::string date, std::string cattle_earring);
+
 };
 
 //! Class FarmHandle
@@ -673,6 +676,11 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
         */
         int getLastNumberAvailable(){
             return pImpl_->getLastNumberAvailable();
+        }
+
+        //Teste
+        void createTransaction2(QSqlQuery* query, int number, double value, std::string description, std::string date, std::string cattle_earring){
+            return pImpl_->createTransaction2(query, number, value, description, date, cattle_earring);
         }
 
 };
