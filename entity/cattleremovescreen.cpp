@@ -80,7 +80,7 @@ void CattleRemoveScreen::on_removeButton_clicked()
         f->remove(c);
 
         if(ui->radioButtonSell->isChecked()){
-            int id = farm->getLastIdAvailable();
+            int id = farm->getLastNumberAvailable();
 
             QString price = ui->inputPrice->text();
             if(price != ""){

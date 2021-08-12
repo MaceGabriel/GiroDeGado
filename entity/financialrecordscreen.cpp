@@ -10,7 +10,7 @@ FinancialRecordScreen::FinancialRecordScreen(QWidget *parent, QWidget* backScree
     this->backScreen = backScreen;
     ui->setupUi(this);
 
-    int id = farm->getLastIdAvailable();
+    int id = farm->getLastNumberAvailable();
 
     QString id_str = QString::number(id);
     ui->labelIdTransaction->setText("#" + id_str);
@@ -30,7 +30,7 @@ void FinancialRecordScreen::on_backButton_clicked()
 
 void FinancialRecordScreen::on_registerButton_clicked()
 {
-    int id = farm->getLastIdAvailable();
+    int id = farm->getLastNumberAvailable();
 
     QString price = ui->inputPrice->text();
     double price_2 = price.toDouble();

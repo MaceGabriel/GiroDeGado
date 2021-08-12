@@ -190,18 +190,18 @@ class Farm{
         virtual double getValue(Cattle* cattle) const = 0;
 
         /*!
-            Sets the id attribute of a transaction.
+            Sets the number attribute of a transaction.
             \param transaction the Transaction at matter.
-            \param transaction_id which will be set to the current Transaction.
+            \param transaction_number which will be set to the current Transaction.
         */
-        virtual void setId(Transaction* transaction, int transaction_id) = 0;
+        virtual void setNumber(Transaction* transaction, int transaction_number) = 0;
 
         /*!
-            Returns the id attribute of a transaction.
+            Returns the number attribute of a transaction.
             \param transaction the Transaction at matter.
-            \return std::string - the content id attribute.  
+            \return int - the content number attribute.
         */
-        virtual int getId(Transaction* transaction) const = 0;
+        virtual int getNumber(Transaction* transaction) const = 0;
 
         /*!
             Sets the value attribute of a transaction.
@@ -266,16 +266,16 @@ class Farm{
         virtual Cattle* getCattle(std::string earring) = 0;
 
         /*!
-            Returns a Transaction with a determined id on the transaction container.
-            \return Transaction* - a Transaction with a determined id on the transaction container.
+            Returns a Transaction with a determined number on the transaction container.
+            \return Transaction* - a Transaction with a determined number on the transaction container.
         */
-        virtual Transaction* getTransaction(int id) = 0;
+        virtual Transaction* getTransaction(int number) = 0;
 
         /*!
-            Returns the last available id on the transaction container.
-            \return int - the last available id on the transaction container.
+            Returns the last available number on the transaction container.
+            \return int - the last available number on the transaction container.
         */
-        virtual int getLastIdAvailable() = 0;
+        virtual int getLastNumberAvailable() = 0;
 
     protected:
         /*!

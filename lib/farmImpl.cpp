@@ -155,12 +155,12 @@ double FarmBody::getValue(Cattle* cattle) const{
     return cattle->getValue();
 }
 
-void FarmBody::setId(Transaction* transaction, int transaction_id){
-    transaction->setId(transaction_id);
+void FarmBody::setNumber(Transaction* transaction, int transaction_id){
+    transaction->setNumber(transaction_id);
 }
 
-int FarmBody::getId(Transaction* transaction) const{
-    return transaction->getId();
+int FarmBody::getNumber(Transaction* transaction) const{
+    return transaction->getNumber();
 }
 
 void FarmBody::setValue(Transaction* transaction, double transaction_value){
@@ -216,7 +216,7 @@ Transaction* FarmBody::getTransaction(int id){
     int current_id;
 
     for(transactionIterator it = beginTransactionContainer(); it < endTransactionContainer(); ++it){
-        current_id = (*it)->getId();
+        current_id = (*it)->getNumber();
 
         if(current_id == id){
             return transaction_container_[cont];
@@ -227,13 +227,13 @@ Transaction* FarmBody::getTransaction(int id){
     return NULL;
 }
 
-int FarmBody::getLastIdAvailable(){
+int FarmBody::getLastNumberAvailable(){
     int id = 1;
 
     if(beginTransactionContainer() != endTransactionContainer()){
         for(auto it = beginTransactionContainer(); it < endTransactionContainer(); ++it){
-            if((*it)->getId() >= id){
-                id = (*it)->getId() + 1;
+            if((*it)->getNumber() >= id){
+                id = (*it)->getNumber() + 1;
             }
         }
     }

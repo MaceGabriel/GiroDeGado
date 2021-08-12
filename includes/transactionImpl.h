@@ -13,7 +13,7 @@ using namespace std;
 class TransactionBody : public Body{
 
     protected:
-        int id_; /*!< This attribute contains the id for the TransactionBody. */
+        int number_; /*!< This attribute contains the number for the TransactionBody. */
         double value_; /*!< This attribute contains the value of the TransactionBody. */
         std::string description_; /*!< This attribute contains the description for the TransactionBody. */
         std::string date_; /*!< This attribute contains the date for the TransactionBody. */
@@ -37,14 +37,14 @@ class TransactionBody : public Body{
 
         /*!
             This is the default constructor for the TransactionBody Class.
-            \param id the id of the TransactionBody.
+            \param number the number of the TransactionBody.
             \param value the value of the TransactionBody.
             \param description the description of the TransactionBody.
             \param date the date of the TransactionBody.
             \param cattle_earring the cattle's earring of the TransactionBody.
             \return TransactionBody - a TransactionBody Class object.
         */
-        TransactionBody(int id = 0, double value = 0.0, std::string description = "", std::string date = "",
+        TransactionBody(int number = 0, double value = 0.0, std::string description = "", std::string date = "",
                         std::string cattle_earring = "");
 
         /*!
@@ -53,16 +53,16 @@ class TransactionBody : public Body{
         virtual ~TransactionBody();
 
         /*!
-            Sets the id attribute in the Transaction Class.
-            \param transaction_id which will be set to the current Transaction.
+            Sets the number attribute in the Transaction Class.
+            \param transaction_number which will be set to the current Transaction.
         */
-        void setId(int transaction_id);
+        void setNumber(int transaction_number);
 
         /*!
-            Returns the id attribute in the Transaction Class.
-            \return std::string - the content id attribute.  
+            Returns the number attribute in the Transaction Class.
+            \return int - the content number attribute.
         */
-        int getId() const;
+        int getNumber() const;
 
         /*!
             Sets the value attribute in the Transaction Class.
@@ -130,9 +130,9 @@ class TransactionHandle : public Handle<TransactionBody>, public Transaction{
             \param cattle_earring the cattle's earring of the TransactionHandle.
             \return TransactionHandle - a TransactionHandle Class object.
         */
-        TransactionHandle(int id = 0, double value = 0.0, std::string description = "", std::string date = "",
+        TransactionHandle(int number = 0, double value = 0.0, std::string description = "", std::string date = "",
                         std::string cattle_earring = ""){
-            pImpl_->setId(id);
+            pImpl_->setNumber(number);
             pImpl_->setValue(value);
             pImpl_->setDescription(description);
             pImpl_->setDate(date);
@@ -145,19 +145,19 @@ class TransactionHandle : public Handle<TransactionBody>, public Transaction{
         virtual ~TransactionHandle(){};
         
         /*!
-            Calls the setId() method implemented in the TransactionBody Class.
-            \param transaction_id which will be set to the current Transaction.
+            Calls the setNumber() method implemented in the TransactionBody Class.
+            \param transaction_number which will be set to the current Transaction.
         */
-        void setId(int transaction_id){
-            pImpl_->setId(transaction_id);
+        void setNumber(int transaction_number){
+            pImpl_->setNumber(transaction_number);
         }
 
         /*!
-            Calls the getId() method implemented in the TransactionBody Class.
-            \return std::string - the content id attribute.  
+            Calls the getNumber() method implemented in the TransactionBody Class.
+            \return int - the content number attribute.
         */
-        int getId() const{
-            return pImpl_->getId();
+        int getNumber() const{
+            return pImpl_->getNumber();
         }
 
         /*!
