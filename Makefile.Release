@@ -315,6 +315,8 @@ release/moc_cattlebirthscreen.cpp: entity/cattlebirthscreen.h \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSize \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSizeF \
 		../../../Qt/6.1.1/mingw81_64/include/QtGui/QTransform \
+		entity/cattleregisterscreen.h \
+		entity/cattlemanagementscreen.h \
 		entity/homescreen.h \
 		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMainWindow \
 		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmainwindow.h \
@@ -455,6 +457,16 @@ release/moc_cattlebuyscreen.cpp: entity/cattlebuyscreen.h \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSize \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSizeF \
 		../../../Qt/6.1.1/mingw81_64/include/QtGui/QTransform \
+		entity/cattleregisterscreen.h \
+		entity/cattlemanagementscreen.h \
+		entity/homescreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMainWindow \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qicon.h \
+		includes/farm.h \
+		includes/cattle.h \
+		includes/transaction.h \
 		release/moc_predefs.h \
 		../../../Qt/6.1.1/mingw81_64/bin/moc.exe
 	C:\Qt\6.1.1\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Programas/git/GiroDeGado/release/moc_predefs.h -IC:/Qt/6.1.1/mingw81_64/mkspecs/win32-g++ -IC:/Programas/git/GiroDeGado -IC:/Qt/6.1.1/mingw81_64/include -IC:/Qt/6.1.1/mingw81_64/include/QtWidgets -IC:/Qt/6.1.1/mingw81_64/include/QtGui -IC:/Qt/6.1.1/mingw81_64/include/QtCore -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include entity\cattlebuyscreen.h -o release\moc_cattlebuyscreen.cpp
@@ -868,6 +880,15 @@ release/moc_cattleremovescreen.cpp: entity/cattleremovescreen.h \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSize \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSizeF \
 		../../../Qt/6.1.1/mingw81_64/include/QtGui/QTransform \
+		entity/cattlemanagementscreen.h \
+		entity/homescreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMainWindow \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qicon.h \
+		includes/farm.h \
+		includes/cattle.h \
+		includes/transaction.h \
 		release/moc_predefs.h \
 		../../../Qt/6.1.1/mingw81_64/bin/moc.exe
 	C:\Qt\6.1.1\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Programas/git/GiroDeGado/release/moc_predefs.h -IC:/Qt/6.1.1/mingw81_64/mkspecs/win32-g++ -IC:/Programas/git/GiroDeGado -IC:/Qt/6.1.1/mingw81_64/include -IC:/Qt/6.1.1/mingw81_64/include/QtWidgets -IC:/Qt/6.1.1/mingw81_64/include/QtGui -IC:/Qt/6.1.1/mingw81_64/include/QtCore -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include entity\cattleremovescreen.h -o release\moc_cattleremovescreen.cpp
@@ -1000,6 +1021,14 @@ release/moc_financialmanagementscreen.cpp: entity/financialmanagementscreen.h \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSize \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSizeF \
 		../../../Qt/6.1.1/mingw81_64/include/QtGui/QTransform \
+		entity/homescreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMainWindow \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qicon.h \
+		includes/farm.h \
+		includes/cattle.h \
+		includes/transaction.h \
 		release/moc_predefs.h \
 		../../../Qt/6.1.1/mingw81_64/bin/moc.exe
 	C:\Qt\6.1.1\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Programas/git/GiroDeGado/release/moc_predefs.h -IC:/Qt/6.1.1/mingw81_64/mkspecs/win32-g++ -IC:/Programas/git/GiroDeGado -IC:/Qt/6.1.1/mingw81_64/include -IC:/Qt/6.1.1/mingw81_64/include/QtWidgets -IC:/Qt/6.1.1/mingw81_64/include/QtGui -IC:/Qt/6.1.1/mingw81_64/include/QtCore -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include entity\financialmanagementscreen.h -o release\moc_financialmanagementscreen.cpp
@@ -1132,6 +1161,15 @@ release/moc_financialrecordscreen.cpp: entity/financialrecordscreen.h \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSize \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSizeF \
 		../../../Qt/6.1.1/mingw81_64/include/QtGui/QTransform \
+		entity/financialmanagementscreen.h \
+		entity/homescreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMainWindow \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qicon.h \
+		includes/farm.h \
+		includes/cattle.h \
+		includes/transaction.h \
 		release/moc_predefs.h \
 		../../../Qt/6.1.1/mingw81_64/bin/moc.exe
 	C:\Qt\6.1.1\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Programas/git/GiroDeGado/release/moc_predefs.h -IC:/Qt/6.1.1/mingw81_64/mkspecs/win32-g++ -IC:/Programas/git/GiroDeGado -IC:/Qt/6.1.1/mingw81_64/include -IC:/Qt/6.1.1/mingw81_64/include/QtWidgets -IC:/Qt/6.1.1/mingw81_64/include/QtGui -IC:/Qt/6.1.1/mingw81_64/include/QtCore -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include entity\financialrecordscreen.h -o release\moc_financialrecordscreen.cpp
@@ -1264,6 +1302,15 @@ release/moc_financialremovescreen.cpp: entity/financialremovescreen.h \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSize \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSizeF \
 		../../../Qt/6.1.1/mingw81_64/include/QtGui/QTransform \
+		entity/financialmanagementscreen.h \
+		entity/homescreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMainWindow \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qicon.h \
+		includes/farm.h \
+		includes/cattle.h \
+		includes/transaction.h \
 		release/moc_predefs.h \
 		../../../Qt/6.1.1/mingw81_64/bin/moc.exe
 	C:\Qt\6.1.1\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Programas/git/GiroDeGado/release/moc_predefs.h -IC:/Qt/6.1.1/mingw81_64/mkspecs/win32-g++ -IC:/Programas/git/GiroDeGado -IC:/Qt/6.1.1/mingw81_64/include -IC:/Qt/6.1.1/mingw81_64/include/QtWidgets -IC:/Qt/6.1.1/mingw81_64/include/QtGui -IC:/Qt/6.1.1/mingw81_64/include/QtCore -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include entity\financialremovescreen.h -o release\moc_financialremovescreen.cpp
@@ -1588,6 +1635,8 @@ release/cattlebirthscreen.o: entity/cattlebirthscreen.cpp entity/cattlebirthscre
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSize \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSizeF \
 		../../../Qt/6.1.1/mingw81_64/include/QtGui/QTransform \
+		entity/cattleregisterscreen.h \
+		entity/cattlemanagementscreen.h \
 		entity/homescreen.h \
 		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMainWindow \
 		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmainwindow.h \
@@ -1596,7 +1645,29 @@ release/cattlebirthscreen.o: entity/cattlebirthscreen.cpp entity/cattlebirthscre
 		includes/farm.h \
 		includes/cattle.h \
 		includes/transaction.h \
-		ui_cattlebirthscreen.h
+		ui_cattlebirthscreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/QVariant \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qlocale.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qpicture.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextdocument.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QLineEdit \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qlineedit.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextcursor.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextformat.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qpen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextoption.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\cattlebirthscreen.o entity\cattlebirthscreen.cpp
 
 release/cattlebuyscreen.o: entity/cattlebuyscreen.cpp entity/cattlebuyscreen.h \
@@ -1727,7 +1798,39 @@ release/cattlebuyscreen.o: entity/cattlebuyscreen.cpp entity/cattlebuyscreen.h \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSize \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSizeF \
 		../../../Qt/6.1.1/mingw81_64/include/QtGui/QTransform \
-		ui_cattlebuyscreen.h
+		entity/cattleregisterscreen.h \
+		entity/cattlemanagementscreen.h \
+		entity/homescreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMainWindow \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qicon.h \
+		includes/farm.h \
+		includes/cattle.h \
+		includes/transaction.h \
+		ui_cattlebuyscreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/QVariant \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qlocale.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qpicture.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextdocument.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QLineEdit \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qlineedit.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextcursor.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextformat.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qpen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextoption.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\cattlebuyscreen.o entity\cattlebuyscreen.cpp
 
 release/cattlemanagementscreen.o: entity/cattlemanagementscreen.cpp entity/cattlemanagementscreen.h \
@@ -1868,7 +1971,23 @@ release/cattlemanagementscreen.o: entity/cattlemanagementscreen.cpp entity/cattl
 		includes/transaction.h \
 		entity/cattleregisterscreen.h \
 		entity/cattleremovescreen.h \
-		ui_cattlemanagementscreen.h
+		ui_cattlemanagementscreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/QVariant \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qlocale.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qpicture.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextdocument.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\cattlemanagementscreen.o entity\cattlemanagementscreen.cpp
 
 release/cattleregisterscreen.o: entity/cattleregisterscreen.cpp entity/cattleregisterscreen.h \
@@ -2010,7 +2129,23 @@ release/cattleregisterscreen.o: entity/cattleregisterscreen.cpp entity/cattlereg
 		includes/transaction.h \
 		entity/cattlebuyscreen.h \
 		entity/cattlebirthscreen.h \
-		ui_cattleregisterscreen.h
+		ui_cattleregisterscreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/QVariant \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qlocale.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qpicture.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextdocument.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\cattleregisterscreen.o entity\cattleregisterscreen.cpp
 
 release/cattleremovescreen.o: entity/cattleremovescreen.cpp entity/cattleremovescreen.h \
@@ -2141,6 +2276,15 @@ release/cattleremovescreen.o: entity/cattleremovescreen.cpp entity/cattleremoves
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSize \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSizeF \
 		../../../Qt/6.1.1/mingw81_64/include/QtGui/QTransform \
+		entity/cattlemanagementscreen.h \
+		entity/homescreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMainWindow \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qicon.h \
+		includes/farm.h \
+		includes/cattle.h \
+		includes/transaction.h \
 		ui_cattleremovescreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\cattleremovescreen.o entity\cattleremovescreen.cpp
 
@@ -2272,9 +2416,33 @@ release/financialmanagementscreen.o: entity/financialmanagementscreen.cpp entity
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSize \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSizeF \
 		../../../Qt/6.1.1/mingw81_64/include/QtGui/QTransform \
+		entity/homescreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMainWindow \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qicon.h \
+		includes/farm.h \
+		includes/cattle.h \
+		includes/transaction.h \
 		entity/financialrecordscreen.h \
 		entity/financialremovescreen.h \
-		ui_financialmanagementscreen.h
+		ui_financialmanagementscreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/QVariant \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qlocale.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qpicture.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextdocument.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\financialmanagementscreen.o entity\financialmanagementscreen.cpp
 
 release/financialrecordscreen.o: entity/financialrecordscreen.cpp entity/financialrecordscreen.h \
@@ -2405,7 +2573,41 @@ release/financialrecordscreen.o: entity/financialrecordscreen.cpp entity/financi
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSize \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSizeF \
 		../../../Qt/6.1.1/mingw81_64/include/QtGui/QTransform \
-		ui_financialrecordscreen.h
+		entity/financialmanagementscreen.h \
+		entity/homescreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMainWindow \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qicon.h \
+		includes/farm.h \
+		includes/cattle.h \
+		includes/transaction.h \
+		ui_financialrecordscreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/QVariant \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qlocale.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qpicture.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextdocument.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QLineEdit \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qlineedit.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextcursor.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextformat.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qpen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextoption.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QTextEdit \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qtextedit.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qabstractscrollarea.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\financialrecordscreen.o entity\financialrecordscreen.cpp
 
 release/financialremovescreen.o: entity/financialremovescreen.cpp entity/financialremovescreen.h \
@@ -2536,6 +2738,15 @@ release/financialremovescreen.o: entity/financialremovescreen.cpp entity/financi
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSize \
 		../../../Qt/6.1.1/mingw81_64/include/QtCore/QSizeF \
 		../../../Qt/6.1.1/mingw81_64/include/QtGui/QTransform \
+		entity/financialmanagementscreen.h \
+		entity/homescreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMainWindow \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmainwindow.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qicon.h \
+		includes/farm.h \
+		includes/cattle.h \
+		includes/transaction.h \
 		ui_financialremovescreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\financialremovescreen.o entity\financialremovescreen.cpp
 
@@ -2676,7 +2887,30 @@ release/homescreen.o: entity/homescreen.cpp entity/homescreen.h \
 		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QDialog \
 		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qdialog.h \
 		entity/financialmanagementscreen.h \
-		ui_homescreen.h
+		ui_homescreen.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/QVariant \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QApplication \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qeventloop.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qguiapplication.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtCore/qlocale.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qpicture.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qtextdocument.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QMenuBar \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmenubar.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qmenu.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtGui/qaction.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QStatusBar \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/qstatusbar.h \
+		../../../Qt/6.1.1/mingw81_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\homescreen.o entity\homescreen.cpp
 
 release/cattleImpl.o: lib/cattleImpl.cpp includes/cattleImpl.h \

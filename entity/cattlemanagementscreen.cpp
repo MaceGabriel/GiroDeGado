@@ -28,14 +28,6 @@ void CattleManagementScreen::on_backButton_clicked()
 void CattleManagementScreen::on_registerButton_clicked()
 {
     CattleRegisterScreen* cattleRegister = new CattleRegisterScreen(nullptr, this, getFarm());
-
-    // TESTE
-    if(farm->beginCattleContainer() != farm->endCattleContainer()){
-        auto it = farm->beginCattleContainer();
-        std::cout << "Breed: " << (*it)->getBreed() << std::endl;
-    }
-    // TESTE
-
     this->hide();
     cattleRegister->show();
 }
@@ -55,7 +47,7 @@ void CattleManagementScreen::on_updateButton_clicked()
 
 void CattleManagementScreen::on_removeButton_clicked()
 {
-    CattleRemoveScreen* remove = new CattleRemoveScreen(nullptr, this);
+    CattleRemoveScreen* remove = new CattleRemoveScreen(nullptr, this, getFarm());
     this->hide();
     remove->show();
 }

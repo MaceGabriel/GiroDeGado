@@ -23,6 +23,12 @@ private slots:
 
     void on_removeButton_clicked();
 
+    void on_radioButtonDeath_clicked();
+
+    void on_okButton_clicked();
+
+    void on_radioButtonSell_clicked();
+
 private:
     Ui::CattleRemoveScreen *ui;
     QWidget* backScreen;
