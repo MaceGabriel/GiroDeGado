@@ -7,7 +7,7 @@ FinancialManagementScreen::FinancialManagementScreen(QWidget *parent, QWidget *b
     QDialog(parent),
     ui(new Ui::FinancialManagementScreen)
 {
-    setFixedSize(694, 550);
+    setFixedSize(900, 600);
     farm = f;
     this->backScreen = backScreen;
     ui->setupUi(this);

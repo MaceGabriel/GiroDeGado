@@ -7,7 +7,7 @@ CattleManagementScreen::CattleManagementScreen(QWidget* parent, QWidget* backScr
     QDialog(parent),
     ui(new Ui::CattleManagementScreen)
 {
-    setFixedSize(694, 550);
+    setFixedSize(900, 600);
     farm = f;
     this->backScreen = backScreen;
     ui->setupUi(this);

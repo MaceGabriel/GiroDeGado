@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>694</width>
-    <height>550</height>
+    <width>900</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="font">
@@ -21,7 +21,7 @@
   <widget class="QLineEdit" name="inputIdTransaction">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>160</x>
      <y>130</y>
      <width>551</width>
      <height>41</height>
@@ -29,22 +29,22 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
   </widget>
   <widget class="QLabel" name="labelIdTransaction">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>160</x>
      <y>110</y>
-     <width>91</width>
+     <width>121</width>
      <height>16</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="text">
@@ -56,13 +56,13 @@
     <rect>
      <x>20</x>
      <y>30</y>
-     <width>81</width>
+     <width>101</width>
      <height>16</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="text">
@@ -72,11 +72,16 @@
   <widget class="QPushButton" name="okButton">
    <property name="geometry">
     <rect>
-     <x>590</x>
+     <x>730</x>
      <y>130</y>
      <width>75</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Ok</string>
@@ -85,15 +90,15 @@
   <widget class="QTableWidget" name="transactionRemoveTable">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>200</x>
      <y>190</y>
      <width>571</width>
-     <height>51</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <row>
@@ -183,7 +188,7 @@
   <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>510</x>
      <y>470</y>
      <width>301</width>
      <height>51</height>
@@ -191,7 +196,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="text">
@@ -201,7 +206,7 @@
   <widget class="QPushButton" name="removeButton">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>160</x>
      <y>470</y>
      <width>301</width>
      <height>51</height>
@@ -209,7 +214,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="text">
