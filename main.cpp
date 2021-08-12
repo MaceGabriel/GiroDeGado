@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
         std::cout << "BD not connected" << std::endl;
     }
 
-    //main_unit_test();
+    main_unit_test();
 
     Farm* f = Farm::createFarm();
 
