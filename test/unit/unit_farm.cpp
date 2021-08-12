@@ -589,6 +589,87 @@ void UnitFarm::unit_farm_assingmentOperator(){
     std::cout << "OK!" << std::endl;
 }
 
+
+//Function prototype for the Farm class' method getCattle() unit test.
+void unit_farm_getCattle(){
+    std::cout << "TEST 36 - Farm class' getCattle() method" << std::endl;
+
+    Farm* farm = Farm::createFarm();
+    Cattle* cattle1 = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle2 = farm->createCattle("006", "Brangus", "02/04/1990", "02/01/1990", "004", "005", 255.0, 2500.0);
+
+    Cattle* c = farm->getCattle("003");
+
+    // Making assertion to verify if the correct cattle was returned from the search
+    assert(c->getEarring() == "003");
+    assert(c->getBreed() == "Angus");
+    assert(c->getAcquisitionDate() == "01/04/1990");
+    assert(c->getBirthDate() == "01/01/1990");
+    assert(c->getFather() == "001");
+    assert(c->getMother() == "002");
+    assert(fabs(c->getWeight() - 250.0) < 0.0001);
+    assert(fabs(c->getValue() - 2400.0) < 0.0001);
+
+    delete farm;
+
+    std::cout << "OK!" << std::endl;
+}
+
+
+//Function prototype for the Farm class' method getTransaction() unit test.
+void unit_farm_getTransaction(){
+    std::cout << "TEST 37 - Farm class' getTransaction() method" << std::endl;
+
+    Farm* farm = Farm::createFarm();
+    Transaction* transaction1 = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Transaction* transaction2 = farm->createTransaction(21, -2100.0, "Compra de Gado", "03/02/1990", "040");
+
+    Transaction* t = farm->getTransaction(20);
+
+    // Making assertion to verify if the correct transaction was returned from the search
+    assert(t->getId() == 20);
+    assert(fabs(t->getValue() - 2000.0) < 0.0001);
+    assert(t->getDescription() == "Venda de Gado");
+    assert(t->getDate() == "02/02/1990");
+    assert(t->getCattleEarring() == "039");
+
+    delete farm;
+
+    std::cout << "OK!" << std::endl;
+}
+
+
+//Function prototype for the Farm class' method getLastIdAvailable() unit test.
+void unit_farm_getLastIdAvailable(){
+    std::cout << "TEST 38 - Farm class' getLastIdAvailable() method" << std::endl;
+
+    Farm* farm = Farm::createFarm();
+    int id = farm->getLastIdAvailable();
+    assert(id == 1);
+
+    Transaction* transaction1 = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    id = farm->getLastIdAvailable();
+    assert(id == 21);
+
+    Transaction* transaction2 = farm->createTransaction(21, -2100.0, "Compra de Gado", "03/02/1990", "040");
+    id = farm->getLastIdAvailable();
+    assert(id == 22);
+
+    farm->remove(transaction2);
+    id = farm->getLastIdAvailable();
+    assert(id == 21);
+
+    farm->remove(transaction1);
+    id = farm->getLastIdAvailable();
+    assert(id == 1);
+
+    delete transaction1;
+    delete transaction2;
+    delete farm;
+
+    std::cout << "OK!" << std::endl;
+}
+
 // Function to run all the Farm class' unit tests.
 void run_unit_tests_farm(){
 
@@ -728,6 +809,18 @@ void run_unit_tests_farm(){
     assert(numBodyCreated == numBodyDeleted);
 
     unit_farm->unit_farm_assingmentOperator();
+    assert(numHandleCreated == numHandleDeleted);
+    assert(numBodyCreated == numBodyDeleted);
+
+    unit_farm_getCattle();
+    assert(numHandleCreated == numHandleDeleted);
+    assert(numBodyCreated == numBodyDeleted);
+
+    unit_farm_getTransaction();
+    assert(numHandleCreated == numHandleDeleted);
+    assert(numBodyCreated == numBodyDeleted);
+
+    unit_farm_getLastIdAvailable();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 

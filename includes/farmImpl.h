@@ -306,6 +306,12 @@ class FarmBody : public Body{
         */
         Transaction* getTransaction(int id);
 
+        /*!
+            Returns the last available id on the transaction container.
+            \return int - the last available id on the transaction container.
+        */
+        int getLastIdAvailable();
+
 };
 
 //! Class FarmHandle
@@ -659,6 +665,14 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
         */
         Transaction* getTransaction(int id){
             return pImpl_->getTransaction(id);
+        }
+
+        /*!
+            Calls the getLastIdAvailable() method implemented in the FarmBody Class.
+            \return int - the last available id on the transaction container.
+        */
+        int getLastIdAvailable(){
+            return pImpl_->getLastIdAvailable();
         }
 
 };

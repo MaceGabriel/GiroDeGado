@@ -190,6 +190,21 @@ void unit_farm_getCattleEarring();
 void unit_farm_setCattleEarring();
 
 /*!
+  Function prototype for the Farm class' method getCattle() unit test.
+*/
+void unit_farm_getCattle();
+
+/*!
+  Function prototype for the Farm class' method getTransaction() unit test.
+*/
+void unit_farm_getTransaction();
+
+/*!
+  Function prototype for the Farm class' method getLastIdAvailable() unit test.
+*/
+void unit_farm_getLastIdAvailable();
+
+/*!
   Function prototype for the function that runs all the unit tests of the Farm class.
 */
 void run_unit_tests_farm();

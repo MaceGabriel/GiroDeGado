@@ -10,13 +10,7 @@ FinancialRecordScreen::FinancialRecordScreen(QWidget *parent, QWidget* backScree
     this->backScreen = backScreen;
     ui->setupUi(this);
 
-    int id = 1;
-
-    if(farm->beginTransactionContainer() != farm->endTransactionContainer()){
-        for(auto it = farm->beginTransactionContainer(); it < farm->endTransactionContainer(); ++it){
-            id++;
-        }
-    }
+    int id = farm->getLastIdAvailable();
 
     QString id_str = QString::number(id);
     ui->labelIdTransaction->setText("#" + id_str);
@@ -36,13 +30,7 @@ void FinancialRecordScreen::on_backButton_clicked()
 
 void FinancialRecordScreen::on_registerButton_clicked()
 {
-    int id = 1;
-
-    if(farm->beginTransactionContainer() != farm->endTransactionContainer()){
-        for(auto it = farm->beginTransactionContainer(); it < farm->endTransactionContainer(); ++it){
-            id++;
-        }
-    }
+    int id = farm->getLastIdAvailable();
 
     QString price = ui->inputPrice->text();
     double price_2 = price.toDouble();
@@ -56,11 +44,26 @@ void FinancialRecordScreen::on_registerButton_clicked()
     QString earring = ui->inputEarring->text();
     std::string earring_2 = earring.toLocal8Bit().constData();
 
-    Farm* f = getFarm();
-    f->createTransaction(id, price_2, description_2, date_2, earring_2);
+    if(price_2 != 0){
+        Farm* f = getFarm();
+        f->createTransaction(id, price_2, description_2, date_2, earring_2);
 
-    backScreen->show();
-    this->close();
+        backScreen->show();
+        this->close();
+    }
+    else{
+        ui->inputPrice->setText("0.0");
+
+        if(description_2 == "")
+            ui->inputDescription->setText("A DEFINIR");
+
+        if(date_2 == "")
+            ui->inputDate->setText("A DEFINIR");
+
+        if(earring_2 == "")
+            ui->inputEarring->setText("A DEFINIR");
+    }
+
 }
 
 Farm* FinancialRecordScreen::getFarm()

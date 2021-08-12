@@ -271,6 +271,12 @@ class Farm{
         */
         virtual Transaction* getTransaction(int id) = 0;
 
+        /*!
+            Returns the last available id on the transaction container.
+            \return int - the last available id on the transaction container.
+        */
+        virtual int getLastIdAvailable() = 0;
+
     protected:
         /*!
            Adds a cattle's pointer to the the cattle container.

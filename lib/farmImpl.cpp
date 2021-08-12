@@ -226,3 +226,17 @@ Transaction* FarmBody::getTransaction(int id){
     
     return NULL;
 }
+
+int FarmBody::getLastIdAvailable(){
+    int id = 1;
+
+    if(beginTransactionContainer() != endTransactionContainer()){
+        for(auto it = beginTransactionContainer(); it < endTransactionContainer(); ++it){
+            if((*it)->getId() >= id){
+                id = (*it)->getId() + 1;
+            }
+        }
+    }
+
+    return id;
+}

@@ -79,21 +79,6 @@
      <string>Venda</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="inputPrice">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>400</y>
-      <width>301</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-   </widget>
    <widget class="QLabel" name="labelPrice">
     <property name="geometry">
      <rect>
@@ -319,6 +304,24 @@
      <string>Ok</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="inputPrice">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>390</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QPushButton" name="removeButton">
    <property name="geometry">
@@ -358,38 +361,5 @@
   </widget>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>radioButtonSell</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>inputPrice</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>67</x>
-     <y>178</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>76</x>
-     <y>300</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButtonSell</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>labelPrice</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>104</x>
-     <y>179</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>62</x>
-     <y>277</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

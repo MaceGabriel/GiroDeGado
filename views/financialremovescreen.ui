@@ -90,10 +90,10 @@
   <widget class="QTableWidget" name="transactionRemoveTable">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>190</x>
      <y>190</y>
-     <width>571</width>
-     <height>71</height>
+     <width>591</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">

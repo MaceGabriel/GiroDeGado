@@ -43,11 +43,31 @@ void CattleBuyScreen::on_registerButton_clicked()
     QString weight = ui->inputWeight->text();
     double weight_2 = weight.toDouble();
 
-    Farm* f = getFarm();
-    f->createCattle(earring_2, breed_2, dateA_2, dateB_2, "COMPRADO", "COMPRADO", weight_2, price_2);
+    if(earring != "" && earring != "INVALIDO"){
+        Farm* f = getFarm();
+        f->createCattle(earring_2, breed_2, dateA_2, dateB_2, "COMPRADO", "COMPRADO", weight_2, price_2);
 
-    backScreen->show();
-    this->close();
+        backScreen->show();
+        this->close();
+    }
+    else{
+        ui->inputEarring->setText("INVALIDO");
+
+        if(breed_2 == "")
+            ui->inputBreed->setText("A DEFINIR");
+
+        if(dateA_2 == "")
+            ui->inputDateA->setText("A DEFINIR");
+
+        if(dateB_2 == "")
+            ui->inputDateB->setText("A DEFINIR");
+
+        if(price == "" || price == "0")
+            ui->inputPrice->setText("0.0");
+
+        if(weight == "" || weight == "0")
+            ui->inputWeight->setText("0.0");
+    }
 }
 
 Farm* CattleBuyScreen::getFarm()
