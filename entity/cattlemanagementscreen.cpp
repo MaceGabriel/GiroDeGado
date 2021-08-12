@@ -1,7 +1,6 @@
 #include "cattlemanagementscreen.h"
 #include "cattleregisterscreen.h"
 #include "cattleremovescreen.h"
-#include "homescreen.h"
 #include "ui_cattlemanagementscreen.h"
 
 CattleManagementScreen::CattleManagementScreen(QWidget* parent, QWidget* backScreen, Farm* f) :
