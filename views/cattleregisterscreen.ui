@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>694</width>
-    <height>550</height>
+    <width>900</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="buyButton">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>180</x>
      <y>145</y>
      <width>531</width>
      <height>71</height>
@@ -24,7 +24,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="text">
@@ -34,7 +34,7 @@
   <widget class="QPushButton" name="birthButton">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>180</x>
      <y>240</y>
      <width>531</width>
      <height>71</height>
@@ -42,7 +42,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="text">
@@ -60,7 +60,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="text">
@@ -70,7 +70,7 @@
   <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>180</x>
      <y>340</y>
      <width>531</width>
      <height>71</height>
@@ -78,7 +78,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="text">

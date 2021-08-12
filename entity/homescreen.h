@@ -2,6 +2,8 @@
 #define HOMESCREEN_H
 
 #include <QMainWindow>
+#include <string>
+#include "../includes/farm.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class HomeScreen; }
@@ -12,8 +14,10 @@ class HomeScreen : public QMainWindow
     Q_OBJECT
 
 public:
-    HomeScreen(QWidget *parent = nullptr);
+    HomeScreen(QWidget *parent = nullptr, Farm* f = nullptr);
     ~HomeScreen();
+
+    Farm* getFarm();
 
 private slots:    
 
@@ -25,5 +29,6 @@ private slots:
 
 private:
     Ui::HomeScreen *ui;
+    Farm* farm;
 };
 #endif // HOMESCREEN_H

@@ -1,9 +1,7 @@
 #include "../includes/cattleImpl.h"
 
-using namespace std;
-
-CattleBody::CattleBody(string earring, string breed, string acquisition_date, string birth_date,
-                       string father, string mother, double weight,  double value){
+CattleBody::CattleBody(std::string earring, std::string breed, std::string acquisition_date, std::string birth_date,
+                       std::string father, std::string mother, double weight,  double value){
     setEarring(earring);
     setBreed(breed);
     setAcquisitionDate(acquisition_date);
@@ -16,51 +14,51 @@ CattleBody::CattleBody(string earring, string breed, string acquisition_date, st
 
 CattleBody::~CattleBody(){}
 
-void CattleBody::setEarring(string cattle_earring){
+void CattleBody::setEarring(std::string cattle_earring){
     earring_ = cattle_earring;
 }
 
-string CattleBody::getEarring() const{
+std::string CattleBody::getEarring() const{
     return earring_;
 }
 
-void CattleBody::setBreed(string cattle_breed){
+void CattleBody::setBreed(std::string cattle_breed){
     breed_ = cattle_breed;
 }
 
-string CattleBody::getBreed() const{
+std::string CattleBody::getBreed() const{
     return breed_;
 }
 
-void CattleBody::setAcquisitionDate(string cattle_acquisition_date){
+void CattleBody::setAcquisitionDate(std::string cattle_acquisition_date){
     acquisition_date_ = cattle_acquisition_date;
 }
 
-string CattleBody::getAcquisitionDate() const{
+std::string CattleBody::getAcquisitionDate() const{
     return acquisition_date_;
 }
 
-void CattleBody::setBirthDate(string cattle_birth_date){
+void CattleBody::setBirthDate(std::string cattle_birth_date){
     birth_date_ = cattle_birth_date;
 }
 
-string CattleBody::getBirthDate() const{
+std::string CattleBody::getBirthDate() const{
     return birth_date_;
 }
 
-void CattleBody::setFather(string cattle_father){
+void CattleBody::setFather(std::string cattle_father){
     father_ = cattle_father;
 }
 
-string CattleBody::getFather() const{
+std::string CattleBody::getFather() const{
     return father_;
 }
 
-void CattleBody::setMother(string cattle_mother){
+void CattleBody::setMother(std::string cattle_mother){
     mother_ = cattle_mother;
 }
 
-string CattleBody::getMother() const{
+std::string CattleBody::getMother() const{
     return mother_;
 }
 

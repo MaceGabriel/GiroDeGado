@@ -9,15 +9,15 @@
 #endif
 
 void main_unit_test(){
-    cout << "\n========== Testes unitarios da Classe Cattle ===========\n" << endl;
+    std::cout << "\n========== Testes unitarios da Classe Cattle ===========\n" << std::endl;
     run_unit_tests_cattle();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
-    cout << "\n========== Testes unitarios da Classe Transaction ===========\n" << endl;
+    std::cout << "\n========== Testes unitarios da Classe Transaction ===========\n" << std::endl;
     run_unit_tests_transaction();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
-    cout << "\n========== Testes unitarios da Classe Farm ===========\n" << endl;
+    std::cout << "\n========== Testes unitarios da Classe Farm ===========\n" << std::endl;
     run_unit_tests_farm();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);

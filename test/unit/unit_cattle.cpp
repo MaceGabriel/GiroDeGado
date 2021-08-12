@@ -4,7 +4,7 @@ using namespace std;
 
 // Function for Cattle class's constructor unit test.
 void unit_cattle_constructor(){
-    cout << "TEST 1 - Default constructor of the Cattle class without passing parameters" << endl;
+    std::cout << "TEST 1 - Default constructor of the Cattle class without passing parameters" << std::endl;
     
     Cattle* cattle1 = new CattleHandle();
     // Making assertion to verify if the earring property was initialized with the default data.
@@ -25,9 +25,9 @@ void unit_cattle_constructor(){
     assert(cattle1->getValue() == 0.0);
 
     delete cattle1;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 
-    cout << "TEST 2 - Default constructor of the Cattle class with passing parameters" << endl; 
+    std::cout << "TEST 2 - Default constructor of the Cattle class with passing parameters" << std::endl; 
     
     Cattle* cattle2 = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     // Making assertion to verify if the earring property was initialized with the parameter specified.
@@ -48,12 +48,12 @@ void unit_cattle_constructor(){
     assert(cattle2->getValue() == 2400.0);
 
     delete cattle2;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for CattleHandle class's copy constructor unit test.
 void unit_cattle_copy_constructor(){
-    cout << "TEST 3 - Copy constructor of the CattleHandle class" << endl;
+    std::cout << "TEST 3 - Copy constructor of the CattleHandle class" << std::endl;
     
     CattleHandle* cattle1 = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     Cattle* cattle2 = new CattleHandle(*cattle1);
@@ -82,12 +82,12 @@ void unit_cattle_copy_constructor(){
 
     assert(numHandleDeleted == numBodyDeleted+1);
 
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for the Cattle class' destructor unit test.
 void unit_cattle_destructor(){
-    cout << "TEST 4 - Default destructor of the Cattle class" << endl;
+    std::cout << "TEST 4 - Default destructor of the Cattle class" << std::endl;
 
     MEMORYSTATUSEX memInfoBefore;
     memInfoBefore.dwLength = sizeof(MEMORYSTATUSEX);
@@ -107,12 +107,12 @@ void unit_cattle_destructor(){
     // is the same as before the creation of Cattle object.
     assert(virtualMemUsedBefore == virtualMemUsedAfter);
 
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method getEarring() unit test.
 void unit_cattle_getEarring(){
-    cout << "TEST 5 - Cattle class' getEarring() method" << endl;
+    std::cout << "TEST 5 - Cattle class' getEarring() method" << std::endl;
     
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
@@ -121,12 +121,12 @@ void unit_cattle_getEarring(){
     assert(cattle->getEarring() == "003");
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method setEarring() unit test.
 void unit_cattle_setEarring(){
-    cout << "TEST 6 - Cattle class' setEarring() method" << endl;
+    std::cout << "TEST 6 - Cattle class' setEarring() method" << std::endl;
     
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     cattle->setEarring("004");
@@ -135,12 +135,12 @@ void unit_cattle_setEarring(){
     assert(cattle->getEarring() == "004");
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method getBreed() unit test.
 void unit_cattle_getBreed(){
-    cout << "TEST 7 - Cattle class' getBreed() method" << endl;
+    std::cout << "TEST 7 - Cattle class' getBreed() method" << std::endl;
     
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
@@ -149,12 +149,12 @@ void unit_cattle_getBreed(){
     assert(cattle->getBreed() == "Angus");
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method setBreed() unit test.
 void unit_cattle_setBreed(){
-    cout << "TEST 8 - Cattle class' setBreed() method" << endl;
+    std::cout << "TEST 8 - Cattle class' setBreed() method" << std::endl;
     
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     cattle->setBreed("Brangus");
@@ -163,12 +163,12 @@ void unit_cattle_setBreed(){
     assert(cattle->getBreed() == "Brangus");
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method getAcquisitionDate() unit test.
 void unit_cattle_getAcquisitionDate(){
-    cout << "TEST 9 - Cattle class's getAcquisitionDate() method" << endl;
+    std::cout << "TEST 9 - Cattle class's getAcquisitionDate() method" << std::endl;
     
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
@@ -177,12 +177,12 @@ void unit_cattle_getAcquisitionDate(){
     assert(cattle->getAcquisitionDate() == "01/04/1990");
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method setAcquisitionDate() unit test.
 void unit_cattle_setAcquisitionDate(){
-    cout << "TEST 10 - Cattle class's setAcquisitionDate() method" << endl;
+    std::cout << "TEST 10 - Cattle class's setAcquisitionDate() method" << std::endl;
     
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     cattle->setAcquisitionDate("02/04/1991");
@@ -191,12 +191,12 @@ void unit_cattle_setAcquisitionDate(){
     assert(cattle->getAcquisitionDate() == "02/04/1991");
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method getBirthDate() unit test.
 void unit_cattle_getBirthDate(){
-    cout << "TEST 11 - Cattle class's getBirthDate() method" << endl;
+    std::cout << "TEST 11 - Cattle class's getBirthDate() method" << std::endl;
     
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
@@ -205,12 +205,12 @@ void unit_cattle_getBirthDate(){
     assert(cattle->getBirthDate() == "01/01/1990");
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method setBirthDate() unit test.
 void unit_cattle_setBirthDate(){
-    cout << "TEST 12 - Cattle class's setBirthDate() method" << endl;
+    std::cout << "TEST 12 - Cattle class's setBirthDate() method" << std::endl;
     
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     cattle->setBirthDate("02/01/1991");
@@ -219,12 +219,12 @@ void unit_cattle_setBirthDate(){
     assert(cattle->getBirthDate() == "02/01/1991");
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method getFather() unit test.
 void unit_cattle_getFather(){
-    cout << "TEST 13 - Cattle class's getFather() method" << endl;
+    std::cout << "TEST 13 - Cattle class's getFather() method" << std::endl;
     
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
@@ -233,12 +233,12 @@ void unit_cattle_getFather(){
     assert(cattle->getFather() == "001");
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method setFather() unit test.
 void unit_cattle_setFather(){
-    cout << "TEST 14 - Cattle class's setFather() method" << endl;
+    std::cout << "TEST 14 - Cattle class's setFather() method" << std::endl;
     
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     cattle->setFather("005");
@@ -247,12 +247,12 @@ void unit_cattle_setFather(){
     assert(cattle->getFather() == "005");
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method getMother() unit test.
 void unit_cattle_getMother(){
-    cout << "TEST 15 - Cattle class's getMother() method" << endl;
+    std::cout << "TEST 15 - Cattle class's getMother() method" << std::endl;
     
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
@@ -261,12 +261,12 @@ void unit_cattle_getMother(){
     assert(cattle->getMother() == "002");
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method setMother() unit test.
 void unit_cattle_setMother(){
-    cout << "TEST 16 - Cattle class's setMother() method" << endl;
+    std::cout << "TEST 16 - Cattle class's setMother() method" << std::endl;
     
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     cattle->setMother("005");
@@ -275,12 +275,12 @@ void unit_cattle_setMother(){
     assert(cattle->getMother() == "005");
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method getWeight() unit test.
 void unit_cattle_getWeight(){
-    cout << "TEST 17 - Cattle class's getWeight() method" << endl;
+    std::cout << "TEST 17 - Cattle class's getWeight() method" << std::endl;
 
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
@@ -289,12 +289,12 @@ void unit_cattle_getWeight(){
     assert(cattle->getWeight() == 250.0);
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method setWeight() unit test.
 void unit_cattle_setWeight(){
-    cout << "TEST 18 - Cattle class's setWeight() method" << endl;
+    std::cout << "TEST 18 - Cattle class's setWeight() method" << std::endl;
 
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     cattle->setWeight(300.0);
@@ -303,12 +303,12 @@ void unit_cattle_setWeight(){
     assert(cattle->getWeight() == 300.0);
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method getValue() unit test.
 void unit_cattle_getValue(){
-    cout << "TEST 19 - Cattle class's getValue() method" << endl;
+    std::cout << "TEST 19 - Cattle class's getValue() method" << std::endl;
 
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
@@ -317,12 +317,12 @@ void unit_cattle_getValue(){
     assert(cattle->getValue() == 2400.0);
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for Cattle class' method setValue() unit test.
 void unit_cattle_setValue(){
-    cout << "TEST 20 - Cattle class's setValue() method" << endl;
+    std::cout << "TEST 20 - Cattle class's setValue() method" << std::endl;
 
     Cattle* cattle = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     cattle->setValue(3000.0);
@@ -331,12 +331,12 @@ void unit_cattle_setValue(){
     assert(cattle->getValue() == 3000.0);
 
     delete cattle;
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function for CattleHandle class' assingment operator unit test.
 void unit_cattle_assingmentOperator(){
-    cout << "TEST 21 - CattleHandle class assignment operator" << endl;
+    std::cout << "TEST 21 - CattleHandle class assignment operator" << std::endl;
     
     CattleHandle* cattle1 = new CattleHandle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     CattleHandle* cattle2 = new CattleHandle();
@@ -362,7 +362,7 @@ void unit_cattle_assingmentOperator(){
     delete cattle1;
     delete cattle2;
 
-    cout << "OK!" << endl;
+    std::cout << "OK!" << std::endl;
 }
 
 // Function to run all the Cattle class' unit tests.

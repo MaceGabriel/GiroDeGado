@@ -1,8 +1,8 @@
 #ifndef UNIT_FARM
 #define UNIT_FARM
 
-#include <assert.h>
 #include <windows.h>
+#include <assert.h>
 #include <math.h>
 #include "../../includes/farmImpl.h"
 
@@ -188,6 +188,21 @@ void unit_farm_getCattleEarring();
   Function prototype for the Farm class' method setCattleEarring() unit test.
 */
 void unit_farm_setCattleEarring();
+
+/*!
+  Function prototype for the Farm class' method getCattle() unit test.
+*/
+void unit_farm_getCattle();
+
+/*!
+  Function prototype for the Farm class' method getTransaction() unit test.
+*/
+void unit_farm_getTransaction();
+
+/*!
+  Function prototype for the Farm class' method getLastIdAvailable() unit test.
+*/
+void unit_farm_getLastIdAvailable();
 
 /*!
   Function prototype for the function that runs all the unit tests of the Farm class.

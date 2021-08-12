@@ -1,8 +1,8 @@
 #ifndef UNIT_CATTLE
 #define UNIT_CATTLE
 
-#include <assert.h>
 #include <windows.h>
+#include <assert.h>
 #include <math.h>
 #include "../../includes/cattleImpl.h"
 

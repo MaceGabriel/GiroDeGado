@@ -1,8 +1,8 @@
 #ifndef UNIT_TRANSACTION
 #define UNIT_TRANSACTION
 
-#include <assert.h>
 #include <windows.h>
+#include <assert.h>
 #include <math.h>
 #include "../../includes/transactionImpl.h"
 

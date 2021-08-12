@@ -15,9 +15,9 @@ class TransactionBody : public Body{
     protected:
         int id_; /*!< This attribute contains the id for the TransactionBody. */
         double value_; /*!< This attribute contains the value of the TransactionBody. */
-        string description_; /*!< This attribute contains the description for the TransactionBody. */
-        string date_; /*!< This attribute contains the date for the TransactionBody. */
-        string cattle_earring_; /*!< This attribute contains the cattle's earring for the TransactionBody. */
+        std::string description_; /*!< This attribute contains the description for the TransactionBody. */
+        std::string date_; /*!< This attribute contains the date for the TransactionBody. */
+        std::string cattle_earring_; /*!< This attribute contains the cattle's earring for the TransactionBody. */
 
     private:
         // No copy allowed
@@ -44,8 +44,8 @@ class TransactionBody : public Body{
             \param cattle_earring the cattle's earring of the TransactionBody.
             \return TransactionBody - a TransactionBody Class object.
         */
-        TransactionBody(int id = 0, double value = 0.0, string description = "", string date = "",
-                        string cattle_earring = "");
+        TransactionBody(int id = 0, double value = 0.0, std::string description = "", std::string date = "",
+                        std::string cattle_earring = "");
 
         /*!
             This is the default destructor for the TransactionBody Class.
@@ -60,7 +60,7 @@ class TransactionBody : public Body{
 
         /*!
             Returns the id attribute in the Transaction Class.
-            \return string - the content id attribute.  
+            \return std::string - the content id attribute.  
         */
         int getId() const;
 
@@ -72,7 +72,7 @@ class TransactionBody : public Body{
 
         /*!
             Returns the value attribute in the Transaction Class.
-            \return string - the content value attribute.  
+            \return std::string - the content value attribute.  
         */
         double getValue() const;
         
@@ -80,37 +80,37 @@ class TransactionBody : public Body{
             Sets the description attribute in the Transaction Class.
             \param transaction_description which will be set to the current Transaction.
         */
-        void setDescription(string transaction_description);
+        void setDescription(std::string transaction_description);
 
         /*!
             Returns the description attribute in the Transaction Class.
-            \return string - the content description attribute.  
+            \return std::string - the content description attribute.  
         */
-        string getDescription() const;
+        std::string getDescription() const;
 
         /*!
             Sets the date attribute in the Transaction Class.
             \param transaction_date which will be set to the current Transaction.
         */
-        void setDate(string transaction_date);
+        void setDate(std::string transaction_date);
 
         /*!
             Returns the date attribute in the Transaction Class.
-            \return string - the content date attribute.  
+            \return std::string - the content date attribute.  
         */
-        string getDate() const;
+        std::string getDate() const;
 
         /*!
             Sets the cattle earring attribute in the Transaction Class.
             \param transaction_cattle_earring which will be set to the current Transaction.
         */
-        void setCattleEarring(string transaction_cattle_earring);
+        void setCattleEarring(std::string transaction_cattle_earring);
 
         /*!
             Returns the cattle earring attribute in the Transaction Class.
-            \return string - the content cattle earring attribute.  
+            \return std::string - the content cattle earring attribute.  
         */
-        string getCattleEarring() const;
+        std::string getCattleEarring() const;
 
 };
 
@@ -130,8 +130,8 @@ class TransactionHandle : public Handle<TransactionBody>, public Transaction{
             \param cattle_earring the cattle's earring of the TransactionHandle.
             \return TransactionHandle - a TransactionHandle Class object.
         */
-        TransactionHandle(int id = 0, double value = 0.0, string description = "", string date = "",
-                        string cattle_earring = ""){
+        TransactionHandle(int id = 0, double value = 0.0, std::string description = "", std::string date = "",
+                        std::string cattle_earring = ""){
             pImpl_->setId(id);
             pImpl_->setValue(value);
             pImpl_->setDescription(description);
@@ -154,7 +154,7 @@ class TransactionHandle : public Handle<TransactionBody>, public Transaction{
 
         /*!
             Calls the getId() method implemented in the TransactionBody Class.
-            \return string - the content id attribute.  
+            \return std::string - the content id attribute.  
         */
         int getId() const{
             return pImpl_->getId();
@@ -170,7 +170,7 @@ class TransactionHandle : public Handle<TransactionBody>, public Transaction{
 
         /*!
             Calls the getValue() method implemented in the TransactionBody Class.
-            \return string - the content value attribute.  
+            \return std::string - the content value attribute.  
         */
         double getValue() const{
             return pImpl_->getValue();
@@ -180,15 +180,15 @@ class TransactionHandle : public Handle<TransactionBody>, public Transaction{
             Calls the setDescription() method implemented in the TransactionBody Class.
             \param transaction_description which will be set to the current Transaction.
         */
-        void setDescription(string transaction_description){
+        void setDescription(std::string transaction_description){
             pImpl_->setDescription(transaction_description);
         }
 
         /*!
             Calls the getDescription() method implemented in the TransactionBody Class.
-            \return string - the content description attribute.  
+            \return std::string - the content description attribute.  
         */
-        string getDescription() const{
+        std::string getDescription() const{
             return pImpl_->getDescription();
         }
 
@@ -196,15 +196,15 @@ class TransactionHandle : public Handle<TransactionBody>, public Transaction{
             Calls the setDate() method implemented in the TransactionBody Class.
             \param transaction_date which will be set to the current Transaction.
         */
-        void setDate(string transaction_date){
+        void setDate(std::string transaction_date){
             pImpl_->setDate(transaction_date);
         }
 
         /*!
             Calls the getDate() method implemented in the TransactionBody Class.
-            \return string - the content date attribute.  
+            \return std::string - the content date attribute.  
         */
-        string getDate() const{
+        std::string getDate() const{
             return pImpl_->getDate();
         }
 
@@ -212,15 +212,15 @@ class TransactionHandle : public Handle<TransactionBody>, public Transaction{
             Calls the setCattleEarring() method implemented in the TransactionBody Class.
             \param transaction_cattle_earring which will be set to the current Transaction.
         */
-        void setCattleEarring(string transaction_cattle_earring){
+        void setCattleEarring(std::string transaction_cattle_earring){
             pImpl_->setCattleEarring(transaction_cattle_earring);
         }
 
         /*!
             Calls the getCattleEarring() method implemented in the TransactionBody Class.
-            \return string - the content cattle earring attribute.  
+            \return std::string - the content cattle earring attribute.  
         */
-        string getCattleEarring() const{
+        std::string getCattleEarring() const{
             return pImpl_->getCattleEarring();
         }
 
