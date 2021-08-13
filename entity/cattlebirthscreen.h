@@ -17,14 +17,7 @@ class CattleBirthScreen : public QDialog
     Q_OBJECT
 
 public:
-    /*!
-        This is the default constructor for the Screen CattleBirth.
-    */
     explicit CattleBirthScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, Farm* f = nullptr);
-
-    /*!
-        This is the default destructor for the Screen CattleBirth.
-    */
     ~CattleBirthScreen();
 
     /*!

@@ -33,6 +33,36 @@ class Farm{
         virtual ~Farm(){}
 
         /*!
+            Sets the query attribute in the Farm Class.
+        */
+        virtual void setQuery(QSqlQuery* query) = 0;
+
+        /*!
+            Returns the query attribute in the Farm Class.
+        */
+        virtual QSqlQuery* getQuery() const = 0;
+
+        /*!
+            Executes the exec() method of the query.
+        */
+        virtual bool queryExec(QString command) = 0;
+
+        /*!
+            Executes the next() method of the query.
+        */
+        virtual bool queryNext() = 0;
+
+        /*!
+            Executes the first() method of the query.
+        */
+        virtual bool queryFirst() = 0;
+
+        /*!
+            Executes the value(pos).toString() method of the query.
+        */
+        virtual QString queryValue(int pos) = 0;
+
+        /*!
             Creates a cattle and returns it's pointer.
             \param earring the earring of the Cattle.
             \param breed the breed of the Cattle.
@@ -50,7 +80,6 @@ class Farm{
         
         /*!
             Creates a cattle and adds it to the database.
-            \param query the query of the GiroDeGado's database.
             \param earring the earring of the Cattle.
             \param breed the breed of the Cattle.
             \param acquisition_date the acquisition date of the Cattle.
@@ -60,7 +89,7 @@ class Farm{
             \param weight the weight of the Cattle.
             \param value the value of the Cattle.
         */
-        virtual void createCattle(QSqlQuery* query = NULL, std::string earring = "", std::string breed = "", 
+        virtual void createCattle(std::string earring = "", std::string breed = "", 
                                     std::string acquisition_date = "", std::string birth_date = "",
                                     std::string father = "", std::string mother = "", double weight = 0.0,
                                     double value = 0.0) = 0;
@@ -79,14 +108,13 @@ class Farm{
         
         /*!
             Creates a transaction and adds it to the database.
-            \param query the query of the GiroDeGado's database.
             \param id the id of the Transaction.
             \param value the value of the Transaction.
             \param description the description of the Transaction.
             \param date the date of the Transaction.
             \param cattle_earring the cattle's earring of the Transaction.
         */
-        virtual void createTransaction(QSqlQuery* query = NULL, int number = 0, double value = 0.0,
+        virtual void createTransaction(int number = 0, double value = 0.0,
                                        std::string description = "", std::string date = "",
                                        std::string cattle_earring = "") = 0;
 
@@ -94,7 +122,7 @@ class Farm{
             Creates a Farm and returns it's pointer.
             \return Farm - a Farm Class object.
         */
-        static Farm* createFarm();
+        static Farm* createFarm(QSqlQuery* query = NULL);
 
         /*!        
            Removes a cattle's pointer on the cattle container.
@@ -294,7 +322,7 @@ class Farm{
             Returns the last available number on the transaction container.
             \return int - the last available number on the transaction container.
         */
-        virtual int getLastNumberAvailable(QSqlQuery* query) = 0;
+        virtual int getLastNumberAvailable() = 0;
 
     protected:
         /*!

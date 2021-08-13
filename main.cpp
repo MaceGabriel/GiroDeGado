@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
 
     main_unit_test();
 
-    Farm* f = Farm::createFarm();
+    QSqlQuery q;
+    Farm* f = Farm::createFarm(&q);
 
     QApplication a(argc, argv);
     HomeScreen w(nullptr, f);
