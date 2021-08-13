@@ -1,13 +1,12 @@
 #include "cattlebirthscreen.h"
 #include "ui_cattlebirthscreen.h"
 
-CattleBirthScreen::CattleBirthScreen(QWidget *parent, QWidget* backScreen, Farm* f, QSqlQuery* q) :
+CattleBirthScreen::CattleBirthScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
     QDialog(parent),
     ui(new Ui::CattleBirthScreen)
 {
     setFixedSize(900, 600);
     farm = f;
-    query = q;
     this->backScreen = backScreen;
     ui->setupUi(this);
 }
@@ -46,8 +45,7 @@ void CattleBirthScreen::on_registerButton_clicked()
 
     if(earring != "" && earring != "INVALIDO"){
         Farm* f = getFarm();
-        QSqlQuery* q = getQuery();
-        f->createCattle(q, earring_2, breed_2, date_2, date_2, father_2, mother_2, weight_2, 0.0);
+        f->createCattle(earring_2, breed_2, date_2, date_2, father_2, mother_2, weight_2, 0.0);
 
         backScreen->show();
         this->close();
@@ -79,7 +77,3 @@ Farm* CattleBirthScreen::getFarm()
     return farm;
 }
 
-QSqlQuery* CattleBirthScreen::getQuery()
-{
-    return query;
-}

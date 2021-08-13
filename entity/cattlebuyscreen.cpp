@@ -1,13 +1,12 @@
 #include "cattlebuyscreen.h"
 #include "ui_cattlebuyscreen.h"
 
-CattleBuyScreen::CattleBuyScreen(QWidget *parent, QWidget* backScreen, Farm* f, QSqlQuery* q) :
+CattleBuyScreen::CattleBuyScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
     QDialog(parent),
     ui(new Ui::CattleBuyScreen)
 {
     setFixedSize(900, 600);
     farm = f;
-    query = q;
     this->backScreen = backScreen;
     ui->setupUi(this);
 }
@@ -45,12 +44,11 @@ void CattleBuyScreen::on_registerButton_clicked()
 
     if(earring != "" && earring != "INVALIDO"){
         Farm* f = getFarm();
-        QSqlQuery* q = getQuery();
-        f->createCattle(q, earring_2, breed_2, dateA_2, dateB_2, "COMPRADO", "COMPRADO", weight_2, price_2);
+        f->createCattle(earring_2, breed_2, dateA_2, dateB_2, "COMPRADO", "COMPRADO", weight_2, price_2);
 
-        int number = farm->getLastNumberAvailable(query);
+        int number = farm->getLastNumberAvailable();
 
-        f->createTransaction(q, number, price_2, "Compra de Gado", dateA_2, earring_2);
+        f->createTransaction(number, price_2, "Compra de Gado", dateA_2, earring_2);
 
         backScreen->show();
         this->close();
@@ -80,7 +78,3 @@ Farm* CattleBuyScreen::getFarm()
     return farm;
 }
 
-QSqlQuery* CattleBuyScreen::getQuery()
-{
-    return query;
-}

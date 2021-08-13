@@ -18,10 +18,10 @@ int main(int argc, char *argv[])
     main_unit_test();
 
     QSqlQuery q;
-    Farm* f = Farm::createFarm();
+    Farm* f = Farm::createFarm(&q);
 
     QApplication a(argc, argv);
-    HomeScreen w(nullptr, f, &q);
+    HomeScreen w(nullptr, f);
     w.show();
     return a.exec();
 }

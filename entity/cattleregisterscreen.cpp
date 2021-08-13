@@ -3,13 +3,12 @@
 #include "cattlebirthscreen.h"
 #include "ui_cattleregisterscreen.h"
 
-CattleRegisterScreen::CattleRegisterScreen(QWidget *parent, QWidget* backScreen, Farm* f, QSqlQuery* q) :
+CattleRegisterScreen::CattleRegisterScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
     QDialog(parent),
     ui(new Ui::CattleRegisterScreen)
 {
     setFixedSize(900, 600);
     farm = f;
-    query = q;
     this->backScreen = backScreen;
     ui->setupUi(this);
 }
@@ -21,7 +20,7 @@ CattleRegisterScreen::~CattleRegisterScreen()
 
 void CattleRegisterScreen::on_buyButton_clicked()
 {
-    CattleBuyScreen* buy = new CattleBuyScreen(nullptr, this, getFarm(), getQuery());
+    CattleBuyScreen* buy = new CattleBuyScreen(nullptr, this, getFarm());
     this->hide();
     buy->show();
 }
@@ -36,7 +35,7 @@ void CattleRegisterScreen::on_backButton_clicked()
 
 void CattleRegisterScreen::on_birthButton_clicked()
 {
-    CattleBirthScreen* birth = new CattleBirthScreen(nullptr, this, getFarm(), getQuery());
+    CattleBirthScreen* birth = new CattleBirthScreen(nullptr, this, getFarm());
     this->hide();
     birth->show();
 }
@@ -46,7 +45,3 @@ Farm* CattleRegisterScreen::getFarm()
     return farm;
 }
 
-QSqlQuery* CattleRegisterScreen::getQuery()
-{
-    return query;
-}

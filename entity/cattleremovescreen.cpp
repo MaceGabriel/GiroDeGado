@@ -1,13 +1,12 @@
 #include "cattleremovescreen.h"
 #include "ui_cattleremovescreen.h"
 
-CattleRemoveScreen::CattleRemoveScreen(QWidget *parent, QWidget* backScreen, Farm* f, QSqlQuery* q) :
+CattleRemoveScreen::CattleRemoveScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
     QDialog(parent),
     ui(new Ui::CattleRemoveScreen)
 {
     setFixedSize(900, 600);
     farm = f;
-    query = q;
     this->backScreen = backScreen;
     ui->setupUi(this);
 }
@@ -28,26 +27,24 @@ void CattleRemoveScreen::on_backButton_clicked()
 void CattleRemoveScreen::on_okButton_clicked()
 {
     QString cattle_earring = ui->inputCattleEarring->text();
-
-    QSqlQuery* q = getQuery();
-
+    Farm* f = getFarm();
     auto model = ui->cattleRemoveTable->model();
 
-    if(q->exec("select * from cattle where earring='"+cattle_earring+"'")){
+    if(f->queryExec("select * from cattle where earring='"+cattle_earring+"'")){
         int count = 0;
-        while(q->next()){
+        while(f->queryNext()){
             count++;
         }
         if(count > 0){
-            q->first();
-            QString earring = q->value(1).toString();
-            QString breed = q->value(2).toString();
-            QString acquisition_date = q->value(3).toString();
-            QString birth_date = q->value(4).toString();
-            QString father = q->value(5).toString();
-            QString mother = q->value(6).toString();
-            QString weight = q->value(7).toString();
-            QString value = q->value(8).toString();
+            f->queryFirst();
+            QString earring = f->queryValue(1);
+            QString breed = f->queryValue(2);
+            QString acquisition_date = f->queryValue(3);
+            QString birth_date = f->queryValue(4);
+            QString father = f->queryValue(5);
+            QString mother = f->queryValue(6);
+            QString weight = f->queryValue(7);
+            QString value = f->queryValue(8);
 
             model->setData(model->index(0,0),earring);
             model->setData(model->index(0,1),breed);
@@ -80,17 +77,16 @@ void CattleRemoveScreen::on_removeButton_clicked()
         std::string earring_2 = earring.toUtf8().constData();
 
         Farm* f = getFarm();
-        QSqlQuery* q = getQuery();
-        q->exec("delete from cattle where earring='"+cattle_earring+"'");
+        f->queryExec("delete from cattle where earring='"+cattle_earring+"'");
 
         if(ui->radioButtonSell->isChecked()){
-            int number = farm->getLastNumberAvailable(query);
+            int number = farm->getLastNumberAvailable();
 
             QString price = ui->inputPrice->text();
             if(price != ""){
                 double price_2 = price.toDouble();
 
-                f->createTransaction(q, number, price_2, "Venda de Gado", "A DEFINIR", earring_2);
+                f->createTransaction(number, price_2, "Venda de Gado", "A DEFINIR", earring_2);
             }
         }
 
@@ -116,10 +112,5 @@ void CattleRemoveScreen::on_radioButtonSell_clicked()
     ui->inputPrice->setVisible(true);
     ui->labelPrice->setVisible(true);
     ui->inputPrice->setText("0");
-}
-
-QSqlQuery* CattleRemoveScreen::getQuery()
-{
-    return query;
 }
 
