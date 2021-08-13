@@ -79,4 +79,3 @@ Farm* FinancialRemoveScreen::getFarm()
 {
     return farm;
 }
-

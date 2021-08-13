@@ -16,13 +16,11 @@ CattleRemoveScreen::~CattleRemoveScreen()
     delete ui;
 }
 
-
 void CattleRemoveScreen::on_backButton_clicked()
 {
     backScreen->show();
     this->close();
 }
-
 
 void CattleRemoveScreen::on_okButton_clicked()
 {
@@ -70,6 +68,7 @@ void CattleRemoveScreen::on_okButton_clicked()
 
 void CattleRemoveScreen::on_removeButton_clicked()
 {
+<<<<<<< HEAD
     QString cattle_earring = ui->inputCattleEarring->text();
     auto earring = ui->cattleRemoveTable->item(0,0)->text();
 
@@ -93,6 +92,9 @@ void CattleRemoveScreen::on_removeButton_clicked()
         backScreen->show();
         this->close();
     }
+=======
+
+>>>>>>> develop
 }
 
 Farm* CattleRemoveScreen::getFarm()
@@ -113,4 +115,7 @@ void CattleRemoveScreen::on_radioButtonSell_clicked()
     ui->labelPrice->setVisible(true);
     ui->inputPrice->setText("0");
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop

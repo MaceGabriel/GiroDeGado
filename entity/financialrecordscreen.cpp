@@ -27,7 +27,6 @@ void FinancialRecordScreen::on_backButton_clicked()
     this->close();
 }
 
-
 void FinancialRecordScreen::on_registerButton_clicked()
 {
     int number = farm->getLastNumberAvailable();
@@ -69,4 +68,3 @@ Farm* FinancialRecordScreen::getFarm()
 {
     return farm;
 }
-

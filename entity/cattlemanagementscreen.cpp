@@ -31,18 +31,15 @@ void CattleManagementScreen::on_registerButton_clicked()
     cattleRegister->show();
 }
 
-
 void CattleManagementScreen::on_queryButton_clicked()
 {
 
 }
 
-
 void CattleManagementScreen::on_updateButton_clicked()
 {
 
 }
-
 
 void CattleManagementScreen::on_removeButton_clicked()
 {

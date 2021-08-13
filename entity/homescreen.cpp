@@ -24,7 +24,6 @@ void HomeScreen::on_cattleButton_clicked()
     cattleManagement->exec();
 }
 
-
 void HomeScreen::on_financialButton_clicked()
 {
     FinancialManagementScreen* financialManagement = new FinancialManagementScreen(nullptr, this, getFarm());
@@ -32,15 +31,12 @@ void HomeScreen::on_financialButton_clicked()
     financialManagement->exec();
 }
 
-
 void HomeScreen::on_exitButton_clicked()
 {
     this->close();
 }
 
-
 Farm* HomeScreen::getFarm()
 {
     return farm;
 }
-

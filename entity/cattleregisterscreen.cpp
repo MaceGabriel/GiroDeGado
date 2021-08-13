@@ -25,13 +25,11 @@ void CattleRegisterScreen::on_buyButton_clicked()
     buy->show();
 }
 
-
 void CattleRegisterScreen::on_backButton_clicked()
 {
     backScreen->show();
     this->close();
 }
-
 
 void CattleRegisterScreen::on_birthButton_clicked()
 {
@@ -44,4 +42,3 @@ Farm* CattleRegisterScreen::getFarm()
 {
     return farm;
 }
-

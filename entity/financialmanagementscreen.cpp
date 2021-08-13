@@ -24,7 +24,6 @@ void FinancialManagementScreen::on_backButton_clicked()
     this->close();
 }
 
-
 void FinancialManagementScreen::on_registerButton_clicked()
 {
     FinancialRecordScreen* record = new FinancialRecordScreen(nullptr, this, getFarm());
@@ -32,12 +31,10 @@ void FinancialManagementScreen::on_registerButton_clicked()
     record->show();
 }
 
-
 void FinancialManagementScreen::on_queryButton_clicked()
 {
 
 }
-
 
 void FinancialManagementScreen::on_removeButton_clicked()
 {
@@ -45,7 +42,6 @@ void FinancialManagementScreen::on_removeButton_clicked()
     this->hide();
     remove->show();
 }
-
 
 void FinancialManagementScreen::on_reportButton_clicked()
 {
@@ -56,4 +52,3 @@ Farm* FinancialManagementScreen::getFarm()
 {
     return farm;
 }
-

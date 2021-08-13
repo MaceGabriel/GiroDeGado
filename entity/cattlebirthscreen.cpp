@@ -22,7 +22,6 @@ void CattleBirthScreen::on_backButton_clicked()
     this->close();
 }
 
-
 void CattleBirthScreen::on_registerButton_clicked()
 {
     QString earring = ui->inputEarring->text();
@@ -71,9 +70,11 @@ void CattleBirthScreen::on_registerButton_clicked()
 
 }
 
-
 Farm* CattleBirthScreen::getFarm()
 {
     return farm;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
