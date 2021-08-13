@@ -24,6 +24,8 @@ void CattleBuyScreen::on_backButton_clicked()
 
 void CattleBuyScreen::on_registerButton_clicked()
 {
+    QString earring = ui->inputEarring->text();
+    std::string earring_2 = earring.toLocal8Bit().constData();
 
     QString breed = ui->inputBreed->text();
     std::string breed_2 = breed.toLocal8Bit().constData();
@@ -75,7 +77,3 @@ Farm* CattleBuyScreen::getFarm()
 {
     return farm;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> develop

@@ -59,15 +59,9 @@ private slots:
     void on_radioButtonSell_clicked();
 
 private:
-<<<<<<< HEAD
-    Ui::CattleRemoveScreen *ui;
-    QWidget* backScreen;
-    Farm* farm;
-=======
     Ui::CattleRemoveScreen *ui; /*!< This attribute contains the ui for the CattleRemove. */
     QWidget* backScreen; /*!< This attribute contains the reference of the back screen. */
     Farm* farm; /*!< This attribute contains the the Farm. */
->>>>>>> develop
 };
 
 #endif // CATTLEREMOVESCREEN_H

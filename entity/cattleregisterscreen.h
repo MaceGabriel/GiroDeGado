@@ -49,15 +49,9 @@ private slots:
     void on_birthButton_clicked();
 
 private:
-<<<<<<< HEAD
-    Ui::CattleRegisterScreen *ui;
-    QWidget* backScreen;
-    Farm* farm;
-=======
     Ui::CattleRegisterScreen *ui; /*!< This attribute contains the ui for the CattleRegister. */
     QWidget* backScreen; /*!< This attribute contains the reference of the back screen. */
     Farm* farm; /*!< This attribute contains the the Farm. */
->>>>>>> develop
 };
 
 #endif // CATTLEREGISTERSCREEN_H

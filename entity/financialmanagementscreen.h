@@ -59,15 +59,9 @@ private slots:
     void on_reportButton_clicked();
 
 private:
-<<<<<<< HEAD
-    Ui::FinancialManagementScreen *ui;
-    QWidget* backScreen;
-    Farm* farm;
-=======
     Ui::FinancialManagementScreen *ui; /*!< This attribute contains the ui for the FinancialManagement. */
     QWidget* backScreen; /*!< This attribute contains the reference of the back screen. */
     Farm* farm; /*!< This attribute contains the the Farm. */
->>>>>>> develop
 };
 
 #endif // FINANCIALMANAGEMENTSCREEN_H

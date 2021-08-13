@@ -74,7 +74,3 @@ Farm* CattleBirthScreen::getFarm()
 {
     return farm;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> develop
