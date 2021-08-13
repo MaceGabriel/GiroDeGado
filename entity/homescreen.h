@@ -5,6 +5,10 @@
 #include <string>
 #include "../includes/farm.h"
 
+//! Screen Home
+/**
+* This screen represents the program home.
+*/
 QT_BEGIN_NAMESPACE
 namespace Ui { class HomeScreen; }
 QT_END_NAMESPACE
@@ -14,23 +18,36 @@ class HomeScreen : public QMainWindow
     Q_OBJECT
 
 public:
-    HomeScreen(QWidget *parent = nullptr, Farm* f = nullptr, QSqlQuery* query = nullptr);
+    HomeScreen(QWidget *parent = nullptr, Farm* f = nullptr);
+
+    /*!
+        This is the default destructor for the Screen Home.
+    */
     ~HomeScreen();
 
+    /*!
+        Returns the Farm.
+    */
     Farm* getFarm();
-    QSqlQuery* getQuery();
 
 private slots:    
-
+    /*!
+        Function that redirects to the cattle management screen.
+    */
     void on_cattleButton_clicked();
 
+    /*!
+        Function that redirects to the finance management screen.
+    */
     void on_financialButton_clicked();
 
+    /*!
+        Function that close the program.
+    */
     void on_exitButton_clicked();
 
 private:
-    Ui::HomeScreen *ui;
-    Farm* farm;
-    QSqlQuery* query;
+    Ui::HomeScreen *ui; /*!< This attribute contains the ui for the Home. */
+    Farm* farm; /*!< This attribute contains the the Farm. */
 };
 #endif // HOMESCREEN_H
