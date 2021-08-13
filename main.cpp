@@ -8,23 +8,20 @@
 int main(int argc, char *argv[])
 {   
     QSqlDatabase bancoDeDados = QSqlDatabase::addDatabase("QSQLITE");
-    //Mudar diretório pelo o de sua máquina. Não esqueça de inverter as barras.
+
     //QString path = "C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/GiroDeGado/bd_giro.db"; //MACE
-    QString path = "C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/bd_giro.db"; //MARCUS
+    //QString path = "C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/bd_giro.db"; //MARCUS
+    QString path = "C:/Programas/git/GiroDeGado/bd_giro.db"; //CARLOS
     bancoDeDados.setDatabaseName(path);
+    bancoDeDados.open();
 
-    if(bancoDeDados.open()){
-        std::cout << "BD connected" << std::endl;
-    } else {
-        std::cout << "BD not connected" << std::endl;
-    }
+    main_unit_test();
 
-    //main_unit_test();
-
+    QSqlQuery q;
     Farm* f = Farm::createFarm();
 
     QApplication a(argc, argv);
-    HomeScreen w(nullptr, f);
+    HomeScreen w(nullptr, f, &q);
     w.show();
     return a.exec();
 }

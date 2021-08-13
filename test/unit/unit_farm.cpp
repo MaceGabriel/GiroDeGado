@@ -8,11 +8,11 @@ void unit_farm_constructor(){
 
     Farm* farm = Farm::createFarm();
 
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     vector<Cattle*> cattleVector;
     cattleVector.push_back(cattle);
 
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     vector<Transaction*> transactionVector;
     transactionVector.push_back(transaction); 
    
@@ -26,7 +26,7 @@ void unit_farm_constructor(){
     counter = 0;    
     for (auto t = farm->beginTransactionContainer(); t != farm->endTransactionContainer(); ++t){
         // Making assertion to verify if the transactions were added to the transaction container property.
-        assert((*t)->getId() == transactionVector[counter]->getId());
+        assert((*t)->getNumber() == transactionVector[counter]->getNumber());
         counter++;
     }
 
@@ -57,7 +57,7 @@ void UnitFarm::unit_farm_copy_constructor(){
     auto t1 = farm1->beginTransactionContainer();
     for (auto t2 = farm2->beginTransactionContainer(); t2 != farm2->endTransactionContainer(); ++t2){
         // Making assertion to verify if the transactions were added to the transaction container property.
-        assert((*t1)->getId() == (*t2)->getId());
+        assert((*t1)->getNumber() == (*t2)->getNumber());
         t1++;
     }
 
@@ -82,8 +82,8 @@ void unit_farm_destructor(){
     DWORDLONG virtualMemUsedBefore = memInfoBefore.ullTotalPageFile - memInfoBefore.ullAvailPageFile;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
     delete farm;
 
@@ -120,7 +120,7 @@ void unit_farm_removeCattle(){
     std::cout << "TEST 6 - Farm class' removeCattle() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
     farm->remove(cattle);
     
@@ -142,7 +142,7 @@ void UnitFarm::unit_farm_addTransaction(){
     farm->add(transaction);
     
     // Making assertion to verify if the transaction has been added to the transaction container property.
-    assert((*(farm->beginTransactionContainer()))->getId() == transaction->getId());
+    assert((*(farm->beginTransactionContainer()))->getNumber() == transaction->getNumber());
 
     delete farm;
     std::cout << "OK!" << std::endl;
@@ -153,7 +153,7 @@ void unit_farm_removeTransaction(){
     std::cout << "TEST 8 - Farm class' removeTransaction() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     
     farm->remove(transaction);
 
@@ -170,7 +170,7 @@ void unit_farm_getEarring(){
     std::cout << "TEST 9 - Farm class' getEarring() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
     // Making assertion to verify if the method returns the added cattle's earring and if it's
     // equal to the parameter previously passed. 
@@ -185,7 +185,7 @@ void unit_farm_setEarring(){
     std::cout << "TEST 10 - Farm class' setEarring() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     farm->setEarring(cattle, "004");
 
     // Making assertion to verify if the data of the added cattle's earring has been altered.
@@ -200,7 +200,7 @@ void unit_farm_getBreed(){
     std::cout << "TEST 11 - Farm class' getBreed() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
     // Making assertion to verify if the method returns the added cattle's breed and if it's
     // equal to the parameter previously passed. 
@@ -215,7 +215,7 @@ void unit_farm_setBreed(){
     std::cout << "TEST 12 - Farm class' setBreed() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     farm->setBreed(cattle, "Brangus");
 
     // Making assertion to verify if the data of the added cattle's breed has been altered.
@@ -230,7 +230,7 @@ void unit_farm_getAcquisitionDate(){
     std::cout << "TEST 13 - Farm class' getAcquisitionDate() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
     // Making assertion to verify if the method returns the added cattle's acquisition date and if it's
     // equal to the parameter previously passed. 
@@ -245,7 +245,7 @@ void unit_farm_setAcquisitionDate(){
     std::cout << "TEST 14 - Farm class' setAcquisitionDate() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     farm->setAcquisitionDate(cattle, "02/04/1991");
 
     // Making assertion to verify if the data of the added cattle's acquisition date has been altered.
@@ -260,7 +260,7 @@ void unit_farm_getBirthDate(){
     std::cout << "TEST 15 - Farm class' getBirthDate() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
     // Making assertion to verify if the method returns the added cattle's birth date and if it's
     // equal to the parameter previously passed. 
@@ -275,7 +275,7 @@ void unit_farm_setBirthDate(){
     std::cout << "TEST 16 - Farm class' setBirthDate() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     farm->setBirthDate(cattle, "02/01/1991");
 
     // Making assertion to verify if the data of the added cattle's birth date has been altered.
@@ -290,7 +290,7 @@ void unit_farm_getFather(){
     std::cout << "TEST 17 - Farm class' getFather() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
     // Making assertion to verify if the method returns the added cattle's father and if it's
     // equal to the parameter previously passed. 
@@ -305,7 +305,7 @@ void unit_farm_setFather(){
     std::cout << "TEST 18 - Farm class' setFather() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     farm->setFather(cattle, "005");
 
     // Making assertion to verify if the data of the added cattle's father has been altered.
@@ -320,7 +320,7 @@ void unit_farm_getMother(){
     std::cout << "TEST 19 - Farm class' getMother() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
     // Making assertion to verify if the method returns the added cattle's mother and if it's
     // equal to the parameter previously passed. 
@@ -335,7 +335,7 @@ void unit_farm_setMother(){
     std::cout << "TEST 20 - Farm class' setMother() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     farm->setMother(cattle, "006");
 
     // Making assertion to verify if the data of the added cattle's mother has been altered.
@@ -350,7 +350,7 @@ void unit_farm_getWeight(){
     std::cout << "TEST 21 - Farm class' getWeight() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
     // Making assertion to verify if the method returns the added cattle's weight and if it's
     // equal to the parameter previously passed. 
@@ -365,7 +365,7 @@ void unit_farm_setWeight(){
     std::cout << "TEST 22 - Farm class' setWeight() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     farm->setWeight(cattle, 300.0);
 
     // Making assertion to verify if the data of the added cattle's weight has been altered.
@@ -380,7 +380,7 @@ void unit_farm_cattle_getValue(){
     std::cout << "TEST 23 - Farm class' getValue() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
 
     // Making assertion to verify if the method returns the added cattle's value and if it's
     // equal to the parameter previously passed.
@@ -395,7 +395,7 @@ void unit_farm_cattle_setValue(){
     std::cout << "TEST 24 - Farm class' setValue() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Cattle* cattle = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
+    Cattle* cattle = farm->farmCreateCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
     farm->setValue(cattle, 3000.0);
 
     // Making assertion to verify if the data of the added cattle's value has been altered.
@@ -405,31 +405,31 @@ void unit_farm_cattle_setValue(){
     std::cout << "OK!" << std::endl;
 }
 
-// Function for the Farm class' getId() method unit test.
-void unit_farm_getId(){
-    std::cout << "TEST 25 - Farm class' getId() method" << std::endl;
+// Function for the Farm class' getNumber() method unit test.
+void unit_farm_getNumber(){
+    std::cout << "TEST 25 - Farm class' getNumber() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
-    // Making assertion to verify if the method returns the added transaction's Id and if it's
+    // Making assertion to verify if the method returns the added transaction's number and if it's
     // equal to the parameter previously passed. 
-    assert(farm->getId(transaction) == 20);
+    assert(farm->getNumber(transaction) == 20);
 
     delete farm;
     std::cout << "OK!" << std::endl;
 }
 
-// Function for the Farm class' setId() method unit test.
-void unit_farm_setId(){
-    std::cout << "TEST 26 - Farm class' setId() method" << std::endl;
+// Function for the Farm class' setNumber() method unit test.
+void unit_farm_setNumber(){
+    std::cout << "TEST 26 - Farm class' setNumber() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
-    farm->setId(transaction, 21);
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    farm->setNumber(transaction, 21);
 
-    // Making assertion to verify if the data of the added transaction's Id has been altered.
-    assert(farm->getId(transaction) == 21);
+    // Making assertion to verify if the data of the added transaction's number has been altered.
+    assert(farm->getNumber(transaction) == 21);
 
     delete farm;
     std::cout << "OK!" << std::endl;
@@ -440,7 +440,7 @@ void unit_farm_transaction_getValue(){
     std::cout << "TEST 27 - Farm class' getValue() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
     // Making assertion to verify if the method returns the added transaction's value and if it's
     // equal to the parameter previously passed. 
@@ -455,7 +455,7 @@ void unit_farm_transaction_setValue(){
     std::cout << "TEST 28 - Farm class' setValue() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     farm->setValue(transaction, 2500.0);
 
     // Making assertion to verify if the data of the added transaction's value has been altered.
@@ -470,7 +470,7 @@ void unit_farm_getDescription(){
     std::cout << "TEST 29 - Farm class' getDescription() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
     // Making assertion to verify if the method returns the added transaction's description and if it's
     // equal to the parameter previously passed. 
@@ -485,7 +485,7 @@ void unit_farm_setDescription(){
     std::cout << "TEST 30 - Farm class' setDescription() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     farm->setDescription(transaction, "Compra de Gado");
 
     // Making assertion to verify if the data of the added transaction's description has been altered.
@@ -500,7 +500,7 @@ void unit_farm_getDate(){
     std::cout << "TEST 31 - Farm class' getDate() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
     // Making assertion to verify if the method returns the added transaction's date and if it's
     // equal to the parameter previously passed. 
@@ -515,7 +515,7 @@ void unit_farm_setDate(){
     std::cout << "TEST 32 - Farm class' setDate() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     farm->setDate(transaction, "03/02/1991");
 
     // Making assertion to verify if the data of the added transaction's date has been altered.
@@ -530,7 +530,7 @@ void unit_farm_getCattleEarring(){
     std::cout << "TEST 33 - Farm class' getCattleEarring() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
     // Making assertion to verify if the method returns the added transaction's cattle earring and if it's
     // equal to the parameter previously passed. 
@@ -545,7 +545,7 @@ void unit_farm_setCattleEarring(){
     std::cout << "TEST 34 - Farm class' setCattleEarring() method" << std::endl;
 
     Farm* farm = Farm::createFarm();
-    Transaction* transaction = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
+    Transaction* transaction = farm->farmCreateTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     farm->setCattleEarring(transaction, "040");
 
     // Making assertion to verify if the data of the added transaction's cattle earring has been altered.
@@ -579,93 +579,12 @@ void UnitFarm::unit_farm_assingmentOperator(){
     auto t1 = farm1->beginTransactionContainer();
     for (auto t2 = farm2->beginTransactionContainer(); t2 != farm2->endTransactionContainer(); ++t2){
         // Making assertion to verify if the transactions were added to the transaction container property.
-        assert((*t1)->getId() == (*t2)->getId());
+        assert((*t1)->getNumber() == (*t2)->getNumber());
         t1++;
     }
     
     delete farm1;
     delete farm2;
-
-    std::cout << "OK!" << std::endl;
-}
-
-
-//Function prototype for the Farm class' method getCattle() unit test.
-void unit_farm_getCattle(){
-    std::cout << "TEST 36 - Farm class' getCattle() method" << std::endl;
-
-    Farm* farm = Farm::createFarm();
-    Cattle* cattle1 = farm->createCattle("003", "Angus", "01/04/1990", "01/01/1990", "001", "002", 250.0, 2400.0);
-    Cattle* cattle2 = farm->createCattle("006", "Brangus", "02/04/1990", "02/01/1990", "004", "005", 255.0, 2500.0);
-
-    Cattle* c = farm->getCattle("003");
-
-    // Making assertion to verify if the correct cattle was returned from the search
-    assert(c->getEarring() == "003");
-    assert(c->getBreed() == "Angus");
-    assert(c->getAcquisitionDate() == "01/04/1990");
-    assert(c->getBirthDate() == "01/01/1990");
-    assert(c->getFather() == "001");
-    assert(c->getMother() == "002");
-    assert(fabs(c->getWeight() - 250.0) < 0.0001);
-    assert(fabs(c->getValue() - 2400.0) < 0.0001);
-
-    delete farm;
-
-    std::cout << "OK!" << std::endl;
-}
-
-
-//Function prototype for the Farm class' method getTransaction() unit test.
-void unit_farm_getTransaction(){
-    std::cout << "TEST 37 - Farm class' getTransaction() method" << std::endl;
-
-    Farm* farm = Farm::createFarm();
-    Transaction* transaction1 = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
-    Transaction* transaction2 = farm->createTransaction(21, -2100.0, "Compra de Gado", "03/02/1990", "040");
-
-    Transaction* t = farm->getTransaction(20);
-
-    // Making assertion to verify if the correct transaction was returned from the search
-    assert(t->getId() == 20);
-    assert(fabs(t->getValue() - 2000.0) < 0.0001);
-    assert(t->getDescription() == "Venda de Gado");
-    assert(t->getDate() == "02/02/1990");
-    assert(t->getCattleEarring() == "039");
-
-    delete farm;
-
-    std::cout << "OK!" << std::endl;
-}
-
-
-//Function prototype for the Farm class' method getLastIdAvailable() unit test.
-void unit_farm_getLastIdAvailable(){
-    std::cout << "TEST 38 - Farm class' getLastIdAvailable() method" << std::endl;
-
-    Farm* farm = Farm::createFarm();
-    int id = farm->getLastIdAvailable();
-    assert(id == 1);
-
-    Transaction* transaction1 = farm->createTransaction(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
-    id = farm->getLastIdAvailable();
-    assert(id == 21);
-
-    Transaction* transaction2 = farm->createTransaction(21, -2100.0, "Compra de Gado", "03/02/1990", "040");
-    id = farm->getLastIdAvailable();
-    assert(id == 22);
-
-    farm->remove(transaction2);
-    id = farm->getLastIdAvailable();
-    assert(id == 21);
-
-    farm->remove(transaction1);
-    id = farm->getLastIdAvailable();
-    assert(id == 1);
-
-    delete transaction1;
-    delete transaction2;
-    delete farm;
 
     std::cout << "OK!" << std::endl;
 }
@@ -768,11 +687,11 @@ void run_unit_tests_farm(){
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 
-    unit_farm_getId();
+    unit_farm_getNumber();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 
-    unit_farm_setId();
+    unit_farm_setNumber();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 
@@ -809,18 +728,6 @@ void run_unit_tests_farm(){
     assert(numBodyCreated == numBodyDeleted);
 
     unit_farm->unit_farm_assingmentOperator();
-    assert(numHandleCreated == numHandleDeleted);
-    assert(numBodyCreated == numBodyDeleted);
-
-    unit_farm_getCattle();
-    assert(numHandleCreated == numHandleDeleted);
-    assert(numBodyCreated == numBodyDeleted);
-
-    unit_farm_getTransaction();
-    assert(numHandleCreated == numHandleDeleted);
-    assert(numBodyCreated == numBodyDeleted);
-
-    unit_farm_getLastIdAvailable();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 

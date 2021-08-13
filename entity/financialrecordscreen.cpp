@@ -1,19 +1,20 @@
 #include "financialrecordscreen.h"
 #include "ui_financialrecordscreen.h"
 
-FinancialRecordScreen::FinancialRecordScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+FinancialRecordScreen::FinancialRecordScreen(QWidget *parent, QWidget* backScreen, Farm* f, QSqlQuery* q) :
     QDialog(parent),
     ui(new Ui::FinancialRecordScreen)
 {
     setFixedSize(900, 600);
     farm = f;
+    query = q;
     this->backScreen = backScreen;
     ui->setupUi(this);
 
-    int id = farm->getLastIdAvailable();
+    int number = farm->getLastNumberAvailable(query);
+    QString number_str = QString::number(number);
 
-    QString id_str = QString::number(id);
-    ui->labelIdTransaction->setText("#" + id_str);
+    ui->labelIdTransaction->setText("#" + number_str);
 }
 
 FinancialRecordScreen::~FinancialRecordScreen()
@@ -30,7 +31,9 @@ void FinancialRecordScreen::on_backButton_clicked()
 
 void FinancialRecordScreen::on_registerButton_clicked()
 {
-    int id = farm->getLastIdAvailable();
+    QSqlQuery* q = getQuery();
+
+    int number = farm->getLastNumberAvailable(query);
 
     QString price = ui->inputPrice->text();
     double price_2 = price.toDouble();
@@ -46,8 +49,7 @@ void FinancialRecordScreen::on_registerButton_clicked()
 
     if(price_2 != 0){
         Farm* f = getFarm();
-        f->createTransaction(id, price_2, description_2, date_2, earring_2);
-
+        f->createTransaction(q, number, price_2, description_2, date_2, earring_2);
         backScreen->show();
         this->close();
     }
@@ -69,4 +71,9 @@ void FinancialRecordScreen::on_registerButton_clicked()
 Farm* FinancialRecordScreen::getFarm()
 {
     return farm;
+}
+
+QSqlQuery* FinancialRecordScreen::getQuery()
+{
+    return query;
 }

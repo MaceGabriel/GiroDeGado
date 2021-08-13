@@ -1,7 +1,7 @@
 #include "../includes/transactionImpl.h"
 
 TransactionBody::TransactionBody(int id, double value, std::string description, std::string date, std::string cattle_earring){
-    setId(id);
+    setNumber(id);
     setValue(value);
     setDescription(description);
     setDate(date);
@@ -10,12 +10,12 @@ TransactionBody::TransactionBody(int id, double value, std::string description, 
 
 TransactionBody::~TransactionBody(){}
 
-void TransactionBody::setId(int transaction_id){
-    id_ = transaction_id;
+void TransactionBody::setNumber(int transaction_id){
+    number_ = transaction_id;
 }
 
-int TransactionBody::getId() const{
-    return id_;
+int TransactionBody::getNumber() const{
+    return number_;
 }
 
 void TransactionBody::setValue(double transaction_value){

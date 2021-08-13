@@ -7,8 +7,8 @@ void unit_transaction_constructor(){
     std::cout << "TEST 1 - Default constructor of the Transaction class without passing parameters" << std::endl;
     
     Transaction* transaction1 = new TransactionHandle();
-    // Making assertion to verify if the id property was initialized with the default data.
-    assert(transaction1->getId() == 0);
+    // Making assertion to verify if the number property was initialized with the default data.
+    assert(transaction1->getNumber() == 0);
     // Making assertion to verify if the value property was initialized with the default data. 
     assert(transaction1->getValue() == 0.0);
     // Making assertion to verify if the description property was initialized with the default data. 
@@ -24,8 +24,8 @@ void unit_transaction_constructor(){
     std::cout << "TEST 2 - Default constructor of the Transaction class with passing parameters" << std::endl; 
     
     Transaction* transaction2 = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
-    // Making assertion to verify if the id property was initialized with the parameter specified.
-    assert(transaction2->getId() == 20);
+    // Making assertion to verify if the number property was initialized with the parameter specified.
+    assert(transaction2->getNumber() == 20);
     // Making assertion to verify if the value property was initialized with the parameter specified.
     assert(transaction2->getValue() == 2000.0);
     // Making assertion to verify if the description property was initialized with the parameter specified.
@@ -46,8 +46,8 @@ void unit_transaction_copy_constructor(){
     TransactionHandle* transaction1 = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
     Transaction* transaction2 = new TransactionHandle(*transaction1);
 
-    // Making assertion to verify if the id property was copied.
-    assert(transaction2->getId() == 20);
+    // Making assertion to verify if the number property was copied.
+    assert(transaction2->getNumber() == 20);
     // Making assertion to verify if the value property was copied.
     assert(transaction2->getValue() == 2000.0);
     // Making assertion to verify if the description property was copied.
@@ -91,29 +91,29 @@ void unit_transaction_destructor(){
     std::cout << "OK!" << std::endl;
 }
 
-// Function for Transaction class' method getId() unit test.
-void unit_transaction_getId(){
-    std::cout << "TEST 5 - Transaction class's getId() method" << std::endl;
+// Function for Transaction class' method getNumber() unit test.
+void unit_transaction_getNumber(){
+    std::cout << "TEST 5 - Transaction class's getNumber() method" << std::endl;
     
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
 
-    // Making assertion to verify if the method returns the Transaction class Id and if it's
+    // Making assertion to verify if the method returns the Transaction class number and if it's
     // equal to the parameter previously passed. 
-    assert(transaction->getId() == 20);
+    assert(transaction->getNumber() == 20);
 
     delete transaction;
     std::cout << "OK!" << std::endl;
 }
 
-// Function for Transaction class' method setId() unit test.
-void unit_transaction_setId(){
-    std::cout << "TEST 6 - Transaction class's setId() method" << std::endl;
+// Function for Transaction class' method setNumber() unit test.
+void unit_transaction_setNumber(){
+    std::cout << "TEST 6 - Transaction class's setNumber() method" << std::endl;
     
     Transaction* transaction = new TransactionHandle(20, 2000.0, "Venda de Gado", "02/02/1990", "039");
-    transaction->setId(21);
+    transaction->setNumber(21);
 
-    // Making assertion to verify if the data of the Id property has been altered.
-    assert(transaction->getId() == 21);
+    // Making assertion to verify if the data of the number property has been altered.
+    assert(transaction->getNumber() == 21);
 
     delete transaction;
     std::cout << "OK!" << std::endl;
@@ -240,7 +240,7 @@ void unit_transaction_assingmentOperator(){
     *transaction2 = *transaction1;
 
     // Making assertion to verify if the id property was assigned.
-    assert(transaction2->getId() == 20);
+    assert(transaction2->getNumber() == 20);
     // Making assertion to verify if the value property was assigned.
     assert(transaction2->getValue() == 2000.0);
     // Making assertion to verify if the description property was assigned.
@@ -272,11 +272,11 @@ void run_unit_tests_transaction(){
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 
-    unit_transaction_getId();
+    unit_transaction_getNumber();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 
-    unit_transaction_setId();
+    unit_transaction_setNumber();
     assert(numHandleCreated == numHandleDeleted);
     assert(numBodyCreated == numBodyDeleted);
 

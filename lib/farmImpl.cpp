@@ -38,17 +38,45 @@ FarmBody::~FarmBody(){
     }
 }
 
-Cattle* FarmBody::createCattle(std::string earring, std::string breed, std::string acquisition_date, std::string birth_date, 
+Cattle* FarmBody::farmCreateCattle(std::string earring, std::string breed, std::string acquisition_date, std::string birth_date, 
                                std::string father, std::string mother, double weight,  double value){
     Cattle* cattle = new CattleHandle(earring, breed, acquisition_date, birth_date, father, mother, weight, value);
     add(cattle);
     return cattle;
 }
 
-Transaction* FarmBody::createTransaction(int id, double value, std::string description, std::string date, std::string cattle_earring){
+void FarmBody::createCattle(QSqlQuery* query, std::string earring, std::string breed, std::string acquisition_date,
+                            std::string birth_date, std::string father, std::string mother, double weight,
+                            double value){
+    query->prepare("insert into cattle (earring, breed, acquisition_date, birth_date, father, mother, weight, value)"
+                   "values (:earring, :breed, :acquisition_date, :birth_date, :father, :mother, :weight, :value)");
+    query->bindValue(":earring", QString::fromStdString(earring));
+    query->bindValue(":breed", QString::fromStdString(breed));
+    query->bindValue(":acquisition_date", QString::fromStdString(acquisition_date));
+    query->bindValue(":birth_date", QString::fromStdString(birth_date));
+    query->bindValue(":father", QString::fromStdString(father));
+    query->bindValue(":mother", QString::fromStdString(mother));
+    query->bindValue(":weight", weight);
+    query->bindValue(":value", value);
+    query->exec();
+}
+
+Transaction* FarmBody::farmCreateTransaction(int id, double value, std::string description, std::string date, std::string cattle_earring){
     Transaction* transaction = new TransactionHandle(id, value, description, date, cattle_earring);
     add(transaction);
     return transaction;
+}
+
+void FarmBody::createTransaction(QSqlQuery* query, int number, double value, std::string description,
+                                 std::string date, std::string cattle_earring){
+    query->prepare("insert into financial (number, value, description, date, cattle_earring)"
+                   "values (:number, :value, :description, :date, :cattle_earring)");
+    query->bindValue(":number", number);
+    query->bindValue(":value", value);
+    query->bindValue(":description", QString::fromStdString(description));
+    query->bindValue(":date", QString::fromStdString(date));
+    query->bindValue(":cattle_earring", QString::fromStdString(cattle_earring));
+    query->exec();
 }
 
 Farm* Farm::createFarm(){
@@ -155,12 +183,12 @@ double FarmBody::getValue(Cattle* cattle) const{
     return cattle->getValue();
 }
 
-void FarmBody::setId(Transaction* transaction, int transaction_id){
-    transaction->setId(transaction_id);
+void FarmBody::setNumber(Transaction* transaction, int transaction_id){
+    transaction->setNumber(transaction_id);
 }
 
-int FarmBody::getId(Transaction* transaction) const{
-    return transaction->getId();
+int FarmBody::getNumber(Transaction* transaction) const{
+    return transaction->getNumber();
 }
 
 void FarmBody::setValue(Transaction* transaction, double transaction_value){
@@ -195,48 +223,14 @@ std::string FarmBody::getCattleEarring(Transaction* transaction) const{
     return transaction->getCattleEarring();
 }
 
-Cattle* FarmBody::getCattle(std::string earring){
-    int cont = 0;
-    std::string current_earring;
+int FarmBody::getLastNumberAvailable(QSqlQuery* query){
+    query->exec("select max(number) from financial");
+    query->first();
+    QString number_str= query->value(0).toString();
+    int number = 0;
+    if(number_str != "")
+        number = number_str.toInt();
+    number++;
 
-    for(cattleIterator it = beginCattleContainer(); it < endCattleContainer(); ++it){
-        current_earring = (*it)->getEarring();
-
-        if(current_earring == earring){
-            return cattle_container_[cont];
-        }
-        cont++;
-    }
-    
-    return NULL;
-}
-
-Transaction* FarmBody::getTransaction(int id){
-    int cont = 0;
-    int current_id;
-
-    for(transactionIterator it = beginTransactionContainer(); it < endTransactionContainer(); ++it){
-        current_id = (*it)->getId();
-
-        if(current_id == id){
-            return transaction_container_[cont];
-        }
-        cont++;
-    }
-    
-    return NULL;
-}
-
-int FarmBody::getLastIdAvailable(){
-    int id = 1;
-
-    if(beginTransactionContainer() != endTransactionContainer()){
-        for(auto it = beginTransactionContainer(); it < endTransactionContainer(); ++it){
-            if((*it)->getId() >= id){
-                id = (*it)->getId() + 1;
-            }
-        }
-    }
-
-    return id;
+    return number;
 }

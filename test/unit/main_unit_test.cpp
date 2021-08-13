@@ -1,4 +1,5 @@
 #include "./main_unit_test.h"
+#include <QtSql>
 
 #define DEBUGING
 #ifdef DEBUGING
@@ -20,5 +21,5 @@ void main_unit_test(){
     std::cout << "\n========== Testes unitarios da Classe Farm ===========\n" << std::endl;
     run_unit_tests_farm();
     assert(numHandleCreated == numHandleDeleted);
-    assert(numBodyCreated == numBodyDeleted);
+    assert(numBodyCreated == numBodyDeleted);    
 }

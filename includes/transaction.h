@@ -17,16 +17,16 @@ class Transaction{
         virtual ~Transaction(){}
      
         /*!
-            Sets the id attribute in the Transaction Class.
-            \param transaction_id which will be set to the current Transaction.
+            Sets the number attribute in the Transaction Class.
+            \param transaction_number which will be set to the current Transaction.
         */
-        virtual void setId(int transaction_id) = 0;
+        virtual void setNumber(int transaction_number) = 0;
 
         /*!
-            Returns the id attribute in the Transaction Class.
-            \return std::string - the content id attribute.  
+            Returns the number attribute in the Transaction Class.
+            \return int - the content number attribute.
         */
-        virtual int getId() const = 0;
+        virtual int getNumber() const = 0;
 
         /*!
             Sets the value attribute in the Transaction Class.

@@ -27,14 +27,14 @@ void unit_transaction_copy_constructor();
 void unit_transaction_destructor();
 
 /*!
-  Function prototype for the Transaction class' method getId() unit test.
+  Function prototype for the Transaction class' method getNumber() unit test.
 */
-void unit_transaction_getId();
+void unit_transaction_getNumber();
 
 /*!
-  Function prototype for the Transaction class' method setId() unit test.
+  Function prototype for the Transaction class' method setNumber() unit test.
 */
-void unit_transaction_setId();
+void unit_transaction_setNumber();
 
 /*!
   Function prototype for the Transaction class' method getValue() unit test.
