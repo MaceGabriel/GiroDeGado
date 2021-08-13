@@ -46,7 +46,8 @@ void CattleBirthScreen::on_registerButton_clicked()
 
     if(earring != "" && earring != "INVALIDO"){
         Farm* f = getFarm();
-        f->createCattle(earring_2, breed_2, date_2, date_2, father_2, mother_2, weight_2, 0.0);
+        QSqlQuery* q = getQuery();
+        f->createCattle(q, earring_2, breed_2, date_2, date_2, father_2, mother_2, weight_2, 0.0);
 
         backScreen->show();
         this->close();

@@ -23,7 +23,6 @@ void CattleBuyScreen::on_backButton_clicked()
     this->close();
 }
 
-
 void CattleBuyScreen::on_registerButton_clicked()
 {
     QString earring = ui->inputEarring->text();
@@ -46,7 +45,12 @@ void CattleBuyScreen::on_registerButton_clicked()
 
     if(earring != "" && earring != "INVALIDO"){
         Farm* f = getFarm();
-        f->createCattle(earring_2, breed_2, dateA_2, dateB_2, "COMPRADO", "COMPRADO", weight_2, price_2);
+        QSqlQuery* q = getQuery();
+        f->createCattle(q, earring_2, breed_2, dateA_2, dateB_2, "COMPRADO", "COMPRADO", weight_2, price_2);
+
+        int number = farm->getLastNumberAvailable(query);
+
+        f->createTransaction(q, number, price_2, "Compra de Gado", dateA_2, earring_2);
 
         backScreen->show();
         this->close();

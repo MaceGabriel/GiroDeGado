@@ -55,7 +55,7 @@ class FarmBody : public Body{
         virtual ~FarmBody();
 
         /*!
-            Creates a cattle and returns it's pointer.
+            Creates a cattle and adds it to the database.
             \param earring the earring of the Cattle.
             \param breed the breed of the Cattle.
             \param acquisition_date the acquisition date of the Cattle.
@@ -64,23 +64,51 @@ class FarmBody : public Body{
             \param mother the mother of the Cattle.
             \param weight the weight of the Cattle.
             \param value the value of the Cattle.
-            \return Cattle - a Cattle Class object.
+            \return Cattle* - a Cattle with a determined earring on the cattle container.
         */
-        Cattle* createCattle(std::string earring = "", std::string breed = "", std::string acquisition_date = "", 
-                             std::string birth_date = "", std::string father = "", std::string mother = "",
-                             double weight = 0.0,  double value = 0.0);
+        Cattle* farmCreateCattle(std::string earring = "", std::string breed = "", 
+                          std::string acquisition_date = "", std::string birth_date = "", std::string father = "",
+                          std::string mother = "", double weight = 0.0,  double value = 0.0);
 
         /*!
-            Creates a transaction and returns it's pointer.
+            Creates a cattle and adds it to the database.
+            \param query the query of the GiroDeGado's database.
+            \param earring the earring of the Cattle.
+            \param breed the breed of the Cattle.
+            \param acquisition_date the acquisition date of the Cattle.
+            \param birth_date the birth date of the Cattle.
+            \param father the father of the Cattle.
+            \param mother the mother of the Cattle.
+            \param weight the weight of the Cattle.
+            \param value the value of the Cattle.
+        */
+        void createCattle(QSqlQuery* query = NULL, std::string earring = "", std::string breed = "", 
+                          std::string acquisition_date = "", std::string birth_date = "", std::string father = "",
+                          std::string mother = "", double weight = 0.0,  double value = 0.0);
+
+        /*!
+            Creates a transaction and adds it to the database.
             \param number the number of the Transaction.
             \param value the value of the Transaction.
             \param description the description of the Transaction.
             \param date the date of the Transaction.
             \param cattle_earring the cattle's earring of the Transaction.
-            \return Transaction - a Transaction Class object.
+            \return Transaction* - a Transaction with a determined number on the transaction container.
         */
-        Transaction* createTransaction(int number = 0, double value = 0.0, std::string description = "",
-                                       std::string date = "", std::string cattle_earring = "");
+        Transaction* farmCreateTransaction(int number = 0, double value = 0.0, std::string description = "",
+                               std::string date = "", std::string cattle_earring = "");
+
+        /*!
+            Creates a transaction and adds it to the database.
+            \param query the query of the GiroDeGado's database.
+            \param number the number of the Transaction.
+            \param value the value of the Transaction.
+            \param description the description of the Transaction.
+            \param date the date of the Transaction.
+            \param cattle_earring the cattle's earring of the Transaction.
+        */
+        void createTransaction(QSqlQuery* query = NULL, int number = 0, double value = 0.0, std::string description = "",
+                               std::string date = "", std::string cattle_earring = "");
 
         /*!
             Creates a Farm and returns it's pointer.
@@ -295,25 +323,10 @@ class FarmBody : public Body{
         std::string getCattleEarring(Transaction* transaction) const;
 
         /*!
-            Returns a Cattle with a determined earring on the cattle container.
-            \return Cattle* - a Cattle with a determined earring on the cattle container.
-        */
-        Cattle* getCattle(std::string earring);
-
-        /*!
-            Returns a Transaction with a determined number on the transaction container.
-            \return Transaction* - a Transaction with a determined number on the transaction container.
-        */
-        Transaction* getTransaction(int number);
-
-        /*!
             Returns the last available number on the transaction container.
             \return int - the last available number on the transaction container.
         */
-        int getLastNumberAvailable();
-
-        //Teste
-        void createTransaction2(QSqlQuery* query, int number, double value, std::string description, std::string date, std::string cattle_earring);
+        int getLastNumberAvailable(QSqlQuery* query);
 
 };
 
@@ -376,10 +389,28 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
             \param value the value of the Cattle.
             \return Cattle - a Cattle Class object.
         */
-        Cattle* createCattle(std::string earring = "", std::string breed = "", std::string acquisition_date = "", 
+        Cattle* farmCreateCattle(std::string earring = "", std::string breed = "", std::string acquisition_date = "", 
                              std::string birth_date = "", std::string father = "", std::string mother = "",
                              double weight = 0.0,  double value = 0.0){
-            return pImpl_->createCattle(earring, breed, acquisition_date, birth_date, father, mother, weight, value);
+            return pImpl_->farmCreateCattle(earring, breed, acquisition_date, birth_date, father, mother, weight, value);
+        }
+
+        /*!
+            Calls the createCattle() method implemented in the FarmBody Class.
+            \param query the query of the GiroDeGado's database.
+            \param earring the earring of the Cattle.
+            \param breed the breed of the Cattle.
+            \param acquisition_date the acquisition date of the Cattle.
+            \param birth_date the birth date of the Cattle.
+            \param father the father of the Cattle.
+            \param mother the mother of the Cattle.
+            \param weight the weight of the Cattle.
+            \param value the value of the Cattle.
+        */
+        void createCattle(QSqlQuery* query, std::string earring = "", std::string breed = "",
+                            std::string acquisition_date = "", std::string birth_date = "", std::string father = "",
+                            std::string mother = "", double weight = 0.0,  double value = 0.0){
+            return pImpl_->createCattle(query, earring, breed, acquisition_date, birth_date, father, mother, weight, value);
         }
 
         /*!
@@ -389,11 +420,25 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
             \param description the description of the Transaction.
             \param date the date of the Transaction.
             \param cattle_earring the cattle's earring of the Transaction.
-            \return Transaction - a Transaction Class object.
+            \return Transaction* - a Transaction Class object.
         */
-        Transaction* createTransaction(int number = 0, double value = 0.0, std::string description = "",
-                                       std::string date = "", std::string cattle_earring = ""){
-            return pImpl_->createTransaction(number, value, description, date, cattle_earring);
+        Transaction* farmCreateTransaction(int number = 0, double value = 0.0, std::string description = "", 
+                               std::string date = "", std::string cattle_earring = ""){
+            return pImpl_->farmCreateTransaction(number, value, description, date, cattle_earring);
+        }
+
+        /*!
+            Calls the createTransaction() method implemented in the FarmBody Class.
+            \param query the query of the GiroDeGado's database.
+            \param number the number of the Transaction.
+            \param value the value of the Transaction.
+            \param description the description of the Transaction.
+            \param date the date of the Transaction.
+            \param cattle_earring the cattle's earring of the Transaction.
+        */
+        void createTransaction(QSqlQuery* query, int number = 0, double value = 0.0, std::string description = "", 
+                               std::string date = "", std::string cattle_earring = ""){
+            return pImpl_->createTransaction(query, number, value, description, date, cattle_earring);
         }
 
         /*!
@@ -655,32 +700,11 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
-            Calls the getCattle() method implemented in the FarmBody Class.
-            \return Cattle* - a Cattle with a determined earring on the cattle container.
-        */
-        Cattle* getCattle(std::string earring){
-            return pImpl_->getCattle(earring);
-        }
-
-        /*!
-            Calls the getTransaction() method implemented in the FarmBody Class.
-            \return Transaction* - a Transaction with a determined id on the transaction container.
-        */
-        Transaction* getTransaction(int id){
-            return pImpl_->getTransaction(id);
-        }
-
-        /*!
             Calls the getLastNumberAvailable() method implemented in the FarmBody Class.
             \return int - the last available number on the transaction container.
         */
-        int getLastNumberAvailable(){
-            return pImpl_->getLastNumberAvailable();
-        }
-
-        //Teste
-        void createTransaction2(QSqlQuery* query, int number, double value, std::string description, std::string date, std::string cattle_earring){
-            return pImpl_->createTransaction2(query, number, value, description, date, cattle_earring);
+        int getLastNumberAvailable(QSqlQuery* query){
+            return pImpl_->getLastNumberAvailable(query);
         }
 
 };

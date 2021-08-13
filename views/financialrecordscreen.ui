@@ -34,7 +34,7 @@
   <widget class="QLineEdit" name="inputEarring">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>460</x>
      <y>240</y>
      <width>281</width>
      <height>41</height>
@@ -100,7 +100,7 @@
   <widget class="QLineEdit" name="inputDate">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>160</x>
      <y>240</y>
      <width>281</width>
      <height>41</height>

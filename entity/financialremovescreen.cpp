@@ -26,47 +26,51 @@ void FinancialRemoveScreen::on_backButton_clicked()
 
 void FinancialRemoveScreen::on_okButton_clicked()
 {
-    QString id = ui->inputIdTransaction->text();
-    int id_2 = id.toInt();
+    QString number = ui->inputIdTransaction->text();
 
-    Farm* f = getFarm();
-    Transaction* t = f->getTransaction(id_2);
+    QSqlQuery* q = getQuery();
 
     auto model = ui->transactionRemoveTable->model();
 
-    if(t != NULL){
-        QString date = QString::fromStdString(t->getDate());
-        QString value = QString::number(t->getValue());
-        QString cattle_earring = QString::fromStdString(t->getCattleEarring());
-        QString description = QString::fromStdString(t->getDescription());
+    if(q->exec("select * from financial where number='"+number+"'")){
+        int count = 0;
+        while(q->next()){
+            count++;
+        }
+        if(count > 0){
+            q->first();
+            QString number = q->value(1).toString();
+            QString date = q->value(2).toString();
+            QString value = q->value(3).toString();
+            QString cattle_earring = q->value(4).toString();
+            QString description = q->value(5).toString();
 
-        model->setData(model->index(0,0),id);
-        model->setData(model->index(0,1),date);
-        model->setData(model->index(0,2),value);
-        model->setData(model->index(0,3),cattle_earring);
-        model->setData(model->index(0,4),description);
-    }
-    else{
-        model->setData(model->index(0,0),QString("INVALIDO"));
-        model->setData(model->index(0,1),QString("INVALIDO"));
-        model->setData(model->index(0,2),QString("INVALIDO"));
-        model->setData(model->index(0,3),QString("INVALIDO"));
-        model->setData(model->index(0,4),QString("INVALIDO"));
+            model->setData(model->index(0,0),number);
+            model->setData(model->index(0,1),date);
+            model->setData(model->index(0,2),value);
+            model->setData(model->index(0,3),cattle_earring);
+            model->setData(model->index(0,4),description);
+        } else {
+            model->setData(model->index(0,0),QString("INVALIDO"));
+            model->setData(model->index(0,1),QString("INVALIDO"));
+            model->setData(model->index(0,2),QString("INVALIDO"));
+            model->setData(model->index(0,3),QString("INVALIDO"));
+            model->setData(model->index(0,4),QString("INVALIDO"));
+        }
     }
 }
 
 
 void FinancialRemoveScreen::on_removeButton_clicked()
 {
-    auto id = ui->transactionRemoveTable->item(0,0)->text();
+    QString number = ui->inputIdTransaction->text();
+    auto number_2 = ui->transactionRemoveTable->item(0,0)->text();
 
-    if(id != "" && id != "INVALIDO"){
-        int id_2 = id.toInt();
+    if(number != "" && number_2 != "INVALIDO"){
+        std::string number_3 = number_2.toUtf8().constData();
 
-        Farm* f = getFarm();
-        Transaction* t = f->getTransaction(id_2);
-
-        f->remove(t);
+        QSqlQuery* q = getQuery();
+        q->exec("delete from financial where number='"+number+"'");
 
         backScreen->show();
         this->close();

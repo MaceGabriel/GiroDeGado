@@ -42,11 +42,28 @@ class Farm{
             \param mother the mother of the Cattle.
             \param weight the weight of the Cattle.
             \param value the value of the Cattle.
-            \return Cattle - a Cattle Class object.
+            \return Cattle* - a Cattle Class object.
         */
-        virtual Cattle* createCattle(std::string earring = "", std::string breed = "", std::string acquisition_date = "", 
+        virtual Cattle* farmCreateCattle(std::string earring = "", std::string breed = "", std::string acquisition_date = "", 
                                      std::string birth_date = "", std::string father = "", std::string mother = "",
                                      double weight = 0.0,  double value = 0.0) = 0;
+        
+        /*!
+            Creates a cattle and adds it to the database.
+            \param query the query of the GiroDeGado's database.
+            \param earring the earring of the Cattle.
+            \param breed the breed of the Cattle.
+            \param acquisition_date the acquisition date of the Cattle.
+            \param birth_date the birth date of the Cattle.
+            \param father the father of the Cattle.
+            \param mother the mother of the Cattle.
+            \param weight the weight of the Cattle.
+            \param value the value of the Cattle.
+        */
+        virtual void createCattle(QSqlQuery* query = NULL, std::string earring = "", std::string breed = "", 
+                                    std::string acquisition_date = "", std::string birth_date = "",
+                                    std::string father = "", std::string mother = "", double weight = 0.0,
+                                    double value = 0.0) = 0;
 
         /*!
             Creates a transaction and returns it's pointer.
@@ -55,10 +72,23 @@ class Farm{
             \param description the description of the Transaction.
             \param date the date of the Transaction.
             \param cattle_earring the cattle's earring of the Transaction.
-            \return Transaction - a Transaction Class object.
+            \return Transaction* - a Transaction Class object.
         */
-        virtual Transaction* createTransaction(int id = 0, double value = 0.0, std::string description = "", 
+        virtual Transaction* farmCreateTransaction(int id = 0, double value = 0.0, std::string description = "", 
                                                std::string date = "", std::string cattle_earring = "") = 0;
+        
+        /*!
+            Creates a transaction and adds it to the database.
+            \param query the query of the GiroDeGado's database.
+            \param id the id of the Transaction.
+            \param value the value of the Transaction.
+            \param description the description of the Transaction.
+            \param date the date of the Transaction.
+            \param cattle_earring the cattle's earring of the Transaction.
+        */
+        virtual void createTransaction(QSqlQuery* query = NULL, int number = 0, double value = 0.0,
+                                       std::string description = "", std::string date = "",
+                                       std::string cattle_earring = "") = 0;
 
         /*!
             Creates a Farm and returns it's pointer.
@@ -261,26 +291,10 @@ class Farm{
         virtual std::string getCattleEarring(Transaction* transaction) const = 0;
 
         /*!
-            Returns a Cattle with a determined earring on the cattle container.
-            \return Cattle* - a Cattle with a determined earring on the cattle container.
-        */
-        virtual Cattle* getCattle(std::string earring) = 0;
-
-        /*!
-            Returns a Transaction with a determined number on the transaction container.
-            \return Transaction* - a Transaction with a determined number on the transaction container.
-        */
-        virtual Transaction* getTransaction(int number) = 0;
-
-        /*!
             Returns the last available number on the transaction container.
             \return int - the last available number on the transaction container.
         */
-        virtual int getLastNumberAvailable() = 0;
-
-
-        //Teste
-        virtual void createTransaction2(QSqlQuery* query, int number, double value, std::string description, std::string date, std::string cattle_earring) = 0;
+        virtual int getLastNumberAvailable(QSqlQuery* query) = 0;
 
     protected:
         /*!
