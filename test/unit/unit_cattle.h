@@ -1,3 +1,8 @@
+/*!
+ \file unit_cattle.h
+ \brief This file contains the unit tests of the Cattle class for the GiroDeGado software.
+*/
+
 #ifndef UNIT_CATTLE
 #define UNIT_CATTLE
 

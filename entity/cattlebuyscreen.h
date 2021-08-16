@@ -1,12 +1,17 @@
+/*!
+ \file cattlebuyscreen.h
+ \brief This file contains the screen for the registration of cattle from purchase for the GiroDeGado software.
+*/
+
 #ifndef CATTLEBUYSCREEN_H
 #define CATTLEBUYSCREEN_H
 
 #include <QDialog>
 #include "cattleregisterscreen.h"
 
-//! Screen CattleBuy
-/**
-* This screen represents the registration of cattle from purchase.
+/** 
+ * \brief
+ * This screen represents the registration of cattle from purchase.
 */
 namespace Ui {
 class CattleBuyScreen;
@@ -44,9 +49,9 @@ private slots:
     void on_registerButton_clicked();
 
 private:
-    Ui::CattleBuyScreen *ui; /*!< This attribute contains the ui for the CattleBuy. */
-    QWidget* backScreen; /*!< This attribute contains the reference of the back screen. */
-    Farm* farm; /*!< This attribute contains the the Farm. */
+    Ui::CattleBuyScreen *ui_; /*!< This attribute contains the ui for the CattleBuy. */
+    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    Farm* farm_; /*!< This attribute contains the the Farm. */
 };
 
 #endif // CATTLEBUYSCREEN_H

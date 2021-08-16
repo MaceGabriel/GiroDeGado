@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,183,73,209"/>
+<area shape="rect" id="node2" href="$class_cattle_birth_screen.html" title=" " alt="" coords="155,5,279,32"/>
+<area shape="rect" id="node3" href="$class_cattle_buy_screen.html" title=" " alt="" coords="157,56,277,83"/>
+<area shape="rect" id="node4" href="$class_cattle_management_screen.html" title=" " alt="" coords="131,107,303,133"/>
+<area shape="rect" id="node5" href="$class_cattle_register_screen.html" title=" " alt="" coords="144,157,289,184"/>
+<area shape="rect" id="node6" href="$class_cattle_remove_screen.html" title=" " alt="" coords="145,208,288,235"/>
+<area shape="rect" id="node7" href="$class_financial_management_screen.html" title=" " alt="" coords="121,259,312,285"/>
+<area shape="rect" id="node8" href="$class_financial_record_screen.html" title=" " alt="" coords="139,309,295,336"/>
+<area shape="rect" id="node9" href="$class_financial_remove_screen.html" title=" " alt="" coords="136,360,297,387"/>
+</map>

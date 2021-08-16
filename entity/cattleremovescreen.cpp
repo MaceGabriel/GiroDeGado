@@ -3,30 +3,30 @@
 
 CattleRemoveScreen::CattleRemoveScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
     QDialog(parent),
-    ui(new Ui::CattleRemoveScreen)
+    ui_(new Ui::CattleRemoveScreen)
 {
     setFixedSize(900, 600);
-    farm = f;
-    this->backScreen = backScreen;
-    ui->setupUi(this);
+    farm_ = f;
+    this->backScreen_ = backScreen;
+    ui_->setupUi(this);
 }
 
 CattleRemoveScreen::~CattleRemoveScreen()
 {
-    delete ui;
+    delete ui_;
 }
 
 void CattleRemoveScreen::on_backButton_clicked()
 {
-    backScreen->show();
+    backScreen_->show();
     this->close();
 }
 
 void CattleRemoveScreen::on_okButton_clicked()
 {
-    QString cattle_earring = ui->inputCattleEarring->text();
+    QString cattle_earring = ui_->inputCattleEarring->text();
     Farm* f = getFarm();
-    auto model = ui->cattleRemoveTable->model();
+    auto model = ui_->cattleRemoveTable->model();
 
     if(f->queryExec("select * from cattle where earring='"+cattle_earring+"'")){
         int count = 0;
@@ -68,19 +68,19 @@ void CattleRemoveScreen::on_okButton_clicked()
 
 void CattleRemoveScreen::on_removeButton_clicked()
 {
-    QString cattle_earring = ui->inputCattleEarring->text();
-    auto earring = ui->cattleRemoveTable->item(0,0)->text();
+    QString cattle_earring = ui_->inputCattleEarring->text();
+    auto earring = ui_->cattleRemoveTable->item(0,0)->text();
 
     if(cattle_earring != "" && earring != "INVALIDO"){
-        std::string earring_2 = earring.toUtf8().constData();
+        int earring_2 = earring.toInt();
 
         Farm* f = getFarm();
         f->queryExec("delete from cattle where earring='"+cattle_earring+"'");
 
-        if(ui->radioButtonSell->isChecked()){
-            int number = farm->getLastNumberAvailable();
+        if(ui_->radioButtonSell->isChecked()){
+            int number = farm_->getLastNumberAvailable();
 
-            QString price = ui->inputPrice->text();
+            QString price = ui_->inputPrice->text();
             if(price != ""){
                 double price_2 = price.toDouble();
 
@@ -88,26 +88,26 @@ void CattleRemoveScreen::on_removeButton_clicked()
             }
         }
 
-        backScreen->show();
+        backScreen_->show();
         this->close();
     }
 }
 
 Farm* CattleRemoveScreen::getFarm()
 {
-    return farm;
+    return farm_;
 }
 
 void CattleRemoveScreen::on_radioButtonDeath_clicked()
 {
-    ui->inputPrice->setText("");
-    ui->labelPrice->setVisible(false);
-    ui->inputPrice->setVisible(false);
+    ui_->inputPrice->setText("");
+    ui_->labelPrice->setVisible(false);
+    ui_->inputPrice->setVisible(false);
 }
 
 void CattleRemoveScreen::on_radioButtonSell_clicked()
 {
-    ui->inputPrice->setVisible(true);
-    ui->labelPrice->setVisible(true);
-    ui->inputPrice->setText("0");
+    ui_->inputPrice->setVisible(true);
+    ui_->labelPrice->setVisible(true);
+    ui_->inputPrice->setText("0");
 }

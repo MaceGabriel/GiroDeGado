@@ -1,5 +1,5 @@
 /*!
- \file Bridge.h
+ \file handlebody.h
  \brief The classes Handle and Body implements "bridge" design pattern (also known as 
 	"handle/body idiom").The class Body was implemented based on the class teCounted
 	writed by Ricardo Cartaxo and Gilberto Câmara and founded in the geographic library TerraLib.

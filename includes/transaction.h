@@ -1,12 +1,17 @@
+/*!
+ \file transaction.h
+ \brief This file contains the interface of a Transaction for the GiroDeGado software.
+*/
+
 #ifndef TRANSACTION_H
 #define TRANSACTION_H
 
 #include <iostream>
 #include <string>
 
-//! Class Transaction
-/**
-* This Class represents a Transaction for the GiroDeGado software implemented in this code.
+/** 
+ * \brief
+ * This Class represents a Transaction for the GiroDeGado software.
 */
 class Transaction{
 

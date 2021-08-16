@@ -5,22 +5,22 @@
 
 CattleManagementScreen::CattleManagementScreen(QWidget* parent, QWidget* backScreen, Farm* f) :
     QDialog(parent),
-    ui(new Ui::CattleManagementScreen)
+    ui_(new Ui::CattleManagementScreen)
 {
     setFixedSize(900, 600);
-    farm = f;
-    this->backScreen = backScreen;
-    ui->setupUi(this);
+    farm_ = f;
+    this->backScreen_ = backScreen;
+    ui_->setupUi(this);
 }
 
 CattleManagementScreen::~CattleManagementScreen()
 {
-    delete ui;
+    delete ui_;
 }
 
 void CattleManagementScreen::on_backButton_clicked()
 {
-    backScreen->show();
+    backScreen_->show();
     this->close();
 }
 
@@ -50,5 +50,5 @@ void CattleManagementScreen::on_removeButton_clicked()
 
 Farm* CattleManagementScreen::getFarm()
 {
-    return farm;
+    return farm_;
 }

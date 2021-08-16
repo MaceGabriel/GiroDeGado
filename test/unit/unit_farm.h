@@ -1,3 +1,8 @@
+/*!
+ \file unit_farm.h
+ \brief This file contains the unit tests of the Farm class for the GiroDeGado software.
+*/
+
 #ifndef UNIT_FARM
 #define UNIT_FARM
 

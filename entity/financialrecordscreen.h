@@ -1,13 +1,17 @@
+/*!
+ \file financialrecordscreen.h
+ \brief This file contains the screen for the registration of a transaction for the GiroDeGado software.
+*/
+
 #ifndef FINANCIALRECORDSCREEN_H
 #define FINANCIALRECORDSCREEN_H
 
 #include <QDialog>
-
 #include "financialmanagementscreen.h"
 
-//! Screen FinancialRecords
-/**
-* This screen represents the transaction register.
+/** 
+ * \brief
+ * This screen represents the registration of a transaction.
 */
 namespace Ui {
 class FinancialRecordScreen;
@@ -45,9 +49,9 @@ private slots:
     void on_registerButton_clicked();
 
 private:
-    Ui::FinancialRecordScreen *ui; /*!< This attribute contains the ui for the FinancialRecords. */
-    QWidget* backScreen; /*!< This attribute contains the reference of the back screen. */
-    Farm* farm; /*!< This attribute contains the the Farm. */
+    Ui::FinancialRecordScreen *ui_; /*!< This attribute contains the ui for the FinancialRecords. */
+    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    Farm* farm_; /*!< This attribute contains the the Farm. */
 };
 
 #endif // FINANCIALRECORDSCREEN_H

@@ -5,16 +5,16 @@
 
 HomeScreen::HomeScreen(QWidget *parent, Farm* f)
     : QMainWindow(parent)
-    , ui(new Ui::HomeScreen)
+    , ui_(new Ui::HomeScreen)
 {
     setFixedSize(900, 600);
-    farm = f;
-    ui->setupUi(this);
+    farm_ = f;
+    ui_->setupUi(this);
 }
 
 HomeScreen::~HomeScreen()
 {
-    delete ui;
+    delete ui_;
 }
 
 void HomeScreen::on_cattleButton_clicked()
@@ -38,5 +38,5 @@ void HomeScreen::on_exitButton_clicked()
 
 Farm* HomeScreen::getFarm()
 {
-    return farm;
+    return farm_;
 }

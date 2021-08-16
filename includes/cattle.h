@@ -1,12 +1,17 @@
+/*!
+ \file cattle.h
+ \brief This file contains the interface of a Cattle for the GiroDeGado software.
+*/
+
 #ifndef CATTLE_H
 #define CATTLE_H
 
 #include <iostream>
 #include <string>
 
-//! Class Cattle
-/**
-* This Class represents a cattle for the GiroDeGado software implemented in this code.
+/** 
+ * \brief
+ * This Class represents a Cattle for the GiroDeGado software.
 */
 class Cattle{
 

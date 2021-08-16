@@ -1,12 +1,17 @@
+/*!
+ \file financialremovescreen.h
+ \brief This file contains the screen for the removal of a registered transaction for the GiroDeGado software.
+*/
+
 #ifndef FINANCIALREMOVESCREEN_H
 #define FINANCIALREMOVESCREEN_H
 
 #include <QDialog>
 #include "financialmanagementscreen.h"
 
-//! Screen FinancialRemove
-/**
-* This screen represents financial removals.
+/** 
+ * \brief
+ * This screen represents transaction removals.
 */
 namespace Ui {
 class FinancialRemoveScreen;
@@ -49,9 +54,9 @@ private slots:
     void on_okButton_clicked();
 
 private:
-    Ui::FinancialRemoveScreen *ui; /*!< This attribute contains the ui for the FinancialRemove. */
-    QWidget* backScreen; /*!< This attribute contains the reference of the back screen. */
-    Farm* farm; /*!< This attribute contains the the Farm. */
+    Ui::FinancialRemoveScreen *ui_; /*!< This attribute contains the ui for the FinancialRemove. */
+    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    Farm* farm_; /*!< This attribute contains the the Farm. */
 };
 
 #endif // FINANCIALREMOVESCREEN_H

@@ -1,3 +1,8 @@
+/*!
+ \file homescreen.h
+ \brief This file contains the home screen for the GiroDeGado software.
+*/
+
 #ifndef HOMESCREEN_H
 #define HOMESCREEN_H
 
@@ -5,9 +10,9 @@
 #include <string>
 #include "../includes/farm.h"
 
-//! Screen Home
-/**
-* This screen represents the program home.
+/** 
+ * \brief
+ * This screen represents the program home.
 */
 QT_BEGIN_NAMESPACE
 namespace Ui { class HomeScreen; }
@@ -47,7 +52,7 @@ private slots:
     void on_exitButton_clicked();
 
 private:
-    Ui::HomeScreen *ui; /*!< This attribute contains the ui for the Home. */
-    Farm* farm; /*!< This attribute contains the the Farm. */
+    Ui::HomeScreen *ui_; /*!< This attribute contains the ui for the Home. */
+    Farm* farm_; /*!< This attribute contains the the Farm. */
 };
 #endif // HOMESCREEN_H

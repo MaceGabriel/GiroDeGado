@@ -1,3 +1,8 @@
+/*!
+ \file farmImpl.h
+ \brief This file contains the handle/body of a Farm for the GiroDeGado software.
+*/
+
 #ifndef FARMIMPL_H
 #define FARMIMPL_H
 
@@ -6,9 +11,9 @@
 #include "../includes/cattleImpl.h"
 #include "./handlebody.h"
 
-//! Class FarmBody
-/**
-* This Class represents the body of a Handle/Body idiom of a Farm for the GiroDeGado software implemented in this code.
+/** 
+ * \brief
+ * This Class represents the body of a Handle/Body idiom of a Farm for the GiroDeGado software.
 */
 class FarmBody : public Body{
 
@@ -107,14 +112,14 @@ class FarmBody : public Body{
             \param breed the breed of the Cattle.
             \param acquisition_date the acquisition date of the Cattle.
             \param birth_date the birth date of the Cattle.
-            \param father the father of the Cattle.
-            \param mother the mother of the Cattle.
+            \param father the father's earring of the Cattle.
+            \param mother the mother's earring of the Cattle.
             \param weight the weight of the Cattle.
             \param value the value of the Cattle.
         */
-        void createCattle(std::string earring = "", std::string breed = "", 
-                          std::string acquisition_date = "", std::string birth_date = "", std::string father = "",
-                          std::string mother = "", double weight = 0.0,  double value = 0.0);
+        void createCattle(int earring = 0, std::string breed = "", std::string acquisition_date = "",
+                          std::string birth_date = "", int father = 0, int mother = 0,
+                          double weight = 0.0,  double value = 0.0);
 
         /*!
             Creates a transaction and adds it to the database.
@@ -137,7 +142,7 @@ class FarmBody : public Body{
             \param cattle_earring the cattle's earring of the Transaction.
         */
         void createTransaction(int number = 0, double value = 0.0, std::string description = "",
-                               std::string date = "", std::string cattle_earring = "");
+                               std::string date = "", int cattle_earring = 0);
 
         /*!
             Creates a Farm and returns it's pointer.
@@ -352,6 +357,12 @@ class FarmBody : public Body{
         std::string getCattleEarring(Transaction* transaction) const;
 
         /*!
+            Returns the last available earring on the cattle container.
+            \return int - the last available earring on the cattle container.
+        */
+        int getLastEarringAvailable();
+
+        /*!
             Returns the last available number on the transaction container.
             \return int - the last available number on the transaction container.
         */
@@ -359,9 +370,9 @@ class FarmBody : public Body{
 
 };
 
-//! Class FarmHandle
-/**
-* This Class represents the handle of a Handle/Body idiom of a Farm for the GiroDeGado software implemented in this code.
+/** 
+ * \brief
+ * This Class represents the handle of a Handle/Body idiom of a Farm for the GiroDeGado software implemented in this code.
 */
 class FarmHandle : public Handle<FarmBody>, public Farm{
     protected:
@@ -479,9 +490,9 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
             \param weight the weight of the Cattle.
             \param value the value of the Cattle.
         */
-        void createCattle(std::string earring = "", std::string breed = "",
-                            std::string acquisition_date = "", std::string birth_date = "", std::string father = "",
-                            std::string mother = "", double weight = 0.0,  double value = 0.0){
+        void createCattle(int earring = 0, std::string breed = "", std::string acquisition_date = "",
+                          std::string birth_date = "", int father = 0, int mother = 0, double weight = 0.0,
+                          double value = 0.0){
             return pImpl_->createCattle(earring, breed, acquisition_date, birth_date, father, mother, weight, value);
         }
 
@@ -508,7 +519,7 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
             \param cattle_earring the cattle's earring of the Transaction.
         */
         void createTransaction(int number = 0, double value = 0.0, std::string description = "", 
-                               std::string date = "", std::string cattle_earring = ""){
+                               std::string date = "", int cattle_earring = 0){
             return pImpl_->createTransaction(number, value, description, date, cattle_earring);
         }
 
@@ -768,6 +779,14 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
         */
         std::string getCattleEarring(Transaction* transaction) const{
             return pImpl_->getCattleEarring(transaction);
+        }
+
+        /*!
+            Calls the getLastEarringAvailable() method implemented in the FarmBody Class.
+            \return int - the last available earring on the cattle container.
+        */
+        int getLastEarringAvailable(){
+            return pImpl_->getLastEarringAvailable();
         }
 
         /*!

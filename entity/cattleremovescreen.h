@@ -1,12 +1,17 @@
+/*!
+ \file cattleremovescreen.h
+ \brief This file contains the screen for the removal of a registered cattle for the GiroDeGado software.
+*/
+
 #ifndef CATTLEREMOVESCREEN_H
 #define CATTLEREMOVESCREEN_H
 
 #include <QDialog>
 #include "cattlemanagementscreen.h"
 
-//! Screen CattleRemove
-/**
-* This screen represents cattle removals.
+/** 
+ * \brief
+ * This screen represents cattle removals.
 */
 namespace Ui {
 class CattleRemoveScreen;
@@ -59,9 +64,9 @@ private slots:
     void on_radioButtonSell_clicked();
 
 private:
-    Ui::CattleRemoveScreen *ui; /*!< This attribute contains the ui for the CattleRemove. */
-    QWidget* backScreen; /*!< This attribute contains the reference of the back screen. */
-    Farm* farm; /*!< This attribute contains the the Farm. */
+    Ui::CattleRemoveScreen *ui_; /*!< This attribute contains the ui for the CattleRemove. */
+    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    Farm* farm_; /*!< This attribute contains the the Farm. */
 };
 
 #endif // CATTLEREMOVESCREEN_H

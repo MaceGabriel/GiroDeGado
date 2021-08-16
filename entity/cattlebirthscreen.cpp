@@ -3,74 +3,75 @@
 
 CattleBirthScreen::CattleBirthScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
     QDialog(parent),
-    ui(new Ui::CattleBirthScreen)
+    ui_(new Ui::CattleBirthScreen)
 {
     setFixedSize(900, 600);
-    farm = f;
-    this->backScreen = backScreen;
-    ui->setupUi(this);
+    farm_ = f;
+    this->backScreen_ = backScreen;
+    ui_->setupUi(this);
+
+    int earring = farm_->getLastEarringAvailable();
+    QString earring_str = QString::number(earring);
+
+    ui_->labelCattleEarring->setText("#" + earring_str);
 }
 
 CattleBirthScreen::~CattleBirthScreen()
 {
-    delete ui;
+    delete ui_;
 }
 
 void CattleBirthScreen::on_backButton_clicked()
 {
-    backScreen->show();
+    backScreen_->show();
     this->close();
 }
 
 void CattleBirthScreen::on_registerButton_clicked()
 {
-    QString earring = ui->inputEarring->text();
-    std::string earring_2 = earring.toLocal8Bit().constData();
+    int earring = farm_->getLastEarringAvailable();
 
-    QString breed = ui->inputBreed->text();
+    QString breed = ui_->inputBreed->text();
     std::string breed_2 = breed.toLocal8Bit().constData();
 
-    QString date = ui->inputDate->text();
+    QString date = ui_->inputDate->text();
     std::string date_2 = date.toLocal8Bit().constData();
 
-    QString father = ui->inputFather->text();
-    std::string father_2 = father.toLocal8Bit().constData();
+    QString father = ui_->inputFather->text();
+    int father_2 = father.toInt();
 
-    QString mother = ui->inputMother->text();
-    std::string mother_2 = mother.toLocal8Bit().constData();
+    QString mother = ui_->inputMother->text();
+    int mother_2 = mother.toInt();
 
-    QString weight = ui->inputWeight->text();
+    QString weight = ui_->inputWeight->text();
     double weight_2 = weight.toDouble();
 
-    if(earring != "" && earring != "INVALIDO"){
+    if(date != "" && date != "INVALIDO"){
         Farm* f = getFarm();
-        f->createCattle(earring_2, breed_2, date_2, date_2, father_2, mother_2, weight_2, 0.0);
+        f->createCattle(earring, breed_2, date_2, date_2, father_2, mother_2, weight_2, 0.0);
 
-        backScreen->show();
+        backScreen_->show();
         this->close();
     }
     else{
-        ui->inputEarring->setText("INVALIDO");
-
         if(breed_2 == "")
-            ui->inputBreed->setText("A DEFINIR");
+            ui_->inputBreed->setText("A DEFINIR");
 
         if(date_2 == "")
-            ui->inputDate->setText("A DEFINIR");
+            ui_->inputDate->setText("INVALIDO");
 
-        if(father_2 == "")
-            ui->inputFather->setText("A DEFINIR");
+        if(father == "" || father == "0")
+            ui_->inputFather->setText("0.0");
 
-        if(mother_2 == "")
-            ui->inputMother->setText("A DEFINIR");
+        if(mother == "")
+            ui_->inputMother->setText("0");
 
-        if(weight == "" || weight == "0")
-            ui->inputWeight->setText("0.0");
+        if(weight == "")
+            ui_->inputWeight->setText("0");
     }
-
 }
 
 Farm* CattleBirthScreen::getFarm()
 {
-    return farm;
+    return farm_;
 }

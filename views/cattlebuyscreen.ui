@@ -28,7 +28,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Brinco</string>
+    <string>Brinco:</string>
    </property>
   </widget>
   <widget class="QLabel" name="labelBreed">
@@ -175,21 +175,6 @@
     <string>Sair</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="inputEarring">
-   <property name="geometry">
-    <rect>
-     <x>160</x>
-     <y>119</y>
-     <width>591</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="inputBreed">
    <property name="geometry">
     <rect>
@@ -263,6 +248,24 @@
     <font>
      <pointsize>12</pointsize>
     </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelCattleEarring">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>100</y>
+     <width>141</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>#10</string>
    </property>
   </widget>
  </widget>

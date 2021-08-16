@@ -3,31 +3,31 @@
 
 FinancialRemoveScreen::FinancialRemoveScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
     QDialog(parent),
-    ui(new Ui::FinancialRemoveScreen)
+    ui_(new Ui::FinancialRemoveScreen)
 {
     setFixedSize(900, 600);
-    farm = f;
-    this-> backScreen = backScreen;
-    ui->setupUi(this);
+    farm_ = f;
+    this-> backScreen_ = backScreen;
+    ui_->setupUi(this);
 }
 
 FinancialRemoveScreen::~FinancialRemoveScreen()
 {
-    delete ui;
+    delete ui_;
 }
 
 void FinancialRemoveScreen::on_backButton_clicked()
 {
-    backScreen->show();
+    backScreen_->show();
     this->close();
 }
 
 
 void FinancialRemoveScreen::on_okButton_clicked()
 {
-    QString number = ui->inputIdTransaction->text();
+    QString number = ui_->inputIdTransaction->text();
     Farm* f = getFarm();
-    auto model = ui->transactionRemoveTable->model();
+    auto model = ui_->transactionRemoveTable->model();
 
     if(f->queryExec("select * from financial where number='"+number+"'")){
         int count = 0;
@@ -60,8 +60,8 @@ void FinancialRemoveScreen::on_okButton_clicked()
 
 void FinancialRemoveScreen::on_removeButton_clicked()
 {
-    QString number = ui->inputIdTransaction->text();
-    auto number_2 = ui->transactionRemoveTable->item(0,0)->text();
+    QString number = ui_->inputIdTransaction->text();
+    auto number_2 = ui_->transactionRemoveTable->item(0,0)->text();
     Farm* f = getFarm();
 
     if(number != "" && number_2 != "INVALIDO"){
@@ -69,7 +69,7 @@ void FinancialRemoveScreen::on_removeButton_clicked()
 
         f->queryExec("delete from financial where number='"+number+"'");
 
-        backScreen->show();
+        backScreen_->show();
         this->close();
     }
 
@@ -77,5 +77,5 @@ void FinancialRemoveScreen::on_removeButton_clicked()
 
 Farm* FinancialRemoveScreen::getFarm()
 {
-    return farm;
+    return farm_;
 }

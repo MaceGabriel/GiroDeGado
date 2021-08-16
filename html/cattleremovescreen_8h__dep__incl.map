@@ -1,0 +1,6 @@
+<map id="GiroDeGado/entity/cattleremovescreen.h" name="GiroDeGado/entity/cattleremovescreen.h">
+<area shape="rect" id="node1" title="This file contains the screen for the removal of a registered cattle for the GiroDeGado software." alt="" coords="221,5,477,32"/>
+<area shape="rect" id="node2" href="$moc__cattleremovescreen_8cpp.html" title=" " alt="" coords="5,80,172,121"/>
+<area shape="rect" id="node3" href="$cattlemanagementscreen_8cpp.html" title=" " alt="" coords="197,87,501,114"/>
+<area shape="rect" id="node4" href="$cattleremovescreen_8cpp.html" title=" " alt="" coords="525,87,796,114"/>
+</map>
