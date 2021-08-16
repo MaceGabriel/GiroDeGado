@@ -1,12 +1,18 @@
+/*!
+ \file financialmanagementscreen.h
+ \brief This file contains the screen for the management of all features related to the transactions for
+ the GiroDeGado software.
+*/
+
 #ifndef FINANCIALMANAGEMENTSCREEN_H
 #define FINANCIALMANAGEMENTSCREEN_H
 
 #include <QDialog>
 #include "homescreen.h"
 
-//! Screen FinancialManagement
-/**
-* This screen represents the management of all features related to the financial.
+/** 
+ * \brief
+ * This screen represents the management of all features related to the transactions.
 */
 namespace Ui {
 class FinancialManagementScreen;
@@ -59,9 +65,9 @@ private slots:
     void on_reportButton_clicked();
 
 private:
-    Ui::FinancialManagementScreen *ui; /*!< This attribute contains the ui for the FinancialManagement. */
-    QWidget* backScreen; /*!< This attribute contains the reference of the back screen. */
-    Farm* farm; /*!< This attribute contains the the Farm. */
+    Ui::FinancialManagementScreen *ui_; /*!< This attribute contains the ui for the FinancialManagement. */
+    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    Farm* farm_; /*!< This attribute contains the the Farm. */
 };
 
 #endif // FINANCIALMANAGEMENTSCREEN_H

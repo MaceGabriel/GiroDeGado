@@ -1,3 +1,8 @@
+/*!
+ \file farm.h
+ \brief This file contains the interface of a Farm for the GiroDeGado software.
+*/
+
 #ifndef FARM_H
 #define FARM_H
 
@@ -7,9 +12,9 @@
 #include "./cattle.h"
 #include "./transaction.h"
 
-//! Class Farm
-/**
-* This Class represents a Farm for the GiroDeGado software implemented in this code.
+/** 
+ * \brief
+ * This Class represents a Farm for the GiroDeGado software.
 */
 class Farm{
 
@@ -84,15 +89,15 @@ class Farm{
             \param breed the breed of the Cattle.
             \param acquisition_date the acquisition date of the Cattle.
             \param birth_date the birth date of the Cattle.
-            \param father the father of the Cattle.
-            \param mother the mother of the Cattle.
+            \param father the father's earring of the Cattle.
+            \param mother the mother's earring of the Cattle.
             \param weight the weight of the Cattle.
             \param value the value of the Cattle.
         */
-        virtual void createCattle(std::string earring = "", std::string breed = "", 
-                                    std::string acquisition_date = "", std::string birth_date = "",
-                                    std::string father = "", std::string mother = "", double weight = 0.0,
-                                    double value = 0.0) = 0;
+        virtual void createCattle(int earring = 0, std::string breed = "", 
+                                  std::string acquisition_date = "", std::string birth_date = "",
+                                  int father = 0, int mother = 0, double weight = 0.0,
+                                  double value = 0.0) = 0;
 
         /*!
             Creates a transaction and returns it's pointer.
@@ -114,9 +119,8 @@ class Farm{
             \param date the date of the Transaction.
             \param cattle_earring the cattle's earring of the Transaction.
         */
-        virtual void createTransaction(int number = 0, double value = 0.0,
-                                       std::string description = "", std::string date = "",
-                                       std::string cattle_earring = "") = 0;
+        virtual void createTransaction(int number = 0, double value = 0.0, std::string description = "",
+                                       std::string date = "", int cattle_earring = 0) = 0;
 
         /*!
             Creates a Farm and returns it's pointer.
@@ -317,6 +321,12 @@ class Farm{
             \return std::string - the content cattle earring attribute.  
         */
         virtual std::string getCattleEarring(Transaction* transaction) const = 0;
+
+        /*!
+            Returns the last available earring on the cattle container.
+            \return int - the last available earring on the cattle container.
+        */
+        virtual int getLastEarringAvailable() = 0;
 
         /*!
             Returns the last available number on the transaction container.

@@ -1,3 +1,8 @@
+/*!
+ \file main_unit_test.h
+ \brief This file executes the unit tests of the Cattle, Transaction and Farm classes for the GiroDeGado software.
+*/
+
 #ifndef MAIN_UNIT_TEST
 #define MAIN_UNIT_TEST
 

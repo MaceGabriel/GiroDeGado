@@ -1,3 +1,8 @@
+/*!
+ \file transactionImpl.h
+ \brief This file contains the handle/body of a Transaction for the GiroDeGado software.
+*/
+
 #ifndef TRANSACTIONIMPL_H
 #define TRANSACTIONIMPL_H
 
@@ -7,9 +12,9 @@
 
 using namespace std;
 
-//! Class TransactionBody
-/**
-* This Class represents the body of a Handle/Body idiom of a Transaction for the GiroDeGado software implemented in this code.
+/** 
+ * \brief
+ * This Class represents the body of a Handle/Body idiom of a Transaction for the GiroDeGado software.
 */
 class TransactionBody : public Body{
 
@@ -115,9 +120,9 @@ class TransactionBody : public Body{
 
 };
 
-//! Class TransactionHandle
-/**
-* This Class represents the handle of a Handle/Body idiom of a Transaction for the GiroDeGado software implemented in this code.
+/** 
+ * \brief
+ * This Class represents the handle of a Handle/Body idiom of a Transaction for the GiroDeGado software implemented in this code.
 */
 class TransactionHandle : public Handle<TransactionBody>, public Transaction{
     public:

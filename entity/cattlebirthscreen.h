@@ -1,12 +1,17 @@
+/*!
+ \file cattlebirthscreen.h
+ \brief This file contains the screen for the registration of cattle from birth for the GiroDeGado software.
+*/
+
 #ifndef CATTLEBIRTHSCREEN_H
 #define CATTLEBIRTHSCREEN_H
 
 #include <QDialog>
 #include "cattleregisterscreen.h"
 
-//! Screen CattleBirth
-/**
-* This screen that represents the registration of cattle from parturition.
+/** 
+ * \brief
+ * This screen that represents the registration of cattle from birth.
 */
 namespace Ui {
 class CattleBirthScreen;
@@ -37,9 +42,9 @@ private slots:
     void on_registerButton_clicked();
 
 private:
-    Ui::CattleBirthScreen *ui; /*!< This attribute contains the ui for the CattleBirth. */
-    QWidget* backScreen; /*!< This attribute contains the reference of the back screen. */
-    Farm* farm; /*!< This attribute contains the the Farm. */
+    Ui::CattleBirthScreen *ui_; /*!< This attribute contains the ui for the CattleBirth. */
+    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    Farm* farm_; /*!< This attribute contains the the Farm. */
 };
 
-#endif // CATTLEBIRTHSCREEN_H
+#endif

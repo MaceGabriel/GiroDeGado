@@ -3,77 +3,76 @@
 
 CattleBuyScreen::CattleBuyScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
     QDialog(parent),
-    ui(new Ui::CattleBuyScreen)
+    ui_(new Ui::CattleBuyScreen)
 {
     setFixedSize(900, 600);
-    farm = f;
-    this->backScreen = backScreen;
-    ui->setupUi(this);
+    farm_ = f;
+    this->backScreen_ = backScreen;
+    ui_->setupUi(this);
+
+    int earring = farm_->getLastEarringAvailable();
+    QString earring_str = QString::number(earring);
+
+    ui_->labelCattleEarring->setText("#" + earring_str);
 }
 
 CattleBuyScreen::~CattleBuyScreen()
 {
-    delete ui;
+    delete ui_;
 }
 
 void CattleBuyScreen::on_backButton_clicked()
 {
-    backScreen->show();
+    backScreen_->show();
     this->close();
 }
 
 void CattleBuyScreen::on_registerButton_clicked()
 {
-    QString earring = ui->inputEarring->text();
-    std::string earring_2 = earring.toLocal8Bit().constData();
+    int earring = farm_->getLastEarringAvailable();
 
-    QString breed = ui->inputBreed->text();
+    QString breed = ui_->inputBreed->text();
     std::string breed_2 = breed.toLocal8Bit().constData();
 
-    QString dateA = ui->inputDateA->text();
+    QString dateA = ui_->inputDateA->text();
     std::string dateA_2 = dateA.toLocal8Bit().constData();
 
-    QString dateB = ui->inputDateB->text();
+    QString dateB = ui_->inputDateB->text();
     std::string dateB_2 = dateB.toLocal8Bit().constData();
 
-    QString price = ui->inputPrice->text();
+    QString price = ui_->inputPrice->text();
     double price_2 = price.toDouble();
 
-    QString weight = ui->inputWeight->text();
+    QString weight = ui_->inputWeight->text();
     double weight_2 = weight.toDouble();
 
-    if(earring != "" && earring != "INVALIDO"){
+    if(price != "" && price_2 != 0){
         Farm* f = getFarm();
-        f->createCattle(earring_2, breed_2, dateA_2, dateB_2, "COMPRADO", "COMPRADO", weight_2, price_2);
+        f->createCattle(earring, breed_2, dateA_2, dateB_2, 0, 0, weight_2, price_2);
 
-        int number = farm->getLastNumberAvailable();
+        int number = farm_->getLastNumberAvailable();
 
-        f->createTransaction(number, price_2, "Compra de Gado", dateA_2, earring_2);
+        f->createTransaction(number, price_2, "Compra de Gado", dateA_2, earring);
 
-        backScreen->show();
+        backScreen_->show();
         this->close();
     }
     else{
-        ui->inputEarring->setText("INVALIDO");
-
         if(breed_2 == "")
-            ui->inputBreed->setText("A DEFINIR");
+            ui_->inputBreed->setText("A DEFINIR");
 
         if(dateA_2 == "")
-            ui->inputDateA->setText("A DEFINIR");
+            ui_->inputDateA->setText("A DEFINIR");
 
         if(dateB_2 == "")
-            ui->inputDateB->setText("A DEFINIR");
-
-        if(price == "" || price == "0")
-            ui->inputPrice->setText("0.0");
+            ui_->inputDateB->setText("A DEFINIR");
 
         if(weight == "" || weight == "0")
-            ui->inputWeight->setText("0.0");
+            ui_->inputWeight->setText("0.0");
     }
 }
 
 Farm* CattleBuyScreen::getFarm()
 {
-    return farm;
+    return farm_;
 }

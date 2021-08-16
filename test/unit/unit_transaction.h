@@ -1,3 +1,8 @@
+/*!
+ \file unit_transaction.h
+ \brief This file contains the unit tests of the Transaction class for the GiroDeGado software.
+*/
+
 #ifndef UNIT_TRANSACTION
 #define UNIT_TRANSACTION
 

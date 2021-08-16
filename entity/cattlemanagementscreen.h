@@ -1,12 +1,18 @@
+/*!
+ \file cattlemanagementscreen.h
+ \brief This file contains the screen for management of all features related to the cattle for the
+ GiroDeGado software.
+*/
+
 #ifndef CATTLEMANAGEMENTSCREEN_H
 #define CATTLEMANAGEMENTSCREEN_H
 
 #include <QDialog>
 #include "homescreen.h"
 
-//! Screen CattleManagement
-/**
-* This screen represents the management of all features related to the cattle.
+/** 
+ * \brief
+ * This screen represents the management of all features related to the cattle.
 */
 namespace Ui {
 class CattleManagementScreen;
@@ -59,9 +65,9 @@ private slots:
     void on_removeButton_clicked();
 
 private:
-    Ui::CattleManagementScreen* ui; /*!< This attribute contains the ui for the CattleManagement. */
-    QWidget* backScreen; /*!< This attribute contains the reference of the back screen. */
-    Farm* farm; /*!< This attribute contains the the Farm. */
+    Ui::CattleManagementScreen* ui_; /*!< This attribute contains the ui for the CattleManagement. */
+    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    Farm* farm_; /*!< This attribute contains the the Farm. */
 };
 
 #endif // CATTLEMANAGEMENTSCREEN_H

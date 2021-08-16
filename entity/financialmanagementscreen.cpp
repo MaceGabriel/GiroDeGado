@@ -5,22 +5,22 @@
 
 FinancialManagementScreen::FinancialManagementScreen(QWidget *parent, QWidget *backScreen, Farm* f) :
     QDialog(parent),
-    ui(new Ui::FinancialManagementScreen)
+    ui_(new Ui::FinancialManagementScreen)
 {
     setFixedSize(900, 600);
-    farm = f;
-    this->backScreen = backScreen;
-    ui->setupUi(this);
+    farm_ = f;
+    this->backScreen_ = backScreen;
+    ui_->setupUi(this);
 }
 
 FinancialManagementScreen::~FinancialManagementScreen()
 {
-    delete ui;
+    delete ui_;
 }
 
 void FinancialManagementScreen::on_backButton_clicked()
 {
-    backScreen->show();
+    backScreen_->show();
     this->close();
 }
 
@@ -50,5 +50,5 @@ void FinancialManagementScreen::on_reportButton_clicked()
 
 Farm* FinancialManagementScreen::getFarm()
 {
-    return farm;
+    return farm_;
 }

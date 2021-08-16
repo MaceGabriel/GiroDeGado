@@ -1,0 +1,14 @@
+<map id="GiroDeGado/entity/financialrecordscreen.h" name="GiroDeGado/entity/financialrecordscreen.h">
+<area shape="rect" id="node1" title="This file contains the screen for the registration of a transaction for the GiroDeGado software." alt="" coords="5,5,272,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="50,155,118,181"/>
+<area shape="rect" id="node3" href="$financialmanagementscreen_8h.html" title="This file contains the screen for the management of all features related to the transactions for the ..." alt="" coords="109,80,304,107"/>
+<area shape="rect" id="node4" href="$homescreen_8h.html" title="This file contains the home screen for the GiroDeGado software." alt="" coords="155,155,259,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="63,229,169,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="349,379,403,405"/>
+<area shape="rect" id="node7" href="$farm_8h.html" title="This file contains the interface of a Farm for the GiroDeGado software." alt="" coords="315,229,437,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="551,304,607,331"/>
+<area shape="rect" id="node9" title=" " alt="" coords="245,304,299,331"/>
+<area shape="rect" id="node10" href="$cattle_8h.html" title="This file contains the interface of a Cattle for the GiroDeGado software." alt="" coords="453,304,526,331"/>
+<area shape="rect" id="node12" href="$transaction_8h.html" title="This file contains the interface of a Transaction for the GiroDeGado software." alt="" coords="323,304,429,331"/>
+<area shape="rect" id="node11" title=" " alt="" coords="440,379,512,405"/>
+</map>

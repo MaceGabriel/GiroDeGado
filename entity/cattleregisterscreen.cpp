@@ -5,17 +5,17 @@
 
 CattleRegisterScreen::CattleRegisterScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
     QDialog(parent),
-    ui(new Ui::CattleRegisterScreen)
+    ui_(new Ui::CattleRegisterScreen)
 {
     setFixedSize(900, 600);
-    farm = f;
-    this->backScreen = backScreen;
-    ui->setupUi(this);
+    farm_ = f;
+    this->backScreen_ = backScreen;
+    ui_->setupUi(this);
 }
 
 CattleRegisterScreen::~CattleRegisterScreen()
 {
-    delete ui;
+    delete ui_;
 }
 
 void CattleRegisterScreen::on_buyButton_clicked()
@@ -27,7 +27,7 @@ void CattleRegisterScreen::on_buyButton_clicked()
 
 void CattleRegisterScreen::on_backButton_clicked()
 {
-    backScreen->show();
+    backScreen_->show();
     this->close();
 }
 
@@ -40,5 +40,5 @@ void CattleRegisterScreen::on_birthButton_clicked()
 
 Farm* CattleRegisterScreen::getFarm()
 {
-    return farm;
+    return farm_;
 }

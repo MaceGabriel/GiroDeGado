@@ -1,12 +1,17 @@
+/*!
+ \file cattleImpl.h
+ \brief This file contains the handle/body of a Cattle for the GiroDeGado software.
+*/
+
 #ifndef CATTLEIMPL_H
 #define CATTLEIMPL_H
 
 #include "./cattle.h"
 #include "./handlebody.h"
 
-//! Class CattleBody
-/**
-* This Class represents the body of a Handle/Body idiom of a cattle for the GiroDeGado software implemented in this code.
+/** 
+ * \brief
+ * This Class represents the body of a Handle/Body idiom of a Cattle for the GiroDeGado software.
 */
 class CattleBody : public Body{
 
@@ -154,9 +159,9 @@ class CattleBody : public Body{
 
 };
 
-//! Class CattleHandle
-/**
-* This Class represents the handle of a Handle/Body idiom of a cattle for the GiroDeGado software implemented in this code.
+/** 
+ * \brief
+ * This Class represents the handle of a Handle/Body idiom of a Cattle for the GiroDeGado software implemented in this code.
 */
 class CattleHandle : public Handle<CattleBody>, public Cattle{
     public:
