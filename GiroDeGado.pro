@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     entity/cattlebirthscreen.cpp \
     entity/cattlebuyscreen.cpp \
+    entity/cattleconsultscreen.cpp \
     entity/cattleeditscreen.cpp \
     entity/cattlemanagementscreen.cpp \
     entity/cattleregisterscreen.cpp \
@@ -31,6 +32,7 @@ SOURCES += \
 HEADERS += \
     entity/cattlebirthscreen.h \
     entity/cattlebuyscreen.h \
+    entity/cattleconsultscreen.h \
     entity/cattleeditscreen.h \
     entity/cattlemanagementscreen.h \
     entity/cattleregisterscreen.h \
@@ -53,6 +55,7 @@ HEADERS += \
 FORMS += \
     views/cattlebirthscreen.ui \
     views/cattlebuyscreen.ui \
+    views/cattleconsultscreen.ui \
     views/cattleeditscreen.ui \
     views/cattlemanagementscreen.ui \
     views/cattleregisterscreen.ui \
