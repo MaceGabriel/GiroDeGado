@@ -16,6 +16,7 @@ SOURCES += \
     entity/cattlemanagementscreen.cpp \
     entity/cattleregisterscreen.cpp \
     entity/cattleremovescreen.cpp \
+    entity/financialconsultscreen.cpp \
     entity/financialmanagementscreen.cpp \
     entity/financialrecordscreen.cpp \
     entity/financialremovescreen.cpp \
@@ -37,6 +38,7 @@ HEADERS += \
     entity/cattlemanagementscreen.h \
     entity/cattleregisterscreen.h \
     entity/cattleremovescreen.h \
+    entity/financialconsultscreen.h \
     entity/financialmanagementscreen.h \
     entity/financialrecordscreen.h \
     entity/financialremovescreen.h \
@@ -60,6 +62,7 @@ FORMS += \
     views/cattlemanagementscreen.ui \
     views/cattleregisterscreen.ui \
     views/cattleremovescreen.ui \
+    views/financialconsultscreen.ui \
     views/financialmanagementscreen.ui \
     views/financialrecordscreen.ui \
     views/financialremovescreen.ui \
