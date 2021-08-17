@@ -30,6 +30,16 @@ class Farm{
         virtual ~Farm(){}
 
         /*!
+            missing
+        */
+        virtual void setNumber(int number) = 0;
+
+        /*!
+            missing
+        */
+        virtual int getNumber() const = 0;
+
+        /*!
             Sets the query attribute in the Farm Class.
             \param query the query of a database.
         */
@@ -98,7 +108,7 @@ class Farm{
             Creates a Farm and returns it's pointer.
             \return Farm - a Farm Class object.
         */
-        static Farm* createFarm(QSqlQuery* query = NULL);
+        static Farm* createFarm(int number = 0, QSqlQuery* query = NULL);
 
         /*!        
            Deletes a cattle from the database.

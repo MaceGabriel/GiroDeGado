@@ -61,7 +61,7 @@ void unit_cattle_getEarring(Farm* f){
     Cattle* cattle = new CattleHandle();
 
     // Making assertion to verify if the method returns the Cattle class earring and if it's
-    // equal to the parameter previously passed. 
+    // equal to the parameter previously passed.
     assert(cattle->getEarring(f->getQuery(), 3) == QString::fromStdString("3"));
 
     delete cattle;

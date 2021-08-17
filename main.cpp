@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
         bancoDeDados.open();
 
         QSqlQuery q_tests;
-        Farm* f_tests = Farm::createFarm(&q_tests);
+        Farm* f_tests = Farm::createFarm(0, &q_tests);
 
         main_unit_test(f_tests);
 
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     bancoDeDados.open();
 
     QSqlQuery q;
-    Farm* f = Farm::createFarm(&q);
+    Farm* f = Farm::createFarm(0, &q);
 
     QApplication a(argc, argv);
     HomeScreen w(nullptr, f);

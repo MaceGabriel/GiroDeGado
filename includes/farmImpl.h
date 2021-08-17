@@ -18,6 +18,7 @@
 class FarmBody : public Body{
 
     protected:
+        int number_; /*!< The number of the farm. */
         QSqlQuery* query_; /*!< The query of the GiroDeGado's database. */
         static std::vector<Farm*> farm_container_; /*!< This static attribute stores pointers to the farms created in the application. */
 
@@ -45,12 +46,22 @@ class FarmBody : public Body{
             This is the default constructor for the FarmBody Class.
             \return FarmBody - a FarmBody Class object.
         */
-        FarmBody(QSqlQuery* query = NULL);
+        FarmBody(int number = 0, QSqlQuery* query = NULL);
 
         /*!
             This is the default destructor for the FarmBody Class.
         */
         virtual ~FarmBody();
+
+        /*!
+            missing
+        */
+        void setNumber(int number);
+
+        /*!
+            missing
+        */
+        int getNumber() const;
 
         /*!
             Sets the query attribute in the Farm Class.
@@ -120,7 +131,7 @@ class FarmBody : public Body{
             Creates a Farm and returns it's pointer.
             \return Farm - a Farm Class object.
         */
-        static Farm* createFarm(QSqlQuery* query = NULL);
+        static Farm* createFarm(int number = 0, QSqlQuery* query = NULL);
 
         /*!        
            Deletes a cattle from the database.
@@ -276,14 +287,31 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
             This is the default constructor for the FarmHandle Class.
             \return FarmHandle - a FarmHandle Class object.
         */
-        FarmHandle(QSqlQuery* query = NULL){
+        FarmHandle(int number = 0, QSqlQuery* query = NULL){
+            pImpl_->setNumber(number);
             pImpl_->setQuery(query);
         };
 
         /*!
             This is the default destructor for the FarmHandle Class.
         */
-        virtual ~FarmHandle(){};
+        virtual ~FarmHandle(){
+            // Deletes the farm from the farm container
+            // for(farmIterator it = beginFarmContainer(); it != endFarmContainer(); ++it){
+            //     if(dynamic_cast<Farm*>(this) == (*it)){
+            //         farm_container_.erase(it);
+            //         break;
+            //     }
+            // }
+        };
+
+        void setNumber(int number){
+            pImpl_->setNumber(number);
+        }
+
+        int getNumber() const{
+            return pImpl_->getNumber();
+        }
 
         /*!
             Sets the query attribute in the Farm Class.
@@ -369,8 +397,8 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
             Calls the createFarm() method implemented in the FarmBody Class.
             \return Farm - a Farm Class object.
         */
-        static Farm* createFarm(QSqlQuery* query = NULL){
-            return pImpl_->createFarm(query);
+        static Farm* createFarm(int number = 0, QSqlQuery* query = NULL){
+            return FarmBody::createFarm(number, query);
         }
 
         /*!        
