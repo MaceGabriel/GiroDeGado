@@ -10,6 +10,7 @@
 #include <assert.h>
 #include <math.h>
 #include "../../includes/cattleImpl.h"
+#include "../../includes/farm.h"
 
 //! Unit tests 
 /**
@@ -34,82 +35,82 @@ void unit_cattle_destructor();
 /*!
   Function prototype for the Cattle class' method getEarring() unit test.
 */
-void unit_cattle_getEarring();
+void unit_cattle_getEarring(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method setEarring() unit test.
 */
-void unit_cattle_setEarring();
+void unit_cattle_setEarring(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method getBreed() unit test.
 */
-void unit_cattle_getBreed();
+void unit_cattle_getBreed(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method setBreed() unit test.
 */
-void unit_cattle_setBreed();
+void unit_cattle_setBreed(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method getAcquisitionDate() unit test.
 */
-void unit_cattle_getAcquisitionDate();
+void unit_cattle_getAcquisitionDate(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method setAcquisitionDate() unit test.
 */
-void unit_cattle_setAcquisitionDate();
+void unit_cattle_setAcquisitionDate(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method getBirthDate() unit test.
 */
-void unit_cattle_getBirthDate();
+void unit_cattle_getBirthDate(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method setBirthDate() unit test.
 */
-void unit_cattle_setBirthDate();
+void unit_cattle_setBirthDate(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method getFather() unit test.
 */
-void unit_cattle_getFather();
+void unit_cattle_getFather(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method setFather() unit test.
 */
-void unit_cattle_setFather();
+void unit_cattle_setFather(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method getMother() unit test.
 */
-void unit_cattle_getMother();
+void unit_cattle_getMother(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method setMother() unit test.
 */
-void unit_cattle_setMother();
+void unit_cattle_setMother(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method getWeight() unit test.
 */
-void unit_cattle_getWeight();
+void unit_cattle_getWeight(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method setWeight() unit test.
 */
-void unit_cattle_setWeight();
+void unit_cattle_setWeight(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method getValue() unit test.
 */
-void unit_cattle_getValue();
+void unit_cattle_getValue(Farm* f);
 
 /*!
   Function prototype for the Cattle class' method setValue() unit test.
 */
-void unit_cattle_setValue();
+void unit_cattle_setValue(Farm* f);
 
 /*!
   Function prototype for the CattleHandle class' assingment operator unit test.
@@ -119,6 +120,6 @@ void unit_cattle_assingmentOperator();
 /*!
   Function prototype for the function that runs all the unit tests of the Cattle class.
 */
-void run_unit_tests_cattle();
+void run_unit_tests_cattle(Farm* f);
 
 #endif

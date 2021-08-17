@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <string>
+#include <QtSql>
 
 /** 
  * \brief
@@ -22,100 +23,132 @@ class Cattle{
         virtual ~Cattle(){}
      
         /*!
-            Sets the earring attribute in the Cattle Class.
-            \param cattle_earring which will be set to the current Cattle.
+            Sets the earring of the current Cattle in the database.
+            \param query the query of a database.
+            \param actual_cattle_earring the earring of the current Cattle.
+            \param new_cattle_earring which will be set to the current Cattle.
         */
-        virtual void setEarring(std::string cattle_earring) = 0;
+        virtual void setEarring(QSqlQuery* query, int actual_cattle_earring, int new_cattle_earring) = 0;
 
         /*!
-            Returns the earring attribute in the Cattle Class.
-            \return string - the content earring attribute.  
+            Returns the earring of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
+            \return QString - the content earring attribute.  
         */
-        virtual std::string getEarring() const = 0;
+        virtual QString getEarring(QSqlQuery* query, int cattle_earring) const = 0;
         
         /*!
-            Sets the breed attribute in the Cattle Class.
+            Sets the breed of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
             \param cattle_breed which will be set to the current Cattle.
         */
-        virtual void setBreed(std::string cattle_breed) = 0;
+        virtual void setBreed(QSqlQuery* query, int cattle_earring, std::string cattle_breed) = 0;
 
         /*!
-            Returns the breed attribute in the Cattle Class.
-            \return string - the content Breed attribute.  
+            Returns the breed of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
+            \return QString - the content Breed attribute.  
         */
-        virtual std::string getBreed() const = 0;
+        virtual QString getBreed(QSqlQuery* query, int cattle_earring) const = 0;
 
         /*!
-            Sets the acquisition date attribute in the Cattle Class.
+            Sets the acquisition date of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
             \param cattle_acquisition_date which will be set to the current Cattle.
         */
-        virtual void setAcquisitionDate(std::string cattle_acquisition_date) = 0;
+        virtual void setAcquisitionDate(QSqlQuery* query, int cattle_earring, std::string cattle_acquisition_date) = 0;
 
         /*!
-            Returns the acquisition date attribute in the Cattle Class.
-            \return string - the content acquisition date attribute.  
+            Returns the acquisition date of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
+            \return QString - the content acquisition date attribute.  
         */
-        virtual std::string getAcquisitionDate() const = 0;
+        virtual QString getAcquisitionDate(QSqlQuery* query, int cattle_earring) const = 0;
 
         /*!
-            Sets the birth date attribute in the Cattle Class.
+            Sets the birth date of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
             \param cattle_birth_date which will be set to the current Cattle.
         */
-        virtual void setBirthDate(std::string cattle_birth_date) = 0;
+        virtual void setBirthDate(QSqlQuery* query, int cattle_earring, std::string cattle_birth_date) = 0;
 
         /*!
-            Returns the birth date attribute in the Cattle Class.
-            \return string - the content birth date attribute.  
+            Returns the birth date of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
+            \return QString - the content birth date attribute.  
         */
-        virtual std::string getBirthDate() const = 0;
+        virtual QString getBirthDate(QSqlQuery* query, int cattle_earring) const = 0;
 
         /*!
-            Sets the father attribute in the Cattle Class.
+            Sets the father's earring of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
             \param cattle_father which will be set to the current Cattle.
         */
-        virtual void setFather(std::string cattle_father) = 0;
+        virtual void setFather(QSqlQuery* query, int cattle_earring, int cattle_father) = 0;
 
         /*!
-            Returns the father attribute in the Cattle Class.
-            \return string - the content father attribute.  
+            Returns the father's earring of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
+            \return QString - the content father attribute.  
         */
-        virtual std::string getFather() const = 0;
+        virtual QString getFather(QSqlQuery* query, int cattle_earring) const = 0;
 
         /*!
-            Sets the mother attribute in the Cattle Class.
+            Sets the mother's earring of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
             \param cattle_mother which will be set to the current Cattle.
         */
-        virtual void setMother(std::string cattle_mother) = 0;
+        virtual void setMother(QSqlQuery* query, int cattle_earring, int cattle_mother) = 0;
 
         /*!
-            Returns the mother attribute in the Cattle Class.
-            \return string - the content mother attribute.  
+            Returns the mother's earring of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
+            \return QString - the content mother attribute.  
         */
-        virtual std::string getMother() const = 0;
+        virtual QString getMother(QSqlQuery* query, int cattle_earring) const = 0;
 
         /*!
-            Sets the weight attribute in the Cattle Class.
+            Sets the weight of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
             \param cattle_weight which will be set to the current Cattle.
         */
-        virtual void setWeight(double cattle_weight) = 0;
+        virtual void setWeight(QSqlQuery* query, int cattle_earring, double cattle_weight) = 0;
 
         /*!
-            Returns the weight attribute in the Cattle Class.
-            \return double - the content weight attribute.  
+            Returns the weight of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
+            \return QString - the content weight attribute.  
         */
-        virtual double getWeight() const = 0;
+        virtual QString getWeight(QSqlQuery* query, int cattle_earring) const = 0;
 
         /*!
-            Sets the value attribute in the Cattle Class.
+            Sets the value of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
             \param cattle_value which will be set to the current Cattle.
         */
-        virtual void setValue(double cattle_value) = 0;
+        virtual void setValue(QSqlQuery* query, int cattle_earring, double cattle_value) = 0;
 
         /*!
-            Returns the value attribute in the Cattle Class.
-            \return double - the content value attribute.  
+            Returns the value of the current Cattle in the database.
+            \param query the query of a database.
+            \param cattle_earring the earring of the current Cattle.
+            \return QString - the content value attribute.  
         */
-        virtual double getValue() const = 0;
+        virtual QString getValue(QSqlQuery* query, int cattle_earring) const = 0;
 
 };
 

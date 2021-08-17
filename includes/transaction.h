@@ -22,64 +22,84 @@ class Transaction{
         virtual ~Transaction(){}
      
         /*!
-            Sets the number attribute in the Transaction Class.
-            \param transaction_number which will be set to the current Transaction.
+            Sets the number of the current Transaction in the database.
+            \param query the query of a database.
+            \param actual_transaction_number the number of the current Transaction.
+            \param new_transaction_number which will be set to the current Transaction.
         */
-        virtual void setNumber(int transaction_number) = 0;
+        virtual void setNumber(QSqlQuery* query, int actual_transaction_number, int new_transaction_number) = 0;
 
         /*!
-            Returns the number attribute in the Transaction Class.
-            \return int - the content number attribute.
+            Returns the number of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content number attribute.
         */
-        virtual int getNumber() const = 0;
+        virtual QString getNumber(QSqlQuery* query, int transaction_number) const = 0;
 
         /*!
-            Sets the value attribute in the Transaction Class.
+            Sets the value of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
             \param transaction_value which will be set to the current Transaction.
         */
-        virtual void setValue(double transaction_value) = 0;
+        virtual void setValue(QSqlQuery* query, int transaction_number, double transaction_value) = 0;
 
         /*!
-            Returns the value attribute in the Transaction Class.
-            \return std::string - the content value attribute.  
+            Returns the value of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content value attribute.  
         */
-        virtual double getValue() const = 0;
+        virtual QString getValue(QSqlQuery* query, int transaction_number) const = 0;
         
         /*!
-            Sets the description attribute in the Transaction Class.
+            Sets the description of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
             \param transaction_description which will be set to the current Transaction.
         */
-        virtual void setDescription(std::string transaction_description) = 0;
+        virtual void setDescription(QSqlQuery* query, int transaction_number, std::string transaction_description) = 0;
 
         /*!
-            Returns the description attribute in the Transaction Class.
-            \return std::string - the content description attribute.  
+            Returns the description of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content description attribute.  
         */
-        virtual std::string getDescription() const = 0;
+        virtual QString getDescription(QSqlQuery* query, int transaction_number) const = 0;
 
         /*!
-            Sets the date attribute in the Transaction Class.
+            Sets the date of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
             \param transaction_date which will be set to the current Transaction.
         */
-        virtual void setDate(std::string transaction_date) = 0;
+        virtual void setDate(QSqlQuery* query, int transaction_number, std::string transaction_date) = 0;
 
         /*!
-            Returns the date attribute in the Transaction Class.
-            \return std::string - the content date attribute.  
+            Returns the date of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content date attribute.  
         */
-        virtual std::string getDate() const = 0;
+        virtual QString getDate(QSqlQuery* query, int transaction_number) const = 0;
 
         /*!
-            Sets the cattle earring attribute in the Transaction Class.
+            Sets the cattle earring of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
             \param transaction_cattle_earring which will be set to the current Transaction.
         */
-        virtual void setCattleEarring(std::string transaction_cattle_earring) = 0;
+        virtual void setCattleEarring(QSqlQuery* query, int transaction_number, int transaction_cattle_earring) = 0;
 
         /*!
-            Returns the cattle earring attribute in the Transaction Class.
-            \return std::string - the content cattle earring attribute.  
+            Returns the cattle earring of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content cattle earring attribute.  
         */
-        virtual std::string getCattleEarring() const = 0;
+        virtual QString getCattleEarring(QSqlQuery* query, int transaction_number) const = 0;
 
 };
 

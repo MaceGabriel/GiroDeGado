@@ -1,79 +1,205 @@
 #include "../includes/cattleImpl.h"
 
-CattleBody::CattleBody(std::string earring, std::string breed, std::string acquisition_date, std::string birth_date,
-                       std::string father, std::string mother, double weight,  double value){
-    setEarring(earring);
-    setBreed(breed);
-    setAcquisitionDate(acquisition_date);
-    setBirthDate(birth_date);
-    setFather(father);
-    setMother(mother);
-    setWeight(weight);
-    setValue(value);
-}
+CattleBody::CattleBody(){}
 
 CattleBody::~CattleBody(){}
 
-void CattleBody::setEarring(std::string cattle_earring){
-    earring_ = cattle_earring;
+void CattleBody::setEarring(QSqlQuery* query, int actual_cattle_earring, int new_cattle_earring){
+    QString actual_earring = QString::number(actual_cattle_earring);
+    QString new_earring = QString::number(new_cattle_earring);
+
+    query->exec("update cattle set earring="+new_earring+" where earring="+actual_earring);
 }
 
-std::string CattleBody::getEarring() const{
-    return earring_;
+QString CattleBody::getEarring(QSqlQuery* query, int cattle_earring) const{
+    QString earring = QString::number(cattle_earring);
+
+    query->exec("select * from cattle where earring="+earring);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(1).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
 
-void CattleBody::setBreed(std::string cattle_breed){
-    breed_ = cattle_breed;
+void CattleBody::setBreed(QSqlQuery* query, int cattle_earring, std::string cattle_breed){
+    QString earring = QString::number(cattle_earring);
+    QString breed = QString::fromStdString(cattle_breed);
+
+    query->exec("update cattle set breed='"+breed+"' where earring="+earring);
 }
 
-std::string CattleBody::getBreed() const{
-    return breed_;
+QString CattleBody::getBreed(QSqlQuery* query, int cattle_earring) const{
+    QString earring = QString::number(cattle_earring);
+
+    query->exec("select * from cattle where earring="+earring);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(2).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
 
-void CattleBody::setAcquisitionDate(std::string cattle_acquisition_date){
-    acquisition_date_ = cattle_acquisition_date;
+void CattleBody::setAcquisitionDate(QSqlQuery* query, int cattle_earring, std::string cattle_acquisition_date){
+    QString earring = QString::number(cattle_earring);
+    QString acquisition_date = QString::fromStdString(cattle_acquisition_date);
+
+    query->exec("update cattle set acquisition_date='"+acquisition_date+"' where earring="+earring);
 }
 
-std::string CattleBody::getAcquisitionDate() const{
-    return acquisition_date_;
+QString CattleBody::getAcquisitionDate(QSqlQuery* query, int cattle_earring) const{
+    QString earring = QString::number(cattle_earring);
+
+    query->exec("select * from cattle where earring="+earring);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(3).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
 
-void CattleBody::setBirthDate(std::string cattle_birth_date){
-    birth_date_ = cattle_birth_date;
+void CattleBody::setBirthDate(QSqlQuery* query, int cattle_earring, std::string cattle_birth_date){
+    QString earring = QString::number(cattle_earring);
+    QString birth_date = QString::fromStdString(cattle_birth_date);
+
+    query->exec("update cattle set birth_date='"+birth_date+"' where earring="+earring);
 }
 
-std::string CattleBody::getBirthDate() const{
-    return birth_date_;
+QString CattleBody::getBirthDate(QSqlQuery* query, int cattle_earring) const{
+    QString earring = QString::number(cattle_earring);
+
+    query->exec("select * from cattle where earring="+earring);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(4).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
 
-void CattleBody::setFather(std::string cattle_father){
-    father_ = cattle_father;
+void CattleBody::setFather(QSqlQuery* query, int cattle_earring, int cattle_father){
+    QString earring = QString::number(cattle_earring);
+    QString father = QString::number(cattle_father);
+
+    query->exec("update cattle set father="+father+" where earring="+earring);
 }
 
-std::string CattleBody::getFather() const{
-    return father_;
+QString CattleBody::getFather(QSqlQuery* query, int cattle_earring) const{
+    QString earring = QString::number(cattle_earring);
+
+    query->exec("select * from cattle where earring="+earring);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(5).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
 
-void CattleBody::setMother(std::string cattle_mother){
-    mother_ = cattle_mother;
+void CattleBody::setMother(QSqlQuery* query, int cattle_earring, int cattle_mother){
+    QString earring = QString::number(cattle_earring);
+    QString mother = QString::number(cattle_mother);
+
+    query->exec("update cattle set mother="+mother+" where earring="+earring);
 }
 
-std::string CattleBody::getMother() const{
-    return mother_;
+QString CattleBody::getMother(QSqlQuery* query, int cattle_earring) const{
+    QString earring = QString::number(cattle_earring);
+
+    query->exec("select * from cattle where earring="+earring);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(6).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
 
-void CattleBody::setWeight(double cattle_weight){
-    weight_ = cattle_weight;
+void CattleBody::setWeight(QSqlQuery* query, int cattle_earring, double cattle_weight){
+    QString earring = QString::number(cattle_earring);
+    QString weight = QString::number(cattle_weight);
+
+    query->exec("update cattle set weight="+weight+" where earring="+earring);
 }
 
-double CattleBody::getWeight() const{
-    return weight_;
+QString CattleBody::getWeight(QSqlQuery* query, int cattle_earring) const{
+    QString earring = QString::number(cattle_earring);
+
+    query->exec("select * from cattle where earring="+earring);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(7).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
 
-void CattleBody::setValue(double cattle_value){
-    value_ = cattle_value;
+void CattleBody::setValue(QSqlQuery* query, int cattle_earring, double cattle_value){
+    QString earring = QString::number(cattle_earring);
+    QString value = QString::number(cattle_value);
+
+    query->exec("update cattle set value="+value+" where earring="+earring);
 }
 
-double CattleBody::getValue() const{
-    return value_;
+QString CattleBody::getValue(QSqlQuery* query, int cattle_earring) const{
+    QString earring = QString::number(cattle_earring);
+
+    query->exec("select * from cattle where earring="+earring);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(8).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }

@@ -18,13 +18,6 @@ using namespace std;
 */
 class TransactionBody : public Body{
 
-    protected:
-        int number_; /*!< This attribute contains the number for the TransactionBody. */
-        double value_; /*!< This attribute contains the value of the TransactionBody. */
-        std::string description_; /*!< This attribute contains the description for the TransactionBody. */
-        std::string date_; /*!< This attribute contains the date for the TransactionBody. */
-        std::string cattle_earring_; /*!< This attribute contains the cattle's earring for the TransactionBody. */
-
     private:
         // No copy allowed
 
@@ -43,15 +36,9 @@ class TransactionBody : public Body{
 
         /*!
             This is the default constructor for the TransactionBody Class.
-            \param number the number of the TransactionBody.
-            \param value the value of the TransactionBody.
-            \param description the description of the TransactionBody.
-            \param date the date of the TransactionBody.
-            \param cattle_earring the cattle's earring of the TransactionBody.
             \return TransactionBody - a TransactionBody Class object.
         */
-        TransactionBody(int number = 0, double value = 0.0, std::string description = "", std::string date = "",
-                        std::string cattle_earring = "");
+        TransactionBody();
 
         /*!
             This is the default destructor for the TransactionBody Class.
@@ -59,64 +46,84 @@ class TransactionBody : public Body{
         virtual ~TransactionBody();
 
         /*!
-            Sets the number attribute in the Transaction Class.
-            \param transaction_number which will be set to the current Transaction.
+            Sets the number of the current Transaction in the database.
+            \param query the query of a database.
+            \param actual_transaction_number the number of the current Transaction.
+            \param new_transaction_number which will be set to the current Transaction.
         */
-        void setNumber(int transaction_number);
+        void setNumber(QSqlQuery* query, int actual_transaction_number, int new_transaction_number);
 
         /*!
-            Returns the number attribute in the Transaction Class.
-            \return int - the content number attribute.
+            Returns the number of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content number attribute.
         */
-        int getNumber() const;
+        QString getNumber(QSqlQuery* query, int transaction_number) const;
 
         /*!
-            Sets the value attribute in the Transaction Class.
+            Sets the value of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
             \param transaction_value which will be set to the current Transaction.
         */
-        void setValue(double transaction_value);
+        void setValue(QSqlQuery* query, int transaction_number, double transaction_value);
 
         /*!
-            Returns the value attribute in the Transaction Class.
-            \return std::string - the content value attribute.  
+            Returns the value of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content value attribute.  
         */
-        double getValue() const;
+        QString getValue(QSqlQuery* query, int transaction_number) const;
         
         /*!
-            Sets the description attribute in the Transaction Class.
+            Sets the description of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
             \param transaction_description which will be set to the current Transaction.
         */
-        void setDescription(std::string transaction_description);
+        void setDescription(QSqlQuery* query, int transaction_number, std::string transaction_description);
 
         /*!
-            Returns the description attribute in the Transaction Class.
-            \return std::string - the content description attribute.  
+            Returns the description of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content description attribute.  
         */
-        std::string getDescription() const;
+        QString getDescription(QSqlQuery* query, int transaction_number) const;
 
         /*!
-            Sets the date attribute in the Transaction Class.
+            Sets the date of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
             \param transaction_date which will be set to the current Transaction.
         */
-        void setDate(std::string transaction_date);
+        void setDate(QSqlQuery* query, int transaction_number, std::string transaction_date);
 
         /*!
-            Returns the date attribute in the Transaction Class.
-            \return std::string - the content date attribute.  
+            Returns the date of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content date attribute.  
         */
-        std::string getDate() const;
+        QString getDate(QSqlQuery* query, int transaction_number) const;
 
         /*!
-            Sets the cattle earring attribute in the Transaction Class.
+            Sets the cattle earring of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
             \param transaction_cattle_earring which will be set to the current Transaction.
         */
-        void setCattleEarring(std::string transaction_cattle_earring);
+        void setCattleEarring(QSqlQuery* query, int transaction_number, int transaction_cattle_earring);
 
         /*!
-            Returns the cattle earring attribute in the Transaction Class.
-            \return std::string - the content cattle earring attribute.  
+            Returns the cattle earring of the current Transaction in the database.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content cattle earring attribute.  
         */
-        std::string getCattleEarring() const;
+        QString getCattleEarring(QSqlQuery* query, int transaction_number) const;
 
 };
 
@@ -129,21 +136,9 @@ class TransactionHandle : public Handle<TransactionBody>, public Transaction{
         
         /*!
             This is the default constructor for the TransactionHandle Class.
-            \param id the id of the TransactionHandle.
-            \param value the value of the TransactionHandle.
-            \param description the description of the TransactionHandle.
-            \param date the date of the TransactionHandle.
-            \param cattle_earring the cattle's earring of the TransactionHandle.
             \return TransactionHandle - a TransactionHandle Class object.
         */
-        TransactionHandle(int number = 0, double value = 0.0, std::string description = "", std::string date = "",
-                        std::string cattle_earring = ""){
-            pImpl_->setNumber(number);
-            pImpl_->setValue(value);
-            pImpl_->setDescription(description);
-            pImpl_->setDate(date);
-            pImpl_->setCattleEarring(cattle_earring);
-        }
+        TransactionHandle(){};
 
         /*!
             This is the default destructor for the TransactionHandle Class.
@@ -152,84 +147,103 @@ class TransactionHandle : public Handle<TransactionBody>, public Transaction{
         
         /*!
             Calls the setNumber() method implemented in the TransactionBody Class.
-            \param transaction_number which will be set to the current Transaction.
+            \param query the query of a database.
+            \param actual_transaction_number the number of the current Transaction.
+            \param new_transaction_number which will be set to the current Transaction.
         */
-        void setNumber(int transaction_number){
-            pImpl_->setNumber(transaction_number);
+        void setNumber(QSqlQuery* query, int actual_transaction_number, int new_transaction_number){
+            pImpl_->setNumber(query, actual_transaction_number, new_transaction_number);
         }
 
         /*!
             Calls the getNumber() method implemented in the TransactionBody Class.
-            \return int - the content number attribute.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content number attribute.
         */
-        int getNumber() const{
-            return pImpl_->getNumber();
+        QString getNumber(QSqlQuery* query, int transaction_number) const{
+            return pImpl_->getNumber(query, transaction_number);
         }
 
         /*!
             Calls the setValue() method implemented in the TransactionBody Class.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
             \param transaction_value which will be set to the current Transaction.
         */
-        void setValue(double transaction_value){
-            pImpl_->setValue(transaction_value);
+        void setValue(QSqlQuery* query, int transaction_number, double transaction_value){
+            pImpl_->setValue(query, transaction_number, transaction_value);
         }
 
         /*!
             Calls the getValue() method implemented in the TransactionBody Class.
-            \return std::string - the content value attribute.  
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content value attribute.  
         */
-        double getValue() const{
-            return pImpl_->getValue();
+        QString getValue(QSqlQuery* query, int transaction_number) const{
+            return pImpl_->getValue(query, transaction_number);
         }
         
         /*!
             Calls the setDescription() method implemented in the TransactionBody Class.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
             \param transaction_description which will be set to the current Transaction.
         */
-        void setDescription(std::string transaction_description){
-            pImpl_->setDescription(transaction_description);
+        void setDescription(QSqlQuery* query, int transaction_number, std::string transaction_description){
+            pImpl_->setDescription(query, transaction_number, transaction_description);
         }
 
         /*!
             Calls the getDescription() method implemented in the TransactionBody Class.
-            \return std::string - the content description attribute.  
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content description attribute.  
         */
-        std::string getDescription() const{
-            return pImpl_->getDescription();
+        QString getDescription(QSqlQuery* query, int transaction_number) const{
+            return pImpl_->getDescription(query, transaction_number);
         }
 
         /*!
             Calls the setDate() method implemented in the TransactionBody Class.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
             \param transaction_date which will be set to the current Transaction.
         */
-        void setDate(std::string transaction_date){
-            pImpl_->setDate(transaction_date);
+        void setDate(QSqlQuery* query, int transaction_number, std::string transaction_date){
+            pImpl_->setDate(query, transaction_number, transaction_date);
         }
 
         /*!
             Calls the getDate() method implemented in the TransactionBody Class.
-            \return std::string - the content date attribute.  
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content date attribute.  
         */
-        std::string getDate() const{
-            return pImpl_->getDate();
+        QString getDate(QSqlQuery* query, int transaction_number) const{
+            return pImpl_->getDate(query, transaction_number);
         }
 
         /*!
             Calls the setCattleEarring() method implemented in the TransactionBody Class.
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
             \param transaction_cattle_earring which will be set to the current Transaction.
         */
-        void setCattleEarring(std::string transaction_cattle_earring){
-            pImpl_->setCattleEarring(transaction_cattle_earring);
+        void setCattleEarring(QSqlQuery* query, int transaction_number, int transaction_cattle_earring){
+            pImpl_->setCattleEarring(query, transaction_number, transaction_cattle_earring);
         }
 
         /*!
             Calls the getCattleEarring() method implemented in the TransactionBody Class.
-            \return std::string - the content cattle earring attribute.  
+            \param query the query of a database.
+            \param transaction_number the number of the current Transaction.
+            \return QString - the content cattle earring attribute.  
         */
-        std::string getCattleEarring() const{
-            return pImpl_->getCattleEarring();
+        QString getCattleEarring(QSqlQuery* query, int transaction_number) const{
+            return pImpl_->getCattleEarring(query, transaction_number);
         }
-
 };
 
 #endif

@@ -1,51 +1,130 @@
 #include "../includes/transactionImpl.h"
 
-TransactionBody::TransactionBody(int id, double value, std::string description, std::string date, std::string cattle_earring){
-    setNumber(id);
-    setValue(value);
-    setDescription(description);
-    setDate(date);
-    setCattleEarring(cattle_earring);
-}
+TransactionBody::TransactionBody(){}
 
 TransactionBody::~TransactionBody(){}
 
-void TransactionBody::setNumber(int transaction_id){
-    number_ = transaction_id;
+void TransactionBody::setNumber(QSqlQuery* query, int actual_transaction_number, int new_transaction_number){
+    QString actual_number = QString::number(actual_transaction_number);
+    QString new_number = QString::number(new_transaction_number);
+
+    query->exec("update financial set number="+new_number+" where number="+actual_number);
 }
 
-int TransactionBody::getNumber() const{
-    return number_;
+QString TransactionBody::getNumber(QSqlQuery* query, int transaction_number) const{
+    QString number = QString::number(transaction_number);
+
+    query->exec("select * from financial where number="+number);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(1).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
 
-void TransactionBody::setValue(double transaction_value){
-    value_ = transaction_value;
+void TransactionBody::setValue(QSqlQuery* query, int transaction_number, double transaction_value){
+    QString number = QString::number(transaction_number);
+    QString value = QString::number(transaction_value);
+
+    query->exec("update financial set value="+value+" where number="+number);
 }
 
-double TransactionBody::getValue() const{
-    return value_;
+QString TransactionBody::getValue(QSqlQuery* query, int transaction_number) const{
+    QString number = QString::number(transaction_number);
+
+    query->exec("select * from financial where number="+number);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(3).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
 
-void TransactionBody::setDescription(std::string transaction_description){
-    description_ = transaction_description;
+void TransactionBody::setDescription(QSqlQuery* query, int transaction_number, std::string transaction_description){
+    QString number = QString::number(transaction_number);
+    QString description = QString::fromStdString(transaction_description);
+
+    query->exec("update financial set description='"+description+"' where number="+number);
 }
 
-std::string TransactionBody::getDescription() const{
-    return description_;
+QString TransactionBody::getDescription(QSqlQuery* query, int transaction_number) const{
+    QString number = QString::number(transaction_number);
+
+    query->exec("select * from financial where number="+number);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(5).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
 
-void TransactionBody::setDate(std::string transaction_date){
-    date_ = transaction_date;
+void TransactionBody::setDate(QSqlQuery* query, int transaction_number, std::string transaction_date){
+    QString number = QString::number(transaction_number);
+    QString date = QString::fromStdString(transaction_date);
+
+    query->exec("update financial set date='"+date+"' where number="+number);
 }
 
-std::string TransactionBody::getDate() const{
-    return date_;
+QString TransactionBody::getDate(QSqlQuery* query, int transaction_number) const{
+    QString number = QString::number(transaction_number);
+
+    query->exec("select * from financial where number="+number);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(2).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
 
-void TransactionBody::setCattleEarring(std::string transaction_cattle_earring){
-    cattle_earring_ = transaction_cattle_earring;
+void TransactionBody::setCattleEarring(QSqlQuery* query, int transaction_number, int transaction_cattle_earring){
+    QString number = QString::number(transaction_number);
+    QString cattle_earring = QString::number(transaction_cattle_earring);
+
+    query->exec("update financial set cattle_earring="+cattle_earring+" where number="+number);
 }
 
-std::string TransactionBody::getCattleEarring() const{
-    return cattle_earring_;
+QString TransactionBody::getCattleEarring(QSqlQuery* query, int transaction_number) const{
+    QString number = QString::number(transaction_number);
+
+    query->exec("select * from financial where number="+number);
+    int count = 0;
+    while(query->next()){
+        count++;
+    }
+    if(count > 0){
+        query->first();
+        return query->value(4).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
