@@ -1,5 +1,6 @@
 #include "cattlemanagementscreen.h"
 #include "cattleregisterscreen.h"
+#include "cattleeditscreen.h"
 #include "cattleremovescreen.h"
 #include "ui_cattlemanagementscreen.h"
 
@@ -38,7 +39,9 @@ void CattleManagementScreen::on_queryButton_clicked()
 
 void CattleManagementScreen::on_updateButton_clicked()
 {
-
+    CattleEditScreen* cattleEdit = new CattleEditScreen(nullptr, this, getFarm());
+    this->hide();
+    cattleEdit->show();
 }
 
 void CattleManagementScreen::on_removeButton_clicked()
