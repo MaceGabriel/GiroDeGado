@@ -11,9 +11,12 @@ CONFIG += c++11
 SOURCES += \
     entity/cattlebirthscreen.cpp \
     entity/cattlebuyscreen.cpp \
+    entity/cattleconsultscreen.cpp \
+    entity/cattleeditscreen.cpp \
     entity/cattlemanagementscreen.cpp \
     entity/cattleregisterscreen.cpp \
     entity/cattleremovescreen.cpp \
+    entity/financialconsultscreen.cpp \
     entity/financialmanagementscreen.cpp \
     entity/financialrecordscreen.cpp \
     entity/financialremovescreen.cpp \
@@ -30,9 +33,12 @@ SOURCES += \
 HEADERS += \
     entity/cattlebirthscreen.h \
     entity/cattlebuyscreen.h \
+    entity/cattleconsultscreen.h \
+    entity/cattleeditscreen.h \
     entity/cattlemanagementscreen.h \
     entity/cattleregisterscreen.h \
     entity/cattleremovescreen.h \
+    entity/financialconsultscreen.h \
     entity/financialmanagementscreen.h \
     entity/financialrecordscreen.h \
     entity/financialremovescreen.h \
@@ -51,9 +57,12 @@ HEADERS += \
 FORMS += \
     views/cattlebirthscreen.ui \
     views/cattlebuyscreen.ui \
+    views/cattleconsultscreen.ui \
+    views/cattleeditscreen.ui \
     views/cattlemanagementscreen.ui \
     views/cattleregisterscreen.ui \
     views/cattleremovescreen.ui \
+    views/financialconsultscreen.ui \
     views/financialmanagementscreen.ui \
     views/financialrecordscreen.ui \
     views/financialremovescreen.ui \

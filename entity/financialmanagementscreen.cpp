@@ -1,5 +1,6 @@
 #include "financialmanagementscreen.h"
 #include "financialrecordscreen.h"
+#include "financialconsultscreen.h"
 #include "financialremovescreen.h"
 #include "ui_financialmanagementscreen.h"
 
@@ -33,7 +34,9 @@ void FinancialManagementScreen::on_registerButton_clicked()
 
 void FinancialManagementScreen::on_queryButton_clicked()
 {
-
+    FinancialConsultScreen* consult = new FinancialConsultScreen(nullptr, this, getFarm());
+    this->hide();
+    consult->show();
 }
 
 void FinancialManagementScreen::on_removeButton_clicked()
