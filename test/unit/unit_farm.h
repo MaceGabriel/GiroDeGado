@@ -16,202 +16,199 @@
 * Creation of the unit tests for the Farm class.
 */
 
-class UnitFarm{
-
-    public:
-        UnitFarm(){}
-        ~UnitFarm(){}
-
-        /*!
-          Function prototype for the FarmHandle class' constructor unit test.
-        */
-        void unit_farm_copy_constructor();
-
-        /*!
-          Function prototype for the Farm class' method addCattle() unit test.
-        */
-        void unit_farm_addCattle();
-
-        /*!
-          Function prototype for the Farm class' method addTransaction() unit test.
-        */
-        void unit_farm_addTransaction();
-
-        /*!
-          Function prototype for the FarmHandle class' assingment operator unit test.
-        */
-        void unit_farm_assingmentOperator();
-
-};
+/*!
+  Function prototype for the Farm class' method createCattle() unit test.
+*/
+void unit_farm_createCattle(Farm* f);
 
 /*!
-  Function prototype for the Farm class' constructor unit test.
+  Function prototype for the Farm class' method createTransaction() unit test.
 */
-void unit_farm_constructor();
+void unit_farm_createTransaction(Farm* f);
 
 /*!
-  Function prototype for the Farm class' destructor unit test.
+  Function prototype for the Farm class' method getQuery() unit test.
 */
-void unit_farm_destructor();
+void unit_farm_getQuery(Farm* f);
 
 /*!
-  Function prototype for the Farm class' method removeCattle() unit test.
+  Function prototype for the Farm class' method setQuery() unit test.
 */
-void unit_farm_removeCattle();
+void unit_farm_setQuery(Farm* f);
 
 /*!
-  Function prototype for the Farm class' method removeTransaction() unit test.
+  Function prototype for the Farm class' method queryExec() unit test.
 */
-void unit_farm_removeTransaction();
+void unit_farm_queryExec(Farm* f);
 
 /*!
-  Function prototype for the Farm class' method getEarring() unit test.
+  Function prototype for the Farm class' method queryNext() unit test.
 */
-void unit_farm_getEarring();
+void unit_farm_queryNext(Farm* f);
 
 /*!
-  Function prototype for the Farm class' method setEarring() unit test.
+  Function prototype for the Farm class' method queryFirst() unit test.
 */
-void unit_farm_setEarring();
+void unit_farm_queryFirst(Farm* f);
 
 /*!
-  Function prototype for the Farm class' method getBreed() unit test.
+  Function prototype for the Farm class' method queryValue() unit test.
 */
-void unit_farm_getBreed();
+void unit_farm_queryValue(Farm* f);
 
 /*!
-  Function prototype for the Farm class' method setBreed() unit test.
+  Function prototype for the Farm class' method getCattleCEarring() unit test.
 */
-void unit_farm_setBreed();
-
-/*!
-  Function prototype for the Farm class' method getAcquisitionDate() unit test.
-*/
-void unit_farm_getAcquisitionDate();
-
-/*!
-  Function prototype for the Farm class' method setAcquisitionDate() unit test.
-*/
-void unit_farm_setAcquisitionDate();
-
-/*!
-  Function prototype for the Farm class' method getBirthDate() unit test.
-*/
-void unit_farm_getBirthDate();
-
-/*!
-  Function prototype for the Farm class' method setBirthDate() unit test.
-*/
-void unit_farm_setBirthDate();
-
-/*!
-  Function prototype for the Farm class' method getFather() unit test.
-*/
-void unit_farm_getFather();
-
-/*!
-  Function prototype for the Farm class' method setFather() unit test.
-*/
-void unit_farm_setFather();
-
-/*!
-  Function prototype for the Farm class' method getMother() unit test.
-*/
-void unit_farm_getMother();
-
-/*!
-  Function prototype for the Farm class' method setMother() unit test.
-*/
-void unit_farm_setMother();
-
-/*!
-  Function prototype for the Farm class' method getWeight() unit test.
-*/
-void unit_farm_getWeight();
-
-/*!
-  Function prototype for the Farm class' method setWeight() unit test.
-*/
-void unit_farm_setWeight();
-
-/*!
-  Function prototype for the Farm class' method getValue() unit test, while passing a Cattle as an argument.
-*/
-void unit_farm_cattle_getValue();
-
-/*!
-  Function prototype for the Farm class' method setValue() unit test, while passing a Cattle as an argument.
-*/
-void unit_farm_cattle_setValue();
-
-/*!
-  Function prototype for the Farm class' method getNumber() unit test.
-*/
-void unit_farm_getNumber();
-
-/*!
-  Function prototype for the Farm class' method setNumber() unit test.
-*/
-void unit_farm_setNumber();
-
-/*!
-  Function prototype for the Farm class' method getValue() unit test, while passing a Transaction as an argument.
-*/
-void unit_farm_transaction_getValue();
-
-/*!
-  Function prototype for the Farm class' method setValue() unit test, while passing a Transaction as an argument.
-*/
-void unit_farm_transaction_setValue();
-
-/*!
-  Function prototype for the Farm class' method getDescription() unit test.
-*/
-void unit_farm_getDescription();
-
-/*!
-  Function prototype for the Farm class' method setDescription() unit test.
-*/
-void unit_farm_setDescription();
-
-/*!
-  Function prototype for the Farm class' method getDate() unit test.
-*/
-void unit_farm_getDate();
-
-/*!
-  Function prototype for the Farm class' method setDate() unit test.
-*/
-void unit_farm_setDate();
-
-/*!
-  Function prototype for the Farm class' method getCattleEarring() unit test.
-*/
-void unit_farm_getCattleEarring();
+void unit_farm_getCattleEarring(Farm* f);
 
 /*!
   Function prototype for the Farm class' method setCattleEarring() unit test.
 */
-void unit_farm_setCattleEarring();
+void unit_farm_setCattleEarring(Farm* f);
 
 /*!
-  Function prototype for the Farm class' method getCattle() unit test.
+  Function prototype for the Farm class' method getCattleBreed() unit test.
 */
-void unit_farm_getCattle();
+void unit_farm_getCattleBreed(Farm* f);
 
 /*!
-  Function prototype for the Farm class' method getTransaction() unit test.
+  Function prototype for the Farm class' method setCattleBreed() unit test.
 */
-void unit_farm_getTransaction();
+void unit_farm_setCattleBreed(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getCattleAcquisitionDate() unit test.
+*/
+void unit_farm_getCattleAcquisitionDate(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setCattleAcquisitionDate() unit test.
+*/
+void unit_farm_setCattleAcquisitionDate(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getCattleBirthDate() unit test.
+*/
+void unit_farm_getCattleBirthDate(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setCattleBirthDate() unit test.
+*/
+void unit_farm_setCattleBirthDate(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getCattleFather() unit test.
+*/
+void unit_farm_getCattleFather(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setCattleFather() unit test.
+*/
+void unit_farm_setCattleFather(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getCattleMother() unit test.
+*/
+void unit_farm_getCattleMother(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setCattleMother() unit test.
+*/
+void unit_farm_setCattleMother(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getCattleWeight() unit test.
+*/
+void unit_farm_getCattleWeight(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setCattleWeight() unit test.
+*/
+void unit_farm_setCattleWeight(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getCattleValue() unit test.
+*/
+void unit_farm_getCattleValue(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setCattleValue() unit test.
+*/
+void unit_farm_setCattleValue(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getTransactionNumber() unit test.
+*/
+void unit_farm_getTransactionNumber(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setTransactionNumber() unit test.
+*/
+void unit_farm_setTransactionNumber(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getTransactionValue() unit test.
+*/
+void unit_farm_getTransactionValue(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setTransactionValue() unit test.
+*/
+void unit_farm_setTransactionValue(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getTransactionDescription() unit test.
+*/
+void unit_farm_getTransactionDescription(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setTransactionDescription() unit test.
+*/
+void unit_farm_setTransactionDescription(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getTransactionDate() unit test.
+*/
+void unit_farm_getTransactionDate(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setTransactionDate() unit test.
+*/
+void unit_farm_setTransactionDate(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getTransactionCattleEarring() unit test.
+*/
+void unit_farm_getTransactionCattleEarring(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setTransactionCattleEarring() unit test.
+*/
+void unit_farm_setTransactionCattleEarring(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getLastEarringAvailable() unit test.
+*/
+void unit_farm_getLastEarringAvailable(Farm* f);
 
 /*!
   Function prototype for the Farm class' method getLastNumberAvailable() unit test.
 */
-void unit_farm_getLastNumberAvailable();
+void unit_farm_getLastNumberAvailable(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method deleteCattle() unit test.
+*/
+void unit_farm_deleteCattle(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method deleteTransaction() unit test.
+*/
+void unit_farm_deleteTransaction(Farm* f);
 
 /*!
   Function prototype for the function that runs all the unit tests of the Farm class.
 */
-void run_unit_tests_farm();
+void run_unit_tests_farm(Farm* f);
 
 #endif

@@ -19,18 +19,13 @@
 class Farm{
 
     public:
-        friend class UnitFarm; /*!< This Class is used to do some unit tests of the Farm class. */
 
-        typedef std::vector<Cattle*>::iterator cattleIterator;
-        typedef std::vector<Transaction*>::iterator transactionIterator;
-        typedef std::vector<Farm*>::iterator farmIterator;
-        
-        virtual cattleIterator beginCattleContainer() = 0; /*!< Returns the iterator to the beginning of the cattle container attribute. */
-        virtual cattleIterator endCattleContainer() = 0; /*!< Returns the iterator to the end of the cattle container attribute. */
-        virtual transactionIterator beginTransactionContainer() = 0; /*!< Returns the iterator to the beginning of the transaction container attribute. */
-        virtual transactionIterator endTransactionContainer() = 0; /*!< Returns the iterator to the end of the transaction container attribute. */
-        virtual farmIterator beginFarmContainer() = 0; /*!< Returns the iterator to the beginning of the global farm container std::vector. */
-        virtual farmIterator endFarmContainer() = 0; /*!< Returns the iterator to the end of the global farm container std::vector. */
+        /*!
+            Returns the singleton Farm.
+            \param query the query of a database.
+            \return Farm* - the pointer to the singleton Farm.
+        */
+        static Farm* getFarm(QSqlQuery* query = NULL);
 
         /*!
             This is the default destructor for the Farm Class.
@@ -39,49 +34,41 @@ class Farm{
 
         /*!
             Sets the query attribute in the Farm Class.
+            \param query the query of a database.
         */
         virtual void setQuery(QSqlQuery* query) = 0;
 
         /*!
             Returns the query attribute in the Farm Class.
+            \return QSqlQuery* - the content query attribute.  
         */
         virtual QSqlQuery* getQuery() const = 0;
 
         /*!
             Executes the exec() method of the query.
+            \param command the command that will be executed by the query.
+            \return bool - if the method was successful or not. 
         */
         virtual bool queryExec(QString command) = 0;
 
         /*!
             Executes the next() method of the query.
+            \return bool - if the method was successful or not. 
         */
         virtual bool queryNext() = 0;
 
         /*!
             Executes the first() method of the query.
+            \return bool - if the method was successful or not. 
         */
         virtual bool queryFirst() = 0;
 
         /*!
-            Executes the value(pos).toString() method of the query.
+            Executes the value(pos).toString() methods of the query.
+            \param pos the position of the field in the current record.
+            \return QString - the value of the field in the current record, converted to a QString. 
         */
         virtual QString queryValue(int pos) = 0;
-
-        /*!
-            Creates a cattle and returns it's pointer.
-            \param earring the earring of the Cattle.
-            \param breed the breed of the Cattle.
-            \param acquisition_date the acquisition date of the Cattle.
-            \param birth_date the birth date of the Cattle.
-            \param father the father of the Cattle.
-            \param mother the mother of the Cattle.
-            \param weight the weight of the Cattle.
-            \param value the value of the Cattle.
-            \return Cattle* - a Cattle Class object.
-        */
-        virtual Cattle* farmCreateCattle(std::string earring = "", std::string breed = "", std::string acquisition_date = "", 
-                                     std::string birth_date = "", std::string father = "", std::string mother = "",
-                                     double weight = 0.0,  double value = 0.0) = 0;
         
         /*!
             Creates a cattle and adds it to the database.
@@ -98,18 +85,6 @@ class Farm{
                                   std::string acquisition_date = "", std::string birth_date = "",
                                   int father = 0, int mother = 0, double weight = 0.0,
                                   double value = 0.0) = 0;
-
-        /*!
-            Creates a transaction and returns it's pointer.
-            \param id the id of the Transaction.
-            \param value the value of the Transaction.
-            \param description the description of the Transaction.
-            \param date the date of the Transaction.
-            \param cattle_earring the cattle's earring of the Transaction.
-            \return Transaction* - a Transaction Class object.
-        */
-        virtual Transaction* farmCreateTransaction(int id = 0, double value = 0.0, std::string description = "", 
-                                               std::string date = "", std::string cattle_earring = "") = 0;
         
         /*!
             Creates a transaction and adds it to the database.
@@ -126,226 +101,213 @@ class Farm{
             Creates a Farm and returns it's pointer.
             \return Farm - a Farm Class object.
         */
-        static Farm* createFarm(QSqlQuery* query = NULL);
+        // static Farm* createFarm(int number = 0, QSqlQuery* query = NULL);
 
         /*!        
-           Removes a cattle's pointer on the cattle container.
-           \param cattle which will be removed from the cattle container.
+           Deletes a cattle from the database.
+           \param cattle_earring earring of the cattle that will be deleted.
         */ 
-        virtual void remove(Cattle* cattle) = 0;
+        virtual void deleteCattle(int cattle_earring) = 0;
       
         /*!
-           Removes a transaction's pointer on the transaction container.
-           \param transaction which will be removed from the transaction container.
+           Deletes a transaction from the database.
+           \param transaction_number number of the transaction that will be deleted.
         */
-        virtual void remove(Transaction* transaction) = 0;
+        virtual void deleteTransaction(int transaction_number) = 0;
 
         /*!
-            Sets the earring attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_earring which will be set to the current Cattle.
+            Sets the earring of a registered Cattle in the database.
+            \param actual_cattle_earring the earring of the Cattle.
+            \param new_cattle_earring which will be set to the Cattle.
         */
-        virtual void setEarring(Cattle* cattle, std::string cattle_earring) = 0;
+        virtual void setCattleEarring(int actual_cattle_earring, int new_cattle_earring) = 0;
 
         /*!
-            Returns the earring attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return std::string - the content earring attribute.  
+            Returns the earring of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content earring attribute.  
         */
-        virtual std::string getEarring(Cattle* cattle) const = 0;
+        virtual QString getCattleEarring(int cattle_earring) const = 0;
         
         /*!
-            Sets the breed attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_breed which will be set to the current Cattle.
+            Sets the breed of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_breed which will be set to the Cattle.
         */
-        virtual void setBreed(Cattle* cattle, std::string cattle_breed) = 0;
+        virtual void setCattleBreed(int cattle_earring, std::string cattle_breed) = 0;
 
         /*!
-            Returns the breed attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return std::string - the content Breed attribute.  
+            Returns the breed of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content Breed attribute.  
         */
-        virtual std::string getBreed(Cattle* cattle) const = 0;
+        virtual QString getCattleBreed(int cattle_earring) const = 0;
 
         /*!
-            Sets the acquisition date attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_acquisition_date which will be set to the current Cattle.
+            Sets the acquisition date of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_acquisition_date which will be set to the Cattle.
         */
-        virtual void setAcquisitionDate(Cattle* cattle, std::string cattle_acquisition_date) = 0;
+        virtual void setCattleAcquisitionDate(int cattle_earring, std::string cattle_acquisition_date) = 0;
 
         /*!
-            Returns the acquisition date attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return std::string - the content acquisition date attribute.  
+            Returns the acquisition date of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content acquisition date attribute.  
         */
-        virtual std::string getAcquisitionDate(Cattle* cattle) const = 0;
+        virtual QString getCattleAcquisitionDate(int cattle_earring) const = 0;
 
         /*!
-            Sets the birth date attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_birth_date which will be set to the current Cattle.
+            Sets the birth date of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_birth_date which will be set to the Cattle.
         */
-        virtual void setBirthDate(Cattle* cattle, std::string cattle_birth_date) = 0;
+        virtual void setCattleBirthDate(int cattle_earring, std::string cattle_birth_date) = 0;
 
         /*!
-            Returns the birth date attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return std::string - the content birth date attribute.  
+            Returns the birth date of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content birth date attribute.  
         */
-        virtual std::string getBirthDate(Cattle* cattle) const = 0;
+        virtual QString getCattleBirthDate(int cattle_earring) const = 0;
 
         /*!
-            Sets the father attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_father which will be set to the current Cattle.
+            Sets the father's earring of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_father which will be set to the Cattle.
         */
-        virtual void setFather(Cattle* cattle, std::string cattle_father) = 0;
+        virtual void setCattleFather(int cattle_earring, int cattle_father) = 0;
 
         /*!
-            Returns the father attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return std::string - the content father attribute.  
+            Returns the father's earring of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content father attribute.  
         */
-        virtual std::string getFather(Cattle* cattle) const = 0;
+        virtual QString getCattleFather(int cattle_earring) const = 0;
 
         /*!
-            Sets the mother attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_mother which will be set to the current Cattle.
+            Sets the mother's earring of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_mother which will be set to the Cattle.
         */
-        virtual void setMother(Cattle* cattle, std::string cattle_mother) = 0;
+        virtual void setCattleMother(int cattle_earring, int cattle_mother) = 0;
 
         /*!
-            Returns the mother attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return std::string - the content mother attribute.  
+            Returns the mother's earring of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content mother attribute.  
         */
-        virtual std::string getMother(Cattle* cattle) const = 0;
+        virtual QString getCattleMother(int cattle_earring) const = 0;
 
         /*!
-            Sets the weight attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_weight which will be set to the current Cattle.
+            Sets the weight of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_weight which will be set to the Cattle.
         */
-        virtual void setWeight(Cattle* cattle, double cattle_weight) = 0;
+        virtual void setCattleWeight(int cattle_earring, double cattle_weight) = 0;
 
         /*!
-            Returns the weight attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return double - the content weight attribute.  
+            Returns the weight of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content weight attribute.  
         */
-        virtual double getWeight(Cattle* cattle) const = 0;
+        virtual QString getCattleWeight(int cattle_earring) const = 0;
 
         /*!
-            Sets the value attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_value which will be set to the current Cattle.
+            Sets the value of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_value which will be set to the Cattle.
         */
-        virtual void setValue(Cattle* cattle, double cattle_value) = 0;
+        virtual void setCattleValue(int cattle_earring, double cattle_value) = 0;
 
         /*!
-            Returns the value attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return double - the content value attribute.  
+            Returns the value of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content value attribute.  
         */
-        virtual double getValue(Cattle* cattle) const = 0;
+        virtual QString getCattleValue(int cattle_earring) const = 0;
 
         /*!
-            Sets the number attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \param transaction_number which will be set to the current Transaction.
+            Sets the number of a registered Transaction in the database.
+            \param actual_transaction_number the number of the Transaction.
+            \param new_transaction_number which will be set to the Transaction.
         */
-        virtual void setNumber(Transaction* transaction, int transaction_number) = 0;
+        virtual void setTransactionNumber(int actual_transaction_number, int new_transaction_number) = 0;
 
         /*!
-            Returns the number attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \return int - the content number attribute.
+            Returns the number of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content number attribute.
         */
-        virtual int getNumber(Transaction* transaction) const = 0;
+        virtual QString getTransactionNumber(int transaction_number) const = 0;
 
         /*!
-            Sets the value attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \param transaction_value which will be set to the current Transaction.
+            Sets the value of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_value which will be set to the Transaction.
         */
-        virtual void setValue(Transaction* transaction, double transaction_value) = 0;
+        virtual void setTransactionValue(int transaction_number, double transaction_value) = 0;
 
         /*!
-            Returns the value attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \return std::string - the content value attribute.  
+            Returns the value of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content value attribute.  
         */
-        virtual double getValue(Transaction* transaction) const = 0;
+        virtual QString getTransactionValue(int transaction_number) const = 0;
         
         /*!
-            Sets the description attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \param transaction_description which will be set to the current Transaction.
+            Sets the description of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_description which will be set to the Transaction.
         */
-        virtual void setDescription(Transaction* transaction, std::string transaction_description) = 0;
+        virtual void setTransactionDescription(int transaction_number, std::string transaction_description) = 0;
 
         /*!
-            Returns the description attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \return std::string - the content description attribute.  
+            Returns the description of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content description attribute.  
         */
-        virtual std::string getDescription(Transaction* transaction) const = 0;
+        virtual QString getTransactionDescription(int transaction_number) const = 0;
 
         /*!
-            Sets the date attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \param transaction_date which will be set to the current Transaction.
+            Sets the date of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_date which will be set to the Transaction.
         */
-        virtual void setDate(Transaction* transaction, std::string transaction_date) = 0;
+        virtual void setTransactionDate(int transaction_number, std::string transaction_date) = 0;
 
         /*!
-            Returns the date attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \return std::string - the content date attribute.  
+            Returns the date of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content date attribute.  
         */
-        virtual std::string getDate(Transaction* transaction) const = 0;
+        virtual QString getTransactionDate(int transaction_number) const = 0;
 
         /*!
-            Sets the cattle earring attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \param transaction_cattle_earring which will be set to the current Transaction.
+            Sets the cattle earring of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_cattle_earring which will be set to the Transaction.
         */
-        virtual void setCattleEarring(Transaction* transaction, std::string transaction_cattle_earring) = 0;
+        virtual void setTransactionCattleEarring(int transaction_number, int transaction_cattle_earring) = 0;
 
         /*!
-            Returns the cattle earring attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \return std::string - the content cattle earring attribute.  
+            Returns the cattle earring of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content cattle earring attribute.  
         */
-        virtual std::string getCattleEarring(Transaction* transaction) const = 0;
+        virtual QString getTransactionCattleEarring(int transaction_number) const = 0;
 
         /*!
-            Returns the last available earring on the cattle container.
-            \return int - the last available earring on the cattle container.
+            Returns the last available earring on the cattle table from the database.
+            \return int - the last available earring on the cattle table from the database.
         */
         virtual int getLastEarringAvailable() = 0;
 
         /*!
-            Returns the last available number on the transaction container.
-            \return int - the last available number on the transaction container.
+            Returns the last available number on the financial table from the database.
+            \return int - the last available number on the financial table from the database.
         */
         virtual int getLastNumberAvailable() = 0;
-
-    protected:
-        /*!
-           Adds a cattle's pointer to the the cattle container.
-           \param cattle the cattle to be added.
-        */ 
-        virtual void add(Cattle* cattle) = 0;
-        
-        /*!        
-           Adds a transaction's pointer to the transaction container.
-           \param transaction the transaction to be added.
-        */ 
-        virtual void add(Transaction* transaction) = 0;
         
 };
 

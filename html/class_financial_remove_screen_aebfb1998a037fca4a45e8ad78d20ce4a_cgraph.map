@@ -1,8 +1,0 @@
-<map id="FinancialRemoveScreen::on_okButton_clicked" name="FinancialRemoveScreen::on_okButton_clicked">
-<area shape="rect" id="node1" title=" " alt="" coords="5,115,167,156"/>
-<area shape="rect" id="node2" href="$class_financial_remove_screen.html#a78e5192f9122a30cff3f0897da504759" title=" " alt="" coords="215,5,376,47"/>
-<area shape="rect" id="node3" href="$class_farm.html#a0553f0ab93db2696fa05a2dcba9e55aa" title=" " alt="" coords="234,71,357,98"/>
-<area shape="rect" id="node4" href="$class_farm.html#aa2e8f031dcbba5e81f8be3fef670ee90" title=" " alt="" coords="236,122,355,149"/>
-<area shape="rect" id="node5" href="$class_farm.html#a0cfc73bdcc93e9e3d7a9e18ad14170ff" title=" " alt="" coords="236,173,355,199"/>
-<area shape="rect" id="node6" href="$class_farm.html#a0a370ef89d4e4d3cac9cc68146e7a884" title=" " alt="" coords="233,223,358,250"/>
-</map>

@@ -13,6 +13,6 @@
 /*!
   Function prototype for running all unit tests not related to screens.
 */
-void main_unit_test();
+void main_unit_test(Farm* f);
 
 #endif

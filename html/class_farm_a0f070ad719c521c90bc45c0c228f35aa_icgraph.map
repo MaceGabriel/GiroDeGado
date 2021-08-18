@@ -1,5 +1,0 @@
-<map id="Farm::createCattle" name="Farm::createCattle">
-<area shape="rect" id="node1" title=" " alt="" coords="225,46,356,73"/>
-<area shape="rect" id="node2" href="$class_cattle_birth_screen.html#a378ec9751a4ff8ec974992e7047fa32f" title=" " alt="" coords="5,5,177,47"/>
-<area shape="rect" id="node3" href="$class_cattle_buy_screen.html#a226db2d4367194625d699828d618931c" title=" " alt="" coords="12,71,171,112"/>
-</map>

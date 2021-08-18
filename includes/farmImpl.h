@@ -18,39 +18,28 @@
 class FarmBody : public Body{
 
     protected:
+        static Farm* farm_; /*!< The singleton farm. */
         QSqlQuery* query_; /*!< The query of the GiroDeGado's database. */
-        std::vector<Cattle*> cattle_container_; /*!< This attribute stores pointers to the cattle contained in the farm. */
-        std::vector<Transaction*> transaction_container_; /*!< This attribute stores pointers to the transactions contained in the farm. */       
-        static std::vector<Farm*> farm_container_; /*!< This static attribute stores pointers to the farms created in the application. */
 
     private:
         // No copy allowed
 
         /*!
             This is the copy constructor for the FarmBody Class.
-            \param sys the FarmBody that is going to be cloned.
+            \param farm the FarmBody that is going to be cloned.
         */
-        FarmBody (const FarmBody& sys);
+        FarmBody (const FarmBody& farm);
 
         /*!
             This is the overloaded assignment operator for the FarmBody Class.
+            \param farm the FarmHandle that is going to be cloned.
         */
-        FarmBody& operator=(const FarmBody& sys);
+        FarmBody& operator=(const FarmBody& farm);
 
     public:
-        typedef std::vector<Cattle*>::iterator cattleIterator;
-        typedef std::vector<Transaction*>::iterator transactionIterator;
-        typedef std::vector<Farm*>::iterator farmIterator;
-
-        cattleIterator beginCattleContainer(); /*!< Returns the iterator to the beginning of the cattle container attribute. */
-        cattleIterator endCattleContainer(); /*!< Returns the iterator to the end of the cattle container attribute. */
-        transactionIterator beginTransactionContainer(); /*!< Returns the iterator to the beginning of the transaction container attribute. */
-        transactionIterator endTransactionContainer(); /*!< Returns the iterator to the end of the transaction container attribute. */
-        farmIterator beginFarmContainer(); /*!< Returns the iterator to the beginning of the global farm container std::vector. */
-        farmIterator endFarmContainer(); /*!< Returns the iterator to the end of the global farm container std::vector. */
-
         /*!
             This is the default constructor for the FarmBody Class.
+            \param query the query of a database.
             \return FarmBody - a FarmBody Class object.
         */
         FarmBody(QSqlQuery* query = NULL);
@@ -61,51 +50,50 @@ class FarmBody : public Body{
         virtual ~FarmBody();
 
         /*!
+            Returns the singleton Farm.
+            \param query the query of a database.
+            \return Farm* - the pointer to the singleton Farm.
+        */
+        static Farm* getFarm(QSqlQuery* query = NULL);
+
+        /*!
             Sets the query attribute in the Farm Class.
+            \param query the query of a database.
         */
         void setQuery(QSqlQuery* query);
 
         /*!
             Returns the query attribute in the Farm Class.
+            \return QSqlQuery* - the content query attribute.  
         */
         QSqlQuery* getQuery() const;
 
         /*!
             Executes the exec() method of the query.
+            \param command the command that will be executed by the query.
+            \return bool - if the method was successful or not. 
         */
         bool queryExec(QString command);
 
         /*!
             Executes the next() method of the query.
+            \return bool - if the method was successful or not. 
         */
         bool queryNext();
 
         /*!
             Executes the first() method of the query.
+            \return bool - if the method was successful or not. 
         */
         bool queryFirst();
 
         /*!
-            Executes the value(pos).toString() method of the query.
+            Executes the value(pos).toString() methods of the query.
+            \param pos the position of the field in the current record.
+            \return QString - the value of the field in the current record, converted to a QString. 
         */
         QString queryValue(int pos);
-
-        /*!
-            Creates a cattle and adds it to the database.
-            \param earring the earring of the Cattle.
-            \param breed the breed of the Cattle.
-            \param acquisition_date the acquisition date of the Cattle.
-            \param birth_date the birth date of the Cattle.
-            \param father the father of the Cattle.
-            \param mother the mother of the Cattle.
-            \param weight the weight of the Cattle.
-            \param value the value of the Cattle.
-            \return Cattle* - a Cattle with a determined earring on the cattle container.
-        */
-        Cattle* farmCreateCattle(std::string earring = "", std::string breed = "", 
-                          std::string acquisition_date = "", std::string birth_date = "", std::string father = "",
-                          std::string mother = "", double weight = 0.0,  double value = 0.0);
-
+        
         /*!
             Creates a cattle and adds it to the database.
             \param earring the earring of the Cattle.
@@ -118,24 +106,12 @@ class FarmBody : public Body{
             \param value the value of the Cattle.
         */
         void createCattle(int earring = 0, std::string breed = "", std::string acquisition_date = "",
-                          std::string birth_date = "", int father = 0, int mother = 0,
-                          double weight = 0.0,  double value = 0.0);
-
+                          std::string birth_date = "", int father = 0, int mother = 0, double weight = 0.0,
+                          double value = 0.0);
+        
         /*!
             Creates a transaction and adds it to the database.
-            \param number the number of the Transaction.
-            \param value the value of the Transaction.
-            \param description the description of the Transaction.
-            \param date the date of the Transaction.
-            \param cattle_earring the cattle's earring of the Transaction.
-            \return Transaction* - a Transaction with a determined number on the transaction container.
-        */
-        Transaction* farmCreateTransaction(int number = 0, double value = 0.0, std::string description = "",
-                               std::string date = "", std::string cattle_earring = "");
-
-        /*!
-            Creates a transaction and adds it to the database.
-            \param number the number of the Transaction.
+            \param id the id of the Transaction.
             \param value the value of the Transaction.
             \param description the description of the Transaction.
             \param date the date of the Transaction.
@@ -150,221 +126,209 @@ class FarmBody : public Body{
         */
         static Farm* createFarm(QSqlQuery* query = NULL);
 
-        /*!
-           Adds a cattle's pointer to the the cattle container.
-           \param cattle the cattle to be added.
-        */ 
-        void add(Cattle* cattle);
-        
         /*!        
-           Adds a transaction's pointer to the transaction container.
-           \param transaction the transaction to be added.
+           Deletes a cattle from the database.
+           \param cattle_earring earring of the cattle that will be deleted.
         */ 
-        void add(Transaction* transaction);
-
-        /*!        
-           Removes a cattle's pointer on the cattle container.
-           \param cattle which will be removed from the cattle container.
-        */ 
-        void remove(Cattle* cattle);
+        void deleteCattle(int cattle_earring);
       
         /*!
-           Removes a transaction's pointer on the transaction container.
-           \param transaction which will be removed from the transaction container.
+           Deletes a transaction from the database.
+           \param transaction_number number of the transaction that will be deleted.
         */
-        void remove(Transaction* transaction);
+        void deleteTransaction(int transaction_number);
 
         /*!
-            Sets the earring attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_earring which will be set to the current Cattle.
+            Sets the earring of a registered Cattle in the database.
+            \param actual_cattle_earring the earring of the Cattle.
+            \param new_cattle_earring which will be set to the Cattle.
         */
-        void setEarring(Cattle* cattle, std::string cattle_earring);
+        void setCattleEarring(int actual_cattle_earring, int new_cattle_earring);
 
         /*!
-            Returns the earring attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return std::string - the content earring attribute.  
+            Returns the earring of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content earring attribute.  
         */
-        std::string getEarring(Cattle* cattle) const;
+        QString getCattleEarring(int cattle_earring) const;
         
         /*!
-            Sets the breed attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_breed which will be set to the current Cattle.
+            Sets the breed of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_breed which will be set to the Cattle.
         */
-        void setBreed(Cattle* cattle, std::string cattle_breed);
+        void setCattleBreed(int cattle_earring, std::string cattle_breed);
 
         /*!
-            Returns the breed attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return std::string - the content Breed attribute.  
+            Returns the breed of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content Breed attribute.  
         */
-        std::string getBreed(Cattle* cattle) const;
+        QString getCattleBreed(int cattle_earring) const;
 
         /*!
-            Sets the acquisition date attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_acquisition_date which will be set to the current Cattle.
+            Sets the acquisition date of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_acquisition_date which will be set to the Cattle.
         */
-        void setAcquisitionDate(Cattle* cattle, std::string cattle_acquisition_date);
+        void setCattleAcquisitionDate(int cattle_earring, std::string cattle_acquisition_date);
 
         /*!
-            Returns the acquisition date attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return std::string - the content acquisition date attribute.  
+            Returns the acquisition date of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content acquisition date attribute.  
         */
-        std::string getAcquisitionDate(Cattle* cattle) const;
+        QString getCattleAcquisitionDate(int cattle_earring) const;
 
         /*!
-            Sets the birth date attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_birth_date which will be set to the current Cattle.
+            Sets the birth date of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_birth_date which will be set to the Cattle.
         */
-        void setBirthDate(Cattle* cattle, std::string cattle_birth_date);
+        void setCattleBirthDate(int cattle_earring, std::string cattle_birth_date);
 
         /*!
-            Returns the birth date attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return std::string - the content birth date attribute.  
+            Returns the birth date of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content birth date attribute.  
         */
-        std::string getBirthDate(Cattle* cattle) const;
+        QString getCattleBirthDate(int cattle_earring) const;
 
         /*!
-            Sets the father attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_father which will be set to the current Cattle.
+            Sets the father's earring of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_father which will be set to the Cattle.
         */
-        void setFather(Cattle* cattle, std::string cattle_father);
+        void setCattleFather(int cattle_earring, int cattle_father);
 
         /*!
-            Returns the father attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return std::string - the content father attribute.  
+            Returns the father's earring of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content father attribute.  
         */
-        std::string getFather(Cattle* cattle) const;
+        QString getCattleFather(int cattle_earring) const;
 
         /*!
-            Sets the mother attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_mother which will be set to the current Cattle.
+            Sets the mother's earring of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_mother which will be set to the Cattle.
         */
-        void setMother(Cattle* cattle, std::string cattle_mother);
+        void setCattleMother(int cattle_earring, int cattle_mother);
 
         /*!
-            Returns the mother attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return std::string - the content mother attribute.  
+            Returns the mother's earring of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content mother attribute.  
         */
-        std::string getMother(Cattle* cattle) const;
+        QString getCattleMother(int cattle_earring) const;
 
         /*!
-            Sets the weight attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_weight which will be set to the current Cattle.
+            Sets the weight of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_weight which will be set to the Cattle.
         */
-        void setWeight(Cattle* cattle, double cattle_weight);
+        void setCattleWeight(int cattle_earring, double cattle_weight);
 
         /*!
-            Returns the weight attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return double - the content weight attribute.  
+            Returns the weight of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content weight attribute.  
         */
-        double getWeight(Cattle* cattle) const;
+        QString getCattleWeight(int cattle_earring) const;
 
         /*!
-            Sets the value attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \param cattle_value which will be set to the current Cattle.
+            Sets the value of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_value which will be set to the Cattle.
         */
-        void setValue(Cattle* cattle, double cattle_value);
+        void setCattleValue(int cattle_earring, double cattle_value);
 
         /*!
-            Returns the value attribute of a cattle.
-            \param cattle the Cattle at matter.
-            \return double - the content value attribute.  
+            Returns the value of a registered Cattle in the database.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content value attribute.  
         */
-        double getValue(Cattle* cattle) const;
+        QString getCattleValue(int cattle_earring) const;
 
         /*!
-            Sets the number attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \param transaction_number which will be set to the current Transaction.
+            Sets the number of a registered Transaction in the database.
+            \param actual_transaction_number the number of the Transaction.
+            \param new_transaction_number which will be set to the Transaction.
         */
-        void setNumber(Transaction* transaction, int transaction_number);
+        void setTransactionNumber(int actual_transaction_number, int new_transaction_number);
 
         /*!
-            Returns the number attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \return int - the content number attribute.
+            Returns the number of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content number attribute.
         */
-        int getNumber(Transaction* transaction) const;
+        QString getTransactionNumber(int transaction_number) const;
 
         /*!
-            Sets the value attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \param transaction_value which will be set to the current Transaction.
+            Sets the value of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_value which will be set to the Transaction.
         */
-        void setValue(Transaction* transaction, double transaction_value);
+        void setTransactionValue(int transaction_number, double transaction_value);
 
         /*!
-            Returns the value attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \return std::string - the content value attribute.  
+            Returns the value of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content value attribute.  
         */
-        double getValue(Transaction* transaction) const;
+        QString getTransactionValue(int transaction_number) const;
         
         /*!
-            Sets the description attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \param transaction_description which will be set to the current Transaction.
+            Sets the description of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_description which will be set to the Transaction.
         */
-        void setDescription(Transaction* transaction, std::string transaction_description);
+        void setTransactionDescription(int transaction_number, std::string transaction_description);
 
         /*!
-            Returns the description attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \return std::string - the content description attribute.  
+            Returns the description of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content description attribute.  
         */
-        std::string getDescription(Transaction* transaction) const;
+        QString getTransactionDescription(int transaction_number) const;
 
         /*!
-            Sets the date attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \param transaction_date which will be set to the current Transaction.
+            Sets the date of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_date which will be set to the Transaction.
         */
-        void setDate(Transaction* transaction, std::string transaction_date);
+        void setTransactionDate(int transaction_number, std::string transaction_date);
 
         /*!
-            Returns the date attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \return std::string - the content date attribute.  
+            Returns the date of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content date attribute.  
         */
-        std::string getDate(Transaction* transaction) const;
+        QString getTransactionDate(int transaction_number) const;
 
         /*!
-            Sets the cattle earring attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \param transaction_cattle_earring which will be set to the current Transaction.
+            Sets the cattle earring of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_cattle_earring which will be set to the Transaction.
         */
-        void setCattleEarring(Transaction* transaction, std::string transaction_cattle_earring);
+        void setTransactionCattleEarring(int transaction_number, int transaction_cattle_earring);
 
         /*!
-            Returns the cattle earring attribute of a transaction.
-            \param transaction the Transaction at matter.
-            \return std::string - the content cattle earring attribute.  
+            Returns the cattle earring of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content cattle earring attribute.  
         */
-        std::string getCattleEarring(Transaction* transaction) const;
+        QString getTransactionCattleEarring(int transaction_number) const;
 
         /*!
-            Returns the last available earring on the cattle container.
-            \return int - the last available earring on the cattle container.
+            Returns the last available earring on the cattle table from the database.
+            \return int - the last available earring on the cattle table from the database.
         */
         int getLastEarringAvailable();
 
         /*!
-            Returns the last available number on the transaction container.
-            \return int - the last available number on the transaction container.
+            Returns the last available number on the financial table from the database.
+            \return int - the last available number on the financial table from the database.
         */
         int getLastNumberAvailable();
 
@@ -375,44 +339,34 @@ class FarmBody : public Body{
  * This Class represents the handle of a Handle/Body idiom of a Farm for the GiroDeGado software implemented in this code.
 */
 class FarmHandle : public Handle<FarmBody>, public Farm{
+
     protected:
-        /*!
-           Calls the overloaded add() method with a Cattle* parameter implemented in the FarmBody Class.
-           \param cattle the cattle to be added.
-        */ 
-        void add(Cattle* cattle){
-            pImpl_->add(cattle);
-        }
-        
-        /*!        
-           Calls the overloaded add() method with a Transaction* parameter implemented in the FarmBody Class.
-           \param transaction the transaction to be added.
-        */ 
-        void add(Transaction* transaction){
-            pImpl_->add(transaction);
-        }
-
-    public:
-        friend class UnitFarm; /*!< This Class is used to do some unit tests of the Farm class. */
-
-        typedef std::vector<Cattle*>::iterator cattleIterator;
-        typedef std::vector<Transaction*>::iterator transactionIterator;
-        typedef std::vector<Farm*>::iterator farmIterator;
-
-        cattleIterator beginCattleContainer(){return pImpl_->beginCattleContainer();} /*!< Returns the iterator to the beginning of the cattle container attribute. */
-        cattleIterator endCattleContainer(){return pImpl_->endCattleContainer();} /*!< Returns the iterator to the end of the cattle container attribute. */
-        transactionIterator beginTransactionContainer(){return pImpl_->beginTransactionContainer();} /*!< Returns the iterator to the beginning of the transaction container attribute. */
-        transactionIterator endTransactionContainer(){return pImpl_->endTransactionContainer();} /*!< Returns the iterator to the end of the transaction container attribute. */
-        farmIterator beginFarmContainer(){return pImpl_->beginFarmContainer();} /*!< Returns the iterator to the beginning of the global farm container std::vector. */
-        farmIterator endFarmContainer(){return pImpl_->endFarmContainer();} /*!< Returns the iterator to the end of the global farm container std::vector. */
 
         /*!
             This is the default constructor for the FarmHandle Class.
+            \param query the query of a database.
             \return FarmHandle - a FarmHandle Class object.
         */
         FarmHandle(QSqlQuery* query = NULL){
             pImpl_->setQuery(query);
         };
+
+        // No copy allowed
+
+        /*!
+            This is the copy constructor for the FarmHandle Class.
+            \param farm the FarmHandle that is going to be cloned.
+        */
+        FarmHandle(FarmHandle& farm) = delete;
+
+        /*!
+            This is the overloaded assignment operator for the FarmHandle Class.
+            \param farm the FarmHandle that is going to be cloned.
+        */
+        FarmHandle& operator=(const FarmHandle& farm) = delete;
+
+    public:
+        friend class FarmBody;
 
         /*!
             This is the default destructor for the FarmHandle Class.
@@ -420,14 +374,25 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
         virtual ~FarmHandle(){};
 
         /*!
-            Calls the setQuery() method implemented in the FarmBody Class.
+            Returns the singleton Farm.
+            \param query the query of a database.
+            \return Farm* - the pointer to the singleton Farm.
+        */
+        static Farm* getFarm(QSqlQuery* query = NULL){
+            return FarmBody::getFarm(query);
+        }
+
+        /*!
+            Sets the query attribute in the Farm Class.
+            \param query the query of a database.
         */
         void setQuery(QSqlQuery* query){
             pImpl_->setQuery(query);
         }
 
         /*!
-            Calls the getQuery() method implemented in the FarmBody Class.
+            Returns the query attribute in the Farm Class.
+            \return QSqlQuery* - the content query attribute.  
         */
         QSqlQuery* getQuery() const{
             return pImpl_->getQuery();
@@ -435,27 +400,33 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
 
         /*!
             Executes the exec() method of the query.
+            \param command the command that will be executed by the query.
+            \return bool - if the method was successful or not. 
         */
         bool queryExec(QString command){
             return pImpl_->queryExec(command);
         }
 
         /*!
-            Calls the queryNext() method implemented in the FarmBody Class.
+            Executes the next() method of the query.
+            \return bool - if the method was successful or not. 
         */
         bool queryNext(){
             return pImpl_->queryNext();
         }
 
         /*!
-            Calls the queryFirst() method implemented in the FarmBody Class.
+            Executes the first() method of the query.
+            \return bool - if the method was successful or not. 
         */
         bool queryFirst(){
             return pImpl_->queryFirst();
         }
 
         /*!
-            Calls the queryValue() method implemented in the FarmBody Class.
+            Executes the value(pos).toString() methods of the query.
+            \param pos the position of the field in the current record.
+            \return QString - the value of the field in the current record, converted to a QString. 
         */
         QString queryValue(int pos){
             return pImpl_->queryValue(pos);
@@ -467,64 +438,32 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
             \param breed the breed of the Cattle.
             \param acquisition_date the acquisition date of the Cattle.
             \param birth_date the birth date of the Cattle.
-            \param father the father of the Cattle.
-            \param mother the mother of the Cattle.
-            \param weight the weight of the Cattle.
-            \param value the value of the Cattle.
-            \return Cattle - a Cattle Class object.
-        */
-        Cattle* farmCreateCattle(std::string earring = "", std::string breed = "", std::string acquisition_date = "", 
-                             std::string birth_date = "", std::string father = "", std::string mother = "",
-                             double weight = 0.0,  double value = 0.0){
-            return pImpl_->farmCreateCattle(earring, breed, acquisition_date, birth_date, father, mother, weight, value);
-        }
-
-        /*!
-            Calls the createCattle() method implemented in the FarmBody Class.
-            \param earring the earring of the Cattle.
-            \param breed the breed of the Cattle.
-            \param acquisition_date the acquisition date of the Cattle.
-            \param birth_date the birth date of the Cattle.
-            \param father the father of the Cattle.
-            \param mother the mother of the Cattle.
+            \param father the father's earring of the Cattle.
+            \param mother the mother's earring of the Cattle.
             \param weight the weight of the Cattle.
             \param value the value of the Cattle.
         */
         void createCattle(int earring = 0, std::string breed = "", std::string acquisition_date = "",
                           std::string birth_date = "", int father = 0, int mother = 0, double weight = 0.0,
                           double value = 0.0){
-            return pImpl_->createCattle(earring, breed, acquisition_date, birth_date, father, mother, weight, value);
+            pImpl_->createCattle(earring, breed, acquisition_date, birth_date, father, mother, weight, value);
         }
-
+        
         /*!
             Calls the createTransaction() method implemented in the FarmBody Class.
-            \param number the number of the Transaction.
-            \param value the value of the Transaction.
-            \param description the description of the Transaction.
-            \param date the date of the Transaction.
-            \param cattle_earring the cattle's earring of the Transaction.
-            \return Transaction* - a Transaction Class object.
-        */
-        Transaction* farmCreateTransaction(int number = 0, double value = 0.0, std::string description = "", 
-                               std::string date = "", std::string cattle_earring = ""){
-            return pImpl_->farmCreateTransaction(number, value, description, date, cattle_earring);
-        }
-
-        /*!
-            Calls the createTransaction() method implemented in the FarmBody Class.
-            \param number the number of the Transaction.
+            \param id the id of the Transaction.
             \param value the value of the Transaction.
             \param description the description of the Transaction.
             \param date the date of the Transaction.
             \param cattle_earring the cattle's earring of the Transaction.
         */
-        void createTransaction(int number = 0, double value = 0.0, std::string description = "", 
+        void createTransaction(int number = 0, double value = 0.0, std::string description = "",
                                std::string date = "", int cattle_earring = 0){
-            return pImpl_->createTransaction(number, value, description, date, cattle_earring);
+            pImpl_->createTransaction(number, value, description, date, cattle_earring);
         }
 
         /*!
-            Calls the getCattleEarring() method implemented in the FarmBody Class.
+            Calls the createFarm() method implemented in the FarmBody Class.
             \return Farm - a Farm Class object.
         */
         static Farm* createFarm(QSqlQuery* query = NULL){
@@ -532,258 +471,258 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!        
-           Calls the overloaded remove() method implemented in the FarmBody Class.
-           \param cattle which will be removed from the cattle container.
+           Calls the deleteCattle() method implemented in the FarmBody Class.
+           \param cattle_earring earring of the cattle that will be deleted.
         */ 
-        void remove(Cattle* cattle){
-            pImpl_->remove(cattle);
+        void deleteCattle(int cattle_earring){
+            pImpl_->deleteCattle(cattle_earring);
         }
       
         /*!
-           Calls the overloaded remove() method implemented in the FarmBody Class.
-           \param transaction which will be removed from the transaction container.
+           Calls the deleteTransaction() method implemented in the FarmBody Class.
+           \param transaction_number number of the transaction that will be deleted.
         */
-        void remove(Transaction* transaction){
-            pImpl_->remove(transaction);
-        }
-
-        /*!
-            Calls the setEarring() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \param cattle_earring which will be set to the current Cattle.
-        */
-        void setEarring(Cattle* cattle, std::string cattle_earring){
-            pImpl_->setEarring(cattle, cattle_earring);
-        }
-
-        /*!
-            Calls the getEarring() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \return std::string - the content earring attribute.  
-        */
-        std::string getEarring(Cattle* cattle) const{
-            return pImpl_->getEarring(cattle);
-        }
-        
-        /*!
-            Calls the setBreed() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \param cattle_breed which will be set to the current Cattle.
-        */
-        void setBreed(Cattle* cattle, std::string cattle_breed){
-            pImpl_->setBreed(cattle, cattle_breed);
-        }
-
-        /*!
-            Calls the getBreed() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \return std::string - the content Breed attribute.  
-        */
-        std::string getBreed(Cattle* cattle) const{
-            return pImpl_->getBreed(cattle);
-        }
-
-        /*!
-            Calls the setAcquisitionDate() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \param cattle_acquisition_date which will be set to the current Cattle.
-        */
-        void setAcquisitionDate(Cattle* cattle, std::string cattle_acquisition_date){
-            pImpl_->setAcquisitionDate(cattle, cattle_acquisition_date);
-        }
-
-        /*!
-            Calls the getAcquisitionDate() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \return std::string - the content acquisition date attribute.  
-        */
-        std::string getAcquisitionDate(Cattle* cattle) const{
-            return pImpl_->getAcquisitionDate(cattle);
-        }
-
-        /*!
-            Calls the setBirthDate() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \param cattle_birth_date which will be set to the current Cattle.
-        */
-        void setBirthDate(Cattle* cattle, std::string cattle_birth_date){
-            pImpl_->setBirthDate(cattle, cattle_birth_date);
-        }
-
-        /*!
-            Calls the getBirthDate() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \return std::string - the content birth date attribute.  
-        */
-        std::string getBirthDate(Cattle* cattle) const{
-            return pImpl_->getBirthDate(cattle);
-        }
-
-        /*!
-            Calls the setFather() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \param cattle_father which will be set to the current Cattle.
-        */
-        void setFather(Cattle* cattle, std::string cattle_father){
-            pImpl_->setFather(cattle, cattle_father);
-        }
-
-        /*!
-            Calls the getFather() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \return std::string - the content father attribute.  
-        */
-        std::string getFather(Cattle* cattle) const{
-            return pImpl_->getFather(cattle);
-        }
-
-        /*!
-            Calls the setMother() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \param cattle_mother which will be set to the current Cattle.
-        */
-        void setMother(Cattle* cattle, std::string cattle_mother){
-            pImpl_->setMother(cattle, cattle_mother);
-        }
-
-        /*!
-            Calls the getMother() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \return std::string - the content mother attribute.  
-        */
-        std::string getMother(Cattle* cattle) const{
-            return pImpl_->getMother(cattle);
-        }
-
-        /*!
-            Calls the setWeight() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \param cattle_weight which will be set to the current Cattle.
-        */
-        void setWeight(Cattle* cattle, double cattle_weight){
-            pImpl_->setWeight(cattle, cattle_weight);
-        }
-
-        /*!
-            Calls the getWeight() method implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \return double - the content weight attribute.  
-        */
-        double getWeight(Cattle* cattle) const{
-            return pImpl_->getWeight(cattle);
-        }
-
-        /*!
-            Calls the overloaded setValue() method with a Cattle* parameter implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \param cattle_value which will be set to the current Cattle.
-        */
-        void setValue(Cattle* cattle, double cattle_value){
-            pImpl_->setValue(cattle, cattle_value);
-        }
-
-        /*!
-            Calls the overloaded getValue() method with a Cattle* parameter implemented in the FarmBody Class.
-            \param cattle the Cattle at matter.
-            \return double - the content value attribute.  
-        */
-        double getValue(Cattle* cattle) const{
-            return pImpl_->getValue(cattle);
-        }
-
-        /*!
-            Calls the setNumber() method implemented in the FarmBody Class.
-            \param transaction the Transaction at matter.
-            \param transaction_number which will be set to the current Transaction.
-        */
-        void setNumber(Transaction* transaction, int transaction_number){
-            pImpl_->setNumber(transaction, transaction_number);
-        }
-
-        /*!
-            Calls the getNumber() method implemented in the FarmBody Class.
-            \param transaction the Transaction at matter.
-            \return int - the content number attribute.
-        */
-        int getNumber(Transaction* transaction) const{
-            return pImpl_->getNumber(transaction);
-        }
-
-        /*!
-            Calls the overloaded setValue() method with a Transaction* parameter implemented in the FarmBody Class.
-            \param transaction the Transaction at matter.
-            \param transaction_value which will be set to the current Transaction.
-        */
-        void setValue(Transaction* transaction, double transaction_value){
-            pImpl_->setValue(transaction, transaction_value);
-        }
-
-        /*!
-            Calls the overloaded getValue() method with a Transaction* parameter implemented in the FarmBody Class.
-            \param transaction the Transaction at matter.
-            \return std::string - the content value attribute.  
-        */
-        double getValue(Transaction* transaction) const{
-            return pImpl_->getValue(transaction);
-        }
-        
-        /*!
-            Calls the setDescription() method implemented in the FarmBody Class.
-            \param transaction the Transaction at matter.
-            \param transaction_description which will be set to the current Transaction.
-        */
-        void setDescription(Transaction* transaction, std::string transaction_description){
-            pImpl_->setDescription(transaction, transaction_description);
-        }
-
-        /*!
-            Calls the getDescription() method implemented in the FarmBody Class.
-            \param transaction the Transaction at matter.
-            \return std::string - the content description attribute.  
-        */
-        std::string getDescription(Transaction* transaction) const{
-            return pImpl_->getDescription(transaction);
-        }
-
-        /*!
-            Calls the setDate() method implemented in the FarmBody Class.
-            \param transaction the Transaction at matter.
-            \param transaction_date which will be set to the current Transaction.
-        */
-        void setDate(Transaction* transaction, std::string transaction_date){
-            pImpl_->setDate(transaction, transaction_date);
-        }
-
-        /*!
-            Calls the getDate() method implemented in the FarmBody Class.
-            \param transaction the Transaction at matter.
-            \return std::string - the content date attribute.  
-        */
-        std::string getDate(Transaction* transaction) const{
-            return pImpl_->getDate(transaction);
+        void deleteTransaction(int transaction_number){
+            pImpl_->deleteTransaction(transaction_number);
         }
 
         /*!
             Calls the setCattleEarring() method implemented in the FarmBody Class.
-            \param transaction the Transaction at matter.
-            \param transaction_cattle_earring which will be set to the current Transaction.
+            \param actual_cattle_earring the earring of the Cattle.
+            \param new_cattle_earring which will be set to the Cattle.
         */
-        void setCattleEarring(Transaction* transaction, std::string transaction_cattle_earring){
-            pImpl_->setCattleEarring(transaction, transaction_cattle_earring);
+        void setCattleEarring(int actual_cattle_earring, int new_cattle_earring){
+            pImpl_->setCattleEarring(actual_cattle_earring, new_cattle_earring);
         }
 
         /*!
             Calls the getCattleEarring() method implemented in the FarmBody Class.
-            \param transaction the Transaction at matter.
-            \return std::string - the content cattle earring attribute.  
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content earring attribute.  
         */
-        std::string getCattleEarring(Transaction* transaction) const{
-            return pImpl_->getCattleEarring(transaction);
+        QString getCattleEarring(int cattle_earring) const{
+            return pImpl_->getCattleEarring(cattle_earring);
+        }
+        
+        /*!
+            Calls the setCattleBreed() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_breed which will be set to the Cattle.
+        */
+        void setCattleBreed(int cattle_earring, std::string cattle_breed){
+            pImpl_->setCattleBreed(cattle_earring, cattle_breed);
+        }
+
+        /*!
+            Calls the getCattleBreed() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content Breed attribute.  
+        */
+        QString getCattleBreed(int cattle_earring) const{
+            return pImpl_->getCattleBreed(cattle_earring);
+        }
+
+        /*!
+            Calls the setCattleAcquisitionDate() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_acquisition_date which will be set to the Cattle.
+        */
+        void setCattleAcquisitionDate(int cattle_earring, std::string cattle_acquisition_date){
+            pImpl_->setCattleAcquisitionDate(cattle_earring, cattle_acquisition_date);
+        }
+
+        /*!
+            Calls the getCattleAcquisitionDate() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content acquisition date attribute.  
+        */
+        QString getCattleAcquisitionDate(int cattle_earring) const{
+            return pImpl_->getCattleAcquisitionDate(cattle_earring);
+        }
+
+        /*!
+            Calls the setCattleBirthDate() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_birth_date which will be set to the Cattle.
+        */
+        void setCattleBirthDate(int cattle_earring, std::string cattle_birth_date){
+            pImpl_->setCattleBirthDate(cattle_earring, cattle_birth_date);
+        }
+
+        /*!
+            Calls the getCattleBirthDate() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content birth date attribute.  
+        */
+        QString getCattleBirthDate(int cattle_earring) const{
+            return pImpl_->getCattleBirthDate(cattle_earring);
+        }
+
+        /*!
+            Calls the setCattleFather() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_father which will be set to the Cattle.
+        */
+        void setCattleFather(int cattle_earring, int cattle_father){
+            pImpl_->setCattleFather(cattle_earring, cattle_father);
+        }
+
+        /*!
+            Calls the getCattleFather() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content father attribute.  
+        */
+        QString getCattleFather(int cattle_earring) const{
+            return pImpl_->getCattleFather(cattle_earring);
+        }
+
+        /*!
+            Calls the setCattleMother() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_mother which will be set to the Cattle.
+        */
+        void setCattleMother(int cattle_earring, int cattle_mother){
+            pImpl_->setCattleMother(cattle_earring, cattle_mother);
+        }
+
+        /*!
+            Calls the getCattleMother() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content mother attribute.  
+        */
+        QString getCattleMother(int cattle_earring) const{
+            return pImpl_->getCattleMother(cattle_earring);
+        }
+
+        /*!
+            Calls the setCattleWeight() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_weight which will be set to the Cattle.
+        */
+        void setCattleWeight(int cattle_earring, double cattle_weight){
+            pImpl_->setCattleWeight(cattle_earring, cattle_weight);
+        }
+
+        /*!
+            Calls the getCattleWeight() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content weight attribute.  
+        */
+        QString getCattleWeight(int cattle_earring) const{
+            return pImpl_->getCattleWeight(cattle_earring);
+        }
+
+        /*!
+            Calls the setCattleValue() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \param cattle_value which will be set to the Cattle.
+        */
+        void setCattleValue(int cattle_earring, double cattle_value){
+            pImpl_->setCattleValue(cattle_earring, cattle_value);
+        }
+
+        /*!
+            Calls the getCattleValue() method implemented in the FarmBody Class.
+            \param cattle_earring the earring of the Cattle.
+            \return QString - the content value attribute.  
+        */
+        QString getCattleValue(int cattle_earring) const{
+            return pImpl_->getCattleValue(cattle_earring);
+        }
+
+        /*!
+            Sets the number of a registered Transaction in the database.
+            \param actual_transaction_number the number of the Transaction.
+            \param new_transaction_number which will be set to the Transaction.
+        */
+        void setTransactionNumber(int actual_transaction_number, int new_transaction_number){
+            pImpl_->setTransactionNumber(actual_transaction_number, new_transaction_number);
+        }
+
+        /*!
+            Returns the number of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content number attribute.
+        */
+        QString getTransactionNumber(int transaction_number) const{
+            return pImpl_->getTransactionNumber(transaction_number);
+        }
+
+        /*!
+            Sets the value of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_value which will be set to the Transaction.
+        */
+        void setTransactionValue(int transaction_number, double transaction_value){
+            pImpl_->setTransactionValue(transaction_number, transaction_value);
+        }
+
+        /*!
+            Returns the value of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content value attribute.  
+        */
+        QString getTransactionValue(int transaction_number) const{
+            return pImpl_->getTransactionValue(transaction_number);
+        }
+        
+        /*!
+            Sets the description of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_description which will be set to the Transaction.
+        */
+        void setTransactionDescription(int transaction_number, std::string transaction_description){
+            pImpl_->setTransactionDescription(transaction_number, transaction_description);
+        }
+
+        /*!
+            Returns the description of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content description attribute.  
+        */
+        QString getTransactionDescription(int transaction_number) const{
+            return pImpl_->getTransactionDescription(transaction_number);
+        }
+
+        /*!
+            Sets the date of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_date which will be set to the Transaction.
+        */
+        void setTransactionDate(int transaction_number, std::string transaction_date){
+            pImpl_->setTransactionDate(transaction_number, transaction_date);
+        }
+
+        /*!
+            Returns the date of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content date attribute.  
+        */
+        QString getTransactionDate(int transaction_number) const{
+            return pImpl_->getTransactionDate(transaction_number);
+        }
+
+        /*!
+            Sets the cattle earring of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_cattle_earring which will be set to the Transaction.
+        */
+        void setTransactionCattleEarring(int transaction_number, int transaction_cattle_earring){
+            pImpl_->setTransactionCattleEarring(transaction_number, transaction_cattle_earring);
+        }
+
+        /*!
+            Returns the cattle earring of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content cattle earring attribute.  
+        */
+        QString getTransactionCattleEarring(int transaction_number) const{
+            return pImpl_->getTransactionCattleEarring(transaction_number);
         }
 
         /*!
             Calls the getLastEarringAvailable() method implemented in the FarmBody Class.
-            \return int - the last available earring on the cattle container.
+            \return int - the last available earring on the cattle table from the database.
         */
         int getLastEarringAvailable(){
             return pImpl_->getLastEarringAvailable();
@@ -791,7 +730,7 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
 
         /*!
             Calls the getLastNumberAvailable() method implemented in the FarmBody Class.
-            \return int - the last available number on the transaction container.
+            \return int - the last available number on the financial table from the database.
         */
         int getLastNumberAvailable(){
             return pImpl_->getLastNumberAvailable();

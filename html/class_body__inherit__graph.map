@@ -1,6 +1,0 @@
-<map id="Body" name="Body">
-<area shape="rect" id="node1" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="231,5,325,171"/>
-<area shape="rect" id="node2" href="$class_cattle_body.html" title="This Class represents the body of a Handle/Body idiom of a Cattle for the GiroDeGado software." alt="" coords="5,292,156,751"/>
-<area shape="rect" id="node3" href="$class_farm_body.html" title="This Class represents the body of a Handle/Body idiom of a Farm for the GiroDeGado software." alt="" coords="181,219,375,824"/>
-<area shape="rect" id="node4" href="$class_transaction_body.html" title="This Class represents the body of a Handle/Body idiom of a Transaction for the GiroDeGado software." alt="" coords="399,358,546,685"/>
-</map>

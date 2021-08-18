@@ -10,6 +10,7 @@
 #include <assert.h>
 #include <math.h>
 #include "../../includes/transactionImpl.h"
+#include "../../includes/farm.h"
 
 //! Unit tests 
 /**
@@ -34,52 +35,52 @@ void unit_transaction_destructor();
 /*!
   Function prototype for the Transaction class' method getNumber() unit test.
 */
-void unit_transaction_getNumber();
+void unit_transaction_getNumber(Farm* f);
 
 /*!
   Function prototype for the Transaction class' method setNumber() unit test.
 */
-void unit_transaction_setNumber();
+void unit_transaction_setNumber(Farm* f);
 
 /*!
   Function prototype for the Transaction class' method getValue() unit test.
 */
-void unit_transaction_getValue();
+void unit_transaction_getValue(Farm* f);
 
 /*!
   Function prototype for the Transaction class' method setValue() unit test.
 */
-void unit_transaction_setValue();
+void unit_transaction_setValue(Farm* f);
 
 /*!
   Function prototype for the Transaction class' method getDescription() unit test.
 */
-void unit_transaction_getDescription();
+void unit_transaction_getDescription(Farm* f);
 
 /*!
   Function prototype for the Transaction class' method setDescription() unit test.
 */
-void unit_transaction_setDescription();
+void unit_transaction_setDescription(Farm* f);
 
 /*!
   Function prototype for the Transaction class' method getDate() unit test.
 */
-void unit_transaction_getDate();
+void unit_transaction_getDate(Farm* f);
 
 /*!
   Function prototype for the Transaction class' method setDate() unit test.
 */
-void unit_transaction_setDate();
+void unit_transaction_setDate(Farm* f);
 
 /*!
   Function prototype for the Transaction class' method getCattleEarring() unit test.
 */
-void unit_transaction_getCattleEarring();
+void unit_transaction_getCattleEarring(Farm* f);
 
 /*!
   Function prototype for the Transaction class' method setCattleEarring() unit test.
 */
-void unit_transaction_setCattleEarring();
+void unit_transaction_setCattleEarring(Farm* f);
 
 /*!
   Function prototype for the TransactionHandle class' assingment operator unit test.
@@ -89,6 +90,6 @@ void unit_transaction_assingmentOperator();
 /*!
   Function prototype for the function that runs all the unit tests of the Transaction class.
 */
-void run_unit_tests_transaction();
+void run_unit_tests_transaction(Farm* f);
 
 #endif

@@ -1,5 +1,0 @@
-<map id="CattleRegisterScreen" name="CattleRegisterScreen">
-<area shape="rect" id="node1" title=" " alt="" coords="30,629,203,795"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,247,73,325"/>
-<area shape="rect" id="node3" href="$class_farm.html" title="This Class represents a Farm for the GiroDeGado software." alt="" coords="98,5,293,567"/>
-</map>
