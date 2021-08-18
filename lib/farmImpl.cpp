@@ -1,45 +1,23 @@
 #include "../includes/farmImpl.h"
 
-// GLOBAL VARIABLES
-vector<Farm*> FarmBody::farm_container_;
+Farm* FarmBody::farm_ = NULL;
 
-// METHODS
+Farm* Farm::getFarm(QSqlQuery* query){
+    return FarmHandle::getFarm(query);
+}
 
-FarmBody::farmIterator FarmBody::beginFarmContainer( void ){return farm_container_.begin();} 
-FarmBody::farmIterator FarmBody::endFarmContainer( void ){return farm_container_.end();} 
+Farm* FarmBody::getFarm(QSqlQuery* query){
+    if (farm_ == NULL){
+        farm_ = new FarmHandle(query);
+    }
+    return farm_;
+}
 
-FarmBody::FarmBody(int number, QSqlQuery* query){
-    setNumber(number);
+FarmBody::FarmBody(QSqlQuery* query){
     setQuery(query);
 }
 
-FarmBody::~FarmBody(){
-    std::cout << "size before: " << farm_container_.size() << std::endl;
-
-    // Deletes the farm from the farm container
-    farmIterator it = beginFarmContainer();
-
-    for(auto item: farm_container_){
-        //if(dynamic_cast<Farm*>(this) == item){
-        FarmHandle* itemHandle = static_cast<FarmHandle*>(item);
-        if(this->getNumber() == itemHandle->getNumber()){
-            std::cout << "LOL" << std::endl;
-            farm_container_.erase(it);
-            break;
-        }
-        ++it;
-    }
-
-    std::cout << "size after: " << farm_container_.size() << std::endl;
-}
-
-void FarmBody::setNumber(int number){
-    number_ = number;
-}
-
-int FarmBody::getNumber() const{
-    return number_;
-}
+FarmBody::~FarmBody(){}
 
 void FarmBody::setQuery(QSqlQuery* query){
     query_ = query;
@@ -90,16 +68,6 @@ void FarmBody::createTransaction(int number, double value, std::string descripti
     query_->bindValue(":date", QString::fromStdString(date));
     query_->bindValue(":cattle_earring", cattle_earring);
     query_->exec();
-}
-
-Farm* Farm::createFarm(int number, QSqlQuery* query){
-    return FarmHandle::createFarm(number, query);
-}
-
-Farm* FarmBody::createFarm(int number, QSqlQuery* query){
-    Farm* f = new FarmHandle(number, query);
-    farm_container_.push_back(f);
-    return f;
 }
 
 void FarmBody::deleteCattle(int cattle_earring){
@@ -294,6 +262,131 @@ void FarmBody::setCattleValue(int cattle_earring, double cattle_value){
     QString value = QString::number(cattle_value);
 
     query_->exec("update cattle set value="+value+" where earring="+earring);
+}
+
+void FarmBody::setTransactionNumber(int actual_transaction_number, int new_transaction_number){
+    QString actual_number = QString::number(actual_transaction_number);
+    QString new_number = QString::number(new_transaction_number);
+
+    query_->exec("update financial set number="+new_number+" where number="+actual_number);
+}
+
+QString FarmBody::getTransactionNumber(int transaction_number) const{
+    QString number = QString::number(transaction_number);
+
+    query_->exec("select * from financial where number="+number);
+    int count = 0;
+    while(query_->next()){
+        count++;
+    }
+    if(count > 0){
+        query_->first();
+        return query_->value(1).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
+}
+
+void FarmBody::setTransactionValue(int transaction_number, double transaction_value){
+    QString number = QString::number(transaction_number);
+    QString value = QString::number(transaction_value);
+
+    query_->exec("update financial set value="+value+" where number="+number);
+}
+
+QString FarmBody::getTransactionValue(int transaction_number) const{
+    QString number = QString::number(transaction_number);
+
+    query_->exec("select * from financial where number="+number);
+    int count = 0;
+    while(query_->next()){
+        count++;
+    }
+    if(count > 0){
+        query_->first();
+        return query_->value(3).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
+}
+
+void FarmBody::setTransactionDescription(int transaction_number, std::string transaction_description){
+    QString number = QString::number(transaction_number);
+    QString description = QString::fromStdString(transaction_description);
+
+    query_->exec("update financial set description='"+description+"' where number="+number);
+}
+
+QString FarmBody::getTransactionDescription(int transaction_number) const{
+    QString number = QString::number(transaction_number);
+
+    query_->exec("select * from financial where number="+number);
+    int count = 0;
+    while(query_->next()){
+        count++;
+    }
+    if(count > 0){
+        query_->first();
+        return query_->value(5).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
+}
+
+void FarmBody::setTransactionDate(int transaction_number, std::string transaction_date){
+    QString number = QString::number(transaction_number);
+    QString date = QString::fromStdString(transaction_date);
+
+    query_->exec("update financial set date='"+date+"' where number="+number);
+}
+
+QString FarmBody::getTransactionDate(int transaction_number) const{
+    QString number = QString::number(transaction_number);
+
+    query_->exec("select * from financial where number="+number);
+    int count = 0;
+    while(query_->next()){
+        count++;
+    }
+    if(count > 0){
+        query_->first();
+        return query_->value(2).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
+}
+
+void FarmBody::setTransactionCattleEarring(int transaction_number, int transaction_cattle_earring){
+    QString number = QString::number(transaction_number);
+    QString cattle_earring = QString::number(transaction_cattle_earring);
+
+    query_->exec("update financial set cattle_earring="+cattle_earring+" where number="+number);
+}
+
+QString FarmBody::getTransactionCattleEarring(int transaction_number) const{
+    QString number = QString::number(transaction_number);
+
+    query_->exec("select * from financial where number="+number);
+    int count = 0;
+    while(query_->next()){
+        count++;
+    }
+    if(count > 0){
+        query_->first();
+        return query_->value(4).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
 }
 
 QString FarmBody::getCattleValue(int cattle_earring) const{

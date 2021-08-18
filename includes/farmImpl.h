@@ -18,35 +18,31 @@
 class FarmBody : public Body{
 
     protected:
-        int number_; /*!< The number of the farm. */
+        static Farm* farm_; /*!< The singleton farm. */
         QSqlQuery* query_; /*!< The query of the GiroDeGado's database. */
-        static std::vector<Farm*> farm_container_; /*!< This static attribute stores pointers to the farms created in the application. */
 
     private:
         // No copy allowed
 
         /*!
             This is the copy constructor for the FarmBody Class.
-            \param sys the FarmBody that is going to be cloned.
+            \param farm the FarmBody that is going to be cloned.
         */
-        FarmBody (const FarmBody& sys);
+        FarmBody (const FarmBody& farm);
 
         /*!
             This is the overloaded assignment operator for the FarmBody Class.
+            \param farm the FarmHandle that is going to be cloned.
         */
-        FarmBody& operator=(const FarmBody& sys);
+        FarmBody& operator=(const FarmBody& farm);
 
     public:
-        typedef std::vector<Farm*>::iterator farmIterator;
-
-        farmIterator beginFarmContainer(); /*!< Returns the iterator to the beginning of the global farm container std::vector. */
-        farmIterator endFarmContainer(); /*!< Returns the iterator to the end of the global farm container std::vector. */
-
         /*!
             This is the default constructor for the FarmBody Class.
+            \param query the query of a database.
             \return FarmBody - a FarmBody Class object.
         */
-        FarmBody(int number = 0, QSqlQuery* query = NULL);
+        FarmBody(QSqlQuery* query = NULL);
 
         /*!
             This is the default destructor for the FarmBody Class.
@@ -54,14 +50,11 @@ class FarmBody : public Body{
         virtual ~FarmBody();
 
         /*!
-            missing
+            Returns the singleton Farm.
+            \param query the query of a database.
+            \return Farm* - the pointer to the singleton Farm.
         */
-        void setNumber(int number);
-
-        /*!
-            missing
-        */
-        int getNumber() const;
+        static Farm* getFarm(QSqlQuery* query = NULL);
 
         /*!
             Sets the query attribute in the Farm Class.
@@ -131,7 +124,7 @@ class FarmBody : public Body{
             Creates a Farm and returns it's pointer.
             \return Farm - a Farm Class object.
         */
-        static Farm* createFarm(int number = 0, QSqlQuery* query = NULL);
+        static Farm* createFarm(QSqlQuery* query = NULL);
 
         /*!        
            Deletes a cattle from the database.
@@ -258,6 +251,76 @@ class FarmBody : public Body{
         QString getCattleValue(int cattle_earring) const;
 
         /*!
+            Sets the number of a registered Transaction in the database.
+            \param actual_transaction_number the number of the Transaction.
+            \param new_transaction_number which will be set to the Transaction.
+        */
+        void setTransactionNumber(int actual_transaction_number, int new_transaction_number);
+
+        /*!
+            Returns the number of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content number attribute.
+        */
+        QString getTransactionNumber(int transaction_number) const;
+
+        /*!
+            Sets the value of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_value which will be set to the Transaction.
+        */
+        void setTransactionValue(int transaction_number, double transaction_value);
+
+        /*!
+            Returns the value of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content value attribute.  
+        */
+        QString getTransactionValue(int transaction_number) const;
+        
+        /*!
+            Sets the description of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_description which will be set to the Transaction.
+        */
+        void setTransactionDescription(int transaction_number, std::string transaction_description);
+
+        /*!
+            Returns the description of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content description attribute.  
+        */
+        QString getTransactionDescription(int transaction_number) const;
+
+        /*!
+            Sets the date of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_date which will be set to the Transaction.
+        */
+        void setTransactionDate(int transaction_number, std::string transaction_date);
+
+        /*!
+            Returns the date of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content date attribute.  
+        */
+        QString getTransactionDate(int transaction_number) const;
+
+        /*!
+            Sets the cattle earring of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_cattle_earring which will be set to the Transaction.
+        */
+        void setTransactionCattleEarring(int transaction_number, int transaction_cattle_earring);
+
+        /*!
+            Returns the cattle earring of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content cattle earring attribute.  
+        */
+        QString getTransactionCattleEarring(int transaction_number) const;
+
+        /*!
             Returns the last available earring on the cattle table from the database.
             \return int - the last available earring on the cattle table from the database.
         */
@@ -277,40 +340,46 @@ class FarmBody : public Body{
 */
 class FarmHandle : public Handle<FarmBody>, public Farm{
 
-    public:
-        typedef std::vector<Farm*>::iterator farmIterator;
-
-        farmIterator beginFarmContainer(){return pImpl_->beginFarmContainer();} /*!< Returns the iterator to the beginning of the global farm container std::vector. */
-        farmIterator endFarmContainer(){return pImpl_->endFarmContainer();} /*!< Returns the iterator to the end of the global farm container std::vector. */
+    protected:
 
         /*!
             This is the default constructor for the FarmHandle Class.
+            \param query the query of a database.
             \return FarmHandle - a FarmHandle Class object.
         */
-        FarmHandle(int number = 0, QSqlQuery* query = NULL){
-            pImpl_->setNumber(number);
+        FarmHandle(QSqlQuery* query = NULL){
             pImpl_->setQuery(query);
         };
+
+        // No copy allowed
+
+        /*!
+            This is the copy constructor for the FarmHandle Class.
+            \param farm the FarmHandle that is going to be cloned.
+        */
+        FarmHandle(FarmHandle& farm) = delete;
+
+        /*!
+            This is the overloaded assignment operator for the FarmHandle Class.
+            \param farm the FarmHandle that is going to be cloned.
+        */
+        FarmHandle& operator=(const FarmHandle& farm) = delete;
+
+    public:
+        friend class FarmBody;
 
         /*!
             This is the default destructor for the FarmHandle Class.
         */
-        virtual ~FarmHandle(){
-            // Deletes the farm from the farm container
-            // for(farmIterator it = beginFarmContainer(); it != endFarmContainer(); ++it){
-            //     if(dynamic_cast<Farm*>(this) == (*it)){
-            //         farm_container_.erase(it);
-            //         break;
-            //     }
-            // }
-        };
+        virtual ~FarmHandle(){};
 
-        void setNumber(int number){
-            pImpl_->setNumber(number);
-        }
-
-        int getNumber() const{
-            return pImpl_->getNumber();
+        /*!
+            Returns the singleton Farm.
+            \param query the query of a database.
+            \return Farm* - the pointer to the singleton Farm.
+        */
+        static Farm* getFarm(QSqlQuery* query = NULL){
+            return FarmBody::getFarm(query);
         }
 
         /*!
@@ -397,8 +466,8 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
             Calls the createFarm() method implemented in the FarmBody Class.
             \return Farm - a Farm Class object.
         */
-        static Farm* createFarm(int number = 0, QSqlQuery* query = NULL){
-            return FarmBody::createFarm(number, query);
+        static Farm* createFarm(QSqlQuery* query = NULL){
+            return FarmBody::createFarm(query);
         }
 
         /*!        
@@ -559,6 +628,96 @@ class FarmHandle : public Handle<FarmBody>, public Farm{
         */
         QString getCattleValue(int cattle_earring) const{
             return pImpl_->getCattleValue(cattle_earring);
+        }
+
+        /*!
+            Sets the number of a registered Transaction in the database.
+            \param actual_transaction_number the number of the Transaction.
+            \param new_transaction_number which will be set to the Transaction.
+        */
+        void setTransactionNumber(int actual_transaction_number, int new_transaction_number){
+            pImpl_->setTransactionNumber(actual_transaction_number, new_transaction_number);
+        }
+
+        /*!
+            Returns the number of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content number attribute.
+        */
+        QString getTransactionNumber(int transaction_number) const{
+            return pImpl_->getTransactionNumber(transaction_number);
+        }
+
+        /*!
+            Sets the value of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_value which will be set to the Transaction.
+        */
+        void setTransactionValue(int transaction_number, double transaction_value){
+            pImpl_->setTransactionValue(transaction_number, transaction_value);
+        }
+
+        /*!
+            Returns the value of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content value attribute.  
+        */
+        QString getTransactionValue(int transaction_number) const{
+            return pImpl_->getTransactionValue(transaction_number);
+        }
+        
+        /*!
+            Sets the description of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_description which will be set to the Transaction.
+        */
+        void setTransactionDescription(int transaction_number, std::string transaction_description){
+            pImpl_->setTransactionDescription(transaction_number, transaction_description);
+        }
+
+        /*!
+            Returns the description of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content description attribute.  
+        */
+        QString getTransactionDescription(int transaction_number) const{
+            return pImpl_->getTransactionDescription(transaction_number);
+        }
+
+        /*!
+            Sets the date of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_date which will be set to the Transaction.
+        */
+        void setTransactionDate(int transaction_number, std::string transaction_date){
+            pImpl_->setTransactionDate(transaction_number, transaction_date);
+        }
+
+        /*!
+            Returns the date of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content date attribute.  
+        */
+        QString getTransactionDate(int transaction_number) const{
+            return pImpl_->getTransactionDate(transaction_number);
+        }
+
+        /*!
+            Sets the cattle earring of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_cattle_earring which will be set to the Transaction.
+        */
+        void setTransactionCattleEarring(int transaction_number, int transaction_cattle_earring){
+            pImpl_->setTransactionCattleEarring(transaction_number, transaction_cattle_earring);
+        }
+
+        /*!
+            Returns the cattle earring of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content cattle earring attribute.  
+        */
+        QString getTransactionCattleEarring(int transaction_number) const{
+            return pImpl_->getTransactionCattleEarring(transaction_number);
         }
 
         /*!

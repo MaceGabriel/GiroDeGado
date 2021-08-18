@@ -1,9 +1,9 @@
 <map id="GiroDeGado/includes/farm.h" name="GiroDeGado/includes/farm.h">
-<area shape="rect" id="node1" title="This file contains the interface of a Farm for the GiroDeGado software." alt="" coords="85,5,230,47"/>
+<area shape="rect" id="node1" title="This file contains the interface of a Farm for the GiroDeGado software." alt="" coords="63,5,209,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,61,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="86,95,141,121"/>
-<area shape="rect" id="node4" href="$cattle_8h.html" title="This file contains the interface of a Cattle for the GiroDeGado software." alt="" coords="165,95,238,121"/>
-<area shape="rect" id="node7" href="$transaction_8h.html" title="This file contains the interface of a Transaction for the GiroDeGado software." alt="" coords="262,95,367,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="177,169,249,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="281,169,335,196"/>
+<area shape="rect" id="node3" title=" " alt="" coords="82,169,137,196"/>
+<area shape="rect" id="node4" href="$cattle_8h.html" title="This file contains the interface of a Cattle for the GiroDeGado software." alt="" coords="137,95,210,121"/>
+<area shape="rect" id="node7" href="$transaction_8h.html" title="This file contains the interface of a Transaction for the GiroDeGado software." alt="" coords="234,95,339,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="248,169,320,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="166,169,221,196"/>
 </map>

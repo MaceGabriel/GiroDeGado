@@ -1,4 +1,23 @@
 var searchData=
 [
-  ['value_5f_687',['value_',['../class_cattle_body.html#a5cb05247aa7278d5646bbd55b402a3bf',1,'CattleBody::value_()'],['../class_transaction_body.html#a8a4367dfab46a6a0682a71436b4ee720',1,'TransactionBody::value_()']]]
+  ['_7ebody_691',['~Body',['../class_body.html#a9b15e54cf881ac0ca64790ca1d50110e',1,'Body']]],
+  ['_7ecattle_692',['~Cattle',['../class_cattle.html#a3487cf251ddadc80255f15acfbd61729',1,'Cattle']]],
+  ['_7ecattlebirthscreen_693',['~CattleBirthScreen',['../class_cattle_birth_screen.html#a1e7869dee53aa7d7c7a2e389000bc14e',1,'CattleBirthScreen']]],
+  ['_7ecattlebody_694',['~CattleBody',['../class_cattle_body.html#afc17cfd4946b9c1708ec3779a478d7d0',1,'CattleBody']]],
+  ['_7ecattlebuyscreen_695',['~CattleBuyScreen',['../class_cattle_buy_screen.html#aaff6f44f0c8c29514b58adbf4abd7b4b',1,'CattleBuyScreen']]],
+  ['_7ecattlehandle_696',['~CattleHandle',['../class_cattle_handle.html#a06b84bd4feb57399f995dc2404d75502',1,'CattleHandle']]],
+  ['_7ecattlemanagementscreen_697',['~CattleManagementScreen',['../class_cattle_management_screen.html#ad007364eda8b1e8f96fd1592c9d54241',1,'CattleManagementScreen']]],
+  ['_7ecattleregisterscreen_698',['~CattleRegisterScreen',['../class_cattle_register_screen.html#a40f8575c3deb5b2dcc2b1b50818120fb',1,'CattleRegisterScreen']]],
+  ['_7ecattleremovescreen_699',['~CattleRemoveScreen',['../class_cattle_remove_screen.html#ab6975e64f1491db3b8eae73917e3051f',1,'CattleRemoveScreen']]],
+  ['_7efarm_700',['~Farm',['../class_farm.html#a52b484dc7d30a4a5a2602dec7c6cf9ac',1,'Farm']]],
+  ['_7efarmbody_701',['~FarmBody',['../class_farm_body.html#a9493b65dd485445031e71988e4e025cd',1,'FarmBody']]],
+  ['_7efarmhandle_702',['~FarmHandle',['../class_farm_handle.html#ae48fd2d2ba39b917cd8fe08b5f02d8de',1,'FarmHandle']]],
+  ['_7efinancialmanagementscreen_703',['~FinancialManagementScreen',['../class_financial_management_screen.html#a989a25c049c1b794483f0326bea6f74d',1,'FinancialManagementScreen']]],
+  ['_7efinancialrecordscreen_704',['~FinancialRecordScreen',['../class_financial_record_screen.html#a3bf7228494b5b5ee364876459f7aff78',1,'FinancialRecordScreen']]],
+  ['_7efinancialremovescreen_705',['~FinancialRemoveScreen',['../class_financial_remove_screen.html#aefa243cab479e80bde5ab3d90eb18ee4',1,'FinancialRemoveScreen']]],
+  ['_7ehandle_706',['~Handle',['../class_handle.html#addd59fdf43baa517a06d44e1125b5ab1',1,'Handle']]],
+  ['_7ehomescreen_707',['~HomeScreen',['../class_home_screen.html#aa638daca35ebc0708a2798dc5ac20c7c',1,'HomeScreen']]],
+  ['_7etransaction_708',['~Transaction',['../class_transaction.html#add22ecfe4d17b3260166c116bee33e15',1,'Transaction']]],
+  ['_7etransactionbody_709',['~TransactionBody',['../class_transaction_body.html#adeceb693851db4432ae06a5a1d226a18',1,'TransactionBody']]],
+  ['_7etransactionhandle_710',['~TransactionHandle',['../class_transaction_handle.html#a8330b125db947dc862644ec7c07206ba',1,'TransactionHandle']]]
 ];

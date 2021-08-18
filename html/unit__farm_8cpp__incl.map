@@ -7,12 +7,12 @@
 <area shape="rect" id="node6" href="$farm_impl_8h.html" title="This file contains the handle/body of a Farm for the GiroDeGado software." alt="" coords="293,169,451,196"/>
 <area shape="rect" id="node7" href="$farm_8h.html" title="This file contains the interface of a Farm for the GiroDeGado software." alt="" coords="92,244,159,271"/>
 <area shape="rect" id="node14" href="$transaction_impl_8h.html" title="This file contains the handle/body of a Transaction for the GiroDeGado software." alt="" coords="183,244,369,271"/>
-<area shape="rect" id="node15" href="$handlebody_8h.html" title="The classes Handle and Body implements &quot;bridge&quot; design pattern (also known as &quot;handle/body idiom&quot;)...." alt="" coords="421,319,528,345"/>
+<area shape="rect" id="node15" href="$handlebody_8h.html" title="The classes Handle and Body implements &quot;bridge&quot; design pattern (also known as &quot;handle/body idiom&quot;)...." alt="" coords="429,319,536,345"/>
 <area shape="rect" id="node16" href="$cattle_impl_8h.html" title="This file contains the handle/body of a Cattle for the GiroDeGado software." alt="" coords="393,244,546,271"/>
-<area shape="rect" id="node8" title=" " alt="" coords="35,319,91,345"/>
-<area shape="rect" id="node9" title=" " alt="" coords="245,319,299,345"/>
-<area shape="rect" id="node10" href="$cattle_8h.html" title="This file contains the interface of a Cattle for the GiroDeGado software." alt="" coords="323,319,397,345"/>
-<area shape="rect" id="node13" href="$transaction_8h.html" title="This file contains the interface of a Transaction for the GiroDeGado software." alt="" coords="115,319,221,345"/>
-<area shape="rect" id="node11" title=" " alt="" coords="184,393,256,420"/>
-<area shape="rect" id="node12" title=" " alt="" coords="306,393,361,420"/>
+<area shape="rect" id="node8" title=" " alt="" coords="20,319,76,345"/>
+<area shape="rect" id="node9" title=" " alt="" coords="137,393,191,420"/>
+<area shape="rect" id="node10" href="$cattle_8h.html" title="This file contains the interface of a Cattle for the GiroDeGado software." alt="" coords="202,319,275,345"/>
+<area shape="rect" id="node13" href="$transaction_8h.html" title="This file contains the interface of a Transaction for the GiroDeGado software." alt="" coords="299,319,405,345"/>
+<area shape="rect" id="node11" title=" " alt="" coords="221,393,293,420"/>
+<area shape="rect" id="node12" title=" " alt="" coords="321,393,375,420"/>
 </map>

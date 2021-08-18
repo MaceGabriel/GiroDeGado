@@ -1,5 +1,5 @@
 <map id="CattleBuyScreen" name="CattleBuyScreen">
-<area shape="rect" id="node1" title=" " alt="" coords="23,629,211,780"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,247,73,325"/>
-<area shape="rect" id="node3" href="$class_farm.html" title="This Class represents a Farm for the GiroDeGado software." alt="" coords="98,5,293,567"/>
+<area shape="rect" id="node1" title=" " alt="" coords="25,717,213,868"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,291,73,369"/>
+<area shape="rect" id="node3" href="$class_farm.html" title="This Class represents a Farm for the GiroDeGado software." alt="" coords="98,5,301,655"/>
 </map>

@@ -26,5 +26,6 @@ void main_unit_test(Farm* f){
     std::cout << "\n========== Testes unitarios da Classe Farm ===========\n" << std::endl;
     run_unit_tests_farm(f);
     assert(numHandleCreated == numHandleDeleted+1);
-    assert(numBodyCreated == numBodyDeleted+1);    
+    assert(numBodyCreated == numBodyDeleted+1);
+
 }

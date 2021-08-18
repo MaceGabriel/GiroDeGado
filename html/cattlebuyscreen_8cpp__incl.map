@@ -7,11 +7,11 @@
 <area shape="rect" id="node5" href="$cattlemanagementscreen_8h.html" title="This file contains the screen for management of all features related to the cattle for the GiroDeGado..." alt="" coords="101,229,280,256"/>
 <area shape="rect" id="node6" href="$homescreen_8h.html" title="This file contains the home screen for the GiroDeGado software." alt="" coords="139,304,243,331"/>
 <area shape="rect" id="node7" title=" " alt="" coords="47,379,153,405"/>
-<area shape="rect" id="node8" title=" " alt="" coords="333,528,387,555"/>
-<area shape="rect" id="node9" href="$farm_8h.html" title="This file contains the interface of a Farm for the GiroDeGado software." alt="" coords="299,379,421,405"/>
-<area shape="rect" id="node10" title=" " alt="" coords="535,453,591,480"/>
-<area shape="rect" id="node11" title=" " alt="" coords="229,453,283,480"/>
-<area shape="rect" id="node12" href="$cattle_8h.html" title="This file contains the interface of a Cattle for the GiroDeGado software." alt="" coords="437,453,510,480"/>
-<area shape="rect" id="node14" href="$transaction_8h.html" title="This file contains the interface of a Transaction for the GiroDeGado software." alt="" coords="307,453,413,480"/>
-<area shape="rect" id="node13" title=" " alt="" coords="424,528,496,555"/>
+<area shape="rect" id="node8" title=" " alt="" coords="334,528,389,555"/>
+<area shape="rect" id="node9" href="$farm_8h.html" title="This file contains the interface of a Farm for the GiroDeGado software." alt="" coords="300,379,423,405"/>
+<area shape="rect" id="node10" title=" " alt="" coords="228,453,284,480"/>
+<area shape="rect" id="node11" title=" " alt="" coords="518,528,573,555"/>
+<area shape="rect" id="node12" href="$cattle_8h.html" title="This file contains the interface of a Cattle for the GiroDeGado software." alt="" coords="438,453,511,480"/>
+<area shape="rect" id="node14" href="$transaction_8h.html" title="This file contains the interface of a Transaction for the GiroDeGado software." alt="" coords="309,453,414,480"/>
+<area shape="rect" id="node13" title=" " alt="" coords="419,528,491,555"/>
 </map>

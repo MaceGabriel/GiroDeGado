@@ -12,6 +12,9 @@ int main(int argc, char *argv[])
     QSqlDatabase bancoDeDados = QSqlDatabase::addDatabase("QSQLITE");
     QString path;
 
+    QSqlQuery q;
+    Farm* f = Farm::getFarm(&q);
+
     // Execucao dos testes unitarios das classes Cattle, Transaction e Farm
     if(UNIT_TEST){
         //path = "C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/GiroDeGado/bd_giro_tests.db"; //MACE
@@ -21,12 +24,8 @@ int main(int argc, char *argv[])
         bancoDeDados.setDatabaseName(path);
         bancoDeDados.open();
 
-        QSqlQuery q_tests;
-        Farm* f_tests = Farm::createFarm(0, &q_tests);
+        main_unit_test(f);
 
-        main_unit_test(f_tests);
-
-        delete f_tests;
         bancoDeDados.close();
     }
 
@@ -37,11 +36,10 @@ int main(int argc, char *argv[])
     bancoDeDados.setDatabaseName(path);
     bancoDeDados.open();
 
-    QSqlQuery q;
-    Farm* f = Farm::createFarm(0, &q);
-
     QApplication a(argc, argv);
     HomeScreen w(nullptr, f);
     w.show();
     return a.exec();
+
+    delete f;
 }

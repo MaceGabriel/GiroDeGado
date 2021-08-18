@@ -19,25 +19,18 @@
 class Farm{
 
     public:
-        typedef std::vector<Farm*>::iterator farmIterator;
-        
-        virtual farmIterator beginFarmContainer() = 0; /*!< Returns the iterator to the beginning of the global farm container std::vector. */
-        virtual farmIterator endFarmContainer() = 0; /*!< Returns the iterator to the end of the global farm container std::vector. */
+
+        /*!
+            Returns the singleton Farm.
+            \param query the query of a database.
+            \return Farm* - the pointer to the singleton Farm.
+        */
+        static Farm* getFarm(QSqlQuery* query = NULL);
 
         /*!
             This is the default destructor for the Farm Class.
         */
         virtual ~Farm(){}
-
-        /*!
-            missing
-        */
-        virtual void setNumber(int number) = 0;
-
-        /*!
-            missing
-        */
-        virtual int getNumber() const = 0;
 
         /*!
             Sets the query attribute in the Farm Class.
@@ -108,7 +101,7 @@ class Farm{
             Creates a Farm and returns it's pointer.
             \return Farm - a Farm Class object.
         */
-        static Farm* createFarm(int number = 0, QSqlQuery* query = NULL);
+        // static Farm* createFarm(int number = 0, QSqlQuery* query = NULL);
 
         /*!        
            Deletes a cattle from the database.
@@ -233,6 +226,76 @@ class Farm{
             \return QString - the content value attribute.  
         */
         virtual QString getCattleValue(int cattle_earring) const = 0;
+
+        /*!
+            Sets the number of a registered Transaction in the database.
+            \param actual_transaction_number the number of the Transaction.
+            \param new_transaction_number which will be set to the Transaction.
+        */
+        virtual void setTransactionNumber(int actual_transaction_number, int new_transaction_number) = 0;
+
+        /*!
+            Returns the number of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content number attribute.
+        */
+        virtual QString getTransactionNumber(int transaction_number) const = 0;
+
+        /*!
+            Sets the value of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_value which will be set to the Transaction.
+        */
+        virtual void setTransactionValue(int transaction_number, double transaction_value) = 0;
+
+        /*!
+            Returns the value of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content value attribute.  
+        */
+        virtual QString getTransactionValue(int transaction_number) const = 0;
+        
+        /*!
+            Sets the description of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_description which will be set to the Transaction.
+        */
+        virtual void setTransactionDescription(int transaction_number, std::string transaction_description) = 0;
+
+        /*!
+            Returns the description of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content description attribute.  
+        */
+        virtual QString getTransactionDescription(int transaction_number) const = 0;
+
+        /*!
+            Sets the date of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_date which will be set to the Transaction.
+        */
+        virtual void setTransactionDate(int transaction_number, std::string transaction_date) = 0;
+
+        /*!
+            Returns the date of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content date attribute.  
+        */
+        virtual QString getTransactionDate(int transaction_number) const = 0;
+
+        /*!
+            Sets the cattle earring of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \param transaction_cattle_earring which will be set to the Transaction.
+        */
+        virtual void setTransactionCattleEarring(int transaction_number, int transaction_cattle_earring) = 0;
+
+        /*!
+            Returns the cattle earring of a registered Transaction in the database.
+            \param transaction_number the number of the Transaction.
+            \return QString - the content cattle earring attribute.  
+        */
+        virtual QString getTransactionCattleEarring(int transaction_number) const = 0;
 
         /*!
             Returns the last available earring on the cattle table from the database.
