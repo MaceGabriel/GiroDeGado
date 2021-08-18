@@ -18,8 +18,8 @@ int main(int argc, char *argv[])
     // Execucao dos testes unitarios das classes Cattle, Transaction e Farm
     if(UNIT_TEST){
         //path = "C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/GiroDeGado/bd_giro_tests.db"; //MACE
-        //path = "C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/bd_giro_tests.db"; //MARCUS
-        path = "C:/Programas/git/GiroDeGado/bd_giro_tests.db"; //CARLOS
+        path = "C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/bd_giro_tests.db"; //MARCUS
+        //path = "C:/Programas/git/GiroDeGado/bd_giro_tests.db"; //CARLOS
 
         bancoDeDados.setDatabaseName(path);
         bancoDeDados.open();
