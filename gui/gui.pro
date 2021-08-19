@@ -1,0 +1,73 @@
+QT       += core gui sql
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+CONFIG += c++11
+#Cada um cria o seu proprio path
+LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui/bin/debug/debug)
+LIBS += -l$$quote(api)
+
+# You can make your code fail to compile if it uses deprecated APIs.
+# In order to do so, uncomment the following line.
+#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+
+SOURCES += \
+    entity/cattlebirthscreen.cpp \
+    entity/cattlebuyscreen.cpp \
+    entity/cattleconsultscreen.cpp \
+    entity/cattleeditscreen.cpp \
+    entity/cattlemanagementscreen.cpp \
+    entity/cattleregisterscreen.cpp \
+    entity/cattleremovescreen.cpp \
+    entity/financialconsultscreen.cpp \
+    entity/financialmanagementscreen.cpp \
+    entity/financialrecordscreen.cpp \
+    entity/financialremovescreen.cpp \
+    entity/homescreen.cpp \
+    main.cpp \
+
+HEADERS += \
+    entity/cattlebirthscreen.h \
+    entity/cattlebuyscreen.h \
+    entity/cattleconsultscreen.h \
+    entity/cattleeditscreen.h \
+    entity/cattlemanagementscreen.h \
+    entity/cattleregisterscreen.h \
+    entity/cattleremovescreen.h \
+    entity/financialconsultscreen.h \
+    entity/financialmanagementscreen.h \
+    entity/financialrecordscreen.h \
+    entity/financialremovescreen.h \
+    entity/homescreen.h \
+    includes/cattle.h \
+    includes/cattleImpl.h \
+    includes/farm.h \
+    includes/farmImpl.h \
+    includes/handlebody.h \
+    includes/transaction.h \
+    includes/transactionImpl.h \
+    lib_global.h \
+    test/unit/main_unit_test.h
+
+FORMS += \
+    views/cattlebirthscreen.ui \
+    views/cattlebuyscreen.ui \
+    views/cattleconsultscreen.ui \
+    views/cattleeditscreen.ui \
+    views/cattlemanagementscreen.ui \
+    views/cattleregisterscreen.ui \
+    views/cattleremovescreen.ui \
+    views/financialconsultscreen.ui \
+    views/financialmanagementscreen.ui \
+    views/financialrecordscreen.ui \
+    views/financialremovescreen.ui \
+    views/homescreen.ui
+
+# Default rules for deployment.
+qnx: target.path = /tmp/$${TARGET}/bin
+else: unix:!android: target.path = /opt/$${TARGET}/bin
+!isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    bd_giro.db \
+    bd_giro_tests.db
