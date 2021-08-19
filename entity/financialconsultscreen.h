@@ -44,9 +44,9 @@ private slots:
     void on_backButton_clicked();
 
 private:
-    Ui::FinancialConsultScreen *ui; /*!< This attribute contains the ui for the FinancialConsult. */
-    QWidget* backScreen; /*!< This attribute contains the reference of the back screen. */
-    Farm* farm; /*!< This attribute contains the the Farm. */
+    Ui::FinancialConsultScreen *ui_; /*!< This attribute contains the ui for the FinancialConsult. */
+    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    Farm* farm_; /*!< This attribute contains the the Farm. */
 };
 
 #endif // FINANCIALCONSULTSCREEN_H

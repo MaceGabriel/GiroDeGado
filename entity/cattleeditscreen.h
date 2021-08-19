@@ -49,9 +49,9 @@ private slots:
     void on_backButton_clicked();
 
 private:
-    Ui::CattleEditScreen *ui; /*!< This attribute contains the ui for the CattleEdit. */
-    QWidget* backScreen; /*!< This attribute contains the reference of the back screen. */
-    Farm* farm; /*!< This attribute contains the the Farm. */
+    Ui::CattleEditScreen *ui_; /*!< This attribute contains the ui for the CattleEdit. */
+    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    Farm* farm_; /*!< This attribute contains the the Farm. */
 };
 
 #endif // CATTLEEDITSCREEN_H
