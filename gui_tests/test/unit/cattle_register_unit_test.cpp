@@ -36,10 +36,13 @@ TestCattleRegisterScreenGUI::TestCattleRegisterScreenGUI(QWidget *parent,Farm* f
 }
 
 void TestCattleRegisterScreenGUI::casoDeUsoPrincipal_data(){
+
     // ENTRADA
     QTest::addColumn<QPushButton*>("botao");
 
     // SAIDA
+    QTest::newRow("Botao de Compra") << d.ui_->buyButton;
+    QTest::newRow("Botao de Parto") << d.ui_->birthButton;
     QTest::newRow("Botao de Voltar") << d.ui_->backButton;
 
 }
@@ -55,6 +58,7 @@ void TestCattleRegisterScreenGUI::casoDeUsoPrincipal(){
         QVERIFY2(d.ui_->buyButton, "Campo não buildado");
         QVERIFY2(d.ui_->birthButton, "Campo não buildado");
         QVERIFY2(d.ui_->backButton, "Campo não buildado");
+
 
 
         QTest::mouseClick(botao, Qt::LeftButton);        
