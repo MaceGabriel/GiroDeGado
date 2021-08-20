@@ -1,3 +1,8 @@
+/*!
+ \file cattleconsultscreen.h
+ \brief This file contains the screen for the consult of cattle for the GiroDeGado software.
+*/
+
 #ifndef CATTLECONSULTSCREEN_H
 #define CATTLECONSULTSCREEN_H
 

@@ -1,3 +1,8 @@
+/*!
+ \file financialconsultscreen.h
+ \brief This file contains the screen for the consult of transactions for the GiroDeGado software.
+*/
+
 #ifndef FINANCIALCONSULTSCREEN_H
 #define FINANCIALCONSULTSCREEN_H
 
