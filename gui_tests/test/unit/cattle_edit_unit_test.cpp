@@ -37,6 +37,7 @@ TestCattleEditScreenGUI::TestCattleEditScreenGUI(QWidget *parent, Farm* f):QObje
 void TestCattleEditScreenGUI::casoDeUsoPrincipal_data(){
     // ENTRADA
     QTest::addColumn<QString>("Brinco");
+    QTest::addColumn<QPushButton*>("Botao");
     QTest::addColumn<QString>("Raca");
     QTest::addColumn<QString>("DataA");
     QTest::addColumn<QString>("DataB");
@@ -44,16 +45,16 @@ void TestCattleEditScreenGUI::casoDeUsoPrincipal_data(){
     QTest::addColumn<QString>("Mae");
     QTest::addColumn<QString>("Peso");
     QTest::addColumn<QString>("Valor");
-    QTest::addColumn<QPushButton*>("Botao");
-    QTest::addColumn<QPushButton*>("botao");
 
     // SAIDA
-    QTest::newRow("Botao de Voltar") << "" << "" << "" << "" << "" << "" << "" << "" << d.ui_->backButton;
-    QTest::newRow("Cadastro correto") << "20" << "Brangus" << "10/10/20" << "10/10/10" << "1" << "2" << "200" << "10000" << d.ui_->okButton;
+    QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton << "" << "" << "" << "" << "" << "" << "";
+    QTest::newRow("Edicao correta") << "20" << d.ui_->okButton << "Brangus" << "10/10/20" << "10/10/10" << "1" << "2" << "200" << "10000";
 }
 
 void TestCattleEditScreenGUI::casoDeUsoPrincipal(){
 
+    QFETCH(QString, Brinco);
+    QFETCH(QPushButton*, Botao);
     QFETCH(QString, Raca);
     QFETCH(QString, DataA);
     QFETCH(QString, DataB);
@@ -61,7 +62,6 @@ void TestCattleEditScreenGUI::casoDeUsoPrincipal(){
     QFETCH(QString, Mae);
     QFETCH(QString, Peso);
     QFETCH(QString, Valor);
-    QFETCH(QPushButton*, Botao);
 
     QTimer::singleShot(500, this, SLOT(timeOut()));
 
@@ -87,6 +87,8 @@ void TestCattleEditScreenGUI::casoDeUsoPrincipal(){
     QVERIFY2(d.ui_->editButton, "Campo não buildado");
     QVERIFY2(d.ui_->backButton, "Campo não buildado");
 
+    QTest::keyClicks(d.ui_->inputEarring, Brinco);
+    QTest::mouseClick(Botao, Qt::LeftButton);
     QTest::keyClicks(d.ui_->inputBreed, Raca);
     QTest::keyClicks(d.ui_->inputDateA, DataA);
     QTest::keyClicks(d.ui_->inputDateB, DataB);
@@ -94,9 +96,10 @@ void TestCattleEditScreenGUI::casoDeUsoPrincipal(){
     QTest::keyClicks(d.ui_->inputPrice, Mae);
     QTest::keyClicks(d.ui_->inputWeight, Peso);
     QTest::keyClicks(d.ui_->inputPrice, Valor);
-    QTest::mouseClick(Botao, Qt::LeftButton);
 
-    //QCOMPARE(d->farm_->getCattleBreed(earring.toInt()), Raca);
+
+    QString earring = d.ui_->inputEarring->text();
+    QCOMPARE(d.farm_->getCattleBreed(earring.toInt()), Raca);
 }
 
 void TestCattleEditScreenGUI::timeOut(){

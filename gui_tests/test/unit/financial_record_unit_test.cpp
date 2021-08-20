@@ -78,7 +78,10 @@ void TestFinancialRecordScreenGUI::casoDeUsoPrincipal(){
     QTest::keyClicks(d->ui_->inputDescription, Descricao);
     QTest::mouseClick(Botao, Qt::LeftButton);
 
-    //QCOMPARE(d->farm_->getCattleBreed(earring.toInt()), Raca);
+    QString id = d->ui_->labelIdTransaction->text();
+    id.remove(0,1);
+
+    QCOMPARE(d->farm_->getTransactionCattleEarring(id.toInt()), Brinco);
 }
 
 void TestFinancialRecordScreenGUI::timeOut(){

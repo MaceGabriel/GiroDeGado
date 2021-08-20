@@ -24,14 +24,13 @@ private slots:
     void timeOut();
 
 private:
-    FinancialConsultScreen d;
+    FinancialConsultScreen* d;
     QString msgResult;
     //bool dialogoAberto;
 };
 
 TestFinancialConsultScreenGUI::TestFinancialConsultScreenGUI(QWidget *parent, Farm* f):QObject(parent){
-    d.farm_ = f;
-    d.backScreen_ = new FinancialManagementScreen();
+    d = new FinancialConsultScreen(nullptr, new FinancialManagementScreen(), f);
 }
 
 void TestFinancialConsultScreenGUI::casoDeUsoPrincipal_data(){
@@ -41,8 +40,8 @@ void TestFinancialConsultScreenGUI::casoDeUsoPrincipal_data(){
     QTest::addColumn<QPushButton*>("Botao");
 
     // SAIDA
-    QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton;
-    QTest::newRow("Registro correto") << "10/10/10" << d.ui_->okButton;
+    //QTest::newRow("Botao de Voltar") << "" << d->ui_->backButton;
+    QTest::newRow("Consulta correta") << "10/10/20" << d->ui_->okButton;
 
 }
 
@@ -54,24 +53,25 @@ void TestFinancialConsultScreenGUI::casoDeUsoPrincipal(){
     QTimer::singleShot(500, this, SLOT(timeOut()));
 
     // Verifica se os componentes da tela estao sendo buildados corretamente.
-    QVERIFY2(d.ui_->labelTitle, "Campo não buildado");
-    QVERIFY2(d.ui_->labelTransactionDate, "Campo não buildado");
-    QVERIFY2(d.ui_->inputTransactionDate, "Campo não buildado");
-    QVERIFY2(d.ui_->okButton, "Campo não buildado");
-    QVERIFY2(d.ui_->okButton, "Campo não buildado");
-    QVERIFY2(d.ui_->backButton, "Campo não buildado");
+    QVERIFY2(d->ui_->labelTitle, "Campo não buildado");
+    QVERIFY2(d->ui_->labelTransactionDate, "Campo não buildado");
+    QVERIFY2(d->ui_->inputTransactionDate, "Campo não buildado");
+    QVERIFY2(d->ui_->transactionConsultTable, "Campo não buildado");
+    QVERIFY2(d->ui_->okButton, "Campo não buildado");
+    QVERIFY2(d->ui_->backButton, "Campo não buildado");
 
-    QTest::keyClicks(d.ui_->inputTransactionDate, Data);
+    QTest::keyClicks(d->ui_->inputTransactionDate, Data);
     QTest::mouseClick(Botao, Qt::LeftButton);
 
-    //QCOMPARE(d->farm_->getCattleBreed(earring.toInt()), Raca);
+    QString id = d->ui_->transactionConsultTable->item(0,0)->text();
+    QCOMPARE(d->farm_->getTransactionDate(id.toInt()), Data);
 }
 
 void TestFinancialConsultScreenGUI::timeOut(){
     // Verificar e fechar message box
     QWidgetList allToplevelWidgets = QApplication::topLevelWidgets();
     foreach (QWidget *w, allToplevelWidgets) {
-        if (w->inherits("QDialog") && w != &d) {
+        if (w->inherits("QDialog") && w != d) {
             QDialog *mb = qobject_cast<QDialog*>(w);
             QTest::keyClick(mb, Qt::Key_Escape);
         }

@@ -40,6 +40,9 @@ void TestFinancialManagementScreenGUI::casoDeUsoPrincipal_data(){
     QTest::addColumn<QPushButton*>("botao");
 
     // SAIDA
+    QTest::newRow("Botao de Cadastro") << d.ui_->registerButton;
+    QTest::newRow("Botao de Consulta") << d.ui_->queryButton;
+    QTest::newRow("Botao de Remocao") << d.ui_->removeButton;
     QTest::newRow("Botao de Voltar") << d.ui_->backButton;
 
 }

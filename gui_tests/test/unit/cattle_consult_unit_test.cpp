@@ -41,7 +41,7 @@ void TestCattleConsultScreenGUI::casoDeUsoPrincipal_data(){
 
     // SAIDA
     QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton;
-    QTest::newRow("Cadastro correto") << "1" << d.ui_->okButton;
+    QTest::newRow("Consulta correta") << "1" << d.ui_->okButton;
 }
 
 void TestCattleConsultScreenGUI::casoDeUsoPrincipal(){
@@ -73,7 +73,8 @@ void TestCattleConsultScreenGUI::casoDeUsoPrincipal(){
     QTest::keyClicks(d.ui_->inputCattleEarring, Brinco);
     QTest::mouseClick(Botao, Qt::LeftButton);
 
-    //QCOMPARE(d->farm_->getCattleBreed(d->ui_->labelCattleEarring->text().toInt()), Raca);
+    QString earring = d.ui_->cattleConsultTable->item(0,0)->text();
+    QCOMPARE(d.farm_->getCattleEarring(earring.toInt()), Brinco);
 }
 
 void TestCattleConsultScreenGUI::timeOut(){

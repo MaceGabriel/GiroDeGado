@@ -41,7 +41,7 @@ void TestFinancialRemoveScreenGUI::casoDeUsoPrincipal_data(){
 
     // SAIDA
     QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton;
-    QTest::newRow("Registro correto") << "2" << d.ui_->okButton;
+    QTest::newRow("Remocao correta") << "2" << d.ui_->okButton;
 }
 
 void TestFinancialRemoveScreenGUI::casoDeUsoPrincipal(){
@@ -62,7 +62,8 @@ void TestFinancialRemoveScreenGUI::casoDeUsoPrincipal(){
     QTest::keyClicks(d.ui_->inputIdTransaction, Id);
     QTest::mouseClick(Botao, Qt::LeftButton);
 
-    //QCOMPARE(d->farm_->getCattleBreed(earring.toInt()), Raca);
+    //QCOMPARE(d.farm_->getTransactionNumber(Id.toInt()), "");
+
 }
 
 void TestFinancialRemoveScreenGUI::timeOut(){

@@ -44,7 +44,7 @@ void TestCattleRemoveScreenGUI::casoDeUsoPrincipal_data(){
 
     // SAIDA
     QTest::newRow("Botao de Voltar") << "" << d.ui_->radioButtonSell << "" << d.ui_->backButton;
-    QTest::newRow("Cadastro correto") << "1" << d.ui_->radioButtonSell << "10000" << d.ui_->okButton;
+    QTest::newRow("Remocao correto") << "1" << d.ui_->radioButtonSell << "10000" << d.ui_->okButton;
 }
 
 void TestCattleRemoveScreenGUI::casoDeUsoPrincipal(){
@@ -75,7 +75,9 @@ void TestCattleRemoveScreenGUI::casoDeUsoPrincipal(){
     QTest::keyClicks(d.ui_->inputPrice, Valor);
     QTest::mouseClick(Botao, Qt::LeftButton);
 
-    //QCOMPARE(m.textEditResult->toPlainText(), resultado);
+    QString earring = d.ui_->labelCattleEarring->text();
+    earring.remove(0,1);
+    QCOMPARE(d.farm_->getCattleEarring(earring.toInt()), "");
 }
 
 void TestCattleRemoveScreenGUI::timeOut(){
