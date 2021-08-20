@@ -1,5 +1,5 @@
-#include "./includes/farm.h"
-#include "./test/unit/main_unit_test.h"
+#include "../api/includes/farm.h"
+#include "../api/test/unit/main_unit_test.h"
 #include "./entity/homescreen.h"
 
 #include <QApplication>

@@ -21,6 +21,7 @@ class CattleManagementScreen;
 class CattleManagementScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestCattleManagementScreenGUI;
 
 public:
     /*!

@@ -1,3 +1,8 @@
+/*!
+ \file cattleconsultscreen.h
+ \brief This file contains the screen for the consult of cattle for the GiroDeGado software.
+*/
+
 #ifndef CATTLECONSULTSCREEN_H
 #define CATTLECONSULTSCREEN_H
 
@@ -15,6 +20,7 @@ class CattleConsultScreen;
 class CattleConsultScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestCattleConsultScreenGUI;
 
 public:
     /*!

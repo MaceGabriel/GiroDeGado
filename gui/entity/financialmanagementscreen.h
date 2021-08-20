@@ -21,6 +21,7 @@ class FinancialManagementScreen;
 class FinancialManagementScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestFinancialManagementScreenGUI;
 
 public:
     /*!

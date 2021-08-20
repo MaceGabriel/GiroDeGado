@@ -8,7 +8,7 @@
 
 #include <QMainWindow>
 #include <string>
-#include "../includes/farm.h"
+#include "../../api/includes/farm.h"
 
 /** 
  * \brief
@@ -21,7 +21,7 @@ QT_END_NAMESPACE
 class HomeScreen : public QMainWindow
 {
     Q_OBJECT
-
+    friend class TestHomeScreenGUI;
 public:
     HomeScreen(QWidget *parent = nullptr, Farm* f = nullptr);
 

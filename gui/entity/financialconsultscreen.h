@@ -1,3 +1,8 @@
+/*!
+ \file financialconsultscreen.h
+ \brief This file contains the screen for the consult of transactions for the GiroDeGado software.
+*/
+
 #ifndef FINANCIALCONSULTSCREEN_H
 #define FINANCIALCONSULTSCREEN_H
 
@@ -15,6 +20,7 @@ class FinancialConsultScreen;
 class FinancialConsultScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestFinancialConsultScreenGUI;
 
 public:
     /*!

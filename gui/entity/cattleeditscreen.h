@@ -1,3 +1,8 @@
+/*!
+ \file cattleeditscreen.h
+ \brief This file contains the screen for the edition of cattle for the GiroDeGado software.
+*/
+
 #ifndef CATTLEEDITSCREEN_H
 #define CATTLEEDITSCREEN_H
 
@@ -15,6 +20,7 @@ class CattleEditScreen;
 class CattleEditScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestCattleEditScreenGUI;
 
 public:
     /*!

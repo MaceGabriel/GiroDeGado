@@ -20,6 +20,7 @@ class CattleBirthScreen;
 class CattleBirthScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestCattleBirthScreenGUI;
 
 public:
     /*!

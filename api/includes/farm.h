@@ -7,7 +7,7 @@
 #define FARM_H
 
 #include <vector>
-#include <QtSql>
+#include <QtSql/QtSql>
 
 #include "./cattle.h"
 #include "./transaction.h"
