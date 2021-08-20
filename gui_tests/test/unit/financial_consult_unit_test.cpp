@@ -35,29 +35,36 @@ TestFinancialConsultScreenGUI::TestFinancialConsultScreenGUI(QWidget *parent, Fa
 }
 
 void TestFinancialConsultScreenGUI::casoDeUsoPrincipal_data(){
+
     // ENTRADA
-    QTest::addColumn<QPushButton*>("botao");
+    QTest::addColumn<QString>("Data");
+    QTest::addColumn<QPushButton*>("Botao");
 
     // SAIDA
-    QTest::newRow("Botao de Voltar") << d.ui_->backButton;
+    QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton;
+    QTest::newRow("Registro correto") << "10/10/10" << d.ui_->okButton;
+
 }
 
 void TestFinancialConsultScreenGUI::casoDeUsoPrincipal(){
 
-        QFETCH(QPushButton*, botao);
+    QFETCH(QString, Data);
+    QFETCH(QPushButton*, Botao);
 
-        QTimer::singleShot(500, this, SLOT(timeOut()));
+    QTimer::singleShot(500, this, SLOT(timeOut()));
 
-        // Verifica se os componentes da tela estao sendo buildados corretamente.
-        QVERIFY2(d.ui_->labelTitle, "Campo não buildado");
-        QVERIFY2(d.ui_->labelTransactionDate, "Campo não buildado");
-        QVERIFY2(d.ui_->inputTransactionDate, "Campo não buildado");
-        QVERIFY2(d.ui_->okButton, "Campo não buildado");
-        QVERIFY2(d.ui_->okButton, "Campo não buildado");
-        QVERIFY2(d.ui_->backButton, "Campo não buildado");
+    // Verifica se os componentes da tela estao sendo buildados corretamente.
+    QVERIFY2(d.ui_->labelTitle, "Campo não buildado");
+    QVERIFY2(d.ui_->labelTransactionDate, "Campo não buildado");
+    QVERIFY2(d.ui_->inputTransactionDate, "Campo não buildado");
+    QVERIFY2(d.ui_->okButton, "Campo não buildado");
+    QVERIFY2(d.ui_->okButton, "Campo não buildado");
+    QVERIFY2(d.ui_->backButton, "Campo não buildado");
 
+    QTest::keyClicks(d.ui_->inputTransactionDate, Data);
+    QTest::mouseClick(Botao, Qt::LeftButton);
 
-        QTest::mouseClick(botao, Qt::LeftButton);
+    //QCOMPARE(d->farm_->getCattleBreed(earring.toInt()), Raca);
 }
 
 void TestFinancialConsultScreenGUI::timeOut(){

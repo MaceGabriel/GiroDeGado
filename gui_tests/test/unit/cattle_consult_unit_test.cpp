@@ -36,39 +36,44 @@ TestCattleConsultScreenGUI::TestCattleConsultScreenGUI(QWidget *parent, Farm* f)
 
 void TestCattleConsultScreenGUI::casoDeUsoPrincipal_data(){
     // ENTRADA
-    QTest::addColumn<QPushButton*>("botao");
+    QTest::addColumn<QString>("Brinco");
+    QTest::addColumn<QPushButton*>("Botao");
 
     // SAIDA
-    QTest::newRow("Botao de Voltar") << d.ui_->backButton;
+    QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton;
+    QTest::newRow("Cadastro correto") << "1" << d.ui_->okButton;
 }
 
 void TestCattleConsultScreenGUI::casoDeUsoPrincipal(){
 
-        QFETCH(QPushButton*, botao);
+    QFETCH(QString, Brinco);
+    QFETCH(QPushButton*, Botao);
 
-        QTimer::singleShot(500, this, SLOT(timeOut()));
+    QTimer::singleShot(500, this, SLOT(timeOut()));
 
-        // Verifica se os componentes da tela estao sendo buildados corretamente.
-        QVERIFY2(d.ui_->labelTitle, "Campo não buildado");
-        QVERIFY2(d.ui_->labelCattleEarring, "Campo não buildado");
-        QVERIFY2(d.ui_->inputCattleEarring, "Campo não buildado");
-        QVERIFY2(d.ui_->okButton, "Campo não buildado");
-        QVERIFY2(d.ui_->cattleConsultTable, "Campo não buildado");
-        QVERIFY2(d.ui_->cattleTransactionTable, "Campo não buildado");
-        QVERIFY2(d.ui_->labelAverageSpending,"Campo não buildado");
-        QVERIFY2(d.ui_->labelValueAverageSpending, "Campo não buildado");
-        QVERIFY2(d.ui_->labelAverageEarnings, "Campo não buildado");
-        QVERIFY2(d.ui_->labelValueAverageEarnings, "Campo não buildado");
-        QVERIFY2(d.ui_->labelTotalSpending, "Campo não buildado");
-        QVERIFY2(d.ui_->labelValueTotalSpending, "Campo não buildado");
-        QVERIFY2(d.ui_->labelTotalEarnings, "Campo não buildado");
-        QVERIFY2(d.ui_->labelValueTotalEarnings, "Campo não buildado");
-        QVERIFY2(d.ui_->labelProfit, "Campo não buildado");
-        QVERIFY2(d.ui_->labelValueProfit, "Campo não buildado");
-        QVERIFY2(d.ui_->backButton, "Campo não buildado");
+    // Verifica se os componentes da tela estao sendo buildados corretamente.
+    QVERIFY2(d.ui_->labelTitle, "Campo não buildado");
+    QVERIFY2(d.ui_->labelCattleEarring, "Campo não buildado");
+    QVERIFY2(d.ui_->inputCattleEarring, "Campo não buildado");
+    QVERIFY2(d.ui_->okButton, "Campo não buildado");
+    QVERIFY2(d.ui_->cattleConsultTable, "Campo não buildado");
+    QVERIFY2(d.ui_->cattleTransactionTable, "Campo não buildado");
+    QVERIFY2(d.ui_->labelAverageSpending,"Campo não buildado");
+    QVERIFY2(d.ui_->labelValueAverageSpending, "Campo não buildado");
+    QVERIFY2(d.ui_->labelAverageEarnings, "Campo não buildado");
+    QVERIFY2(d.ui_->labelValueAverageEarnings, "Campo não buildado");
+    QVERIFY2(d.ui_->labelTotalSpending, "Campo não buildado");
+    QVERIFY2(d.ui_->labelValueTotalSpending, "Campo não buildado");
+    QVERIFY2(d.ui_->labelTotalEarnings, "Campo não buildado");
+    QVERIFY2(d.ui_->labelValueTotalEarnings, "Campo não buildado");
+    QVERIFY2(d.ui_->labelProfit, "Campo não buildado");
+    QVERIFY2(d.ui_->labelValueProfit, "Campo não buildado");
+    QVERIFY2(d.ui_->backButton, "Campo não buildado");
 
+    QTest::keyClicks(d.ui_->inputCattleEarring, Brinco);
+    QTest::mouseClick(Botao, Qt::LeftButton);
 
-        QTest::mouseClick(botao, Qt::LeftButton);
+    //QCOMPARE(d->farm_->getCattleBreed(d->ui_->labelCattleEarring->text().toInt()), Raca);
 }
 
 void TestCattleConsultScreenGUI::timeOut(){

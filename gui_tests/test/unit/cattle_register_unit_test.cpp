@@ -48,17 +48,17 @@ void TestCattleRegisterScreenGUI::casoDeUsoPrincipal_data(){
 
 void TestCattleRegisterScreenGUI::casoDeUsoPrincipal(){
 
-        QFETCH(QPushButton*, botao);
+    QFETCH(QPushButton*, botao);
 
-        QTimer::singleShot(500, this, SLOT(timeOut()));
+    QTimer::singleShot(500, this, SLOT(timeOut()));
 
-        // Verifica se os componentes da tela estao sendo buildados corretamente.
-        QVERIFY2(d.ui_->labelTitle, "Campo não buildado");
-        QVERIFY2(d.ui_->buyButton, "Campo não buildado");
-        QVERIFY2(d.ui_->birthButton, "Campo não buildado");
-        QVERIFY2(d.ui_->backButton, "Campo não buildado");
+    // Verifica se os componentes da tela estao sendo buildados corretamente.
+    QVERIFY2(d.ui_->labelTitle, "Campo não buildado");
+    QVERIFY2(d.ui_->buyButton, "Campo não buildado");
+    QVERIFY2(d.ui_->birthButton, "Campo não buildado");
+    QVERIFY2(d.ui_->backButton, "Campo não buildado");
 
-        QTest::mouseClick(botao, Qt::LeftButton);        
+    QTest::mouseClick(botao, Qt::LeftButton);
 }
 
 void TestCattleRegisterScreenGUI::timeOut(){

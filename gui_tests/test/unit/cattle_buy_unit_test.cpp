@@ -51,41 +51,43 @@ void TestCattleBuyScreenGUI::casoDeUsoPrincipal_data(){
 
 void TestCattleBuyScreenGUI::casoDeUsoPrincipal(){
 
-        QFETCH(QString, Raca);
-        QFETCH(QString, DataA);
-        QFETCH(QString, DataB);
-        QFETCH(QString, Peso);
-        QFETCH(QString, Valor);
-        QFETCH(QPushButton*, Botao);
+    QFETCH(QString, Raca);
+    QFETCH(QString, DataA);
+    QFETCH(QString, DataB);
+    QFETCH(QString, Peso);
+    QFETCH(QString, Valor);
+    QFETCH(QPushButton*, Botao);
 
-        QTimer::singleShot(500, this, SLOT(timeOut()));
+    QTimer::singleShot(500, this, SLOT(timeOut()));
 
-        // Verifica se os componentes da tela estao sendo buildados corretamente.
-        QVERIFY2(d->ui_->labelTitle, "Campo não buildado");
-        QVERIFY2(d->ui_->labelEarring, "Campo não buildado");
-        QVERIFY2(d->ui_->labelCattleEarring, "Campo não buildado");
-        QVERIFY2(d->ui_->labelBreed, "Campo não buildado");
-        QVERIFY2(d->ui_->inputBreed, "Campo não buildado");
-        QVERIFY2(d->ui_->labelDateA, "Campo não buildado");
-        QVERIFY2(d->ui_->inputDateA, "Campo não buildado");
-        QVERIFY2(d->ui_->labelDateB, "Campo não buildado");
-        QVERIFY2(d->ui_->inputDateB, "Campo não buildado");
-        QVERIFY2(d->ui_->labelWeight, "Campo não buildado");
-        QVERIFY2(d->ui_->inputWeight, "Campo não buildado");
-        QVERIFY2(d->ui_->labelPrice, "Campo não buildado");
-        QVERIFY2(d->ui_->inputPrice, "Campo não buildado");
-        QVERIFY2(d->ui_->registerButton, "Campo não buildado");
-        QVERIFY2(d->ui_->backButton, "Campo não buildado");
+    // Verifica se os componentes da tela estao sendo buildados corretamente.
+    QVERIFY2(d->ui_->labelTitle, "Campo não buildado");
+    QVERIFY2(d->ui_->labelEarring, "Campo não buildado");
+    QVERIFY2(d->ui_->labelCattleEarring, "Campo não buildado");
+    QVERIFY2(d->ui_->labelBreed, "Campo não buildado");
+    QVERIFY2(d->ui_->inputBreed, "Campo não buildado");
+    QVERIFY2(d->ui_->labelDateA, "Campo não buildado");
+    QVERIFY2(d->ui_->inputDateA, "Campo não buildado");
+    QVERIFY2(d->ui_->labelDateB, "Campo não buildado");
+    QVERIFY2(d->ui_->inputDateB, "Campo não buildado");
+    QVERIFY2(d->ui_->labelWeight, "Campo não buildado");
+    QVERIFY2(d->ui_->inputWeight, "Campo não buildado");
+    QVERIFY2(d->ui_->labelPrice, "Campo não buildado");
+    QVERIFY2(d->ui_->inputPrice, "Campo não buildado");
+    QVERIFY2(d->ui_->registerButton, "Campo não buildado");
+    QVERIFY2(d->ui_->backButton, "Campo não buildado");
 
-        QTest::keyClicks(d->ui_->inputBreed, Raca);
-        QTest::keyClicks(d->ui_->inputDateA, DataA);
-        QTest::keyClicks(d->ui_->inputDateB, DataB);
-        QTest::keyClicks(d->ui_->inputWeight, Peso);
-        QTest::keyClicks(d->ui_->inputPrice, Valor);
-        QTest::mouseClick(Botao, Qt::LeftButton);
+    QTest::keyClicks(d->ui_->inputBreed, Raca);
+    QTest::keyClicks(d->ui_->inputDateA, DataA);
+    QTest::keyClicks(d->ui_->inputDateB, DataB);
+    QTest::keyClicks(d->ui_->inputWeight, Peso);
+    QTest::keyClicks(d->ui_->inputPrice, Valor);
+    QTest::mouseClick(Botao, Qt::LeftButton);
 
-        std::cout << d->ui_->labelCattleEarring->text().toUtf8().constData() << std::endl;
-        QCOMPARE(d->farm_->getCattleBreed(d->ui_->labelCattleEarring->text().toInt()), Raca);
+    QString earring = d->ui_->labelCattleEarring->text();
+    earring.remove(0,1);
+    QCOMPARE(d->farm_->getCattleBreed(earring.toInt()), Raca);
+
 }
 
 void TestCattleBuyScreenGUI::timeOut(){

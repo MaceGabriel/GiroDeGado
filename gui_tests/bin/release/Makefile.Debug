@@ -4131,17 +4131,6 @@ debug/cattle_birth_unit_test.moc: ../../test/unit/cattle_birth_unit_test.cpp \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_cattlebirthscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
 		debug/moc_predefs.h \
 		D:/Programas/Qt/6.1.2/mingw81_64/bin/moc.exe
 	D:\Programas\Qt\6.1.2\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/release/debug/moc_predefs.h -ID:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++ -IC:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests -ID:/Programas/Qt/6.1.2/mingw81_64/include -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtGui -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtTest -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtSql -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\test\unit\cattle_birth_unit_test.cpp -o debug\cattle_birth_unit_test.moc
@@ -4525,17 +4514,6 @@ debug/cattle_buy_unit_test.moc: ../../test/unit/cattle_buy_unit_test.cpp \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_cattlebuyscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
 		debug/moc_predefs.h \
 		D:/Programas/Qt/6.1.2/mingw81_64/bin/moc.exe
 	D:\Programas\Qt\6.1.2\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/release/debug/moc_predefs.h -ID:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++ -IC:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests -ID:/Programas/Qt/6.1.2/mingw81_64/include -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtGui -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtTest -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtSql -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\test\unit\cattle_buy_unit_test.cpp -o debug\cattle_buy_unit_test.moc
@@ -4918,24 +4896,6 @@ debug/cattle_consult_unit_test.moc: ../../test/unit/cattle_consult_unit_test.cpp
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_cattleconsultscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QGroupBox \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qgroupbox.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QHeaderView \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qheaderview.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QTableWidget \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtablewidget.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtableview.h \
 		debug/moc_predefs.h \
 		D:/Programas/Qt/6.1.2/mingw81_64/bin/moc.exe
 	D:\Programas\Qt\6.1.2\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/release/debug/moc_predefs.h -ID:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++ -IC:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests -ID:/Programas/Qt/6.1.2/mingw81_64/include -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtGui -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtTest -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtSql -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\test\unit\cattle_consult_unit_test.cpp -o debug\cattle_consult_unit_test.moc
@@ -5318,17 +5278,6 @@ debug/cattle_edit_unit_test.moc: ../../test/unit/cattle_edit_unit_test.cpp \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_cattleeditscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
 		debug/moc_predefs.h \
 		D:/Programas/Qt/6.1.2/mingw81_64/bin/moc.exe
 	D:\Programas\Qt\6.1.2\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/release/debug/moc_predefs.h -ID:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++ -IC:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests -ID:/Programas/Qt/6.1.2/mingw81_64/include -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtGui -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtTest -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtSql -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\test\unit\cattle_edit_unit_test.cpp -o debug\cattle_edit_unit_test.moc
@@ -5710,11 +5659,6 @@ debug/cattle_management_unit_test.moc: ../../test/unit/cattle_management_unit_te
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_cattlemanagementscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
 		debug/moc_predefs.h \
 		D:/Programas/Qt/6.1.2/mingw81_64/bin/moc.exe
 	D:\Programas\Qt\6.1.2\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/release/debug/moc_predefs.h -ID:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++ -IC:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests -ID:/Programas/Qt/6.1.2/mingw81_64/include -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtGui -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtTest -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtSql -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\test\unit\cattle_management_unit_test.cpp -o debug\cattle_management_unit_test.moc
@@ -6097,11 +6041,6 @@ debug/cattle_register_unit_test.moc: ../../test/unit/cattle_register_unit_test.c
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_cattleregisterscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
 		debug/moc_predefs.h \
 		D:/Programas/Qt/6.1.2/mingw81_64/bin/moc.exe
 	D:\Programas\Qt\6.1.2\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/release/debug/moc_predefs.h -ID:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++ -IC:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests -ID:/Programas/Qt/6.1.2/mingw81_64/include -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtGui -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtTest -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtSql -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\test\unit\cattle_register_unit_test.cpp -o debug\cattle_register_unit_test.moc
@@ -6486,24 +6425,6 @@ debug/cattle_remove_unit_test.moc: ../../test/unit/cattle_remove_unit_test.cpp \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_cattleremovescreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QGroupBox \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qgroupbox.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QHeaderView \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qheaderview.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QTableWidget \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtablewidget.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtableview.h \
 		debug/moc_predefs.h \
 		D:/Programas/Qt/6.1.2/mingw81_64/bin/moc.exe
 	D:\Programas\Qt\6.1.2\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/release/debug/moc_predefs.h -ID:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++ -IC:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests -ID:/Programas/Qt/6.1.2/mingw81_64/include -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtGui -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtTest -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtSql -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\test\unit\cattle_remove_unit_test.cpp -o debug\cattle_remove_unit_test.moc
@@ -6886,24 +6807,6 @@ debug/financial_consult_unit_test.moc: ../../test/unit/financial_consult_unit_te
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_financialconsultscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QGroupBox \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qgroupbox.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QHeaderView \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qheaderview.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QTableWidget \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtablewidget.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtableview.h \
 		debug/moc_predefs.h \
 		D:/Programas/Qt/6.1.2/mingw81_64/bin/moc.exe
 	D:\Programas\Qt\6.1.2\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/release/debug/moc_predefs.h -ID:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++ -IC:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests -ID:/Programas/Qt/6.1.2/mingw81_64/include -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtGui -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtTest -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtSql -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\test\unit\financial_consult_unit_test.cpp -o debug\financial_consult_unit_test.moc
@@ -7285,11 +7188,6 @@ debug/financial_management_unit_test.moc: ../../test/unit/financial_management_u
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_financialmanagementscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
 		debug/moc_predefs.h \
 		D:/Programas/Qt/6.1.2/mingw81_64/bin/moc.exe
 	D:\Programas\Qt\6.1.2\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/release/debug/moc_predefs.h -ID:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++ -IC:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests -ID:/Programas/Qt/6.1.2/mingw81_64/include -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtGui -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtTest -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtSql -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\test\unit\financial_management_unit_test.cpp -o debug\financial_management_unit_test.moc
@@ -7674,19 +7572,6 @@ debug/financial_record_unit_test.moc: ../../test/unit/financial_record_unit_test
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_financialrecordscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QTextEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtextedit.h \
 		debug/moc_predefs.h \
 		D:/Programas/Qt/6.1.2/mingw81_64/bin/moc.exe
 	D:\Programas\Qt\6.1.2\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/release/debug/moc_predefs.h -ID:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++ -IC:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests -ID:/Programas/Qt/6.1.2/mingw81_64/include -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtGui -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtTest -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtSql -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\test\unit\financial_record_unit_test.cpp -o debug\financial_record_unit_test.moc
@@ -8069,22 +7954,6 @@ debug/financial_remove_unit_test.moc: ../../test/unit/financial_remove_unit_test
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_financialremovescreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QHeaderView \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qheaderview.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QTableWidget \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtablewidget.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtableview.h \
 		debug/moc_predefs.h \
 		D:/Programas/Qt/6.1.2/mingw81_64/bin/moc.exe
 	D:\Programas\Qt\6.1.2\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/release/debug/moc_predefs.h -ID:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++ -IC:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests -ID:/Programas/Qt/6.1.2/mingw81_64/include -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtGui -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtTest -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtSql -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\test\unit\financial_remove_unit_test.cpp -o debug\financial_remove_unit_test.moc
@@ -8464,18 +8333,6 @@ debug/home_unit_test.moc: ../../test/unit/home_unit_test.cpp \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_homescreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QMenuBar \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qmenubar.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qmenu.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qaction.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QStatusBar \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qstatusbar.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QWidget \
 		debug/moc_predefs.h \
 		D:/Programas/Qt/6.1.2/mingw81_64/bin/moc.exe
 	D:\Programas\Qt\6.1.2\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/release/debug/moc_predefs.h -ID:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++ -IC:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests -ID:/Programas/Qt/6.1.2/mingw81_64/include -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtGui -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtTest -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtSql -ID:/Programas/Qt/6.1.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\test\unit\home_unit_test.cpp -o debug\home_unit_test.moc
@@ -8838,25 +8695,7 @@ debug/cattlebirthscreen.o: ../../../gui/entity/cattlebirthscreen.cpp ../../../gu
 		../../../api/includes/cattle.h \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
-		ui_cattlebirthscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h
+		ui_cattlebirthscreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\cattlebirthscreen.o ..\..\..\gui\entity\cattlebirthscreen.cpp
 
 debug/cattlebuyscreen.o: ../../../gui/entity/cattlebuyscreen.cpp ../../../gui/entity/cattlebuyscreen.h \
@@ -9154,25 +8993,7 @@ debug/cattlebuyscreen.o: ../../../gui/entity/cattlebuyscreen.cpp ../../../gui/en
 		../../../api/includes/cattle.h \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
-		ui_cattlebuyscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h
+		ui_cattlebuyscreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\cattlebuyscreen.o ..\..\..\gui\entity\cattlebuyscreen.cpp
 
 debug/cattleconsultscreen.o: ../../../gui/entity/cattleconsultscreen.cpp ../../../gui/entity/cattleconsultscreen.h \
@@ -9469,32 +9290,7 @@ debug/cattleconsultscreen.o: ../../../gui/entity/cattleconsultscreen.cpp ../../.
 		../../../api/includes/cattle.h \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
-		ui_cattleconsultscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QGroupBox \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qgroupbox.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QHeaderView \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qheaderview.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QTableWidget \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtablewidget.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtableview.h
+		ui_cattleconsultscreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\cattleconsultscreen.o ..\..\..\gui\entity\cattleconsultscreen.cpp
 
 debug/cattleeditscreen.o: ../../../gui/entity/cattleeditscreen.cpp ../../../gui/entity/cattleeditscreen.h \
@@ -9791,25 +9587,7 @@ debug/cattleeditscreen.o: ../../../gui/entity/cattleeditscreen.cpp ../../../gui/
 		../../../api/includes/cattle.h \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
-		ui_cattleeditscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h
+		ui_cattleeditscreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\cattleeditscreen.o ..\..\..\gui\entity\cattleeditscreen.cpp
 
 debug/cattlemanagementscreen.o: ../../../gui/entity/cattlemanagementscreen.cpp ../../../gui/entity/cattlemanagementscreen.h \
@@ -10109,19 +9887,7 @@ debug/cattlemanagementscreen.o: ../../../gui/entity/cattlemanagementscreen.cpp .
 		../../../gui/entity/cattleconsultscreen.h \
 		../../../gui/entity/cattleeditscreen.h \
 		../../../gui/entity/cattleremovescreen.h \
-		ui_cattlemanagementscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h
+		ui_cattlemanagementscreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\cattlemanagementscreen.o ..\..\..\gui\entity\cattlemanagementscreen.cpp
 
 debug/cattleregisterscreen.o: ../../../gui/entity/cattleregisterscreen.cpp ../../../gui/entity/cattleregisterscreen.h \
@@ -10420,19 +10186,7 @@ debug/cattleregisterscreen.o: ../../../gui/entity/cattleregisterscreen.cpp ../..
 		../../../api/includes/transaction.h \
 		../../../gui/entity/cattlebuyscreen.h \
 		../../../gui/entity/cattlebirthscreen.h \
-		ui_cattleregisterscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h
+		ui_cattleregisterscreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\cattleregisterscreen.o ..\..\..\gui\entity\cattleregisterscreen.cpp
 
 debug/cattleremovescreen.o: ../../../gui/entity/cattleremovescreen.cpp ../../../gui/entity/cattleremovescreen.h \
@@ -10729,34 +10483,7 @@ debug/cattleremovescreen.o: ../../../gui/entity/cattleremovescreen.cpp ../../../
 		../../../api/includes/cattle.h \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
-		ui_cattleremovescreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QGroupBox \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qgroupbox.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QHeaderView \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qheaderview.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QRadioButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qradiobutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QTableWidget \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtablewidget.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtableview.h
+		ui_cattleremovescreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\cattleremovescreen.o ..\..\..\gui\entity\cattleremovescreen.cpp
 
 debug/financialconsultscreen.o: ../../../gui/entity/financialconsultscreen.cpp ../../../gui/entity/financialconsultscreen.h \
@@ -11053,32 +10780,7 @@ debug/financialconsultscreen.o: ../../../gui/entity/financialconsultscreen.cpp .
 		../../../api/includes/cattle.h \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
-		ui_financialconsultscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QGroupBox \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qgroupbox.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QHeaderView \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qheaderview.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QTableWidget \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtablewidget.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtableview.h
+		ui_financialconsultscreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\financialconsultscreen.o ..\..\..\gui\entity\financialconsultscreen.cpp
 
 debug/financialmanagementscreen.o: ../../../gui/entity/financialmanagementscreen.cpp ../../../gui/entity/financialmanagementscreen.h \
@@ -11377,19 +11079,7 @@ debug/financialmanagementscreen.o: ../../../gui/entity/financialmanagementscreen
 		../../../gui/entity/financialrecordscreen.h \
 		../../../gui/entity/financialconsultscreen.h \
 		../../../gui/entity/financialremovescreen.h \
-		ui_financialmanagementscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h
+		ui_financialmanagementscreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\financialmanagementscreen.o ..\..\..\gui\entity\financialmanagementscreen.cpp
 
 debug/financialrecordscreen.o: ../../../gui/entity/financialrecordscreen.cpp ../../../gui/entity/financialrecordscreen.h \
@@ -11686,27 +11376,7 @@ debug/financialrecordscreen.o: ../../../gui/entity/financialrecordscreen.cpp ../
 		../../../api/includes/cattle.h \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
-		ui_financialrecordscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QTextEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtextedit.h
+		ui_financialrecordscreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\financialrecordscreen.o ..\..\..\gui\entity\financialrecordscreen.cpp
 
 debug/financialremovescreen.o: ../../../gui/entity/financialremovescreen.cpp ../../../gui/entity/financialremovescreen.h \
@@ -12003,30 +11673,7 @@ debug/financialremovescreen.o: ../../../gui/entity/financialremovescreen.cpp ../
 		../../../api/includes/cattle.h \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
-		ui_financialremovescreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QHeaderView \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qheaderview.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QTableWidget \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtablewidget.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtableview.h
+		ui_financialremovescreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\financialremovescreen.o ..\..\..\gui\entity\financialremovescreen.cpp
 
 debug/homescreen.o: ../../../gui/entity/homescreen.cpp ../../../gui/entity/homescreen.h \
@@ -12323,26 +11970,7 @@ debug/homescreen.o: ../../../gui/entity/homescreen.cpp ../../../gui/entity/homes
 		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QDialog \
 		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qdialog.h \
 		../../../gui/entity/financialmanagementscreen.h \
-		ui_homescreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtCore/QVariant \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qguiapplication.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qinputmethod.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QMenuBar \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qmenubar.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qmenu.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qaction.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QPushButton \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qpushbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QStatusBar \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qstatusbar.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QWidget
+		ui_homescreen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\homescreen.o ..\..\..\gui\entity\homescreen.cpp
 
 debug/main.o: ../../main.cpp ../../test/unit/home_unit_test.cpp \
@@ -12720,18 +12348,6 @@ debug/main.o: ../../main.cpp ../../test/unit/home_unit_test.cpp \
 		../../lib_global.h \
 		../../../api/includes/transaction.h \
 		ui_homescreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLabel \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlabel.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpicture.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextdocument.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QMenuBar \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qmenubar.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qmenu.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qaction.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QStatusBar \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qstatusbar.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QWidget \
 		debug/home_unit_test.moc \
 		../../test/unit/cattle_management_unit_test.cpp \
 		../../../gui/entity/cattlemanagementscreen.h \
@@ -12745,12 +12361,6 @@ debug/main.o: ../../main.cpp ../../test/unit/home_unit_test.cpp \
 		../../test/unit/cattle_buy_unit_test.cpp \
 		../../../gui/entity/cattlebuyscreen.h \
 		ui_cattlebuyscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QLineEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qlineedit.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextcursor.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextformat.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qpen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtGui/qtextoption.h \
 		debug/cattle_buy_unit_test.moc \
 		../../test/unit/cattle_birth_unit_test.cpp \
 		../../../gui/entity/cattlebirthscreen.h \
@@ -12759,13 +12369,6 @@ debug/main.o: ../../main.cpp ../../test/unit/home_unit_test.cpp \
 		../../test/unit/cattle_consult_unit_test.cpp \
 		../../../gui/entity/cattleconsultscreen.h \
 		ui_cattleconsultscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QGroupBox \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qgroupbox.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QHeaderView \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qheaderview.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QTableWidget \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtablewidget.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtableview.h \
 		debug/cattle_consult_unit_test.moc \
 		../../test/unit/cattle_edit_unit_test.cpp \
 		../../../gui/entity/cattleeditscreen.h \
@@ -12784,8 +12387,6 @@ debug/main.o: ../../main.cpp ../../test/unit/home_unit_test.cpp \
 		../../test/unit/financial_record_unit_test.cpp \
 		../../../gui/entity/financialrecordscreen.h \
 		ui_financialrecordscreen.h \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QTextEdit \
-		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/qtextedit.h \
 		debug/financial_record_unit_test.moc \
 		../../test/unit/financial_consult_unit_test.cpp \
 		../../../gui/entity/financialconsultscreen.h \
@@ -12794,7 +12395,8 @@ debug/main.o: ../../main.cpp ../../test/unit/home_unit_test.cpp \
 		../../test/unit/financial_remove_unit_test.cpp \
 		../../../gui/entity/financialremovescreen.h \
 		ui_financialremovescreen.h \
-		debug/financial_remove_unit_test.moc
+		debug/financial_remove_unit_test.moc \
+		D:/Programas/Qt/6.1.2/mingw81_64/include/QtWidgets/QApplication
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\..\main.cpp
 
 debug/moc_cattlebirthscreen.o: debug/moc_cattlebirthscreen.cpp 

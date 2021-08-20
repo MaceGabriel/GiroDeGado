@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     TestCattleRegisterScreenGUI reg(nullptr,f);
     QTest::qExec(&reg);
 
-    //Teste para a tela de Compra de Gado - AQUI
+    //Teste para a tela de Compra de Gado
     TestCattleBuyScreenGUI buy(nullptr,f);
     QTest::qExec(&buy);
 
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
     TestCattleRemoveScreenGUI remove(nullptr,f);
     QTest::qExec(&remove);
 
-    //Teste unitário da tela de Gerencia Financeira - OK
+    //Teste unitário da tela de Gerencia Financeira
     TestFinancialManagementScreenGUI finanManag(nullptr,f);
     QTest::qExec(&finanManag);
 
@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
     TestFinancialConsultScreenGUI finanConsu(nullptr,f);
     QTest::qExec(&finanConsu);
 
-    //Teste unitário da tela de Consulta Financeira
+    //Teste unitário da tela de Exclusao Financeira
     TestFinancialRemoveScreenGUI finanRemo(nullptr,f);
     QTest::qExec(&finanRemo);
 

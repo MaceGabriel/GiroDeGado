@@ -46,19 +46,19 @@ void TestFinancialManagementScreenGUI::casoDeUsoPrincipal_data(){
 
 void TestFinancialManagementScreenGUI::casoDeUsoPrincipal(){
 
-        QFETCH(QPushButton*, botao);
+    QFETCH(QPushButton*, botao);
 
-        QTimer::singleShot(500, this, SLOT(timeOut()));
+    QTimer::singleShot(500, this, SLOT(timeOut()));
 
-        // Verifica se os componentes da tela estao sendo buildados corretamente.
-        QVERIFY2(d.ui_->labelTitle, "label GiroDeGado não buildado");
-        QVERIFY2(d.ui_->registerButton, "botao Registro não buildado");
-        QVERIFY2(d.ui_->queryButton, "botao Consultar não buildado");
-        QVERIFY2(d.ui_->reportButton, "botao Relatorio não buildado");
-        QVERIFY2(d.ui_->removeButton, "botao Consultar Transação não buildado");
-        QVERIFY2(d.ui_->backButton, "botao voltar não buildado");
+    // Verifica se os componentes da tela estao sendo buildados corretamente.
+    QVERIFY2(d.ui_->labelTitle, "label GiroDeGado não buildado");
+    QVERIFY2(d.ui_->registerButton, "botao Registro não buildado");
+    QVERIFY2(d.ui_->queryButton, "botao Consultar não buildado");
+    QVERIFY2(d.ui_->reportButton, "botao Relatorio não buildado");
+    QVERIFY2(d.ui_->removeButton, "botao Consultar Transação não buildado");
+    QVERIFY2(d.ui_->backButton, "botao voltar não buildado");
 
-        QTest::mouseClick(botao, Qt::LeftButton);
+    QTest::mouseClick(botao, Qt::LeftButton);
 
 }
 
