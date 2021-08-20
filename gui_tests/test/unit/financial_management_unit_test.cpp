@@ -3,8 +3,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QPushButton>
-
-#include<iostream>
+#include <iostream>
 
 #include "../../../gui/entity/financialmanagementscreen.h"
 #include "ui_financialmanagementscreen.h"
@@ -36,11 +35,13 @@ private:
 }
 
 void TestFinancialManagementScreenGUI::casoDeUsoPrincipal_data(){
+
     // ENTRADA
     QTest::addColumn<QPushButton*>("botao");
 
     // SAIDA
     QTest::newRow("Botao de Voltar") << d.ui_->backButton;
+
 }
 
 void TestFinancialManagementScreenGUI::casoDeUsoPrincipal(){
@@ -57,7 +58,8 @@ void TestFinancialManagementScreenGUI::casoDeUsoPrincipal(){
         QVERIFY2(d.ui_->removeButton, "botao Consultar Transação não buildado");
         QVERIFY2(d.ui_->backButton, "botao voltar não buildado");
 
-        QTest::mouseClick(botao, Qt::LeftButton);       
+        QTest::mouseClick(botao, Qt::LeftButton);
+
 }
 
 void TestFinancialManagementScreenGUI::timeOut(){

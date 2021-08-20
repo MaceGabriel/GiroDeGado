@@ -11,7 +11,7 @@
 #include "test/unit/financial_consult_unit_test.cpp"
 #include "test/unit/financial_remove_unit_test.cpp"
 
-#include<QtSql/QtSql>
+#include <QtSql/QtSql>
 #include <QApplication>
 
 int main(int argc, char *argv[])
@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
     bancoDeDados.setDatabaseName(path_test);
     bancoDeDados.open();
 
+    //Teste para a tela Home
     QApplication a(argc, argv);
     TestHomeScreenGUI home;
     QTest::qExec(&home);
@@ -39,7 +40,7 @@ int main(int argc, char *argv[])
     TestCattleRegisterScreenGUI reg(nullptr,f);
     QTest::qExec(&reg);
 
-    //Teste para a tela de Compra de Gado
+    //Teste para a tela de Compra de Gado - AQUI
     TestCattleBuyScreenGUI buy(nullptr,f);
     QTest::qExec(&buy);
 
@@ -59,7 +60,7 @@ int main(int argc, char *argv[])
     TestCattleRemoveScreenGUI remove(nullptr,f);
     QTest::qExec(&remove);
 
-    //Teste unitário da tela de Gerencia Financeira
+    //Teste unitário da tela de Gerencia Financeira - OK
     TestFinancialManagementScreenGUI finanManag(nullptr,f);
     QTest::qExec(&finanManag);
 

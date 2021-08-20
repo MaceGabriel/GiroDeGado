@@ -3,8 +3,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QPushButton>
-
-#include<iostream>
+#include <iostream>
 
 #include "../../../gui/entity/cattlebuyscreen.h"
 #include "../ui_cattlebuyscreen.h"
@@ -35,16 +34,29 @@ TestCattleBuyScreenGUI::TestCattleBuyScreenGUI(QWidget *parent, Farm* f):QObject
 }
 
 void TestCattleBuyScreenGUI::casoDeUsoPrincipal_data(){
+
     // ENTRADA
-    QTest::addColumn<QPushButton*>("botao");
+    QTest::addColumn<QString>("Raca");
+    QTest::addColumn<QString>("DataA");
+    QTest::addColumn<QString>("DataB");
+    QTest::addColumn<QString>("Peso");
+    QTest::addColumn<QString>("Valor");
+    QTest::addColumn<QPushButton*>("Botao");
 
     // SAIDA
-    QTest::newRow("Botao de Voltar") << d->ui_->backButton;
+    QTest::newRow("Botao de Voltar") << "" << "" << "" << "" << "" << d->ui_->backButton;
+    QTest::newRow("Registro correto") << "Brangus" << "10/10/20" << "10/10/10" << "200" << "10000" << d->ui_->registerButton;
+
 }
 
 void TestCattleBuyScreenGUI::casoDeUsoPrincipal(){
 
-        QFETCH(QPushButton*, botao);
+        QFETCH(QString, Raca);
+        QFETCH(QString, DataA);
+        QFETCH(QString, DataB);
+        QFETCH(QString, Peso);
+        QFETCH(QString, Valor);
+        QFETCH(QPushButton*, Botao);
 
         QTimer::singleShot(500, this, SLOT(timeOut()));
 
@@ -65,7 +77,15 @@ void TestCattleBuyScreenGUI::casoDeUsoPrincipal(){
         QVERIFY2(d->ui_->registerButton, "Campo não buildado");
         QVERIFY2(d->ui_->backButton, "Campo não buildado");
 
-        QTest::mouseClick(botao, Qt::LeftButton);
+        QTest::keyClicks(d->ui_->inputBreed, Raca);
+        QTest::keyClicks(d->ui_->inputDateA, DataA);
+        QTest::keyClicks(d->ui_->inputDateB, DataB);
+        QTest::keyClicks(d->ui_->inputWeight, Peso);
+        QTest::keyClicks(d->ui_->inputPrice, Valor);
+        QTest::mouseClick(Botao, Qt::LeftButton);
+
+        std::cout << d->ui_->labelCattleEarring->text().toUtf8().constData() << std::endl;
+        QCOMPARE(d->farm_->getCattleBreed(d->ui_->labelCattleEarring->text().toInt()), Raca);
 }
 
 void TestCattleBuyScreenGUI::timeOut(){

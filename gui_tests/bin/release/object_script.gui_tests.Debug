@@ -11,14 +11,6 @@ debug/financialrecordscreen.o
 debug/financialremovescreen.o
 debug/homescreen.o
 debug/main.o
-debug/cattle_birth_unit_test.o
-debug/cattle_buy_unit_test.o
-debug/cattle_consult_unit_test.o
-debug/cattle_edit_unit_test.o
-debug/cattle_remove_unit_test.o
-debug/financial_consult_unit_test.o
-debug/financial_record_unit_test.o
-debug/financial_remove_unit_test.o
 debug/moc_cattlebirthscreen.o
 debug/moc_cattlebuyscreen.o
 debug/moc_cattleconsultscreen.o

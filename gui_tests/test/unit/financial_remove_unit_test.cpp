@@ -3,8 +3,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QPushButton>
-
-#include<iostream>
+#include <iostream>
 
 #include "../../../gui/entity/financialremovescreen.h"
 #include "../ui_financialremovescreen.h"

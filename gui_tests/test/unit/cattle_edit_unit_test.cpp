@@ -3,8 +3,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QPushButton>
-
-#include<iostream>
+#include <iostream>
 
 #include "../../../gui/entity/cattleeditscreen.h"
 #include "../ui_cattleeditscreen.h"

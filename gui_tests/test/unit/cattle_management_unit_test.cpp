@@ -3,8 +3,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QPushButton>
-
-#include<iostream>
+#include <iostream>
 
 #include "../../../gui/entity/cattlemanagementscreen.h"
 #include "../ui_cattlemanagementscreen.h"
@@ -61,9 +60,8 @@ void TestCattleManagementScreenGUI::casoDeUsoPrincipal(){
     QVERIFY2(d.ui_->removeButton, "Campo não buildado");
     QVERIFY2(d.ui_->backButton, "Campo não buildado");
 
-
-
     QTest::mouseClick(botao, Qt::LeftButton);
+
 }
 
 void TestCattleManagementScreenGUI::timeOut(){

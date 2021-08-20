@@ -4,8 +4,7 @@
 #include <QTimer>
 #include <QPushButton>
 #include <QRadioButton>
-
-#include<iostream>
+#include <iostream>
 
 #include "../../../gui/entity/financialrecordscreen.h"
 #include "../ui_financialrecordscreen.h"

@@ -4,8 +4,7 @@
 #include <QTimer>
 #include <QPushButton>
 #include <QRadioButton>
-
-#include<iostream>
+#include <iostream>
 
 #include "../../../gui/entity/cattleremovescreen.h"
 #include "../ui_cattleremovescreen.h"

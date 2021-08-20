@@ -3,8 +3,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QPushButton>
-
-#include<iostream>
+#include <iostream>
 
 #include "../../../gui/entity/homescreen.h"
 #include "../ui_homescreen.h"
@@ -37,6 +36,7 @@ void TestHomeScreenGUI::casoDeUsoPrincipal_data(){
     QTest::newRow("Botao de Gado") << d.ui_->cattleButton;
     QTest::newRow("Botao de Financeiro") << d.ui_->financialButton;
     QTest::newRow("Botao de Saida") << d.ui_->exitButton;
+
 }
 
 void TestHomeScreenGUI::casoDeUsoPrincipal(){

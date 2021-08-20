@@ -3,8 +3,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QPushButton>
-
-#include<iostream>
+#include <iostream>
 
 #include "../../../gui/entity/cattleregisterscreen.h"
 #include "../ui_cattleregisterscreen.h"
@@ -58,8 +57,6 @@ void TestCattleRegisterScreenGUI::casoDeUsoPrincipal(){
         QVERIFY2(d.ui_->buyButton, "Campo não buildado");
         QVERIFY2(d.ui_->birthButton, "Campo não buildado");
         QVERIFY2(d.ui_->backButton, "Campo não buildado");
-
-
 
         QTest::mouseClick(botao, Qt::LeftButton);        
 }
