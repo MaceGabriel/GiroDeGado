@@ -3,7 +3,8 @@ QT       += core gui widgets testlib
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
-LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui_tests/bin/debug/debug)
+#LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui_tests/bin/debug/debug) #Mace
+LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/debug/debug) #Marcus
 LIBS += -l$$quote(api)
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -24,8 +25,18 @@ SOURCES += \
     ../gui/entity/financialremovescreen.cpp \
     ../gui/entity/homescreen.cpp \
     main.cpp \
-    mainwindow.cpp \
-    unit_test.cpp
+    test/unit/cattle_birth_unit_test.cpp \
+    test/unit/cattle_buy_unit_test.cpp \
+    test/unit/cattle_consult_unit_test.cpp \
+    test/unit/cattle_edit_unit_test.cpp \
+    test/unit/cattle_management_unit_test.cpp \
+    test/unit/cattle_register_unit_test.cpp \
+    test/unit/cattle_remove_unit_test.cpp \
+    test/unit/financial_consult_unit_test.cpp \
+    test/unit/financial_management_unit_test.cpp \
+    test/unit/financial_record_unit_test.cpp \
+    test/unit/financial_remove_unit_test.cpp \
+    test/unit/home_unit_test.cpp
 
 HEADERS += \
     ../gui/entity/cattlebirthscreen.h \
@@ -40,8 +51,7 @@ HEADERS += \
     ../gui/entity/financialrecordscreen.h \
     ../gui/entity/financialremovescreen.h \
     ../gui/entity/homescreen.h \
-    lib_global.h \
-    mainwindow.h
+    lib_global.h
 
 FORMS += \
     ../gui/views/cattlebirthscreen.ui \
@@ -55,8 +65,7 @@ FORMS += \
     ../gui/views/financialmanagementscreen.ui \
     ../gui/views/financialrecordscreen.ui \
     ../gui/views/financialremovescreen.ui \
-    ../gui/views/homescreen.ui \
-    mainwindow.ui
+    ../gui/views/homescreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

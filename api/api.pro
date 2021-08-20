@@ -40,5 +40,3 @@ unix {
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    bd_giro.db \
-    bd_giro_tests.db \

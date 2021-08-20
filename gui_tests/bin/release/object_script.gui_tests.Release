@@ -11,8 +11,17 @@ release/financialrecordscreen.o
 release/financialremovescreen.o
 release/homescreen.o
 release/main.o
-release/mainwindow.o
-release/unit_test.o
+release/cattle_birth_unit_test.o
+release/cattle_buy_unit_test.o
+release/cattle_consult_unit_test.o
+release/cattle_edit_unit_test.o
+release/cattle_management_unit_test.o
+release/cattle_register_unit_test.o
+release/cattle_remove_unit_test.o
+release/financial_consult_unit_test.o
+release/financial_management_unit_test.o
+release/financial_record_unit_test.o
+release/financial_remove_unit_test.o
 release/moc_cattlebirthscreen.o
 release/moc_cattlebuyscreen.o
 release/moc_cattleconsultscreen.o
@@ -25,4 +34,3 @@ release/moc_financialmanagementscreen.o
 release/moc_financialrecordscreen.o
 release/moc_financialremovescreen.o
 release/moc_homescreen.o
-release/moc_mainwindow.o
