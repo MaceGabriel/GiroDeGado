@@ -42,16 +42,17 @@ void TestCattleBirthScreenGUI::casoDeUsoPrincipal_data(){
 }
 
 void TestCattleBirthScreenGUI::casoDeUsoPrincipal(){
-    /*
+
         //QFETCH(QPushButton*, botao);
         //QFETCH(QString, sair);
 
         QTimer::singleShot(500, this, SLOT(timeOut()));
-
-        // Preenche os campos com login e senhas corretos
-        QVERIFY2(d.ui_->label, "Campo não buildado");
-        QVERIFY2(d.ui_->cattleButton, "Campo buildado");
-        QVERIFY2(d.ui_->financialButton, "Campo buildado");
+        /*
+        // Verifica se os componentes da tela estao sendo buildados corretamente.
+        QVERIFY2(d.ui_->labelTitle, "Campo não buildado");
+        QVERIFY2(d.ui_->labelBreed, "Campo buildado");
+        QVERIFY2(d.ui_->inputBreed, "Campo buildado");
+        QVERIFY2(d.ui_->, "Campo buildado");
         QVERIFY2(d.ui_->exitButton, "Campo buildado");
         */
 

@@ -29,50 +29,44 @@ private:
 };
 
 void TestCattleRegisterScreenGUI::casoDeUsoPrincipal_data(){
-    /*
+
     // ENTRADA
     QTest::addColumn<QPushButton*>("botao");
-    QTest::addColumn<QString>("sair");
 
     // SAIDA
-    QTest::newRow("Botao de Gado") << d.ui_->cattleButton << "esc";
-    QTest::newRow("Botao de Financeiro") << d.ui_->financialButton << "esc";
-    QTest::newRow("Botao de Saida") << d.ui_->exitButton << "";
-    */
+    QTest::newRow("Botao de Compra") << d.ui_->buyButton;
+    QTest::newRow("Botao de Parto") << d.ui_->birthButton;
+
 }
 
 void TestCattleRegisterScreenGUI::casoDeUsoPrincipal(){
-        /*
-        //QFETCH(QPushButton*, botao);
-        //QFETCH(QString, sair);
+
+        QFETCH(QPushButton*, botao);
 
         QTimer::singleShot(500, this, SLOT(timeOut()));
 
-        // Preenche os campos com login e senhas corretos
-        QVERIFY2(d.ui_->label, "Campo não buildado");
-        QVERIFY2(d.ui_->cattleButton, "Campo buildado");
-        QVERIFY2(d.ui_->financialButton, "Campo buildado");
-        QVERIFY2(d.ui_->exitButton, "Campo buildado");
-        */
+        // Verifica se os componentes da tela estao sendo buildados corretamente.
+        QVERIFY2(d.ui_->labelTitle, "Campo não buildado");
+        QVERIFY2(d.ui_->buyButton, "Campo buildado");
+        QVERIFY2(d.ui_->birthButton, "Campo buildado");
+        QVERIFY2(d.ui_->backButton, "Campo buildado");
 
-        /*
-        QTest::mouseClick(botao, Qt::LeftButton);
-        if(sair =="esc")
-            QApplication::sendEvent(QApplication::, new QKeyEvent(QEvent::KeyPress  , Qt::Key_Escape, Qt::NoModifier));
-        */
+
+
+        QTest::mouseClick(botao, Qt::LeftButton);        
 }
 
 void TestCattleRegisterScreenGUI::timeOut(){
-    /*
+
     // Verificar e fechar message box
     QWidgetList allToplevelWidgets = QApplication::topLevelWidgets();
     foreach (QWidget *w, allToplevelWidgets) {
-        if (w->inherits("QMessageBox")) {
-            QMessageBox *mb = qobject_cast<QMessageBox *>(w);
+        if (w->inherits("QDialog") && w != &d) {
+            QDialog *mb = qobject_cast<QDialog*>(w);
             QTest::keyClick(mb, Qt::Key_Escape);
         }
     }
-    */
+
 }
 
 #include "cattle_register_unit_test.moc"

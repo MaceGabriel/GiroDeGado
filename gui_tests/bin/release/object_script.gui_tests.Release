@@ -15,11 +15,8 @@ release/cattle_birth_unit_test.o
 release/cattle_buy_unit_test.o
 release/cattle_consult_unit_test.o
 release/cattle_edit_unit_test.o
-release/cattle_management_unit_test.o
-release/cattle_register_unit_test.o
 release/cattle_remove_unit_test.o
 release/financial_consult_unit_test.o
-release/financial_management_unit_test.o
 release/financial_record_unit_test.o
 release/financial_remove_unit_test.o
 release/moc_cattlebirthscreen.o

@@ -20,6 +20,7 @@ class FinancialRemoveScreen;
 class FinancialRemoveScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestFinancialRemoveScreenGUI;
 
 public:
     /*!

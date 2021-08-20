@@ -48,7 +48,7 @@ void TestCattleEditScreenGUI::casoDeUsoPrincipal(){
 
         QTimer::singleShot(500, this, SLOT(timeOut()));
 
-        // Preenche os campos com login e senhas corretos
+        // Verifica se os componentes da tela estao sendo buildados corretamente.
         QVERIFY2(d.ui_->label, "Campo não buildado");
         QVERIFY2(d.ui_->cattleButton, "Campo buildado");
         QVERIFY2(d.ui_->financialButton, "Campo buildado");

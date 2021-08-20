@@ -15,11 +15,8 @@ debug/cattle_birth_unit_test.o
 debug/cattle_buy_unit_test.o
 debug/cattle_consult_unit_test.o
 debug/cattle_edit_unit_test.o
-debug/cattle_management_unit_test.o
-debug/cattle_register_unit_test.o
 debug/cattle_remove_unit_test.o
 debug/financial_consult_unit_test.o
-debug/financial_management_unit_test.o
 debug/financial_record_unit_test.o
 debug/financial_remove_unit_test.o
 debug/moc_cattlebirthscreen.o
