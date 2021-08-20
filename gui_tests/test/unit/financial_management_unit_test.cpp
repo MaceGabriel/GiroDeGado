@@ -14,6 +14,8 @@ class TestFinancialManagementScreenGUI: public QObject
 {
     Q_OBJECT
 
+public:
+  explicit TestFinancialManagementScreenGUI(QWidget *parent = nullptr, Farm* f = nullptr);
 
 private slots:
 
@@ -28,17 +30,17 @@ private:
     //bool dialogoAberto;
 };
 
-void TestFinancialManagementScreenGUI::casoDeUsoPrincipal_data(){
+ TestFinancialManagementScreenGUI::TestFinancialManagementScreenGUI(QWidget *parent, Farm* f):QObject(parent){
+    d.farm_ = f;
+    d.backScreen_ = new HomeScreen();
+}
 
+void TestFinancialManagementScreenGUI::casoDeUsoPrincipal_data(){
     // ENTRADA
     QTest::addColumn<QPushButton*>("botao");
 
     // SAIDA
-    QTest::newRow("Botao de Registro") << d.ui_->registerButton;
-    QTest::newRow("Botao de Consulta") << d.ui_->queryButton;
-    QTest::newRow("Botao de Remocao") << d.ui_->removeButton;
-
-
+    QTest::newRow("Botao de Voltar") << d.ui_->backButton;
 }
 
 void TestFinancialManagementScreenGUI::casoDeUsoPrincipal(){

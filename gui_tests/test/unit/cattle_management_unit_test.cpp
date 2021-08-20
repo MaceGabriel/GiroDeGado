@@ -14,6 +14,8 @@ class TestCattleManagementScreenGUI: public QObject
 {
     Q_OBJECT
 
+public:
+  explicit TestCattleManagementScreenGUI(QWidget *parent = nullptr, Farm* f = nullptr);
 
 private slots:
 
@@ -28,6 +30,11 @@ private:
     //bool dialogoAberto;
 };
 
+TestCattleManagementScreenGUI::TestCattleManagementScreenGUI(QWidget *parent, Farm* f):QObject(parent){
+    d.farm_ = f;
+    d.backScreen_ = new HomeScreen();
+}
+
 void TestCattleManagementScreenGUI::casoDeUsoPrincipal_data(){
 
     // ENTRADA
@@ -37,6 +44,7 @@ void TestCattleManagementScreenGUI::casoDeUsoPrincipal_data(){
     QTest::newRow("Botao de Registro") << d.ui_->registerButton;
     QTest::newRow("Botao de Consulta") << d.ui_->queryButton;
     QTest::newRow("Botao de Remocao") << d.ui_->removeButton;
+    QTest::newRow("Botao de Voltar") << d.ui_->backButton;
 
 }
 
@@ -48,10 +56,10 @@ void TestCattleManagementScreenGUI::casoDeUsoPrincipal(){
 
     // Verifica se os componentes da tela estao sendo buildados corretamente.
     QVERIFY2(d.ui_->labelTitle, "Campo não buildado");
-    QVERIFY2(d.ui_->registerButton, "Campo buildado");
-    QVERIFY2(d.ui_->queryButton, "Campo buildado");
-    QVERIFY2(d.ui_->removeButton, "Campo buildado");
-    QVERIFY2(d.ui_->backButton, "Campo buildado");
+    QVERIFY2(d.ui_->registerButton, "Campo não buildado");
+    QVERIFY2(d.ui_->queryButton, "Campo não buildado");
+    QVERIFY2(d.ui_->removeButton, "Campo não buildado");
+    QVERIFY2(d.ui_->backButton, "Campo não buildado");
 
 
 
@@ -59,7 +67,6 @@ void TestCattleManagementScreenGUI::casoDeUsoPrincipal(){
 }
 
 void TestCattleManagementScreenGUI::timeOut(){
-
     // Verificar e fechar message box
     QWidgetList allToplevelWidgets = QApplication::topLevelWidgets();
     foreach (QWidget *w, allToplevelWidgets) {
