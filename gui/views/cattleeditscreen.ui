@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tela de Edição de Gado</string>
   </property>
   <widget class="QLabel" name="labelPrice">
    <property name="geometry">

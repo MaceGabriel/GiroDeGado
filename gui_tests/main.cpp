@@ -1,11 +1,12 @@
 #include "mainwindow.h"
-
+#include "unit_test.cpp"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    TestHomeScreenGUI x;
+    QTest::qExec(&x);
+
     return a.exec();
 }

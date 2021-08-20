@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tela de Consulta de Gado</string>
   </property>
   <widget class="QLabel" name="labelTitle">
    <property name="geometry">
@@ -266,7 +266,7 @@
      <rect>
       <x>0</x>
       <y>230</y>
-      <width>231</width>
+      <width>211</width>
       <height>181</height>
      </rect>
     </property>

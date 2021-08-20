@@ -4,7 +4,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 #Cada um cria o seu proprio path
-LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui/bin/debug/debug)
+#LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui/bin/debug/debug) #Marcus
+LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui/bin/debug/debug)
 LIBS += -l$$quote(api)
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -27,6 +28,14 @@ SOURCES += \
     main.cpp \
 
 HEADERS += \
+    ../api/includes/cattle.h \
+    ../api/includes/cattleImpl.h \
+    ../api/includes/farm.h \
+    ../api/includes/farmImpl.h \
+    ../api/includes/handlebody.h \
+    ../api/includes/transaction.h \
+    ../api/includes/transactionImpl.h \
+    ../api/test/unit/main_unit_test.h \
     entity/cattlebirthscreen.h \
     entity/cattlebuyscreen.h \
     entity/cattleconsultscreen.h \
@@ -39,15 +48,7 @@ HEADERS += \
     entity/financialrecordscreen.h \
     entity/financialremovescreen.h \
     entity/homescreen.h \
-    includes/cattle.h \
-    includes/cattleImpl.h \
-    includes/farm.h \
-    includes/farmImpl.h \
-    includes/handlebody.h \
-    includes/transaction.h \
-    includes/transactionImpl.h \
-    lib_global.h \
-    test/unit/main_unit_test.h
+    lib_global.h
 
 FORMS += \
     views/cattlebirthscreen.ui \
