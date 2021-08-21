@@ -1,0 +1,8 @@
+<map id="GiroDeGado/includes/cattleImpl.h" name="GiroDeGado/includes/cattleImpl.h">
+<area shape="rect" id="node1" title="This file contains the handle/body of a Cattle for the GiroDeGado software." alt="" coords="114,5,259,47"/>
+<area shape="rect" id="node2" href="$cattle_8h.html" title="This file contains the interface of a Cattle for the GiroDeGado software." alt="" coords="93,95,166,121"/>
+<area shape="rect" id="node6" href="$handlebody_8h.html" title="The classes Handle and Body implements &quot;bridge&quot; design pattern (also known as &quot;handle/body idiom&quot;)...." alt="" coords="191,95,297,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,169,77,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="102,169,157,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="181,169,235,196"/>
+</map>

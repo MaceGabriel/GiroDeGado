@@ -1,0 +1,10 @@
+<map id="unit_farm_removeCattle" name="unit_farm_removeCattle">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,163,133"/>
+<area shape="rect" id="node2" href="$class_farm.html#a8531dca79f309aaa0aaa11c6c19def0b" title=" " alt="" coords="211,5,391,32"/>
+<area shape="rect" id="node3" href="$class_farm.html#a34757068bc141eb75b25eeab4a15bc47" title=" " alt="" coords="237,56,364,83"/>
+<area shape="rect" id="node6" href="$class_farm.html#a784f3721c9fe1cee25cc5610e82d1ba4" title=" " alt="" coords="215,107,386,133"/>
+<area shape="rect" id="node7" href="$class_farm.html#a2ec0efcdcfd2b8a41771e010a2b0adf4" title=" " alt="" coords="222,157,379,184"/>
+<area shape="rect" id="node8" href="$class_farm.html#a3c06249179d8d87ba989fa1deef894e5" title=" " alt="" coords="250,208,351,235"/>
+<area shape="rect" id="node4" href="$class_farm_handle.html#a90e74daaf3db023f5afbe781ca80cac3" title=" " alt="" coords="439,56,605,83"/>
+<area shape="rect" id="node5" href="$class_farm_body.html#a0e6098aea46148c1cbf41feca990ab70" title=" " alt="" coords="653,56,809,83"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="GiroDeGado/includes/handlebody.h" name="GiroDeGado/includes/handlebody.h">
+<area shape="rect" id="node1" title="The classes Handle and Body implements &quot;bridge&quot; design pattern (also known as &quot;handle/body idiom&quot;)...." alt="" coords="393,5,538,47"/>
+<area shape="rect" id="node2" href="$cattle_impl_8h.html" title="This file contains the handle/body of a Cattle for the GiroDeGado software." alt="" coords="253,95,398,136"/>
+<area shape="rect" id="node3" href="$farm_impl_8h.html" title="This file contains the handle/body of a Farm for the GiroDeGado software." alt="" coords="393,184,538,225"/>
+<area shape="rect" id="node13" href="$transaction_impl_8h.html" title="This file contains the handle/body of a Transaction for the GiroDeGado software." alt="" coords="541,95,686,136"/>
+<area shape="rect" id="node10" href="$cattle_impl_8cpp.html" title=" " alt="" coords="5,191,200,218"/>
+<area shape="rect" id="node11" href="$unit__cattle_8h.html" title="This file contains the unit tests of the Cattle class for the GiroDeGado software." alt="" coords="224,184,368,225"/>
+<area shape="rect" id="node4" href="$farm_impl_8cpp.html" title=" " alt="" coords="533,281,721,307"/>
+<area shape="rect" id="node5" href="$unit__farm_8h.html" title="This file contains the unit tests of the Farm class for the GiroDeGado software." alt="" coords="364,273,508,315"/>
+<area shape="rect" id="node6" href="$main__unit__test_8h.html" title="This file executes the unit tests of the Cattle, Transaction and Farm classes for the GiroDeGado soft..." alt="" coords="309,363,453,404"/>
+<area shape="rect" id="node9" href="$unit__farm_8cpp.html" title=" " alt="" coords="477,363,621,404"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title=" " alt="" coords="221,459,371,486"/>
+<area shape="rect" id="node8" href="$main__unit__test_8cpp.html" title=" " alt="" coords="396,452,540,493"/>
+<area shape="rect" id="node12" href="$unit__cattle_8cpp.html" title=" " alt="" coords="145,273,289,315"/>
+<area shape="rect" id="node14" href="$transaction_impl_8cpp.html" title=" " alt="" coords="563,184,741,225"/>
+<area shape="rect" id="node15" href="$unit__transaction_8h.html" title="This file contains the unit tests of the Transaction class for the GiroDeGado software." alt="" coords="765,184,909,225"/>
+<area shape="rect" id="node16" href="$unit__transaction_8cpp.html" title=" " alt="" coords="796,273,940,315"/>
+</map>

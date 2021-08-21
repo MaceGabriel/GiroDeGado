@@ -1,0 +1,5 @@
+<map id="CattleManagementScreen::getFarm" name="CattleManagementScreen::getFarm">
+<area shape="rect" id="node1" title=" " alt="" coords="233,39,405,80"/>
+<area shape="rect" id="node2" href="$class_cattle_management_screen.html#a93e78ea21b54364924d07b7147bd1d82" title=" " alt="" coords="5,5,185,47"/>
+<area shape="rect" id="node3" href="$class_cattle_management_screen.html#aa9be87d8e4dea8dcea31b04d7b03f961" title=" " alt="" coords="6,71,185,112"/>
+</map>
