@@ -120,6 +120,17 @@ class LIB_EXPORT FarmBody : public Body{
         */
         void createTransaction(int number = 0, double value = 0.0, std::string description = "",
                                std::string date = "", int cattle_earring = 0);
+        
+        /*!
+            Creates a user and adds it to the database.
+            \param nickname the nickname of the User.
+            \param name the name of the User.
+            \param password the password of the User.
+            \param birth_date the birth_date of the User.
+            \param type the type of the User.
+        */
+        void createUser(std::string nickname = "", std::string name = "", std::string password = "",
+                                std::string birth_date = "", std::string type = "");
 
         /*!
             Creates a Farm and returns it's pointer.
@@ -138,6 +149,12 @@ class LIB_EXPORT FarmBody : public Body{
            \param transaction_number number of the transaction that will be deleted.
         */
         void deleteTransaction(int transaction_number);
+
+        /*!
+           Deletes a user from the database.
+           \param user_nickname nickname of the user that will be deleted.
+        */
+        void deleteUser(std::string user_nickname);
 
         /*!
             Sets the earring of a registered Cattle in the database.
@@ -322,6 +339,76 @@ class LIB_EXPORT FarmBody : public Body{
         QString getTransactionCattleEarring(int transaction_number) const;
 
         /*!
+            Sets the nickname of a registered User in the database.
+            \param actual_user_nickname the nickname of the current User.
+            \param new_user_nickname which will be set to the current User.
+        */
+        void setUserNickname(std::string actual_user_nickname, std::string new_user_nickname);
+
+        /*!
+            Returns the nickname of a registered User in the database.
+            \param user_nickname the nickname of the current User.
+            \return QString - the content nickname attribute.  
+        */
+        QString getUserNickname(std::string user_nickname) const;
+
+        /*!
+            Sets the name of a registered User in the database.
+            \param user_nickname the nickname of the current User.
+            \param user_name which will be set to the current User.
+        */
+        void setUserName(std::string user_nickname, std::string user_name);
+
+        /*!
+            Returns the name of a registered User in the database.
+            \param user_nickname the name of the current User.
+            \return QString - the content name attribute.  
+        */
+        QString getUserName(std::string user_nickname) const;
+
+        /*!
+            Sets the password of a registered User in the database.
+            \param user_nickname the nickname of the current User.
+            \param user_password which will be set to the current User.
+        */
+        void setUserPassword(std::string user_nickname, std::string user_password);
+
+        /*!
+            Returns the password of a registered User in the database.
+            \param user_nickname the password of the current User.
+            \return QString - the content password attribute.  
+        */
+        QString getUserPassword(std::string user_nickname) const;
+
+        /*!
+            Sets the date of a registered User in the database.
+            \param user_nickname the nickname of the current User.
+            \param user_date which will be set to the current User.
+        */
+        void setUserDate(std::string user_nickname, std::string user_date);
+
+        /*!
+            Returns the date of a registered User in the database.
+            \param user_nickname the date of the current User.
+            \return QString - the content date attribute.  
+        */
+        QString getUserDate(std::string user_nickname) const;
+
+        /*!
+            Sets the type of a registered User in the database.
+            \param user_nickname the nickname of the current User.
+            \param user_type which will be set to the current User.
+        */
+        void setUserType(std::string user_nickname, std::string user_type);
+
+        /*!
+            Returns the type of a registered User in the database.
+            \param user_nickname the type of the current User.
+            \return QString - the content type attribute.  
+        */
+        QString getUserType(std::string user_nickname) const;
+
+        /*!
             Returns the last available earring on the cattle table from the database.
             \return int - the last available earring on the cattle table from the database.
         */
@@ -464,6 +551,19 @@ class LIB_EXPORT FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
+            Calls the createUser() method implemented in the FarmBody Class.
+            \param nickname the nickname of the User.
+            \param name the name of the User.
+            \param password the password of the User.
+            \param birth_date the birth_date of the User.
+            \param type the type of the User.
+        */
+        void createUser(std::string nickname = "", std::string name = "", std::string password = "",
+                        std::string birth_date = "", std::string type = ""){
+            pImpl_->createUser(nickname, name, password, birth_date, type);
+        }
+
+        /*!
             Calls the createFarm() method implemented in the FarmBody Class.
             \return Farm - a Farm Class object.
         */
@@ -485,6 +585,14 @@ class LIB_EXPORT FarmHandle : public Handle<FarmBody>, public Farm{
         */
         void deleteTransaction(int transaction_number){
             pImpl_->deleteTransaction(transaction_number);
+        }
+
+        /*!
+           Calls the deleteUser() method implemented in the FarmBody Class.
+           \param user_nickname nickname of the user that will be deleted.
+        */
+        void deleteUser(std::string user_nickname){
+            pImpl_->deleteUser(user_nickname);
         }
 
         /*!
@@ -632,7 +740,7 @@ class LIB_EXPORT FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
-            Sets the number of a registered Transaction in the database.
+            Calls the setTransactionNumber() method implemented in the FarmBody Class.
             \param actual_transaction_number the number of the Transaction.
             \param new_transaction_number which will be set to the Transaction.
         */
@@ -641,7 +749,7 @@ class LIB_EXPORT FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
-            Returns the number of a registered Transaction in the database.
+            Calls the getTransactionNumber() method implemented in the FarmBody Class.
             \param transaction_number the number of the Transaction.
             \return QString - the content number attribute.
         */
@@ -650,7 +758,7 @@ class LIB_EXPORT FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
-            Sets the value of a registered Transaction in the database.
+            Calls the setTransactionValue() method implemented in the FarmBody Class.
             \param transaction_number the number of the Transaction.
             \param transaction_value which will be set to the Transaction.
         */
@@ -659,7 +767,7 @@ class LIB_EXPORT FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
-            Returns the value of a registered Transaction in the database.
+            Calls the getTransactionValue() method implemented in the FarmBody Class.
             \param transaction_number the number of the Transaction.
             \return QString - the content value attribute.  
         */
@@ -668,7 +776,7 @@ class LIB_EXPORT FarmHandle : public Handle<FarmBody>, public Farm{
         }
         
         /*!
-            Sets the description of a registered Transaction in the database.
+            Calls the setTransactionDescription() method implemented in the FarmBody Class.
             \param transaction_number the number of the Transaction.
             \param transaction_description which will be set to the Transaction.
         */
@@ -677,7 +785,7 @@ class LIB_EXPORT FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
-            Returns the description of a registered Transaction in the database.
+            Calls the getTransactionDescription() method implemented in the FarmBody Class.
             \param transaction_number the number of the Transaction.
             \return QString - the content description attribute.  
         */
@@ -686,7 +794,7 @@ class LIB_EXPORT FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
-            Sets the date of a registered Transaction in the database.
+            Calls the setTransactionDate() method implemented in the FarmBody Class.
             \param transaction_number the number of the Transaction.
             \param transaction_date which will be set to the Transaction.
         */
@@ -695,7 +803,7 @@ class LIB_EXPORT FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
-            Returns the date of a registered Transaction in the database.
+            Calls the getTransactionDate() method implemented in the FarmBody Class.
             \param transaction_number the number of the Transaction.
             \return QString - the content date attribute.  
         */
@@ -704,7 +812,7 @@ class LIB_EXPORT FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
-            Sets the cattle earring of a registered Transaction in the database.
+            Calls the setTransactionCattleEarring() method implemented in the FarmBody Class.
             \param transaction_number the number of the Transaction.
             \param transaction_cattle_earring which will be set to the Transaction.
         */
@@ -713,12 +821,102 @@ class LIB_EXPORT FarmHandle : public Handle<FarmBody>, public Farm{
         }
 
         /*!
-            Returns the cattle earring of a registered Transaction in the database.
+            Calls the getTransactionCattleEarring() method implemented in the FarmBody Class.
             \param transaction_number the number of the Transaction.
             \return QString - the content cattle earring attribute.  
         */
         QString getTransactionCattleEarring(int transaction_number) const{
             return pImpl_->getTransactionCattleEarring(transaction_number);
+        }
+
+        /*!
+            Calls the setUserNickname() method implemented in the FarmBody Class.
+            \param actual_user_nickname the nickname of the current User.
+            \param new_user_nickname which will be set to the current User.
+        */
+        void setUserNickname(std::string actual_user_nickname, std::string new_user_nickname){
+            pImpl_->setUserNickname(actual_user_nickname, new_user_nickname);
+        }
+
+        /*!
+            Calls the getUserNickname() method implemented in the FarmBody Class.
+            \param user_nickname the nickname of the current User.
+            \return QString - the content nickname attribute.  
+        */
+        QString getUserNickname(std::string user_nickname) const{
+            return pImpl_->getUserNickname(user_nickname);
+        }
+
+        /*!
+            Calls the setUserName() method implemented in the FarmBody Class.
+            \param user_nickname the nickname of the current User.
+            \param user_name which will be set to the current User.
+        */
+        void setUserName(std::string user_nickname, std::string user_name){
+            pImpl_->setUserName(user_nickname, user_name);
+        }
+
+        /*!
+            Calls the getUserName() method implemented in the FarmBody Class.
+            \param user_nickname the name of the current User.
+            \return QString - the content name attribute.  
+        */
+        QString getUserName(std::string user_nickname) const{
+            return pImpl_->getUserName(user_nickname);
+        }
+
+        /*!
+            Calls the setUserPassword() method implemented in the FarmBody Class.
+            \param user_nickname the nickname of the current User.
+            \param user_password which will be set to the current User.
+        */
+        void setUserPassword(std::string user_nickname, std::string user_password){
+            pImpl_->setUserPassword(user_nickname, user_password);
+        }
+
+        /*!
+            Calls the getUserPassword() method implemented in the FarmBody Class.
+            \param user_nickname the password of the current User.
+            \return QString - the content password attribute.  
+        */
+        QString getUserPassword(std::string user_nickname) const{
+            return pImpl_->getUserPassword(user_nickname);
+        }
+
+        /*!
+            Calls the setUserDate() method implemented in the FarmBody Class.
+            \param user_nickname the nickname of the current User.
+            \param user_date which will be set to the current User.
+        */
+        void setUserDate(std::string user_nickname, std::string user_date){
+            pImpl_->setUserDate(user_nickname, user_date);
+        }
+
+        /*!
+            Calls the getUserDate() method implemented in the FarmBody Class.
+            \param user_nickname the date of the current User.
+            \return QString - the content date attribute.  
+        */
+        QString getUserDate(std::string user_nickname) const{
+            return pImpl_->getUserDate(user_nickname);
+        }
+
+        /*!
+            Calls the setUserType() method implemented in the FarmBody Class.
+            \param user_nickname the nickname of the current User.
+            \param user_type which will be set to the current User.
+        */
+        void setUserType(std::string user_nickname, std::string user_type){
+            pImpl_->setUserType(user_nickname, user_type);
+        }
+
+        /*!
+            Calls the getUserType() method implemented in the FarmBody Class.
+            \param user_nickname the type of the current User.
+            \return QString - the content type attribute.  
+        */
+        QString getUserType(std::string user_nickname) const{
+            return pImpl_->getUserType(user_nickname);
         }
 
         /*!

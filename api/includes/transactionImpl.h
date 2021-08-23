@@ -24,14 +24,14 @@ class LIB_EXPORT TransactionBody : public Body{
 
         /*!
             This is the copy constructor for the TransactionBody Class.
-            \param sys the TransactionBody that is going to be cloned.
+            \param transaction the TransactionBody that is going to be cloned.
         */
-        TransactionBody (const TransactionBody& sys);
+        TransactionBody (const TransactionBody& transaction);
 
         /*!
             This is the overloaded assignment operator for the TransactionBody Class.
         */
-        TransactionBody& operator=(const TransactionBody& sys);
+        TransactionBody& operator=(const TransactionBody& transaction);
 
     public:
 

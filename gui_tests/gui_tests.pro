@@ -4,7 +4,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 #LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui_tests/bin/debug/debug) #Mace
-LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/debug/debug) #Marcus
+#LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/debug/debug) #Marcus
+LIBS += -L$$quote(C:/Programas/git/GiroDeGado/gui/bin/debug/debug) #Carlos
 LIBS += -l$$quote(api)
 
 # You can make your code fail to compile if it uses deprecated APIs.

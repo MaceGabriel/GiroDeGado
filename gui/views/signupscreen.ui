@@ -54,7 +54,7 @@
     <rect>
      <x>70</x>
      <y>250</y>
-     <width>61</width>
+     <width>201</width>
      <height>16</height>
     </rect>
    </property>
@@ -64,7 +64,7 @@
     </font>
    </property>
    <property name="text">
-    <string>User</string>
+    <string>Nome de usuário</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="inputUser">
