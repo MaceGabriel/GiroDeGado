@@ -28,10 +28,10 @@ public:
     QPushButton *loginButton;
     QLabel *labelTitle;
     QLabel *labelUser;
-    QLabel *labelBreed_2;
+    QLabel *labelPassword;
     QPushButton *exitButton;
     QLineEdit *inputUser;
-    QLineEdit *inputBreed_2;
+    QLineEdit *inputPassword;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -39,7 +39,7 @@ public:
     {
         if (LoginScreen->objectName().isEmpty())
             LoginScreen->setObjectName(QString::fromUtf8("LoginScreen"));
-        LoginScreen->resize(800, 600);
+        LoginScreen->resize(900, 600);
         centralwidget = new QWidget(LoginScreen);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         loginButton = new QPushButton(centralwidget);
@@ -50,18 +50,18 @@ public:
         loginButton->setFont(font);
         labelTitle = new QLabel(centralwidget);
         labelTitle->setObjectName(QString::fromUtf8("labelTitle"));
-        labelTitle->setGeometry(QRect(20, 10, 81, 16));
-        labelTitle->setFont(font);
+        labelTitle->setGeometry(QRect(20, 10, 121, 16));
+        QFont font1;
+        font1.setPointSize(12);
+        labelTitle->setFont(font1);
         labelUser = new QLabel(centralwidget);
         labelUser->setObjectName(QString::fromUtf8("labelUser"));
         labelUser->setGeometry(QRect(170, 180, 61, 16));
-        QFont font1;
-        font1.setPointSize(12);
         labelUser->setFont(font1);
-        labelBreed_2 = new QLabel(centralwidget);
-        labelBreed_2->setObjectName(QString::fromUtf8("labelBreed_2"));
-        labelBreed_2->setGeometry(QRect(170, 250, 61, 16));
-        labelBreed_2->setFont(font1);
+        labelPassword = new QLabel(centralwidget);
+        labelPassword->setObjectName(QString::fromUtf8("labelPassword"));
+        labelPassword->setGeometry(QRect(170, 250, 61, 16));
+        labelPassword->setFont(font1);
         exitButton = new QPushButton(centralwidget);
         exitButton->setObjectName(QString::fromUtf8("exitButton"));
         exitButton->setGeometry(QRect(170, 410, 571, 51));
@@ -70,15 +70,15 @@ public:
         inputUser->setObjectName(QString::fromUtf8("inputUser"));
         inputUser->setGeometry(QRect(170, 200, 571, 41));
         inputUser->setFont(font1);
-        inputBreed_2 = new QLineEdit(centralwidget);
-        inputBreed_2->setObjectName(QString::fromUtf8("inputBreed_2"));
-        inputBreed_2->setGeometry(QRect(170, 270, 571, 41));
-        inputBreed_2->setFont(font1);
-        inputBreed_2->setEchoMode(QLineEdit::Password);
+        inputPassword = new QLineEdit(centralwidget);
+        inputPassword->setObjectName(QString::fromUtf8("inputPassword"));
+        inputPassword->setGeometry(QRect(170, 270, 571, 41));
+        inputPassword->setFont(font1);
+        inputPassword->setEchoMode(QLineEdit::Password);
         LoginScreen->setCentralWidget(centralwidget);
         menubar = new QMenuBar(LoginScreen);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
+        menubar->setGeometry(QRect(0, 0, 900, 26));
         LoginScreen->setMenuBar(menubar);
         statusbar = new QStatusBar(LoginScreen);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -95,7 +95,7 @@ public:
         loginButton->setText(QCoreApplication::translate("LoginScreen", "Entrar", nullptr));
         labelTitle->setText(QCoreApplication::translate("LoginScreen", "Giro de Gado", nullptr));
         labelUser->setText(QCoreApplication::translate("LoginScreen", "User", nullptr));
-        labelBreed_2->setText(QCoreApplication::translate("LoginScreen", "Senha", nullptr));
+        labelPassword->setText(QCoreApplication::translate("LoginScreen", "Senha", nullptr));
         exitButton->setText(QCoreApplication::translate("LoginScreen", "Sair do programa", nullptr));
     } // retranslateUi
 
