@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>900</width>
     <height>600</height>
    </rect>
   </property>
@@ -37,13 +37,13 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>81</width>
+      <width>121</width>
       <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -68,7 +68,7 @@
      <string>User</string>
     </property>
    </widget>
-   <widget class="QLabel" name="labelBreed_2">
+   <widget class="QLabel" name="labelPassword">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -119,7 +119,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="inputBreed_2">
+   <widget class="QLineEdit" name="inputPassword">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -143,7 +143,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>900</width>
      <height>26</height>
     </rect>
    </property>
