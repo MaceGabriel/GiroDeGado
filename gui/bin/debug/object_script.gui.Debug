@@ -10,6 +10,7 @@ debug/financialmanagementscreen.o
 debug/financialrecordscreen.o
 debug/financialremovescreen.o
 debug/homescreen.o
+debug/loginscreen.o
 debug/main.o
 debug/moc_cattlebirthscreen.o
 debug/moc_cattlebuyscreen.o
@@ -23,3 +24,4 @@ debug/moc_financialmanagementscreen.o
 debug/moc_financialrecordscreen.o
 debug/moc_financialremovescreen.o
 debug/moc_homescreen.o
+debug/moc_loginscreen.o
