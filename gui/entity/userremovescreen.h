@@ -25,7 +25,7 @@ private slots:
     void on_okButton_clicked();
 
 private:
-    Ui::UserRemoveScreen *ui;
+    Ui::UserRemoveScreen *ui_;
     QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
     Farm* farm_;
 };

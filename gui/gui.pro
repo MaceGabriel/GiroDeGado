@@ -28,6 +28,7 @@ SOURCES += \
     entity/loginscreen.cpp \
     entity/signupscreen.cpp \
     entity/userremovescreen.cpp \
+    entity/usereditscreen.cpp \
     main.cpp
 
 HEADERS += \
@@ -54,9 +55,11 @@ HEADERS += \
     entity/loginscreen.h \
     entity/signupscreen.h \
     entity/userremovescreen.h \
-    lib_global.h \
+    entity/usereditscreen.h \
+    lib_global.h
 
 FORMS += \
+    usereditscreen.ui \
     userremovescreen.ui \
     views/cattlebirthscreen.ui \
     views/cattlebuyscreen.ui \
@@ -72,6 +75,7 @@ FORMS += \
     views/homescreen.ui \
     views/loginscreen.ui \
     views/userremovescreen.ui \
+    views/usereditscreen.ui \
     views/signupscreen.ui
 
 # Default rules for deployment.
