@@ -32,8 +32,9 @@ void HomeScreen::on_financialButton_clicked()
     financialManagement->exec();
 }
 
-void HomeScreen::on_exitButton_clicked()
+void HomeScreen::on_logoutButton_clicked()
 {
+    backScreen_->show();
     this->close();
 }
 

@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Tela Inicial</string>
   </property>
-  <widget class="QPushButton" name="exitButton">
+  <widget class="QPushButton" name="logoutButton">
    <property name="geometry">
     <rect>
      <x>180</x>

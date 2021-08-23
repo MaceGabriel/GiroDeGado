@@ -52,6 +52,8 @@ private slots:
     */
     void on_exitButton_clicked();
 
+    void on_logoutButton_clicked();
+
 private:
     Ui::HomeScreen *ui_; /*!< This attribute contains the ui for the Home. */
     QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */

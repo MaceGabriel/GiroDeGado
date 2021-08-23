@@ -12,7 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QDialog>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
@@ -31,7 +31,7 @@ public:
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
-    void setupUi(QMainWindow *HomeScreen)
+    void setupUi(QDialog *HomeScreen)
     {
         if (HomeScreen->objectName().isEmpty())
             HomeScreen->setObjectName(QString::fromUtf8("HomeScreen"));
@@ -70,7 +70,7 @@ public:
         QMetaObject::connectSlotsByName(HomeScreen);
     } // setupUi
 
-    void retranslateUi(QMainWindow *HomeScreen)
+    void retranslateUi(QDialog *HomeScreen)
     {
         HomeScreen->setWindowTitle(QCoreApplication::translate("HomeScreen", "Tela Inicial", nullptr));
         cattleButton->setText(QCoreApplication::translate("HomeScreen", "Gado", nullptr));
