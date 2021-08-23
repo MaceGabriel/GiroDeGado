@@ -30,7 +30,8 @@ void UserEditScreen::on_signButton_clicked()
 
 void UserEditScreen::on_backButton_clicked()
 {
-
+    backScreen_->show();
+    this->close();
 }
 
 Farm* UserEditScreen::getFarm()

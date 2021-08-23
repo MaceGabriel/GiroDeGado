@@ -4,8 +4,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 #Cada um cria o seu proprio path
-LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui/bin/debug/debug) #Marcus
-#LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui/bin/debug/debug) #Mace
+#LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui/bin/debug/debug) #Marcus
+LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui/bin/debug/debug) #Mace
 LIBS += -l$$quote(api)
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -27,8 +27,10 @@ SOURCES += \
     entity/homescreen.cpp \
     entity/loginscreen.cpp \
     entity/signupscreen.cpp \
+    entity/userqueryscreen.cpp \
     entity/userremovescreen.cpp \
     entity/usereditscreen.cpp \
+    entity/usermanagementscreen.cpp \
     main.cpp
 
 HEADERS += \
@@ -54,13 +56,13 @@ HEADERS += \
     entity/homescreen.h \
     entity/loginscreen.h \
     entity/signupscreen.h \
+    entity/userqueryscreen.h \
     entity/userremovescreen.h \
     entity/usereditscreen.h \
+    entity/usermanagementscreen.h \
     lib_global.h
 
 FORMS += \
-    usereditscreen.ui \
-    userremovescreen.ui \
     views/cattlebirthscreen.ui \
     views/cattlebuyscreen.ui \
     views/cattleconsultscreen.ui \
@@ -74,9 +76,11 @@ FORMS += \
     views/financialremovescreen.ui \
     views/homescreen.ui \
     views/loginscreen.ui \
+    views/userqueryscreen.ui \
     views/userremovescreen.ui \
-    views/usereditscreen.ui \
-    views/signupscreen.ui
+    views/usereditscreen.ui \    
+    views/signupscreen.ui \
+    views/usermanagementscreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

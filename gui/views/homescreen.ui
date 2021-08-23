@@ -53,7 +53,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>280</y>
+     <y>220</y>
      <width>531</width>
      <height>71</height>
     </rect>
@@ -71,7 +71,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>120</y>
+     <y>110</y>
      <width>531</width>
      <height>71</height>
     </rect>
@@ -83,6 +83,24 @@
    </property>
    <property name="text">
     <string>Gado</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="userButton">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>330</y>
+     <width>531</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Usuário</string>
    </property>
   </widget>
  </widget>
