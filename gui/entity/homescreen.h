@@ -6,7 +6,7 @@
 #ifndef HOMESCREEN_H
 #define HOMESCREEN_H
 
-#include <QMainWindow>
+#include <QDialog>
 #include <string>
 #include "../../api/includes/farm.h"
 
@@ -14,11 +14,12 @@
  * \brief
  * This screen represents the program home.
 */
-QT_BEGIN_NAMESPACE
-namespace Ui { class HomeScreen; }
-QT_END_NAMESPACE
 
-class HomeScreen : public QMainWindow
+namespace Ui {
+    class HomeScreen;
+}
+
+class HomeScreen : public QDialog
 {
     Q_OBJECT
     friend class TestHomeScreenGUI;

@@ -25,7 +25,8 @@ SOURCES += \
     entity/financialrecordscreen.cpp \
     entity/financialremovescreen.cpp \
     entity/homescreen.cpp \
-    main.cpp \
+    entity/loginscreen.cpp \
+    main.cpp
 
 HEADERS += \
     ../api/includes/cattle.h \
@@ -48,9 +49,11 @@ HEADERS += \
     entity/financialrecordscreen.h \
     entity/financialremovescreen.h \
     entity/homescreen.h \
+    entity/loginscreen.h \
     lib_global.h
 
 FORMS += \
+    loginscreen.ui \
     views/cattlebirthscreen.ui \
     views/cattlebuyscreen.ui \
     views/cattleconsultscreen.ui \
@@ -62,7 +65,8 @@ FORMS += \
     views/financialmanagementscreen.ui \
     views/financialrecordscreen.ui \
     views/financialremovescreen.ui \
-    views/homescreen.ui
+    views/homescreen.ui \
+    views/loginscreen.ui \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

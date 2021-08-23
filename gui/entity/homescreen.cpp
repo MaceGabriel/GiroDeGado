@@ -4,7 +4,7 @@
 #include "ui_homescreen.h"
 
 HomeScreen::HomeScreen(QWidget *parent, Farm* f)
-    : QMainWindow(parent)
+    : QDialog(parent)
     , ui_(new Ui::HomeScreen)
 {
     setFixedSize(900, 600);
