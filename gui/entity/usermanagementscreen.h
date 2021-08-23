@@ -2,7 +2,7 @@
 #define USERMANAGEMENTSCREEN_H
 
 #include <QDialog>
-
+#include "../../api/includes/farm.h"
 namespace Ui {
 class UserManagementScreen;
 }
@@ -12,8 +12,9 @@ class UserManagementScreen : public QDialog
     Q_OBJECT
 
 public:
-    explicit UserManagementScreen(QWidget *parent = nullptr);
+    explicit UserManagementScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, Farm* f = nullptr);
     ~UserManagementScreen();
+    Farm* getFarm();
 
 private slots:
     void on_registerButton_clicked();
@@ -27,7 +28,9 @@ private slots:
     void on_backButton_clicked();
 
 private:
-    Ui::UserManagementScreen *ui;
+    Ui::UserManagementScreen *ui_;
+    QWidget* backScreen_;
+    Farm* farm_;
 };
 
 #endif // USERMANAGEMENTSCREEN_H

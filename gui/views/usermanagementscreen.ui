@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tela de Gerenciamento de Usuários</string>
   </property>
   <widget class="QPushButton" name="queryButton">
    <property name="geometry">

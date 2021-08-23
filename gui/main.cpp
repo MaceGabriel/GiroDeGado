@@ -1,12 +1,12 @@
 #include "../api/includes/farm.h"
 #include "../api/test/unit/main_unit_test.h"
-#include "./entity/signupscreen.h"
+#include "./entity/loginscreen.h"
 
 #include <QApplication>
 #include <QtSql>
 #include <QFileInfo>
 
-#define UNIT_TEST 1
+#define UNIT_TEST 0
 
 int main(int argc, char* argv[])
 {
@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
     bancoDeDados.open();
 
     QApplication a(argc, argv);
-    SignUpScreen w(nullptr);
+    LoginScreen w(nullptr,f);
     w.show();
     return a.exec();
 

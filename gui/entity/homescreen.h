@@ -50,9 +50,9 @@ private slots:
     /*!
         Function that close the program.
     */
-    void on_exitButton_clicked();
-
     void on_logoutButton_clicked();
+
+    void on_userButton_clicked();
 
 private:
     Ui::HomeScreen *ui_; /*!< This attribute contains the ui for the Home. */

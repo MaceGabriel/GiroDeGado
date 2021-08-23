@@ -1,6 +1,7 @@
 #include "homescreen.h"
 #include "cattlemanagementscreen.h"
 #include "financialmanagementscreen.h"
+#include "usermanagementscreen.h"
 #include "ui_homescreen.h"
 
 HomeScreen::HomeScreen(QWidget *parent, QWidget* backScreen, Farm* f)
@@ -42,3 +43,11 @@ Farm* HomeScreen::getFarm()
 {
     return farm_;
 }
+
+void HomeScreen::on_userButton_clicked()
+{
+    UserManagementScreen* userManagement = new UserManagementScreen(nullptr,this,getFarm());
+    this->hide();
+    userManagement->show();
+}
+
