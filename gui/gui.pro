@@ -4,8 +4,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 #Cada um cria o seu proprio path
-LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui/bin/debug/debug) #Marcus
-#LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui/bin/debug/debug) #Mace
+#LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui/bin/debug/debug) #Marcus
+LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui/bin/debug/debug) #Mace
 LIBS += -l$$quote(api)
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -25,7 +25,8 @@ SOURCES += \
     entity/financialrecordscreen.cpp \
     entity/financialremovescreen.cpp \
     entity/homescreen.cpp \
-    main.cpp \
+    entity/loginscreen.cpp \
+    main.cpp
 
 HEADERS += \
     ../api/includes/cattle.h \
@@ -48,9 +49,10 @@ HEADERS += \
     entity/financialrecordscreen.h \
     entity/financialremovescreen.h \
     entity/homescreen.h \
+    entity/loginscreen.h \
     lib_global.h
 
-FORMS += \
+FORMS += \    
     views/cattlebirthscreen.ui \
     views/cattlebuyscreen.ui \
     views/cattleconsultscreen.ui \
@@ -62,7 +64,8 @@ FORMS += \
     views/financialmanagementscreen.ui \
     views/financialrecordscreen.ui \
     views/financialremovescreen.ui \
-    views/homescreen.ui
+    views/homescreen.ui \
+    views/loginscreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

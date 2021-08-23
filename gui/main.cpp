@@ -1,6 +1,6 @@
 #include "../api/includes/farm.h"
 #include "../api/test/unit/main_unit_test.h"
-#include "./entity/homescreen.h"
+#include "./entity/loginscreen.h"
 
 #include <QApplication>
 #include <QtSql>
@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
     bancoDeDados.open();
 
     QApplication a(argc, argv);
-    HomeScreen w(nullptr, f);
+    LoginScreen w(nullptr, f);
     w.show();
     return a.exec();
 

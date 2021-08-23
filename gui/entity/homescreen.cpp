@@ -3,12 +3,13 @@
 #include "financialmanagementscreen.h"
 #include "ui_homescreen.h"
 
-HomeScreen::HomeScreen(QWidget *parent, Farm* f)
-    : QMainWindow(parent)
+HomeScreen::HomeScreen(QWidget *parent, QWidget* backScreen, Farm* f)
+    : QDialog(parent)
     , ui_(new Ui::HomeScreen)
 {
     setFixedSize(900, 600);
     farm_ = f;
+    this-> backScreen_ = backScreen;
     ui_->setupUi(this);
 }
 

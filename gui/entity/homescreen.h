@@ -6,24 +6,25 @@
 #ifndef HOMESCREEN_H
 #define HOMESCREEN_H
 
-#include <QMainWindow>
+#include <QDialog>
 #include <string>
 #include "../../api/includes/farm.h"
 
-/** 
+/**
  * \brief
  * This screen represents the program home.
 */
-QT_BEGIN_NAMESPACE
-namespace Ui { class HomeScreen; }
-QT_END_NAMESPACE
 
-class HomeScreen : public QMainWindow
+namespace Ui {
+class HomeScreen;
+}
+
+class HomeScreen : public QDialog
 {
     Q_OBJECT
     friend class TestHomeScreenGUI;
 public:
-    HomeScreen(QWidget *parent = nullptr, Farm* f = nullptr);
+    HomeScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, Farm* f = nullptr);
 
     /*!
         This is the default destructor for the Screen Home.
@@ -35,7 +36,7 @@ public:
     */
     Farm* getFarm();
 
-private slots:    
+private slots:
     /*!
         Function that redirects to the cattle management screen.
     */
@@ -53,6 +54,7 @@ private slots:
 
 private:
     Ui::HomeScreen *ui_; /*!< This attribute contains the ui for the Home. */
+    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
     Farm* farm_; /*!< This attribute contains the the Farm. */
 };
 #endif // HOMESCREEN_H
