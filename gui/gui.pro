@@ -29,6 +29,7 @@ SOURCES += \
     entity/signupscreen.cpp \
     entity/userremovescreen.cpp \
     entity/usereditscreen.cpp \
+    entity/usermanagementscreen.cpp \
     main.cpp
 
 HEADERS += \
@@ -56,6 +57,7 @@ HEADERS += \
     entity/signupscreen.h \
     entity/userremovescreen.h \
     entity/usereditscreen.h \
+    entity/usermanagementscreen.h \
     lib_global.h
 
 FORMS += \
@@ -75,8 +77,9 @@ FORMS += \
     views/homescreen.ui \
     views/loginscreen.ui \
     views/userremovescreen.ui \
-    views/usereditscreen.ui \
-    views/signupscreen.ui
+    views/usereditscreen.ui \    
+    views/signupscreen.ui \
+    views/usermanagementscreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
