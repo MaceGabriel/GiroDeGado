@@ -12,6 +12,7 @@ release/financialremovescreen.o
 release/homescreen.o
 release/loginscreen.o
 release/signupscreen.o
+release/userremovescreen.o
 release/main.o
 release/moc_cattlebirthscreen.o
 release/moc_cattlebuyscreen.o
@@ -27,3 +28,4 @@ release/moc_financialremovescreen.o
 release/moc_homescreen.o
 release/moc_loginscreen.o
 release/moc_signupscreen.o
+release/moc_userremovescreen.o
