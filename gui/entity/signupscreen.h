@@ -23,7 +23,7 @@ private slots:
     void on_backButton_clicked();
 
 private:
-    Ui::SignUpScreen *ui;
+    Ui::SignUpScreen *ui_;
     QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
     Farm* farm_;
 };
