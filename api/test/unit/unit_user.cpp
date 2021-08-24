@@ -19,12 +19,12 @@ void unit_user_copy_constructor(){
     User* user2 = new UserHandle(*user1);
 
     // The copy constructor instantiates a new UserHandle, but not a new UserBody
-    assert(numHandleCreated == numBodyCreated+2);
+    assert(numHandleCreated == numBodyCreated+3);
 
     delete user1;
     delete user2;
 
-    assert(numHandleDeleted+1 == numBodyDeleted+1+2);
+    assert(numHandleDeleted == numBodyDeleted+3);
 
     std::cout << "OK!" << std::endl;
 }

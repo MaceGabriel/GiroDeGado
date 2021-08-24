@@ -24,7 +24,7 @@ void unit_transaction_copy_constructor(){
     delete transaction1;
     delete transaction2;
 
-    assert(numHandleDeleted+1 == numBodyDeleted+1+2);
+    assert(numHandleDeleted == numBodyDeleted+2);
 
     std::cout << "OK!" << std::endl;
 }

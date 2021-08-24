@@ -42,6 +42,8 @@ HEADERS += \
     ../api/includes/handlebody.h \
     ../api/includes/transaction.h \
     ../api/includes/transactionImpl.h \
+    ../api/includes/user.h \
+    ../api/includes/userImpl.h \
     ../api/test/unit/main_unit_test.h \
     entity/cattlebirthscreen.h \
     entity/cattlebuyscreen.h \
