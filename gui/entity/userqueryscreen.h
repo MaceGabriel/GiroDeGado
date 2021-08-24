@@ -15,6 +15,7 @@ class UserQueryScreen : public QDialog
 public:
     explicit UserQueryScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, Farm* f = nullptr);
     ~UserQueryScreen();
+    Farm* getFarm();
 
 private slots:
     void on_okButton_clicked();
