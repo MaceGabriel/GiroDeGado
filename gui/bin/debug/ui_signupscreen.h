@@ -56,7 +56,7 @@ public:
         labelTitle->setFont(font1);
         labelUser = new QLabel(SignUpScreen);
         labelUser->setObjectName(QString::fromUtf8("labelUser"));
-        labelUser->setGeometry(QRect(70, 250, 61, 16));
+        labelUser->setGeometry(QRect(70, 250, 201, 16));
         labelUser->setFont(font1);
         inputUser = new QLineEdit(SignUpScreen);
         inputUser->setObjectName(QString::fromUtf8("inputUser"));
@@ -113,7 +113,7 @@ public:
         SignUpScreen->setWindowTitle(QCoreApplication::translate("SignUpScreen", "Tela de Cadastro de Usu\303\241rio", nullptr));
         signButton->setText(QCoreApplication::translate("SignUpScreen", "Cadastrar", nullptr));
         labelTitle->setText(QCoreApplication::translate("SignUpScreen", "Giro de Gado", nullptr));
-        labelUser->setText(QCoreApplication::translate("SignUpScreen", "User", nullptr));
+        labelUser->setText(QCoreApplication::translate("SignUpScreen", "Nome de usu\303\241rio", nullptr));
         inputUser->setText(QString());
         labelSearchUser->setText(QCoreApplication::translate("SignUpScreen", "Nome", nullptr));
         backButton->setText(QCoreApplication::translate("SignUpScreen", "Voltar", nullptr));

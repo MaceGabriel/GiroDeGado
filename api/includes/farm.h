@@ -8,9 +8,6 @@
 
 #include <vector>
 #include <QtSql/QtSql>
-
-#include "./cattle.h"
-#include "./transaction.h"
 #include "lib_global.h"
 
 /** 
@@ -99,10 +96,15 @@ class LIB_EXPORT Farm{
                                        std::string date = "", int cattle_earring = 0) = 0;
 
         /*!
-            Creates a Farm and returns it's pointer.
-            \return Farm - a Farm Class object.
+            Creates a user and adds it to the database.
+            \param nickname the nickname of the User.
+            \param name the name of the User.
+            \param password the password of the User.
+            \param birth_date the birth_date of the User.
+            \param type the type of the User.
         */
-        // static Farm* createFarm(int number = 0, QSqlQuery* query = NULL);
+        virtual void createUser(std::string nickname = "", std::string name = "", std::string password = "",
+                                std::string birth_date = "", std::string type = "") = 0;
 
         /*!        
            Deletes a cattle from the database.
@@ -115,6 +117,12 @@ class LIB_EXPORT Farm{
            \param transaction_number number of the transaction that will be deleted.
         */
         virtual void deleteTransaction(int transaction_number) = 0;
+
+        /*!
+           Deletes a user from the database.
+           \param user_nickname nickname of the user that will be deleted.
+        */
+        virtual void deleteUser(std::string user_nickname) = 0;
 
         /*!
             Sets the earring of a registered Cattle in the database.
@@ -297,6 +305,76 @@ class LIB_EXPORT Farm{
             \return QString - the content cattle earring attribute.  
         */
         virtual QString getTransactionCattleEarring(int transaction_number) const = 0;
+
+        /*!
+            Sets the nickname of a registered User in the database.
+            \param actual_user_nickname the nickname of the current User.
+            \param new_user_nickname which will be set to the current User.
+        */
+        virtual void setUserNickname(std::string actual_user_nickname, std::string new_user_nickname) = 0;
+
+        /*!
+            Returns the nickname of a registered User in the database.
+            \param user_nickname the nickname of the current User.
+            \return QString - the content nickname attribute.  
+        */
+        virtual QString getUserNickname(std::string user_nickname) const = 0;
+
+        /*!
+            Sets the name of a registered User in the database.
+            \param user_nickname the nickname of the current User.
+            \param user_name which will be set to the current User.
+        */
+        virtual void setUserName(std::string user_nickname, std::string user_name) = 0;
+
+        /*!
+            Returns the name of a registered User in the database.
+            \param user_nickname the name of the current User.
+            \return QString - the content name attribute.  
+        */
+        virtual QString getUserName(std::string user_nickname) const = 0;
+
+        /*!
+            Sets the password of a registered User in the database.
+            \param user_nickname the nickname of the current User.
+            \param user_password which will be set to the current User.
+        */
+        virtual void setUserPassword(std::string user_nickname, std::string user_password) = 0;
+
+        /*!
+            Returns the password of a registered User in the database.
+            \param user_nickname the password of the current User.
+            \return QString - the content password attribute.  
+        */
+        virtual QString getUserPassword(std::string user_nickname) const = 0;
+
+        /*!
+            Sets the date of a registered User in the database.
+            \param user_nickname the nickname of the current User.
+            \param user_date which will be set to the current User.
+        */
+        virtual void setUserDate(std::string user_nickname, std::string user_date) = 0;
+
+        /*!
+            Returns the date of a registered User in the database.
+            \param user_nickname the date of the current User.
+            \return QString - the content date attribute.  
+        */
+        virtual QString getUserDate(std::string user_nickname) const = 0;
+
+        /*!
+            Sets the type of a registered User in the database.
+            \param user_nickname the nickname of the current User.
+            \param user_type which will be set to the current User.
+        */
+        virtual void setUserType(std::string user_nickname, std::string user_type) = 0;
+
+        /*!
+            Returns the type of a registered User in the database.
+            \param user_nickname the type of the current User.
+            \return QString - the content type attribute.  
+        */
+        virtual QString getUserType(std::string user_nickname) const = 0;
 
         /*!
             Returns the last available earring on the cattle table from the database.

@@ -21,14 +21,14 @@ class LIB_EXPORT CattleBody : public Body{
 
         /*!
             This is the copy constructor for the CattleBody Class.
-            \param sys the CattleBody that is going to be cloned.
+            \param cattle the CattleBody that is going to be cloned.
         */
-        CattleBody (const CattleBody& sys);
+        CattleBody (const CattleBody& cattle);
 
         /*!
             This is the overloaded assignment operator for the CattleBody Class.
         */
-        CattleBody& operator=(const CattleBody& sys);
+        CattleBody& operator=(const CattleBody& cattle);
 
     public:
 

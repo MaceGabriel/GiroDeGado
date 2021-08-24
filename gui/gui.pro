@@ -5,7 +5,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++11
 #Cada um cria o seu proprio path
 #LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui/bin/debug/debug) #Marcus
-LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui/bin/debug/debug) #Mace
+#LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui/bin/debug/debug) #Mace
+LIBS += -L$$quote(C:/Programas/git/GiroDeGado/gui/bin/debug/debug) #Carlos
 LIBS += -l$$quote(api)
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -41,6 +42,8 @@ HEADERS += \
     ../api/includes/handlebody.h \
     ../api/includes/transaction.h \
     ../api/includes/transactionImpl.h \
+    ../api/includes/user.h \
+    ../api/includes/userImpl.h \
     ../api/test/unit/main_unit_test.h \
     entity/cattlebirthscreen.h \
     entity/cattlebuyscreen.h \

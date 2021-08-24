@@ -11,72 +11,62 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QStatusBar>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_HomeScreen
 {
 public:
-    QWidget *centralwidget;
-    QPushButton *cattleButton;
-    QPushButton *exitButton;
-    QPushButton *financialButton;
+    QPushButton *logoutButton;
     QLabel *label;
-    QMenuBar *menubar;
-    QStatusBar *statusbar;
+    QPushButton *financialButton;
+    QPushButton *cattleButton;
+    QPushButton *userButton;
 
-    void setupUi(QMainWindow *HomeScreen)
+    void setupUi(QDialog *HomeScreen)
     {
         if (HomeScreen->objectName().isEmpty())
             HomeScreen->setObjectName(QString::fromUtf8("HomeScreen"));
         HomeScreen->resize(900, 600);
-        centralwidget = new QWidget(HomeScreen);
-        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        cattleButton = new QPushButton(centralwidget);
-        cattleButton->setObjectName(QString::fromUtf8("cattleButton"));
-        cattleButton->setGeometry(QRect(180, 120, 531, 71));
+        logoutButton = new QPushButton(HomeScreen);
+        logoutButton->setObjectName(QString::fromUtf8("logoutButton"));
+        logoutButton->setGeometry(QRect(180, 440, 531, 71));
         QFont font;
         font.setPointSize(12);
-        cattleButton->setFont(font);
-        exitButton = new QPushButton(centralwidget);
-        exitButton->setObjectName(QString::fromUtf8("exitButton"));
-        exitButton->setGeometry(QRect(180, 440, 531, 71));
-        exitButton->setFont(font);
-        financialButton = new QPushButton(centralwidget);
-        financialButton->setObjectName(QString::fromUtf8("financialButton"));
-        financialButton->setGeometry(QRect(180, 280, 531, 71));
-        financialButton->setFont(font);
-        label = new QLabel(centralwidget);
+        logoutButton->setFont(font);
+        label = new QLabel(HomeScreen);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(20, 10, 121, 31));
         label->setFont(font);
-        HomeScreen->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(HomeScreen);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 900, 21));
-        HomeScreen->setMenuBar(menubar);
-        statusbar = new QStatusBar(HomeScreen);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        HomeScreen->setStatusBar(statusbar);
+        financialButton = new QPushButton(HomeScreen);
+        financialButton->setObjectName(QString::fromUtf8("financialButton"));
+        financialButton->setGeometry(QRect(180, 220, 531, 71));
+        financialButton->setFont(font);
+        cattleButton = new QPushButton(HomeScreen);
+        cattleButton->setObjectName(QString::fromUtf8("cattleButton"));
+        cattleButton->setGeometry(QRect(180, 110, 531, 71));
+        cattleButton->setFont(font);
+        userButton = new QPushButton(HomeScreen);
+        userButton->setObjectName(QString::fromUtf8("userButton"));
+        userButton->setGeometry(QRect(180, 330, 531, 71));
+        userButton->setFont(font);
 
         retranslateUi(HomeScreen);
 
         QMetaObject::connectSlotsByName(HomeScreen);
     } // setupUi
 
-    void retranslateUi(QMainWindow *HomeScreen)
+    void retranslateUi(QDialog *HomeScreen)
     {
         HomeScreen->setWindowTitle(QCoreApplication::translate("HomeScreen", "Tela Inicial", nullptr));
-        cattleButton->setText(QCoreApplication::translate("HomeScreen", "Gado", nullptr));
-        exitButton->setText(QCoreApplication::translate("HomeScreen", "Sair", nullptr));
-        financialButton->setText(QCoreApplication::translate("HomeScreen", "Financeiro", nullptr));
+        logoutButton->setText(QCoreApplication::translate("HomeScreen", "Sair", nullptr));
         label->setText(QCoreApplication::translate("HomeScreen", "Giro de Gado", nullptr));
+        financialButton->setText(QCoreApplication::translate("HomeScreen", "Financeiro", nullptr));
+        cattleButton->setText(QCoreApplication::translate("HomeScreen", "Gado", nullptr));
+        userButton->setText(QCoreApplication::translate("HomeScreen", "Usu\303\241rio", nullptr));
     } // retranslateUi
 
 };
