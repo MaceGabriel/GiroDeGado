@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Tela de Consulta de Usuário</string>
   </property>
-  <widget class="QLineEdit" name="inputUser">
+  <widget class="QLineEdit" name="inputNickname">
    <property name="geometry">
     <rect>
      <x>130</x>
@@ -51,7 +51,7 @@
     <rect>
      <x>200</x>
      <y>170</y>
-     <width>501</width>
+     <width>471</width>
      <height>61</height>
     </rect>
    </property>
@@ -60,9 +60,14 @@
      <pointsize>12</pointsize>
     </font>
    </property>
+   <row>
+    <property name="text">
+     <string>Usuário</string>
+    </property>
+   </row>
    <column>
     <property name="text">
-     <string>ID</string>
+     <string>Nome de Usuário</string>
     </property>
     <property name="font">
      <font>
@@ -85,13 +90,45 @@
      <string>Tipo</string>
     </property>
    </column>
+   <item row="0" column="0">
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flags">
+     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+    </property>
+   </item>
+   <item row="0" column="1">
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flags">
+     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+    </property>
+   </item>
+   <item row="0" column="2">
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flags">
+     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+    </property>
+   </item>
+   <item row="0" column="3">
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flags">
+     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+    </property>
+   </item>
   </widget>
-  <widget class="QLabel" name="labelUser">
+  <widget class="QLabel" name="labelNickname">
    <property name="geometry">
     <rect>
      <x>130</x>
      <y>90</y>
-     <width>121</width>
+     <width>171</width>
      <height>16</height>
     </rect>
    </property>
@@ -101,7 +138,7 @@
     </font>
    </property>
    <property name="text">
-    <string>User</string>
+    <string>Nome de Usuário</string>
    </property>
   </widget>
   <widget class="QLabel" name="labelTitle">

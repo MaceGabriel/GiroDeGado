@@ -13,12 +13,12 @@
   <property name="windowTitle">
    <string>Tela de Exclusão de Usuário</string>
   </property>
-  <widget class="QLabel" name="labelUser">
+  <widget class="QLabel" name="labelNickname">
    <property name="geometry">
     <rect>
      <x>130</x>
      <y>100</y>
-     <width>121</width>
+     <width>201</width>
      <height>16</height>
     </rect>
    </property>
@@ -28,7 +28,7 @@
     </font>
    </property>
    <property name="text">
-    <string>User</string>
+    <string>Nome de Usuário</string>
    </property>
   </widget>
   <widget class="QLabel" name="labelTitle">
@@ -49,7 +49,7 @@
     <string>Giro de Gado</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="inputUser">
+  <widget class="QLineEdit" name="inputNickname">
    <property name="geometry">
     <rect>
      <x>130</x>
@@ -85,9 +85,9 @@
   <widget class="QTableWidget" name="userRemoveTable">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>180</y>
-     <width>501</width>
+     <x>180</x>
+     <y>190</y>
+     <width>471</width>
      <height>61</height>
     </rect>
    </property>
@@ -96,14 +96,14 @@
      <pointsize>12</pointsize>
     </font>
    </property>
+   <row>
+    <property name="text">
+     <string>Usuário</string>
+    </property>
+   </row>
    <column>
     <property name="text">
-     <string>ID</string>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
+     <string>Nome de Usuário</string>
     </property>
    </column>
    <column>

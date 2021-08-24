@@ -22,6 +22,8 @@ private slots:
 
     void on_backButton_clicked();
 
+    void on_signButton_clicked();
+
 private:
     Ui::SignUpScreen *ui_;
     QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */

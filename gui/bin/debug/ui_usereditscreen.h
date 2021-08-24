@@ -23,10 +23,10 @@ QT_BEGIN_NAMESPACE
 class Ui_UserEditScreen
 {
 public:
-    QLineEdit *inputUser;
-    QComboBox *comboBox;
+    QLineEdit *inputNewNickname;
+    QComboBox *userType;
     QLineEdit *inputPassword;
-    QLabel *labelUser;
+    QLabel *labelNewNickname;
     QLabel *labelName;
     QLineEdit *inputName;
     QLabel *labelTitle;
@@ -37,38 +37,38 @@ public:
     QPushButton *signButton;
     QLabel *labelUserType;
     QPushButton *okButton;
-    QLineEdit *inputSearchUser;
-    QLabel *labelSearchUser;
+    QLineEdit *inputNickname;
+    QLabel *labelNickname;
 
     void setupUi(QDialog *UserEditScreen)
     {
         if (UserEditScreen->objectName().isEmpty())
             UserEditScreen->setObjectName(QString::fromUtf8("UserEditScreen"));
         UserEditScreen->resize(900, 600);
-        inputUser = new QLineEdit(UserEditScreen);
-        inputUser->setObjectName(QString::fromUtf8("inputUser"));
-        inputUser->setGeometry(QRect(70, 390, 371, 41));
+        inputNewNickname = new QLineEdit(UserEditScreen);
+        inputNewNickname->setObjectName(QString::fromUtf8("inputNewNickname"));
+        inputNewNickname->setGeometry(QRect(70, 390, 371, 41));
         QFont font;
         font.setPointSize(12);
-        inputUser->setFont(font);
-        inputUser->setEchoMode(QLineEdit::Password);
-        comboBox = new QComboBox(UserEditScreen);
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setGeometry(QRect(480, 300, 351, 41));
+        inputNewNickname->setFont(font);
+        inputNewNickname->setEchoMode(QLineEdit::Normal);
+        userType = new QComboBox(UserEditScreen);
+        userType->addItem(QString());
+        userType->addItem(QString());
+        userType->setObjectName(QString::fromUtf8("userType"));
+        userType->setGeometry(QRect(480, 300, 351, 41));
         QFont font1;
         font1.setPointSize(10);
-        comboBox->setFont(font1);
+        userType->setFont(font1);
         inputPassword = new QLineEdit(UserEditScreen);
         inputPassword->setObjectName(QString::fromUtf8("inputPassword"));
         inputPassword->setGeometry(QRect(480, 390, 351, 41));
         inputPassword->setFont(font);
         inputPassword->setEchoMode(QLineEdit::Password);
-        labelUser = new QLabel(UserEditScreen);
-        labelUser->setObjectName(QString::fromUtf8("labelUser"));
-        labelUser->setGeometry(QRect(70, 370, 61, 16));
-        labelUser->setFont(font);
+        labelNewNickname = new QLabel(UserEditScreen);
+        labelNewNickname->setObjectName(QString::fromUtf8("labelNewNickname"));
+        labelNewNickname->setGeometry(QRect(70, 370, 221, 16));
+        labelNewNickname->setFont(font);
         labelName = new QLabel(UserEditScreen);
         labelName->setObjectName(QString::fromUtf8("labelName"));
         labelName->setGeometry(QRect(70, 190, 61, 16));
@@ -109,14 +109,14 @@ public:
         okButton->setObjectName(QString::fromUtf8("okButton"));
         okButton->setGeometry(QRect(760, 130, 75, 41));
         okButton->setFont(font);
-        inputSearchUser = new QLineEdit(UserEditScreen);
-        inputSearchUser->setObjectName(QString::fromUtf8("inputSearchUser"));
-        inputSearchUser->setGeometry(QRect(70, 130, 651, 41));
-        inputSearchUser->setFont(font);
-        labelSearchUser = new QLabel(UserEditScreen);
-        labelSearchUser->setObjectName(QString::fromUtf8("labelSearchUser"));
-        labelSearchUser->setGeometry(QRect(70, 110, 121, 16));
-        labelSearchUser->setFont(font);
+        inputNickname = new QLineEdit(UserEditScreen);
+        inputNickname->setObjectName(QString::fromUtf8("inputNickname"));
+        inputNickname->setGeometry(QRect(70, 130, 651, 41));
+        inputNickname->setFont(font);
+        labelNickname = new QLabel(UserEditScreen);
+        labelNickname->setObjectName(QString::fromUtf8("labelNickname"));
+        labelNickname->setGeometry(QRect(70, 110, 151, 16));
+        labelNickname->setFont(font);
 
         retranslateUi(UserEditScreen);
 
@@ -126,21 +126,21 @@ public:
     void retranslateUi(QDialog *UserEditScreen)
     {
         UserEditScreen->setWindowTitle(QCoreApplication::translate("UserEditScreen", "Tela de Edi\303\247\303\243o de Usu\303\241rio", nullptr));
-        inputUser->setText(QString());
-        comboBox->setItemText(0, QCoreApplication::translate("UserEditScreen", "Administrador", nullptr));
-        comboBox->setItemText(1, QCoreApplication::translate("UserEditScreen", "Funcion\303\241rio", nullptr));
+        inputNewNickname->setText(QString());
+        userType->setItemText(0, QCoreApplication::translate("UserEditScreen", "Administrador", nullptr));
+        userType->setItemText(1, QCoreApplication::translate("UserEditScreen", "Funcion\303\241rio", nullptr));
 
         inputPassword->setText(QString());
-        labelUser->setText(QCoreApplication::translate("UserEditScreen", "User", nullptr));
+        labelNewNickname->setText(QCoreApplication::translate("UserEditScreen", "Novo Nome de Usu\303\241rio", nullptr));
         labelName->setText(QCoreApplication::translate("UserEditScreen", "Nome", nullptr));
         labelTitle->setText(QCoreApplication::translate("UserEditScreen", "Giro de Gado", nullptr));
         labelPassword->setText(QCoreApplication::translate("UserEditScreen", "Senha", nullptr));
         backButton->setText(QCoreApplication::translate("UserEditScreen", "Voltar", nullptr));
         labelBirthDate->setText(QCoreApplication::translate("UserEditScreen", "Data de Nascimento", nullptr));
-        signButton->setText(QCoreApplication::translate("UserEditScreen", "Cadastrar", nullptr));
+        signButton->setText(QCoreApplication::translate("UserEditScreen", "Editar", nullptr));
         labelUserType->setText(QCoreApplication::translate("UserEditScreen", "Tipo de Usu\303\241rio", nullptr));
         okButton->setText(QCoreApplication::translate("UserEditScreen", "Ok", nullptr));
-        labelSearchUser->setText(QCoreApplication::translate("UserEditScreen", "User", nullptr));
+        labelNickname->setText(QCoreApplication::translate("UserEditScreen", "Nome de Usu\303\241rio", nullptr));
     } // retranslateUi
 
 };

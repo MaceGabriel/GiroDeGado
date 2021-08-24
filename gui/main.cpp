@@ -6,7 +6,7 @@
 #include <QtSql>
 #include <QFileInfo>
 
-#define UNIT_TEST 1
+#define UNIT_TEST 0
 
 int main(int argc, char* argv[])
 {
