@@ -1,13 +1,15 @@
 #include "cattlebirthscreen.h"
 #include "ui_cattlebirthscreen.h"
 
-CattleBirthScreen::CattleBirthScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+CattleBirthScreen::CattleBirthScreen(QWidget *parent, QWidget* backScreen, QWidget* loginScreen, Farm* f, std::string current_user) :
     QDialog(parent),
     ui_(new Ui::CattleBirthScreen)
 {
     setFixedSize(900, 600);
     farm_ = f;
-    this->backScreen_ = backScreen;
+    back_screen_ = backScreen;
+    login_screen_ = loginScreen;
+    current_user_ = current_user;
     ui_->setupUi(this);
 
     int earring = farm_->getLastEarringAvailable();
@@ -23,7 +25,7 @@ CattleBirthScreen::~CattleBirthScreen()
 
 void CattleBirthScreen::on_backButton_clicked()
 {
-    backScreen_->show();
+    back_screen_->show();
     this->close();
 }
 
@@ -50,7 +52,7 @@ void CattleBirthScreen::on_registerButton_clicked()
         Farm* f = getFarm();
         f->createCattle(earring, breed_2, date_2, date_2, father_2, mother_2, weight_2, 0.0);
 
-        backScreen_->show();
+        back_screen_->show();
         this->close();
     }
     else{

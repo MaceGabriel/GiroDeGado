@@ -5,13 +5,15 @@
 #include "reportscreen.h"
 #include "ui_financialmanagementscreen.h"
 
-FinancialManagementScreen::FinancialManagementScreen(QWidget *parent, QWidget *backScreen, Farm* f) :
+FinancialManagementScreen::FinancialManagementScreen(QWidget *parent, QWidget *backScreen, QWidget* loginScreen, Farm* f, std::string current_user) :
     QDialog(parent),
     ui_(new Ui::FinancialManagementScreen)
 {
     setFixedSize(900, 600);
     farm_ = f;
-    this->backScreen_ = backScreen;
+    back_screen_ = backScreen;
+    login_screen_ = loginScreen;
+    current_user_ = current_user;
     ui_->setupUi(this);
 }
 
@@ -22,34 +24,34 @@ FinancialManagementScreen::~FinancialManagementScreen()
 
 void FinancialManagementScreen::on_backButton_clicked()
 {
-    backScreen_->show();
+    back_screen_->show();
     this->close();
 }
 
 void FinancialManagementScreen::on_registerButton_clicked()
 {
-    FinancialRecordScreen* record = new FinancialRecordScreen(nullptr, this, getFarm());
+    FinancialRecordScreen* record = new FinancialRecordScreen(nullptr, this, login_screen_, getFarm(), current_user_);
     this->hide();
     record->show();
 }
 
 void FinancialManagementScreen::on_queryButton_clicked()
 {
-    FinancialConsultScreen* consult = new FinancialConsultScreen(nullptr, this, getFarm());
+    FinancialConsultScreen* consult = new FinancialConsultScreen(nullptr, this, login_screen_, getFarm(), current_user_);
     this->hide();
     consult->show();
 }
 
 void FinancialManagementScreen::on_removeButton_clicked()
 {
-    FinancialRemoveScreen* remove = new FinancialRemoveScreen(nullptr, this, getFarm());
+    FinancialRemoveScreen* remove = new FinancialRemoveScreen(nullptr, this, login_screen_, getFarm(), current_user_);
     this->hide();
     remove->show();
 }
 
 void FinancialManagementScreen::on_reportButton_clicked()
 {
-    ReportScreen* report = new ReportScreen(nullptr, this, getFarm());
+    ReportScreen* report = new ReportScreen(nullptr, this, login_screen_, getFarm(), current_user_);
     this->hide();
     report->show();
 }

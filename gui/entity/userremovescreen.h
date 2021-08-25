@@ -7,6 +7,7 @@
 #define USERREMOVESCREEN_H
 
 #include <QDialog>
+#include <QMessageBox>
 #include "../../api/includes/farm.h"
 
 /**
@@ -24,7 +25,7 @@ public:
     /*!
         This is the default constructor for the Screen UserRemoveScreen.
     */
-    explicit UserRemoveScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, Farm* f = nullptr);
+    explicit UserRemoveScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, QWidget* loginScreen = nullptr, Farm* f = nullptr, std::string current_user = "");
     /*!
         This is the default destructor for the Screen UserRemoveScreen.
     */
@@ -52,8 +53,10 @@ private slots:
 
 private:
     Ui::UserRemoveScreen *ui_; /*!< This attribute contains the ui for the UserRemoveScreen. */
-    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    QWidget* back_screen_; /*!< This attribute contains the reference of the back screen. */
+    QWidget* login_screen_; /*!< This attribute contains the reference of the login screen. */
     Farm* farm_; /*!< This attribute contains the the Farm. */
+    std::string current_user_; /*!< The nickname of the current user. */
 };
 
 #endif // USERREMOVESCREEN_H

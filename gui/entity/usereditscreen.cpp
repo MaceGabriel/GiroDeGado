@@ -1,13 +1,15 @@
 #include "usereditscreen.h"
 #include "ui_usereditscreen.h"
 
-UserEditScreen::UserEditScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+UserEditScreen::UserEditScreen(QWidget *parent, QWidget* backScreen, QWidget* loginScreen, Farm* f, std::string current_user) :
     QDialog(parent),
     ui_(new Ui::UserEditScreen)
 {
     setFixedSize(900, 600);
     farm_ = f;
-    this-> backScreen_ = backScreen;
+    back_screen_ = backScreen;
+    login_screen_ = loginScreen;
+    current_user_ = current_user;
     ui_->setupUi(this);
 }
 
@@ -83,14 +85,15 @@ void UserEditScreen::on_signButton_clicked()
         f->setUserDate(new_nickname, birth_date);
         f->setUserType(new_nickname, type);
 
-        backScreen_->show();
+        current_user_ = new_nickname;
+        back_screen_->show();
         this->close();
     }
 }
 
 void UserEditScreen::on_backButton_clicked()
 {
-    backScreen_->show();
+    back_screen_->show();
     this->close();
 }
 

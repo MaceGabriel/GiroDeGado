@@ -2,13 +2,15 @@
 #include "ui_signupscreen.h"
 #include<iostream>
 
-SignUpScreen::SignUpScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+SignUpScreen::SignUpScreen(QWidget *parent, QWidget* backScreen, QWidget* loginScreen, Farm* f, std::string current_user) :
     QDialog(parent),
     ui_(new Ui::SignUpScreen)
 {
     setFixedSize(900, 600);
     farm_ = f;
-    this-> backScreen_ = backScreen;
+    back_screen_ = backScreen;
+    login_screen_ = loginScreen;
+    current_user_ = current_user;
     ui_->setupUi(this);
 }
 
@@ -39,7 +41,7 @@ void SignUpScreen::on_signButton_clicked()
         }
 
         f->createUser(nickname_2, name, password_2, birth_date, type);
-        backScreen_->show();
+        back_screen_->show();
         this->close();
     }
     else{
@@ -51,7 +53,7 @@ void SignUpScreen::on_signButton_clicked()
 
 void SignUpScreen::on_backButton_clicked()
 {
-    backScreen_->show();
+    back_screen_->show();
     this->close();
 }
 

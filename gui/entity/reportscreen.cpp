@@ -1,13 +1,15 @@
 #include "reportscreen.h"
 #include "ui_reportscreen.h"
 
-ReportScreen::ReportScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+ReportScreen::ReportScreen(QWidget *parent, QWidget* backScreen, QWidget* loginScreen, Farm* f, std::string current_user) :
     QDialog(parent),
     ui(new Ui::ReportScreen)
 {
     setFixedSize(900, 600);
     farm_ = f;
-    this-> backScreen_ = backScreen;
+    back_screen_ = backScreen;
+    login_screen_ = loginScreen;
+    current_user_ = current_user;
     ui->setupUi(this);
 }
 
@@ -24,7 +26,7 @@ void ReportScreen::on_okButton_clicked()
 
 void ReportScreen::on_backButton_clicked()
 {
-    backScreen_->show();
+    back_screen_->show();
     this->close();
 }
 
