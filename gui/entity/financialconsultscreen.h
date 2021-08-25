@@ -9,9 +9,9 @@
 #include <QDialog>
 #include "financialmanagementscreen.h"
 
-//! Screen FinancialConsult
 /**
-* This screen that represents the financial consult.
+ * \brief
+ * This screen that represents cattle consults.
 */
 namespace Ui {
 class FinancialConsultScreen;
