@@ -49,11 +49,6 @@ void SignUpScreen::on_signButton_clicked()
     }
 }
 
-void SignUpScreen::on_dateEdit_userDateChanged(const QDate &date)
-{
-
-}
-
 void SignUpScreen::on_backButton_clicked()
 {
     backScreen_->show();

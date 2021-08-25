@@ -24,6 +24,9 @@ class HomeScreen : public QDialog
     Q_OBJECT
     friend class TestHomeScreenGUI;
 public:
+    /*!
+        This is the default constructor for the Screen Home.
+    */
     HomeScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, Farm* f = nullptr);
 
     /*!
@@ -48,10 +51,13 @@ private slots:
     void on_financialButton_clicked();
 
     /*!
-        Function that close the program.
+        Function that logout of the program.
     */
     void on_logoutButton_clicked();
 
+    /*!
+        Function that redirects to the user management screen.
+    */
     void on_userButton_clicked();
 
 private:

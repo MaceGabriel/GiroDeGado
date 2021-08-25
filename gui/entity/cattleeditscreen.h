@@ -9,9 +9,10 @@
 #include <QDialog>
 #include "cattlemanagementscreen.h"
 
-//! Screen CattleEdit
+
 /**
-* This screen that represents the cattle edition.
+ * \brief
+ * This screen that represents the cattle edition.
 */
 namespace Ui {
 class CattleEditScreen;

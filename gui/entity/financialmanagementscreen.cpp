@@ -2,6 +2,7 @@
 #include "financialrecordscreen.h"
 #include "financialconsultscreen.h"
 #include "financialremovescreen.h"
+#include "reportscreen.h"
 #include "ui_financialmanagementscreen.h"
 
 FinancialManagementScreen::FinancialManagementScreen(QWidget *parent, QWidget *backScreen, Farm* f) :
@@ -48,7 +49,9 @@ void FinancialManagementScreen::on_removeButton_clicked()
 
 void FinancialManagementScreen::on_reportButton_clicked()
 {
-
+    ReportScreen* report = new ReportScreen(nullptr, this, getFarm());
+    this->hide();
+    report->show();
 }
 
 Farm* FinancialManagementScreen::getFarm()

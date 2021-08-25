@@ -5,8 +5,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++11
 #Cada um cria o seu proprio path
 #LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui/bin/debug/debug) #Marcus
-#LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui/bin/debug/debug) #Mace
-LIBS += -L$$quote(C:/Programas/git/GiroDeGado/gui/bin/debug/debug) #Carlos
+LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui/bin/debug/debug) #Mace
+#LIBS += -L$$quote(C:/Programas/git/GiroDeGado/gui/bin/debug/debug) #Carlos
 LIBS += -l$$quote(api)
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -27,6 +27,7 @@ SOURCES += \
     entity/financialremovescreen.cpp \
     entity/homescreen.cpp \
     entity/loginscreen.cpp \
+    entity/reportscreen.cpp \
     entity/signupscreen.cpp \
     entity/userqueryscreen.cpp \
     entity/userremovescreen.cpp \
@@ -58,6 +59,7 @@ HEADERS += \
     entity/financialremovescreen.h \
     entity/homescreen.h \
     entity/loginscreen.h \
+    entity/reportscreen.h \
     entity/signupscreen.h \
     entity/userqueryscreen.h \
     entity/userremovescreen.h \
@@ -79,6 +81,7 @@ FORMS += \
     views/financialremovescreen.ui \
     views/homescreen.ui \
     views/loginscreen.ui \
+    views/reportscreen.ui \
     views/userqueryscreen.ui \
     views/userremovescreen.ui \
     views/usereditscreen.ui \    
