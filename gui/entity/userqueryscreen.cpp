@@ -1,13 +1,15 @@
 #include "userqueryscreen.h"
 #include "ui_userqueryscreen.h"
 
-UserQueryScreen::UserQueryScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+UserQueryScreen::UserQueryScreen(QWidget *parent, QWidget* backScreen, QWidget* loginScreen, Farm* f, std::string current_user) :
     QDialog(parent),
     ui_(new Ui::UserQueryScreen)
 {
     setFixedSize(900, 600);
     farm_ = f;
-    this->backScreen_ = backScreen;
+    back_screen_ = backScreen;
+    login_screen_ = loginScreen;
+    current_user_ = current_user;
     ui_->setupUi(this);
 }
 
@@ -47,7 +49,7 @@ void UserQueryScreen::on_okButton_clicked()
 void UserQueryScreen::on_backButton_clicked()
 {
     this->close();
-    backScreen_->show();
+    back_screen_->show();
 }
 
 Farm* UserQueryScreen::getFarm()

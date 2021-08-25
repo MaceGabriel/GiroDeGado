@@ -24,7 +24,7 @@ public:
     /*!
         This is the default constructor for the Screen UserQueryScreen.
     */
-    explicit UserQueryScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, Farm* f = nullptr);
+    explicit UserQueryScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, QWidget* loginScreen = nullptr, Farm* f = nullptr, std::string current_user = "");
     /*!
         This is the default destructor for the Screen UserQueryScreen.
     */
@@ -47,8 +47,10 @@ private slots:
 
 private:
     Ui::UserQueryScreen *ui_; /*!< This attribute contains the ui for the UserQueryScreen. */
-    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    QWidget* back_screen_; /*!< This attribute contains the reference of the back screen. */
+    QWidget* login_screen_; /*!< This attribute contains the reference of the login screen. */
     Farm* farm_;/*!< This attribute contains the the Farm. */
+    std::string current_user_; /*!< The nickname of the current user. */
 };
 
 #endif // USERQUERYSCREEN_H

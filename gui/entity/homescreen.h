@@ -7,6 +7,8 @@
 #define HOMESCREEN_H
 
 #include <QDialog>
+#include <QMessageBox>
+#include <iostream>
 #include <string>
 #include "../../api/includes/farm.h"
 
@@ -27,7 +29,7 @@ public:
     /*!
         This is the default constructor for the Screen Home.
     */
-    HomeScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, Farm* f = nullptr);
+    HomeScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, QWidget* loginScreen = nullptr, Farm* f = nullptr, std::string current_user = "");
 
     /*!
         This is the default destructor for the Screen Home.
@@ -62,7 +64,9 @@ private slots:
 
 private:
     Ui::HomeScreen *ui_; /*!< This attribute contains the ui for the Home. */
-    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    QWidget* back_screen_; /*!< This attribute contains the reference of the back screen. */
+    QWidget* login_screen_; /*!< This attribute contains the reference of the login screen. */
     Farm* farm_; /*!< This attribute contains the the Farm. */
+    std::string current_user_; /*!< The nickname of the current user. */
 };
 #endif // HOMESCREEN_H

@@ -1,13 +1,15 @@
 #include "financialrecordscreen.h"
 #include "ui_financialrecordscreen.h"
 
-FinancialRecordScreen::FinancialRecordScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+FinancialRecordScreen::FinancialRecordScreen(QWidget *parent, QWidget* backScreen, QWidget* loginScreen, Farm* f, std::string current_user) :
     QDialog(parent),
     ui_(new Ui::FinancialRecordScreen)
 {
     setFixedSize(900, 600);
     farm_ = f;
-    this->backScreen_ = backScreen;
+    back_screen_ = backScreen;
+    login_screen_ = loginScreen;
+    current_user_ = current_user;
     ui_->setupUi(this);
 
     int number = farm_->getLastNumberAvailable();
@@ -23,7 +25,7 @@ FinancialRecordScreen::~FinancialRecordScreen()
 
 void FinancialRecordScreen::on_backButton_clicked()
 {
-    backScreen_->show();
+    back_screen_->show();
     this->close();
 }
 
@@ -46,7 +48,7 @@ void FinancialRecordScreen::on_registerButton_clicked()
     if(price_2 != 0){
         Farm* f = getFarm();
         f->createTransaction(number, price_2, description_2, date_2, earring_2);
-        backScreen_->show();
+        back_screen_->show();
         this->close();
     }
     else{

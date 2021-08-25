@@ -1,13 +1,15 @@
 #include "userremovescreen.h"
 #include "ui_userremovescreen.h"
 
-UserRemoveScreen::UserRemoveScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+UserRemoveScreen::UserRemoveScreen(QWidget *parent, QWidget* backScreen, QWidget* loginScreen, Farm* f, std::string current_user) :
     QDialog(parent),
     ui_(new Ui::UserRemoveScreen)
 {
     setFixedSize(900, 600);
     farm_ = f;
-    this-> backScreen_ = backScreen;
+    back_screen_ = backScreen;
+    login_screen_ = loginScreen;
+    current_user_ = current_user;
     ui_->setupUi(this);
 }
 
@@ -54,16 +56,45 @@ void UserRemoveScreen::on_removeButton_clicked()
     QString type = ui_->userRemoveTable->item(0,0)->text();
 
     if(nickname != "" && type != "INVALIDO" && type != ""){
-        f->deleteUser(nickname);
 
-        backScreen_->show();
-        this->close();
+        // Last admin can't be deleted
+        f->queryExec("select * from users where type='Administrador'");
+        int count = 0;
+        if(f->queryFirst()){
+            count++;
+            while(f->queryNext()){
+                count++;
+            }
+        }
+
+        if(count == 1 && type != QString::fromStdString("Administrador")){
+            QMessageBox msg = QMessageBox(msg.Warning, "Aviso: Ultimo Administrador restante",
+            QString("O usuario a ser excluido e o ultimo administrador do sistema, e portanto, nao pode ser excluido."));
+            msg.setStandardButtons(msg.Ok);
+            msg.exec();
+        }
+        else{
+            f->deleteUser(nickname);
+
+            // Admin is deleting itself
+            if(nickname == current_user_){
+                login_screen_->show();
+                this->close();
+            }
+            // Admin is deleting another user
+            else{
+                back_screen_->show();
+                this->close();
+            }
+        }
+
     }
+
 }
 
 void UserRemoveScreen::on_backButton_clicked()
 {
-    backScreen_->show();
+    back_screen_->show();
     this->close();
 }
 

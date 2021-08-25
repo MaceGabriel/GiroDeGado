@@ -7,8 +7,8 @@
 #define LOGINSCREEN_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 #include "../../api/includes/farm.h"
-
 
 /**
  * \brief
