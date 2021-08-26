@@ -22,8 +22,11 @@ void ReportScreen::on_okButton_clicked()
 {
     Farm* f = getFarm();
 
-    QString begin_date = ui_->dateIntervalB->text();
-    QString end_date = ui_->dateIntervalE->text();
+    std::string begin = ui_->dateIntervalB->text().toUtf8().constData();
+    std::string end = ui_->dateIntervalE->text().toUtf8().constData();
+
+    QString begin_date = QString::fromStdString(begin);
+    QString end_date = QString::fromStdString(end);
 
     auto table = ui_->reportTable;
     table->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -42,7 +45,7 @@ void ReportScreen::on_okButton_clicked()
     int earningsCount = 0;
     int spendingCount = 0;
 
-    f->queryExec("select * from financial where date>='"+begin_date+"'and date <="+end_date+"'");
+    f->queryExec("select * from financial where date>='"+begin_date+"'and date<='"+end_date+"'");
     QString value;
     QString cattle_earring;
     QString descricao;
@@ -85,6 +88,7 @@ void ReportScreen::on_okButton_clicked()
 
     ui_->labelValueAverageEarnings->setText("R$ "+QString::number(totalEarnings/earningsCount));
     ui_->labelValueAverageSpending->setText("R$ "+QString::number(totalSpending/spendingCount));
+
 }
 
 

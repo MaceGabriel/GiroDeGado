@@ -7,6 +7,7 @@
 #define REPORTSCREEN_H
 
 #include <QDialog>
+#include <iostream>
 #include "../../api/includes/farm.h"
 
 /**
