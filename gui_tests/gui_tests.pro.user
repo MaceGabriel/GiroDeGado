@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.15.2, 2021-08-25T21:15:47. -->
+<!-- Written by QtCreator 4.15.2, 2021-08-26T20:13:58. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -68,12 +68,12 @@
     <value type="bool" key="AutoTest.Framework.QtTest">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="AutoTest.CheckStates">
-    <value type="Qt::CheckState" key="1@C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/test/unit/financial_remove_unit_test.cpp:Botao de Voltar">Checked</value>
-    <value type="Qt::CheckState" key="1@C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/test/unit/financial_remove_unit_test.cpp:Remocao correta">Checked</value>
-    <value type="Qt::CheckState" key="1@C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/test/unit/financial_remove_unit_test.cpp:TestFinancialRemoveScreenGUI">Checked</value>
-    <value type="Qt::CheckState" key="1@C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/test/unit/financial_remove_unit_test.cpp:casoDeUsoPrincipal">Checked</value>
-    <value type="Qt::CheckState" key="1@C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/test/unit/financial_remove_unit_test.cpp:casoDeUsoPrincipal_data">Unchecked</value>
-    <value type="Qt::CheckState" key="1@C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/test/unit/financial_remove_unit_test.cpp:timeOut">Checked</value>
+    <value type="Qt::CheckState" key="1@C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/test/unit/user_remove_unit_test.cpp:Botao de Voltar">Checked</value>
+    <value type="Qt::CheckState" key="1@C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/test/unit/user_remove_unit_test.cpp:Remocao correta">Checked</value>
+    <value type="Qt::CheckState" key="1@C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/test/unit/user_remove_unit_test.cpp:TestUserRemoveScreenGUI">Checked</value>
+    <value type="Qt::CheckState" key="1@C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/test/unit/user_remove_unit_test.cpp:casoDeUsoPrincipal">Checked</value>
+    <value type="Qt::CheckState" key="1@C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/test/unit/user_remove_unit_test.cpp:casoDeUsoPrincipal_data">Unchecked</value>
+    <value type="Qt::CheckState" key="1@C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/test/unit/user_remove_unit_test.cpp:timeOut">Checked</value>
    </valuemap>
    <value type="int" key="AutoTest.RunAfterBuild">0</value>
    <value type="bool" key="AutoTest.UseGlobal">true</value>

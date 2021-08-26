@@ -3,8 +3,8 @@ QT       += core gui widgets testlib sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
-LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui_tests/bin/debug/debug) #Mace
-#LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/debug/debug) #Marcus
+#LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui_tests/bin/debug/debug) #Mace
+LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/debug/debug) #Marcus
 #LIBS += -L$$quote(C:/Programas/git/GiroDeGado/gui/bin/debug/debug) #Carlos
 LIBS += -l$$quote(api)
 
@@ -46,6 +46,7 @@ SOURCES += \
     test/unit/financial_remove_unit_test.cpp \
     test/unit/home_unit_test.cpp \
     test/unit/login_unit_test.cpp \
+    test/unit/report_unit_test.cpp \
     test/unit/signup_unit_test.cpp \
     test/unit/user_consult_unit_test.cpp \
     test/unit/user_edit_unit_test.cpp \

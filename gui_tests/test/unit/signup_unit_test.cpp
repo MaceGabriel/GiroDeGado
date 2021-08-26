@@ -88,9 +88,8 @@ void TestSignUpScreenGUI::casoDeUsoPrincipal(){
     QTest::mouseClick(Botao, Qt::LeftButton);
 
     QString user = d->ui_->dateEdit->text();
-    std::cout<<user.toStdString()<<std::endl;
-    /*QCOMPARE(d->farm_->getUserNickname(user.to), User);*/
-
+    //std::cout<<user.toStdString()<<std::endl;
+    //QCOMPARE(d->farm_->getUserNickname(user.to), User);
 
 }
 

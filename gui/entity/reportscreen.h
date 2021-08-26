@@ -20,6 +20,7 @@ class ReportScreen;
 class ReportScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestReportScreenGUI;
 
 public:
     /*!
