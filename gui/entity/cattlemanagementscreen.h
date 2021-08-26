@@ -8,7 +8,7 @@
 #define CATTLEMANAGEMENTSCREEN_H
 
 #include <QDialog>
-#include "homescreen.h"
+#include "../../api/includes/farm.h"
 
 /** 
  * \brief

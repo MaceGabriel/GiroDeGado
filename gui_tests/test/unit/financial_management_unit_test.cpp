@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "../../../gui/entity/financialmanagementscreen.h"
+#include "../../../gui/entity/homescreen.h"
 #include "ui_financialmanagementscreen.h"
 
 // TESTE UNITARIO COMPORTAMENTAL (funcionalidade + transicoes)
@@ -31,7 +32,7 @@ private:
 
  TestFinancialManagementScreenGUI::TestFinancialManagementScreenGUI(QWidget *parent, Farm* f):QObject(parent){
     d.farm_ = f;
-    d.backScreen_ = new HomeScreen();
+    d.back_screen_ = new HomeScreen();
 }
 
 void TestFinancialManagementScreenGUI::casoDeUsoPrincipal_data(){
@@ -63,6 +64,7 @@ void TestFinancialManagementScreenGUI::casoDeUsoPrincipal(){
 
     QTest::mouseClick(botao, Qt::LeftButton);
 
+    QCOMPARE(d.isVisible(), false);
 }
 
 void TestFinancialManagementScreenGUI::timeOut(){

@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "../../../gui/entity/cattleeditscreen.h"
+#include "../../../gui/entity/cattlemanagementscreen.h"
 #include "../ui_cattleeditscreen.h"
 
 // TESTE UNITARIO COMPORTAMENTAL (funcionalidade + transicoes)
@@ -31,7 +32,7 @@ private:
 
 TestCattleEditScreenGUI::TestCattleEditScreenGUI(QWidget *parent, Farm* f):QObject(parent){
     d.farm_ = f;
-    d.backScreen_ = new CattleManagementScreen();
+    d.back_screen_ = new CattleManagementScreen();
 }
 
 void TestCattleEditScreenGUI::casoDeUsoPrincipal_data(){
@@ -48,7 +49,7 @@ void TestCattleEditScreenGUI::casoDeUsoPrincipal_data(){
 
     // SAIDA
     QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton << "" << "" << "" << "" << "" << "" << "";
-    QTest::newRow("Edicao correta") << "20" << d.ui_->okButton << "Brangus" << "10/10/20" << "10/10/10" << "1" << "2" << "200" << "10000";
+    QTest::newRow("Edicao correta") << "1" << d.ui_->okButton << "Brangus" << "10/10/20" << "10/10/10" << "1" << "2" << "200" << "10000";
 }
 
 void TestCattleEditScreenGUI::casoDeUsoPrincipal(){

@@ -19,6 +19,7 @@ class UserQueryScreen;
 class UserQueryScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestUserConsultScreenGUI;
 
 public:
     /*!

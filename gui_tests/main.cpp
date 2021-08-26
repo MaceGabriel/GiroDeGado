@@ -10,6 +10,12 @@
 #include "test/unit/financial_record_unit_test.cpp"
 #include "test/unit/financial_consult_unit_test.cpp"
 #include "test/unit/financial_remove_unit_test.cpp"
+#include "test/unit/login_unit_test.cpp"
+#include "test/unit/user_management_unit_test.cpp"
+#include "test/unit/signup_unit_test.cpp"
+#include "test/unit/user_consult_unit_test.cpp"
+#include "test/unit/user_edit_unit_test.cpp"
+#include "test/unit/user_remove_unit_test.cpp"
 
 #include <QtSql/QtSql>
 #include <QApplication>
@@ -27,9 +33,16 @@ int main(int argc, char *argv[])
     bancoDeDados.setDatabaseName(path_test);
     bancoDeDados.open();
 
-    //Teste para a tela Home
+    f->createUser("admin", "ADM", "123", "04/08/1999", "Administrador");
+
     QApplication a(argc, argv);
-    TestHomeScreenGUI home;
+
+    //Teste para a tela Login - FAZER
+    TestLoginScreenGUI login(nullptr, f);
+    QTest::qExec(&login);
+
+    //Teste para a tela Home    
+    TestHomeScreenGUI home(nullptr,f);
     QTest::qExec(&home);
 
     //Teste para a tela de Gerencia de Gado
@@ -75,6 +88,30 @@ int main(int argc, char *argv[])
     //Teste unitário da tela de Exclusao Financeira
     TestFinancialRemoveScreenGUI finanRemo(nullptr,f);
     QTest::qExec(&finanRemo);
+
+    //Teste unitário da tela de Gerencia de Usuarios
+    TestUserManagementScreenGUI userManag(nullptr,f);
+    QTest::qExec(&userManag);
+
+    //Teste unitário da tela de Cadastro de Usuarios
+    TestSignUpScreenGUI userSignUp(nullptr,f);
+    QTest::qExec(&userSignUp);
+
+    //Teste unitário da tela de Consulta de Usuarios
+    TestUserConsultScreenGUI userConsu(nullptr,f);
+    QTest::qExec(&userConsu);
+
+    //Teste para a tela de Edicao de Usuarios - FAZER
+    TestUserEditScreenGUI userEdit(nullptr,f);
+    QTest::qExec(&userEdit);
+
+    //Teste unitário da tela de Exclusao de Usuarios
+    TestUserRemoveScreenGUI userRemo(nullptr,f);
+    QTest::qExec(&userRemo);
+
+    f->queryExec("delete from cattle");
+    f->queryExec("delete from transaction");
+    f->queryExec("delete from user");
 
     bancoDeDados.close();
 

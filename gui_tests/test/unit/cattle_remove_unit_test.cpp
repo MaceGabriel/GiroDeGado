@@ -7,6 +7,7 @@
 #include <iostream>
 
 #include "../../../gui/entity/cattleremovescreen.h"
+#include "../../../gui/entity/cattlemanagementscreen.h"
 #include "../ui_cattleremovescreen.h"
 
 // TESTE UNITARIO COMPORTAMENTAL (funcionalidade + transicoes)
@@ -32,7 +33,7 @@ private:
 
 TestCattleRemoveScreenGUI::TestCattleRemoveScreenGUI(QWidget *parent, Farm* f):QObject(parent){
     d.farm_ = f;
-    d.backScreen_ = new CattleManagementScreen();
+    d.back_screen_ = new CattleManagementScreen();
 }
 
 void TestCattleRemoveScreenGUI::casoDeUsoPrincipal_data(){

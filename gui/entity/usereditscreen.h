@@ -19,6 +19,7 @@ class UserEditScreen;
 class UserEditScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestUserEditScreenGUI;
 
 public:
     /*!
