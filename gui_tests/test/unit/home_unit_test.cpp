@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "../../../gui/entity/homescreen.h"
+#include "../../../gui/entity/loginscreen.h"
 #include "../ui_homescreen.h"
 
 // TESTE UNITARIO COMPORTAMENTAL (funcionalidade + transicoes)
@@ -13,6 +14,8 @@ class TestHomeScreenGUI: public QObject
 {
     Q_OBJECT
 
+public:
+    explicit TestHomeScreenGUI(QWidget *parent = nullptr, Farm* f = nullptr);
 
 private slots:
 
@@ -27,6 +30,11 @@ private:
     //bool dialogoAberto;
 };
 
+TestHomeScreenGUI::TestHomeScreenGUI(QWidget *parent, Farm* f):QObject(parent){
+    d.farm_ = f;
+    d.back_screen_ = new LoginScreen(parent, f);
+}
+
 void TestHomeScreenGUI::casoDeUsoPrincipal_data(){
 
     // ENTRADA
@@ -35,7 +43,8 @@ void TestHomeScreenGUI::casoDeUsoPrincipal_data(){
     // SAIDA
     QTest::newRow("Botao de Gado") << d.ui_->cattleButton;
     QTest::newRow("Botao de Financeiro") << d.ui_->financialButton;
-    QTest::newRow("Botao de Saida") << d.ui_->exitButton;
+    //QTest::newRow("Botao de Usuario") << d.ui_->userButton;
+    //QTest::newRow("Botao de Saida") << d.ui_->logoutButton;
 
 }
 
@@ -48,7 +57,8 @@ void TestHomeScreenGUI::casoDeUsoPrincipal(){
         QVERIFY2(d.ui_->label, "Campo não buildado");
         QVERIFY2(d.ui_->cattleButton, "Campo não buildado");
         QVERIFY2(d.ui_->financialButton, "Campo não buildado");
-        QVERIFY2(d.ui_->exitButton, "Campo não buildado");
+        QVERIFY2(d.ui_->userButton, "Campo não buildado");
+        QVERIFY2(d.ui_->logoutButton, "Campo não buildado");
 
 
         QTest::mouseClick(botao, Qt::LeftButton);
@@ -60,7 +70,7 @@ void TestHomeScreenGUI::timeOut(){
     // Verificar e fechar message box
     QWidgetList allToplevelWidgets = QApplication::topLevelWidgets();
     foreach (QWidget *w, allToplevelWidgets) {
-        if (w->inherits("QDialog")) {
+        if (w->inherits("QDialog") && w != &d) {
             QDialog *mb = qobject_cast<QDialog*>(w);
             QTest::keyClick(mb, Qt::Key_Escape);
         }

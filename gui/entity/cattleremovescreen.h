@@ -7,7 +7,7 @@
 #define CATTLEREMOVESCREEN_H
 
 #include <QDialog>
-#include "cattlemanagementscreen.h"
+#include "../../api/includes/farm.h"
 
 /** 
  * \brief

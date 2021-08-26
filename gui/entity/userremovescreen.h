@@ -20,6 +20,7 @@ class UserRemoveScreen;
 class UserRemoveScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestUserRemoveScreenGUI;
 
 public:
     /*!

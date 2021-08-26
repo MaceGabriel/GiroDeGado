@@ -20,6 +20,7 @@ class UserManagementScreen;
 class UserManagementScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestUserManagementScreenGUI;
 
 public:
     /*!

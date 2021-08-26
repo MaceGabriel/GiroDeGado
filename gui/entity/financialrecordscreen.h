@@ -7,7 +7,7 @@
 #define FINANCIALRECORDSCREEN_H
 
 #include <QDialog>
-#include "financialmanagementscreen.h"
+#include "../../api/includes/farm.h"
 
 /** 
  * \brief

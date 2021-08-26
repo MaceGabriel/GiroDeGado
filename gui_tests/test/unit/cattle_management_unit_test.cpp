@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "../../../gui/entity/cattlemanagementscreen.h"
+#include "../../../gui/entity/homescreen.h"
 #include "../ui_cattlemanagementscreen.h"
 
 // TESTE UNITARIO COMPORTAMENTAL (funcionalidade + transicoes)
@@ -31,7 +32,7 @@ private:
 
 TestCattleManagementScreenGUI::TestCattleManagementScreenGUI(QWidget *parent, Farm* f):QObject(parent){
     d.farm_ = f;
-    d.backScreen_ = new HomeScreen();
+    d.back_screen_ = new HomeScreen();
 }
 
 void TestCattleManagementScreenGUI::casoDeUsoPrincipal_data(){
@@ -62,6 +63,7 @@ void TestCattleManagementScreenGUI::casoDeUsoPrincipal(){
 
     QTest::mouseClick(botao, Qt::LeftButton);
 
+    QCOMPARE(d.isVisible(),false);
 }
 
 void TestCattleManagementScreenGUI::timeOut(){

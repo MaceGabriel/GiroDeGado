@@ -7,6 +7,7 @@
 #include <iostream>
 
 #include "../../../gui/entity/financialrecordscreen.h"
+#include "../../../gui/entity/financialmanagementscreen.h"
 #include "../ui_financialrecordscreen.h"
 
 // TESTE UNITARIO COMPORTAMENTAL (funcionalidade + transicoes)
@@ -31,7 +32,7 @@ private:
 };
 
 TestFinancialRecordScreenGUI::TestFinancialRecordScreenGUI(QWidget *parent, Farm* f):QObject(parent){
-    d = new FinancialRecordScreen(nullptr,new FinancialManagementScreen(),f);
+    d = new FinancialRecordScreen(parent, new FinancialManagementScreen(), nullptr, f, "");
 }
 
 void TestFinancialRecordScreenGUI::casoDeUsoPrincipal_data(){

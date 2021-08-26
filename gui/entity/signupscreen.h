@@ -19,6 +19,7 @@ class SignUpScreen;
 class SignUpScreen : public QDialog
 {
     Q_OBJECT
+    friend class TestSignUpScreenGUI;
 
 public:
     /*!
