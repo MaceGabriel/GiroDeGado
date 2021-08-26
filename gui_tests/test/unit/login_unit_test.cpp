@@ -35,63 +35,44 @@ TestLoginScreenGUI::TestLoginScreenGUI(QWidget* parent, Farm* f):QObject(parent)
 }
 
 void TestLoginScreenGUI::casoDeUsoPrincipal_data(){
-    /*
+
 
     // ENTRADA
-    QTest::addColumn<QString>("Raca");
-    QTest::addColumn<QString>("DataA");
-    QTest::addColumn<QString>("DataB");
-    QTest::addColumn<QString>("Peso");
-    QTest::addColumn<QString>("Valor");
-    QTest::addColumn<QPushButton*>("Botao");
-
+    QTest::addColumn<QString>("User");
+    QTest::addColumn<QString>("Password");
+    QTest::addColumn<QPushButton*>("Button");
     // SAIDA
-    QTest::newRow("Botao de Voltar") << "" << "" << "" << "" << "" << d->ui_->backButton;
-    QTest::newRow("Registro correto") << "Brangus" << "10/10/20" << "10/10/10" << "200" << "10000" << d->ui_->registerButton;
-    */
+
+    QTest::newRow("login correto") << "admin" << "123" << d->ui_->loginButton;
+    QTest::newRow("login errado")  << "Hello" << "HELLO" << d->ui_->loginButton;
+    QTest::newRow("botão sair") << "" << "" << d->ui_->exitButton;
 
 }
 
 void TestLoginScreenGUI::casoDeUsoPrincipal(){
-    /*
 
-    QFETCH(QString, Raca);
-    QFETCH(QString, DataA);
-    QFETCH(QString, DataB);
-    QFETCH(QString, Peso);
-    QFETCH(QString, Valor);
-    QFETCH(QPushButton*, Botao);
+
+    QFETCH(QString, User);
+    QFETCH(QString, Password);
+    QFETCH(QPushButton*, Button);
 
     QTimer::singleShot(500, this, SLOT(timeOut()));
 
     // Verifica se os componentes da tela estao sendo buildados corretamente.
     QVERIFY2(d->ui_->labelTitle, "Campo não buildado");
-    QVERIFY2(d->ui_->labelEarring, "Campo não buildado");
-    QVERIFY2(d->ui_->labelCattleEarring, "Campo não buildado");
-    QVERIFY2(d->ui_->labelBreed, "Campo não buildado");
-    QVERIFY2(d->ui_->inputBreed, "Campo não buildado");
-    QVERIFY2(d->ui_->labelDateA, "Campo não buildado");
-    QVERIFY2(d->ui_->inputDateA, "Campo não buildado");
-    QVERIFY2(d->ui_->labelDateB, "Campo não buildado");
-    QVERIFY2(d->ui_->inputDateB, "Campo não buildado");
-    QVERIFY2(d->ui_->labelWeight, "Campo não buildado");
-    QVERIFY2(d->ui_->inputWeight, "Campo não buildado");
-    QVERIFY2(d->ui_->labelPrice, "Campo não buildado");
-    QVERIFY2(d->ui_->inputPrice, "Campo não buildado");
-    QVERIFY2(d->ui_->registerButton, "Campo não buildado");
-    QVERIFY2(d->ui_->backButton, "Campo não buildado");
+    QVERIFY2(d->ui_->labelUser, "Campo não buildado");
+    QVERIFY2(d->ui_->inputUser, "Campo não buildado");
+    QVERIFY2(d->ui_->labelPassword, "Campo não buildado");
+    QVERIFY2(d->ui_->inputPassword, "Campo não buildado");
+    QVERIFY2(d->ui_->loginButton, "Campo não buildado");
+    QVERIFY2(d->ui_->exitButton, "Campo não buildado");
 
-    QTest::keyClicks(d->ui_->inputBreed, Raca);
-    QTest::keyClicks(d->ui_->inputDateA, DataA);
-    QTest::keyClicks(d->ui_->inputDateB, DataB);
-    QTest::keyClicks(d->ui_->inputWeight, Peso);
-    QTest::keyClicks(d->ui_->inputPrice, Valor);
-    QTest::mouseClick(Botao, Qt::LeftButton);
+    QTest::keyClicks(d->ui_->inputUser, User);
+    QTest::keyClicks(d->ui_->inputPassword, Password);
+    QTest::mouseClick(Button, Qt::LeftButton);
 
-    QString earring = d->ui_->labelCattleEarring->text();
-    earring.remove(0,1);
-    QCOMPARE(d->farm_->getCattleBreed(earring.toInt()), Raca);
-    */
+    QCOMPARE(d->isVisible(),false);
+
 
 }
 

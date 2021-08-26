@@ -37,9 +37,9 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
 
-//    //Teste para a tela Login - FAZER
-//    TestLoginScreenGUI login;
-//    QTest::qExec(&login);
+    //Teste para a tela Login - FAZER
+    TestLoginScreenGUI login(nullptr, f);
+    QTest::qExec(&login);
 
     //Teste para a tela Home    
     TestHomeScreenGUI home(nullptr,f);
@@ -89,25 +89,29 @@ int main(int argc, char *argv[])
     TestFinancialRemoveScreenGUI finanRemo(nullptr,f);
     QTest::qExec(&finanRemo);
 
-//    //Teste unitário da tela de Gerencia de Usuarios
-//    TestUserManagementScreenGUI userManag(nullptr,f);
-//    QTest::qExec(&userManag);
+    //Teste unitário da tela de Gerencia de Usuarios
+    TestUserManagementScreenGUI userManag(nullptr,f);
+    QTest::qExec(&userManag);
 
-//    //Teste unitário da tela de Cadastro de Usuarios
-//    TestSignUpScreenGUI userSignUp(nullptr,f);
-//    QTest::qExec(&userSignUp);
+    //Teste unitário da tela de Cadastro de Usuarios
+    TestSignUpScreenGUI userSignUp(nullptr,f);
+    QTest::qExec(&userSignUp);
 
-//    //Teste unitário da tela de Consulta de Usuarios
-//    TestUserConsultScreenGUI userConsu(nullptr,f);
-//    QTest::qExec(&userConsu);
+    //Teste unitário da tela de Consulta de Usuarios
+    TestUserConsultScreenGUI userConsu(nullptr,f);
+    QTest::qExec(&userConsu);
 
-//    //Teste para a tela de Edicao de Usuarios - FAZER
-//    TestUserEditScreenGUI userEdit(nullptr,f);
-//    QTest::qExec(&userEdit);
+    //Teste para a tela de Edicao de Usuarios - FAZER
+    TestUserEditScreenGUI userEdit(nullptr,f);
+    QTest::qExec(&userEdit);
 
-//    //Teste unitário da tela de Exclusao de Usuarios
-//    TestUserRemoveScreenGUI userRemo(nullptr,f);
-//    QTest::qExec(&userRemo);
+    //Teste unitário da tela de Exclusao de Usuarios
+    TestUserRemoveScreenGUI userRemo(nullptr,f);
+    QTest::qExec(&userRemo);
+
+    f->queryExec("delete from cattle");
+    f->queryExec("delete from transaction");
+    f->queryExec("delete from user");
 
     bancoDeDados.close();
 

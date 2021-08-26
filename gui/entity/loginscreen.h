@@ -20,6 +20,7 @@ QT_END_NAMESPACE
 class LoginScreen : public QMainWindow
 {
     Q_OBJECT
+    friend class TestLoginScreenGUI;
 
 public:
     /*!

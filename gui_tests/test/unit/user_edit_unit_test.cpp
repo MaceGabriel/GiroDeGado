@@ -38,75 +38,67 @@ TestUserEditScreenGUI::TestUserEditScreenGUI(QWidget *parent, Farm* f):QObject(p
 }
 
 void TestUserEditScreenGUI::casoDeUsoPrincipal_data(){
-    /*
+
     // ENTRADA
-    QTest::addColumn<QString>("Brinco");
-    QTest::addColumn<QPushButton*>("Botao");
-    QTest::addColumn<QString>("Raca");
-    QTest::addColumn<QString>("DataA");
-    QTest::addColumn<QString>("DataB");
-    QTest::addColumn<QString>("Pai");
-    QTest::addColumn<QString>("Mae");
-    QTest::addColumn<QString>("Peso");
-    QTest::addColumn<QString>("Valor");
+    QTest::addColumn<QString>("User");
+    QTest::addColumn<QPushButton*>("Button");
+    QTest::addColumn<QString>("Name");
+    QTest::addColumn<QString>("DateB");
+    //QTest::addColumn<QString>("Type");
+    QTest::addColumn<QString>("NewUser");
+    QTest::addColumn<QString>("Password");
+    QTest::addColumn<QPushButton*>("Confirm");
 
     // SAIDA
-    QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton << "" << "" << "" << "" << "" << "" << "";
-    QTest::newRow("Edicao correta") << "20" << d.ui_->okButton << "Brangus" << "10/10/20" << "10/10/10" << "1" << "2" << "200" << "10000";
-    */
+    //QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton << "" << "" << "" << "" << "" << d.ui_->backButton;
+    QTest::newRow("Edicao correta") << "user1" << d.ui_->okButton << "Mateus" << "10/10/20" << "user2" << "1234" << d.ui_->signButton;
+
 }
 
 void TestUserEditScreenGUI::casoDeUsoPrincipal(){
-    /*
 
-    QFETCH(QString, Brinco);
-    QFETCH(QPushButton*, Botao);
-    QFETCH(QString, Raca);
-    QFETCH(QString, DataA);
-    QFETCH(QString, DataB);
-    QFETCH(QString, Pai);
-    QFETCH(QString, Mae);
-    QFETCH(QString, Peso);
-    QFETCH(QString, Valor);
+
+    QFETCH(QString, User);
+    QFETCH(QPushButton*, Button);
+    QFETCH(QString, Name);
+    QFETCH(QString, DateB);
+    //QFETCH(QString, Type);
+    QFETCH(QString, NewUser);
+    QFETCH(QString, Password);
+    QFETCH(QPushButton*, Confirm);
 
     QTimer::singleShot(500, this, SLOT(timeOut()));
 
     // Verifica se os componentes da tela estao sendo buildados corretamente.
     QVERIFY2(d.ui_->labelTitle, "Campo não buildado");
-    QVERIFY2(d.ui_->labelEarring, "Campo não buildado");
-    QVERIFY2(d.ui_->inputEarring, "Campo não buildado");
+    QVERIFY2(d.ui_->labelNickname, "Campo não buildado");
+    QVERIFY2(d.ui_->inputNickname, "Campo não buildado");
     QVERIFY2(d.ui_->okButton, "Campo não buildado");
-    QVERIFY2(d.ui_->labelBreed, "Campo não buildado");
-    QVERIFY2(d.ui_->inputBreed, "Campo não buildado");
-    QVERIFY2(d.ui_->labelDateA, "Campo não buildado");
-    QVERIFY2(d.ui_->inputDateA, "Campo não buildado");
-    QVERIFY2(d.ui_->labelDateB, "Campo não buildado");
-    QVERIFY2(d.ui_->inputDateB, "Campo não buildado");
-    QVERIFY2(d.ui_->labelFather, "Campo não buildado");
-    QVERIFY2(d.ui_->inputFather, "Campo não buildado");
-    QVERIFY2(d.ui_->labelMother, "Campo não buildado");
-    QVERIFY2(d.ui_->inputMother, "Campo não buildado");
-    QVERIFY2(d.ui_->labelWeight, "Campo não buildado");
-    QVERIFY2(d.ui_->inputWeight, "Campo não buildado");
-    QVERIFY2(d.ui_->labelPrice, "Campo não buildado");
-    QVERIFY2(d.ui_->inputPrice, "Campo não buildado");
-    QVERIFY2(d.ui_->editButton, "Campo não buildado");
+    QVERIFY2(d.ui_->labelName, "Campo não buildado");
+    QVERIFY2(d.ui_->inputName, "Campo não buildado");
+    QVERIFY2(d.ui_->labelBirthDate, "Campo não buildado");
+    QVERIFY2(d.ui_->dateEdit, "Campo não buildado");
+    QVERIFY2(d.ui_->labelUserType, "Campo não buildado");
+    QVERIFY2(d.ui_->userType, "Campo não buildado");
+    QVERIFY2(d.ui_->labelNewNickname, "Campo não buildado");
+    QVERIFY2(d.ui_->inputNewNickname, "Campo não buildado");
+    QVERIFY2(d.ui_->labelPassword, "Campo não buildado");
+    QVERIFY2(d.ui_->inputPassword, "Campo não buildado");
+    QVERIFY2(d.ui_->signButton, "Campo não buildado");
     QVERIFY2(d.ui_->backButton, "Campo não buildado");
 
-    QTest::keyClicks(d.ui_->inputEarring, Brinco);
-    QTest::mouseClick(Botao, Qt::LeftButton);
-    QTest::keyClicks(d.ui_->inputBreed, Raca);
-    QTest::keyClicks(d.ui_->inputDateA, DataA);
-    QTest::keyClicks(d.ui_->inputDateB, DataB);
-    QTest::keyClicks(d.ui_->inputWeight, Pai);
-    QTest::keyClicks(d.ui_->inputPrice, Mae);
-    QTest::keyClicks(d.ui_->inputWeight, Peso);
-    QTest::keyClicks(d.ui_->inputPrice, Valor);
+    QTest::keyClicks(d.ui_->inputNickname, User);
+    QTest::mouseClick(Button, Qt::LeftButton);
+    QTest::keyClicks(d.ui_->inputName, Name);
+    QTest::keyClicks(d.ui_->dateEdit, DateB);
+    //QTest::keyClicks(d.ui_->inputDateB, DataB);
+    QTest::keyClicks(d.ui_->inputNewNickname, NewUser);
+    QTest::keyClicks(d.ui_->inputPassword, Password);
+    QTest::mouseClick(Confirm, Qt::LeftButton);
 
 
-    QString earring = d.ui_->inputEarring->text();
-    QCOMPARE(d.farm_->getCattleBreed(earring.toInt()), Raca);
-    */
+    QCOMPARE(d.farm_->getUserName(NewUser.toUtf8().toStdString()), Name);
+    //QCOMPARE(d.farm_->getUserNickname(User.toUtf8().toStdString()), "");
 }
 
 void TestUserEditScreenGUI::timeOut(){
