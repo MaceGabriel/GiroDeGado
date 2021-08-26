@@ -7,6 +7,7 @@
 #define REPORTSCREEN_H
 
 #include <QDialog>
+#include <iostream>
 #include "../../api/includes/farm.h"
 
 /**
@@ -48,7 +49,7 @@ private slots:
     void on_backButton_clicked();
 
 private:
-    Ui::ReportScreen *ui; /*!< This attribute contains the ui for the ReportScreen. */
+    Ui::ReportScreen *ui_; /*!< This attribute contains the ui for the ReportScreen. */
     QWidget* back_screen_; /*!< This attribute contains the reference of the back screen. */
     QWidget* login_screen_; /*!< This attribute contains the reference of the login screen. */
     Farm* farm_; /*!< This attribute contains the the Farm. */

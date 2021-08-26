@@ -53,7 +53,7 @@ void UserRemoveScreen::on_removeButton_clicked()
     QString nickname_q = f->getUserNickname(nickname);
     nickname = nickname_q.toUtf8().constData();
 
-    QString type = ui_->userRemoveTable->item(0,0)->text();
+    QString type = ui_->userRemoveTable->item(0,3)->text();
 
     if(nickname != "" && type != "INVALIDO" && type != ""){
 
@@ -67,7 +67,7 @@ void UserRemoveScreen::on_removeButton_clicked()
             }
         }
 
-        if(count == 1 && type != QString::fromStdString("Administrador")){
+        if(count == 1 && type == QString::fromStdString("Administrador")){
             QMessageBox msg = QMessageBox(msg.Warning, "Aviso: Ultimo Administrador restante",
             QString("O usuario a ser excluido e o ultimo administrador do sistema, e portanto, nao pode ser excluido."));
             msg.setStandardButtons(msg.Ok);
