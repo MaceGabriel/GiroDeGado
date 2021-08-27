@@ -40,32 +40,26 @@ TestUserEditScreenGUI::TestUserEditScreenGUI(QWidget *parent, Farm* f):QObject(p
 void TestUserEditScreenGUI::casoDeUsoPrincipal_data(){
 
     // ENTRADA
-    QTest::addColumn<QString>("User");
-    QTest::addColumn<QPushButton*>("Button");
-    QTest::addColumn<QString>("Name");
-    QTest::addColumn<QString>("DateB");
-    //QTest::addColumn<QString>("Type");
-    QTest::addColumn<QString>("NewUser");
-    QTest::addColumn<QString>("Password");
-    QTest::addColumn<QPushButton*>("Confirm");
+    QTest::addColumn<QString>("Usuario");
+    QTest::addColumn<QPushButton*>("Botao");
+    QTest::addColumn<QString>("Nome");
+    QTest::addColumn<QString>("DataB");
+    //QTest::addColumn<QString>("Tipo");
+    QTest::addColumn<QString>("NovoUsuario");
+    QTest::addColumn<QString>("Senha");
+    QTest::addColumn<QPushButton*>("Confirmar");
 
     // SAIDA
     //QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton << "" << "" << "" << "" << "" << d.ui_->backButton;
-    QTest::newRow("Edicao correta") << "user1" << d.ui_->okButton << "Mateus" << "10/10/20" << "user2" << "1234" << d.ui_->signButton;
+    QTest::newRow("Edicao correta") << "user1" << d.ui_->okButton << "Mateus" << "02/10/20" << "user2" << "1234" << d.ui_->signButton;
 
 }
 
 void TestUserEditScreenGUI::casoDeUsoPrincipal(){
 
 
-    QFETCH(QString, User);
-    QFETCH(QPushButton*, Button);
-    QFETCH(QString, Name);
-    QFETCH(QString, DateB);
-    //QFETCH(QString, Type);
-    QFETCH(QString, NewUser);
-    QFETCH(QString, Password);
-    QFETCH(QPushButton*, Confirm);
+    QFETCH(QString, Usuario);
+    QFETCH(QPushButton*, Botao);
 
     QTimer::singleShot(500, this, SLOT(timeOut()));
 
@@ -87,17 +81,30 @@ void TestUserEditScreenGUI::casoDeUsoPrincipal(){
     QVERIFY2(d.ui_->signButton, "Campo não buildado");
     QVERIFY2(d.ui_->backButton, "Campo não buildado");
 
-    QTest::keyClicks(d.ui_->inputNickname, User);
-    QTest::mouseClick(Button, Qt::LeftButton);
-    QTest::keyClicks(d.ui_->inputName, Name);
-    QTest::keyClicks(d.ui_->dateEdit, DateB);
+    QTest::keyClicks(d.ui_->inputNickname, Usuario);
+    QTest::mouseClick(Botao, Qt::LeftButton);
+
+    d.ui_->inputName->clear();
+    d.ui_->dateEdit->clear();
+    d.ui_->inputNewNickname->clear();
+    d.ui_->inputPassword->clear();
+
+    QFETCH(QString, Nome);
+    QFETCH(QString, DataB);
+    //QFETCH(QString, Tipo);
+    QFETCH(QString, NovoUsuario);
+    QFETCH(QString, Senha);
+
+    QFETCH(QPushButton*, Confirmar);
+    QTest::keyClicks(d.ui_->inputName, Nome);
+    QTest::keyClicks(d.ui_->dateEdit, DataB);
     //QTest::keyClicks(d.ui_->inputDateB, DataB);
-    QTest::keyClicks(d.ui_->inputNewNickname, NewUser);
-    QTest::keyClicks(d.ui_->inputPassword, Password);
-    QTest::mouseClick(Confirm, Qt::LeftButton);
+    QTest::keyClicks(d.ui_->inputNewNickname, NovoUsuario);
+    QTest::keyClicks(d.ui_->inputPassword, Senha);
+    QTest::mouseClick(Confirmar, Qt::LeftButton);
 
 
-    QCOMPARE(d.farm_->getUserName(NewUser.toUtf8().toStdString()), Name);
+    QCOMPARE(d.farm_->getUserName(NovoUsuario.toUtf8().toStdString()), Nome);
     //QCOMPARE(d.farm_->getUserNickname(User.toUtf8().toStdString()), "");
 }
 

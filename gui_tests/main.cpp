@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
     TestLoginScreenGUI login(nullptr, f);
     QTest::qExec(&login);
 
-    //Teste para a tela Home    
+    //Teste para a tela Home
     TestHomeScreenGUI home(nullptr,f);
     QTest::qExec(&home);
 
