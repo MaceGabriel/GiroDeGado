@@ -6,7 +6,10 @@
 #ifndef UNIT_USER
 #define UNIT_USER
 
+#ifndef __unix__
 #include <windows.h>
+#endif
+
 #include <assert.h>
 #include <math.h>
 #include "../../includes/userImpl.h"

@@ -6,7 +6,10 @@
 #ifndef UNIT_FARM
 #define UNIT_FARM
 
+#ifndef __unix__
 #include <windows.h>
+#endif
+
 #include <assert.h>
 #include <math.h>
 #include "../../includes/farmImpl.h"
