@@ -49,7 +49,7 @@ void TestSignUpScreenGUI::casoDeUsoPrincipal_data(){
 
     // SAIDA
     QTest::newRow("Botao de Voltar") << "" << "" << "" << "" << d->ui_->backButton;
-    QTest::newRow("Registro correto") << "Brangus" << "21/12/2001" << "user1" << "123" << d->ui_->signButton;
+    QTest::newRow("Registro correto") << "Brangus" << "01/12/2001" << "user1" << "123" << d->ui_->signButton;
 }
 
 void TestSignUpScreenGUI::casoDeUsoPrincipal(){
@@ -84,8 +84,7 @@ void TestSignUpScreenGUI::casoDeUsoPrincipal(){
     QTest::keyClicks(d->ui_->inputPassword, Senha);
     QTest::mouseClick(Botao, Qt::LeftButton);
 
-    QString user = d->ui_->dateEdit->text();
-    //std::cout<<user.toStdString()<<std::endl;
+    QString user = d->ui_->inputNickname->text();
     QCOMPARE(d->farm_->getUserNickname(user.toUtf8().constData()), Usuario);
 
 }
