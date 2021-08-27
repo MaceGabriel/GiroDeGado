@@ -1,9 +1,0 @@
-<map id="unit_farm_setFather" name="unit_farm_setFather">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,143,108"/>
-<area shape="rect" id="node2" href="$class_farm.html#a34757068bc141eb75b25eeab4a15bc47" title=" " alt="" coords="206,5,333,32"/>
-<area shape="rect" id="node5" href="$class_farm.html#a2ec0efcdcfd2b8a41771e010a2b0adf4" title=" " alt="" coords="191,56,348,83"/>
-<area shape="rect" id="node6" href="$class_farm.html#a35bcfd231cfa148a8b45c8f7ae0522d0" title=" " alt="" coords="212,107,327,133"/>
-<area shape="rect" id="node7" href="$class_farm.html#af2a72d86002abc76f87d767cdfd4a1ef" title=" " alt="" coords="212,157,327,184"/>
-<area shape="rect" id="node3" href="$class_farm_handle.html#a90e74daaf3db023f5afbe781ca80cac3" title=" " alt="" coords="396,5,563,32"/>
-<area shape="rect" id="node4" href="$class_farm_body.html#a0e6098aea46148c1cbf41feca990ab70" title=" " alt="" coords="611,5,767,32"/>
-</map>

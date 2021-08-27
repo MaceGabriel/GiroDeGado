@@ -1,9 +1,0 @@
-<map id="unit_farm_setWeight" name="unit_farm_setWeight">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,147,108"/>
-<area shape="rect" id="node2" href="$class_farm.html#a34757068bc141eb75b25eeab4a15bc47" title=" " alt="" coords="210,5,337,32"/>
-<area shape="rect" id="node5" href="$class_farm.html#a2ec0efcdcfd2b8a41771e010a2b0adf4" title=" " alt="" coords="195,56,352,83"/>
-<area shape="rect" id="node6" href="$class_farm.html#a4d6ae0a63cb6c5f22bc3e9f619e40457" title=" " alt="" coords="214,107,333,133"/>
-<area shape="rect" id="node7" href="$class_farm.html#a8342f7dc75d3b2693e434757267428cd" title=" " alt="" coords="214,157,333,184"/>
-<area shape="rect" id="node3" href="$class_farm_handle.html#a90e74daaf3db023f5afbe781ca80cac3" title=" " alt="" coords="400,5,567,32"/>
-<area shape="rect" id="node4" href="$class_farm_body.html#a0e6098aea46148c1cbf41feca990ab70" title=" " alt="" coords="615,5,771,32"/>
-</map>

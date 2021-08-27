@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['value_5f_1017',['value_',['../class_cattle_body.html#a5cb05247aa7278d5646bbd55b402a3bf',1,'CattleBody::value_()'],['../class_transaction_body.html#a8a4367dfab46a6a0682a71436b4ee720',1,'TransactionBody::value_()']]]
+  ['transactionconsulttable_1699',['transactionConsultTable',['../class_ui___financial_consult_screen.html#a41bcb8552243edac38b76a4495bb0022',1,'Ui_FinancialConsultScreen']]],
+  ['transactionremovetable_1700',['transactionRemoveTable',['../class_ui___financial_remove_screen.html#ad11a71b1935cd30db73ad4a0f8cc3d02',1,'Ui_FinancialRemoveScreen']]]
 ];

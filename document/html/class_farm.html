@@ -79,8 +79,8 @@ Inheritance diagram for Farm:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm__inherit__graph.png" border="0" usemap="#a_farm_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_farm_inherit__map" id="a_farm_inherit__map">
-<area shape="rect" title="This Class represents a Farm for the GiroDeGado software." alt="" coords="5,5,208,655"/>
-<area shape="rect" href="class_farm_handle.html" title="This Class represents the handle of a Handle/Body idiom of a Farm for the GiroDeGado software impleme..." alt="" coords="5,703,208,1411"/>
+<area shape="rect" title="This Class represents a Farm for the GiroDeGado software." alt="" coords="5,5,191,537"/>
+<area shape="rect" href="class_farm_handle.html" title="This Class represents the handle of a Handle/Body idiom of a Farm for the GiroDeGado software impleme..." alt="" coords="5,585,191,1176"/>
 </map>
 </div>
 <div class="dynheader">
@@ -88,7 +88,7 @@ Collaboration diagram for Farm:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm__coll__graph.png" border="0" usemap="#a_farm_coll__map" alt="Collaboration graph"/></div>
 <map name="a_farm_coll__map" id="a_farm_coll__map">
-<area shape="rect" title="This Class represents a Farm for the GiroDeGado software." alt="" coords="5,5,208,655"/>
+<area shape="rect" title="This Class represents a Farm for the GiroDeGado software." alt="" coords="5,5,191,537"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -112,10 +112,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0f070ad719c521c90bc45c0c228f35aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5329f10759b521886021dd34820caf52"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#a5329f10759b521886021dd34820caf52">createTransaction</a> (int number=0, double value=0.0, std::string description=&quot;&quot;, std::string date=&quot;&quot;, int cattle_earring=0)=0</td></tr>
 <tr class="separator:a5329f10759b521886021dd34820caf52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af629a2e377b3eaa7eb03b4a1a27d2cc9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#af629a2e377b3eaa7eb03b4a1a27d2cc9">createUser</a> (std::string nickname=&quot;&quot;, std::string name=&quot;&quot;, std::string password=&quot;&quot;, std::string birth_date=&quot;&quot;, std::string type=&quot;&quot;)=0</td></tr>
+<tr class="separator:af629a2e377b3eaa7eb03b4a1a27d2cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf9273fa807d2595a1147bad28b546b0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#acf9273fa807d2595a1147bad28b546b0">deleteCattle</a> (int cattle_earring)=0</td></tr>
 <tr class="separator:acf9273fa807d2595a1147bad28b546b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60451bee5ee28ff4b1f40230e69847b8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#a60451bee5ee28ff4b1f40230e69847b8">deleteTransaction</a> (int transaction_number)=0</td></tr>
 <tr class="separator:a60451bee5ee28ff4b1f40230e69847b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c037b7e136e21c2df8c880d15353fba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#a3c037b7e136e21c2df8c880d15353fba">deleteUser</a> (std::string user_nickname)=0</td></tr>
+<tr class="separator:a3c037b7e136e21c2df8c880d15353fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfb4d3b361107f266236718fa67c9a2c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#adfb4d3b361107f266236718fa67c9a2c">setCattleEarring</a> (int actual_cattle_earring, int new_cattle_earring)=0</td></tr>
 <tr class="separator:adfb4d3b361107f266236718fa67c9a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bdfbfb6dc52079086d9cc8143c4d326"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#a8bdfbfb6dc52079086d9cc8143c4d326">getCattleEarring</a> (int cattle_earring) const =0</td></tr>
@@ -168,6 +172,26 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2bdaf173069f4042c5060a1ac8fd8778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7663deb98ca697b68e759b2ea08de440"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#a7663deb98ca697b68e759b2ea08de440">getTransactionCattleEarring</a> (int transaction_number) const =0</td></tr>
 <tr class="separator:a7663deb98ca697b68e759b2ea08de440"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ce1f45c8de5a26662a6e7e766cab70"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#a67ce1f45c8de5a26662a6e7e766cab70">setUserNickname</a> (std::string actual_user_nickname, std::string new_user_nickname)=0</td></tr>
+<tr class="separator:a67ce1f45c8de5a26662a6e7e766cab70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f96a705c12df164b910d8141efe374d"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#a5f96a705c12df164b910d8141efe374d">getUserNickname</a> (std::string user_nickname) const =0</td></tr>
+<tr class="separator:a5f96a705c12df164b910d8141efe374d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac579108380284df9c5446cb9bf73d620"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#ac579108380284df9c5446cb9bf73d620">setUserName</a> (std::string user_nickname, std::string user_name)=0</td></tr>
+<tr class="separator:ac579108380284df9c5446cb9bf73d620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71797bba7d43932eac632abfd70eec54"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#a71797bba7d43932eac632abfd70eec54">getUserName</a> (std::string user_nickname) const =0</td></tr>
+<tr class="separator:a71797bba7d43932eac632abfd70eec54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48c0e774a2a48b98d2dea6cf2f61e28"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#aa48c0e774a2a48b98d2dea6cf2f61e28">setUserPassword</a> (std::string user_nickname, std::string user_password)=0</td></tr>
+<tr class="separator:aa48c0e774a2a48b98d2dea6cf2f61e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f3412a472fcf499ba84499a3c4f5e96"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#a2f3412a472fcf499ba84499a3c4f5e96">getUserPassword</a> (std::string user_nickname) const =0</td></tr>
+<tr class="separator:a2f3412a472fcf499ba84499a3c4f5e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77926a81ad972da07cff3d004c2a8ace"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#a77926a81ad972da07cff3d004c2a8ace">setUserDate</a> (std::string user_nickname, std::string user_date)=0</td></tr>
+<tr class="separator:a77926a81ad972da07cff3d004c2a8ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1eb7f11a8c9588efe9e65289c2e082b"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#af1eb7f11a8c9588efe9e65289c2e082b">getUserDate</a> (std::string user_nickname) const =0</td></tr>
+<tr class="separator:af1eb7f11a8c9588efe9e65289c2e082b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa33b498efaf8e16887df200b48c1cc80"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#aa33b498efaf8e16887df200b48c1cc80">setUserType</a> (std::string user_nickname, std::string user_type)=0</td></tr>
+<tr class="separator:aa33b498efaf8e16887df200b48c1cc80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ba43fd2e316e1a0264d0469ffe0664"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#af5ba43fd2e316e1a0264d0469ffe0664">getUserType</a> (std::string user_nickname) const =0</td></tr>
+<tr class="separator:af5ba43fd2e316e1a0264d0469ffe0664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8551ba881705694de18c12b47fcefdda"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#a8551ba881705694de18c12b47fcefdda">getLastEarringAvailable</a> ()=0</td></tr>
 <tr class="separator:a8551ba881705694de18c12b47fcefdda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1acd8cc7886264e1e342ff18d50ff454"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm.html#a1acd8cc7886264e1e342ff18d50ff454">getLastNumberAvailable</a> ()=0</td></tr>
@@ -297,14 +321,17 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a0f070ad719c521c90bc45c0c228f35aa_icgraph.png" border="0" usemap="#aclass_farm_a0f070ad719c521c90bc45c0c228f35aa_icgraph" alt=""/></div>
 <map name="aclass_farm_a0f070ad719c521c90bc45c0c228f35aa_icgraph" id="aclass_farm_a0f070ad719c521c90bc45c0c228f35aa_icgraph">
-<area shape="rect" title=" " alt="" coords="669,107,800,134"/>
-<area shape="rect" href="class_cattle_birth_screen.html#a378ec9751a4ff8ec974992e7047fa32f" title=" " alt="" coords="449,5,621,47"/>
-<area shape="rect" href="class_cattle_buy_screen.html#a226db2d4367194625d699828d618931c" title=" " alt="" coords="456,71,615,112"/>
-<area shape="rect" href="unit__cattle_8cpp.html#adcc4d6f867258451aa13fe491fd5eef1" title=" " alt="" coords="259,137,401,163"/>
-<area shape="rect" href="unit__farm_8cpp.html#a11765238cb588ac3ad4531975cbbbf12" title="Unit tests." alt="" coords="459,187,611,214"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,162,211,189"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,162,56,189"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="262,187,398,214"/>
+<area shape="rect" title=" " alt="" coords="704,129,835,156"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="512,5,628,32"/>
+<area shape="rect" href="class_cattle_birth_screen.html#a378ec9751a4ff8ec974992e7047fa32f" title=" " alt="" coords="484,57,656,98"/>
+<area shape="rect" href="class_cattle_buy_screen.html#a226db2d4367194625d699828d618931c" title=" " alt="" coords="491,122,649,163"/>
+<area shape="rect" href="unit__cattle_8cpp.html#adcc4d6f867258451aa13fe491fd5eef1" title=" " alt="" coords="293,188,436,215"/>
+<area shape="rect" href="unit__farm_8cpp.html#a11765238cb588ac3ad4531975cbbbf12" title="Unit tests." alt="" coords="494,239,646,265"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="295,39,434,65"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,104,245,131"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,163,56,189"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,188,228,215"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="297,239,433,265"/>
 </map>
 </div>
 
@@ -378,15 +405,103 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a5329f10759b521886021dd34820caf52_icgraph.png" border="0" usemap="#aclass_farm_a5329f10759b521886021dd34820caf52_icgraph" alt=""/></div>
 <map name="aclass_farm_a5329f10759b521886021dd34820caf52_icgraph" id="aclass_farm_a5329f10759b521886021dd34820caf52_icgraph">
-<area shape="rect" title=" " alt="" coords="715,143,877,170"/>
-<area shape="rect" href="class_cattle_buy_screen.html#a226db2d4367194625d699828d618931c" title=" " alt="" coords="495,5,653,47"/>
-<area shape="rect" href="class_financial_record_screen.html#ab8cd36639436e6ba4e3886210b69006c" title=" " alt="" coords="484,71,664,112"/>
-<area shape="rect" href="class_cattle_remove_screen.html#af3254dbc9d6920d5a849eda24e3a3982" title=" " alt="" coords="485,136,663,177"/>
-<area shape="rect" href="unit__transaction_8cpp.html#a9f2f36e69d5b38b9d7d4240425ada186" title=" " alt="" coords="259,202,433,229"/>
-<area shape="rect" href="unit__farm_8cpp.html#a20aacf25126ae2a9996daa0e5950c6b6" title=" " alt="" coords="481,253,667,279"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,227,211,254"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,227,56,254"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="278,253,414,279"/>
+<area shape="rect" title=" " alt="" coords="749,195,912,221"/>
+<area shape="rect" href="functional__tests_8cpp.html#ad1f163fafadccbf88cfab8a5f3d8835b" title=" " alt="" coords="535,5,683,32"/>
+<area shape="rect" href="class_cattle_buy_screen.html#a226db2d4367194625d699828d618931c" title=" " alt="" coords="529,57,688,98"/>
+<area shape="rect" href="class_financial_record_screen.html#ab8cd36639436e6ba4e3886210b69006c" title=" " alt="" coords="519,122,699,163"/>
+<area shape="rect" href="class_cattle_remove_screen.html#af3254dbc9d6920d5a849eda24e3a3982" title=" " alt="" coords="519,187,698,229"/>
+<area shape="rect" href="unit__transaction_8cpp.html#a9f2f36e69d5b38b9d7d4240425ada186" title=" " alt="" coords="293,253,468,280"/>
+<area shape="rect" href="class_test_report_screen_g_u_i.html#a3a8c9c2da88b080a48e91b4fcc93f0e6" title=" " alt="" coords="531,305,687,346"/>
+<area shape="rect" href="unit__farm_8cpp.html#a20aacf25126ae2a9996daa0e5950c6b6" title=" " alt="" coords="516,371,701,397"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="311,55,450,81"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,153,245,180"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,228,56,255"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,253,228,280"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="313,337,449,364"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af629a2e377b3eaa7eb03b4a1a27d2cc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af629a2e377b3eaa7eb03b4a1a27d2cc9">&#9670;&nbsp;</a></span>createUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Farm::createUser </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nickname</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>password</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>birth_date</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>type</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a user and adds it to the database. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nickname</td><td>the nickname of the <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+    <tr><td class="paramname">name</td><td>the name of the <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+    <tr><td class="paramname">password</td><td>the password of the <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+    <tr><td class="paramname">birth_date</td><td>the birth_date of the <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+    <tr><td class="paramname">type</td><td>the type of the <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_farm_handle.html#a8b1fbe696d19bb244809b7694f3ff80b">FarmHandle</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_farm_af629a2e377b3eaa7eb03b4a1a27d2cc9_icgraph.png" border="0" usemap="#aclass_farm_af629a2e377b3eaa7eb03b4a1a27d2cc9_icgraph" alt=""/></div>
+<map name="aclass_farm_af629a2e377b3eaa7eb03b4a1a27d2cc9_icgraph" id="aclass_farm_af629a2e377b3eaa7eb03b4a1a27d2cc9_icgraph">
+<area shape="rect" title=" " alt="" coords="724,115,847,141"/>
+<area shape="rect" href="functional__tests_8cpp.html#a86d2feca61fc275c1bdc4d08baac4ede" title=" " alt="" coords="523,5,633,32"/>
+<area shape="rect" href="gui__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="553,56,603,83"/>
+<area shape="rect" href="class_sign_up_screen.html#a052b232058014c8643c365f1e66f8ece" title=" " alt="" coords="480,107,676,149"/>
+<area shape="rect" href="unit__user_8cpp.html#a1bd364eebc11877ba390937013dfed25" title=" " alt="" coords="295,173,431,200"/>
+<area shape="rect" href="unit__farm_8cpp.html#aebf4129e522cec7632a06bcdae1ca08d" title=" " alt="" coords="505,224,651,251"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,35,432,61"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,93,245,120"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,148,56,175"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,173,228,200"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,224,431,251"/>
 </map>
 </div>
 
@@ -415,7 +530,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates a <a class="el" href="class_farm.html" title="This Class represents a Farm for the GiroDeGado software.">Farm</a> and returns it's pointer. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_farm.html" title="This Class represents a Farm for the GiroDeGado software.">Farm</a> - a <a class="el" href="class_farm.html" title="This Class represents a Farm for the GiroDeGado software.">Farm</a> Class object.</dd></dl>
 <p>Deletes a cattle from the database. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cattle_earring</td><td>earring of the cattle that will be deleted. </td></tr>
@@ -429,12 +543,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_acf9273fa807d2595a1147bad28b546b0_icgraph.png" border="0" usemap="#aclass_farm_acf9273fa807d2595a1147bad28b546b0_icgraph" alt=""/></div>
 <map name="aclass_farm_acf9273fa807d2595a1147bad28b546b0_icgraph" id="aclass_farm_acf9273fa807d2595a1147bad28b546b0_icgraph">
-<area shape="rect" title=" " alt="" coords="669,42,799,69"/>
-<area shape="rect" href="class_cattle_remove_screen.html#af3254dbc9d6920d5a849eda24e3a3982" title=" " alt="" coords="443,5,621,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a5c35bfa629ada5b11bc40b39240a0bc8" title=" " alt="" coords="457,71,607,98"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,71,395,98"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,71,211,98"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,71,56,98"/>
+<area shape="rect" title=" " alt="" coords="707,64,836,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="511,5,627,32"/>
+<area shape="rect" href="class_cattle_remove_screen.html#af3254dbc9d6920d5a849eda24e3a3982" title=" " alt="" coords="480,57,659,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#a5c35bfa629ada5b11bc40b39240a0bc8" title=" " alt="" coords="494,123,645,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
 </map>
 </div>
 
@@ -476,12 +593,65 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a60451bee5ee28ff4b1f40230e69847b8_icgraph.png" border="0" usemap="#aclass_farm_a60451bee5ee28ff4b1f40230e69847b8_icgraph" alt=""/></div>
 <map name="aclass_farm_a60451bee5ee28ff4b1f40230e69847b8_icgraph" id="aclass_farm_a60451bee5ee28ff4b1f40230e69847b8_icgraph">
-<area shape="rect" title=" " alt="" coords="675,42,837,69"/>
-<area shape="rect" href="class_financial_remove_screen.html#a1e13b274e942117333b69498de498ac7" title=" " alt="" coords="445,5,624,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#aacb852c3b16b649deb9b56c844b86f4b" title=" " alt="" coords="443,71,627,98"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,71,395,98"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,71,211,98"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,71,56,98"/>
+<area shape="rect" title=" " alt="" coords="712,64,875,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#ad1f163fafadccbf88cfab8a5f3d8835b" title=" " alt="" coords="498,5,646,32"/>
+<area shape="rect" href="class_financial_remove_screen.html#a1e13b274e942117333b69498de498ac7" title=" " alt="" coords="483,57,661,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#aacb852c3b16b649deb9b56c844b86f4b" title=" " alt="" coords="480,123,664,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c037b7e136e21c2df8c880d15353fba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c037b7e136e21c2df8c880d15353fba">&#9670;&nbsp;</a></span>deleteUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Farm::deleteUser </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_nickname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Deletes a user from the database. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_nickname</td><td>nickname of the user that will be deleted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_farm_handle.html#a286e7f869cdacb262c2f96f9d7976704">FarmHandle</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_farm_a3c037b7e136e21c2df8c880d15353fba_icgraph.png" border="0" usemap="#aclass_farm_a3c037b7e136e21c2df8c880d15353fba_icgraph" alt=""/></div>
+<map name="aclass_farm_a3c037b7e136e21c2df8c880d15353fba_icgraph" id="aclass_farm_a3c037b7e136e21c2df8c880d15353fba_icgraph">
+<area shape="rect" title=" " alt="" coords="687,64,809,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#a86d2feca61fc275c1bdc4d08baac4ede" title=" " alt="" coords="505,5,614,32"/>
+<area shape="rect" href="class_user_remove_screen.html#a40a837f6bc87dda78491dcda6fad419f" title=" " alt="" coords="480,57,639,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#a19051657128e128f6aedaf2264ec2097" title=" " alt="" coords="487,123,631,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
 </map>
 </div>
 
@@ -525,13 +695,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a29b4ed761d03a8ecb8b01808d4dfde41_icgraph.png" border="0" usemap="#aclass_farm_a29b4ed761d03a8ecb8b01808d4dfde41_icgraph" alt=""/></div>
 <map name="aclass_farm_a29b4ed761d03a8ecb8b01808d4dfde41_icgraph" id="aclass_farm_a29b4ed761d03a8ecb8b01808d4dfde41_icgraph">
-<area shape="rect" title=" " alt="" coords="716,71,919,98"/>
-<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="480,5,631,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#aeb94549b5268e88a44c35e141b8e76a1" title=" " alt="" coords="443,71,668,98"/>
-<area shape="rect" href="unit__farm_8cpp.html#a5f181020901664188f7dbcde1e7cf529" title=" " alt="" coords="443,122,668,149"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,97,395,123"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,97,211,123"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,97,56,123"/>
+<area shape="rect" title=" " alt="" coords="753,163,956,189"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="535,5,651,32"/>
+<area shape="rect" href="class_cattle_consult_screen.html#a0cdd343d4fd4537fb4a5fd8dd02a881a" title=" " alt="" coords="517,57,668,98"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a98d8072972deede8e8d38fd1d076c61f" title=" " alt="" coords="521,122,664,163"/>
+<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="517,187,668,229"/>
+<area shape="rect" href="unit__farm_8cpp.html#aeb94549b5268e88a44c35e141b8e76a1" title=" " alt="" coords="480,253,705,280"/>
+<area shape="rect" href="unit__farm_8cpp.html#a5f181020901664188f7dbcde1e7cf529" title=" " alt="" coords="480,304,705,331"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,104,432,131"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,203,245,229"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,228,56,255"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,253,431,280"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,253,228,280"/>
 </map>
 </div>
 
@@ -575,13 +750,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a1e6e134122270fc013cadea89f7ca122_icgraph.png" border="0" usemap="#aclass_farm_a1e6e134122270fc013cadea89f7ca122_icgraph" alt=""/></div>
 <map name="aclass_farm_a1e6e134122270fc013cadea89f7ca122_icgraph" id="aclass_farm_a1e6e134122270fc013cadea89f7ca122_icgraph">
-<area shape="rect" title=" " alt="" coords="679,71,845,98"/>
-<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="461,5,612,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#af1f3003b9b21f6851ef26d173cf49896" title=" " alt="" coords="443,71,631,98"/>
-<area shape="rect" href="unit__farm_8cpp.html#a53857d90824bc6cf2b51f0bfe461f36e" title=" " alt="" coords="443,122,631,149"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,97,395,123"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,97,211,123"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,97,56,123"/>
+<area shape="rect" title=" " alt="" coords="716,163,883,189"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="516,5,632,32"/>
+<area shape="rect" href="class_cattle_consult_screen.html#a0cdd343d4fd4537fb4a5fd8dd02a881a" title=" " alt="" coords="499,57,649,98"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a98d8072972deede8e8d38fd1d076c61f" title=" " alt="" coords="503,122,645,163"/>
+<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="499,187,649,229"/>
+<area shape="rect" href="unit__farm_8cpp.html#af1f3003b9b21f6851ef26d173cf49896" title=" " alt="" coords="480,253,668,280"/>
+<area shape="rect" href="unit__farm_8cpp.html#a53857d90824bc6cf2b51f0bfe461f36e" title=" " alt="" coords="480,304,668,331"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,104,432,131"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,203,245,229"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,228,56,255"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,253,431,280"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,253,228,280"/>
 </map>
 </div>
 
@@ -625,13 +805,21 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a4c6bf4782413446068a72748518ecd1f_icgraph.png" border="0" usemap="#aclass_farm_a4c6bf4782413446068a72748518ecd1f_icgraph" alt=""/></div>
 <map name="aclass_farm_a4c6bf4782413446068a72748518ecd1f_icgraph" id="aclass_farm_a4c6bf4782413446068a72748518ecd1f_icgraph">
-<area shape="rect" title=" " alt="" coords="659,71,805,98"/>
-<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="451,5,602,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a903ec13759bf62d6c426c846f1c1f354" title=" " alt="" coords="443,71,611,98"/>
-<area shape="rect" href="unit__farm_8cpp.html#af4833498ce47c4fe3546f77b632b774a" title=" " alt="" coords="443,122,611,149"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,97,395,123"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,97,211,123"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,97,56,123"/>
+<area shape="rect" title=" " alt="" coords="699,261,845,287"/>
+<area shape="rect" href="class_test_cattle_birth_screen_g_u_i.html#a947711f4a911955d303c45c4fd5b9584" title=" " alt="" coords="480,5,651,47"/>
+<area shape="rect" href="class_test_cattle_buy_screen_g_u_i.html#ac7ef6e91d4e0a4a7eaa49e73d56cccff" title=" " alt="" coords="482,71,649,112"/>
+<area shape="rect" href="class_test_cattle_edit_screen_g_u_i.html#a5ae38b2bf1dda2753f13e3a04dadd277" title=" " alt="" coords="482,136,649,177"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="507,202,623,229"/>
+<area shape="rect" href="class_cattle_consult_screen.html#a0cdd343d4fd4537fb4a5fd8dd02a881a" title=" " alt="" coords="490,253,641,295"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a98d8072972deede8e8d38fd1d076c61f" title=" " alt="" coords="494,319,637,360"/>
+<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="490,384,641,425"/>
+<area shape="rect" href="unit__farm_8cpp.html#a903ec13759bf62d6c426c846f1c1f354" title=" " alt="" coords="481,450,649,477"/>
+<area shape="rect" href="unit__farm_8cpp.html#af4833498ce47c4fe3546f77b632b774a" title=" " alt="" coords="481,501,649,527"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,301,432,327"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,399,245,426"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,425,56,451"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,450,431,477"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,450,228,477"/>
 </map>
 </div>
 
@@ -675,15 +863,22 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a8bdfbfb6dc52079086d9cc8143c4d326_icgraph.png" border="0" usemap="#aclass_farm_a8bdfbfb6dc52079086d9cc8143c4d326_icgraph" alt=""/></div>
 <map name="aclass_farm_a8bdfbfb6dc52079086d9cc8143c4d326_icgraph" id="aclass_farm_a8bdfbfb6dc52079086d9cc8143c4d326_icgraph">
-<area shape="rect" title=" " alt="" coords="665,122,819,149"/>
-<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="455,5,605,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a11765238cb588ac3ad4531975cbbbf12" title="Unit tests." alt="" coords="454,71,606,98"/>
-<area shape="rect" href="unit__farm_8cpp.html#a5c35bfa629ada5b11bc40b39240a0bc8" title=" " alt="" coords="455,122,605,149"/>
-<area shape="rect" href="unit__farm_8cpp.html#ad6d5aae5be174a001cbad3cfa432f5bf" title=" " alt="" coords="443,173,617,199"/>
-<area shape="rect" href="unit__farm_8cpp.html#ab50c465cf64c993c1c4cb80566ea27df" title=" " alt="" coords="443,223,617,250"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,147,395,174"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,147,211,174"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,147,56,174"/>
+<area shape="rect" title=" " alt="" coords="719,294,872,321"/>
+<area shape="rect" href="class_test_cattle_consult_screen_g_u_i.html#aad024850555ea5845e87c248c31f151c" title=" " alt="" coords="481,5,669,47"/>
+<area shape="rect" href="class_test_cattle_remove_screen_g_u_i.html#ad3f83c4db4e011406fcc7233649a6b64" title=" " alt="" coords="480,71,671,112"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="517,137,633,163"/>
+<area shape="rect" href="class_cattle_consult_screen.html#a0cdd343d4fd4537fb4a5fd8dd02a881a" title=" " alt="" coords="500,188,651,229"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a98d8072972deede8e8d38fd1d076c61f" title=" " alt="" coords="504,253,647,295"/>
+<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="500,319,651,360"/>
+<area shape="rect" href="unit__farm_8cpp.html#a11765238cb588ac3ad4531975cbbbf12" title="Unit tests." alt="" coords="499,385,651,411"/>
+<area shape="rect" href="unit__farm_8cpp.html#a5c35bfa629ada5b11bc40b39240a0bc8" title=" " alt="" coords="500,435,651,462"/>
+<area shape="rect" href="unit__farm_8cpp.html#ad6d5aae5be174a001cbad3cfa432f5bf" title=" " alt="" coords="488,486,663,513"/>
+<area shape="rect" href="unit__farm_8cpp.html#ab50c465cf64c993c1c4cb80566ea27df" title=" " alt="" coords="488,537,663,563"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,261,432,287"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,385,245,411"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,410,56,437"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,435,431,462"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,435,228,462"/>
 </map>
 </div>
 
@@ -727,13 +922,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a251ad89b0f299ce5a1f9474eb1db7fe8_icgraph.png" border="0" usemap="#aclass_farm_a251ad89b0f299ce5a1f9474eb1db7fe8_icgraph" alt=""/></div>
 <map name="aclass_farm_a251ad89b0f299ce5a1f9474eb1db7fe8_icgraph" id="aclass_farm_a251ad89b0f299ce5a1f9474eb1db7fe8_icgraph">
-<area shape="rect" title=" " alt="" coords="661,71,811,98"/>
-<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="453,5,603,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a25fd5167284fc68e96ac95b2ea4f1ff1" title=" " alt="" coords="443,71,613,98"/>
-<area shape="rect" href="unit__farm_8cpp.html#aee8316f1188aa4182acbd384409d5f9c" title=" " alt="" coords="443,122,613,149"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,97,395,123"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,97,211,123"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,97,56,123"/>
+<area shape="rect" title=" " alt="" coords="699,163,848,189"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="507,5,623,32"/>
+<area shape="rect" href="class_cattle_consult_screen.html#a0cdd343d4fd4537fb4a5fd8dd02a881a" title=" " alt="" coords="490,57,641,98"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a98d8072972deede8e8d38fd1d076c61f" title=" " alt="" coords="494,122,637,163"/>
+<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="490,187,641,229"/>
+<area shape="rect" href="unit__farm_8cpp.html#a25fd5167284fc68e96ac95b2ea4f1ff1" title=" " alt="" coords="480,253,651,280"/>
+<area shape="rect" href="unit__farm_8cpp.html#aee8316f1188aa4182acbd384409d5f9c" title=" " alt="" coords="480,304,651,331"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,104,432,131"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,203,245,229"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,228,56,255"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,253,431,280"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,253,228,280"/>
 </map>
 </div>
 
@@ -777,13 +977,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_ae254fdf9753ae6cf0c59c4fa878bc999_icgraph.png" border="0" usemap="#aclass_farm_ae254fdf9753ae6cf0c59c4fa878bc999_icgraph" alt=""/></div>
 <map name="aclass_farm_ae254fdf9753ae6cf0c59c4fa878bc999_icgraph" id="aclass_farm_ae254fdf9753ae6cf0c59c4fa878bc999_icgraph">
-<area shape="rect" title=" " alt="" coords="665,71,817,98"/>
-<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="455,5,605,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#ad461287990185a1443f859fcf461d3c7" title=" " alt="" coords="443,71,617,98"/>
-<area shape="rect" href="unit__farm_8cpp.html#ac2285b632a65e236f1b9a85c938f5696" title=" " alt="" coords="443,122,617,149"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,97,395,123"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,97,211,123"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,97,56,123"/>
+<area shape="rect" title=" " alt="" coords="703,163,855,189"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="509,5,625,32"/>
+<area shape="rect" href="class_cattle_consult_screen.html#a0cdd343d4fd4537fb4a5fd8dd02a881a" title=" " alt="" coords="492,57,643,98"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a98d8072972deede8e8d38fd1d076c61f" title=" " alt="" coords="496,122,639,163"/>
+<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="492,187,643,229"/>
+<area shape="rect" href="unit__farm_8cpp.html#ad461287990185a1443f859fcf461d3c7" title=" " alt="" coords="480,253,655,280"/>
+<area shape="rect" href="unit__farm_8cpp.html#ac2285b632a65e236f1b9a85c938f5696" title=" " alt="" coords="480,304,655,331"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,104,432,131"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,203,245,229"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,228,56,255"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,253,431,280"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,253,228,280"/>
 </map>
 </div>
 
@@ -827,13 +1032,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a27c0c130017bfde0479f0a7742c66510_icgraph.png" border="0" usemap="#aclass_farm_a27c0c130017bfde0479f0a7742c66510_icgraph" alt=""/></div>
 <map name="aclass_farm_a27c0c130017bfde0479f0a7742c66510_icgraph" id="aclass_farm_a27c0c130017bfde0479f0a7742c66510_icgraph">
-<area shape="rect" title=" " alt="" coords="657,71,803,98"/>
-<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="451,5,601,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a6c62e301a80d6d7099baf2b27303203f" title=" " alt="" coords="443,71,609,98"/>
-<area shape="rect" href="unit__farm_8cpp.html#aaafbfe1577f8b7ddf5f41ebd46647cd2" title=" " alt="" coords="443,122,609,149"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,97,395,123"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,97,211,123"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,97,56,123"/>
+<area shape="rect" title=" " alt="" coords="695,163,840,189"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="505,5,621,32"/>
+<area shape="rect" href="class_cattle_consult_screen.html#a0cdd343d4fd4537fb4a5fd8dd02a881a" title=" " alt="" coords="488,57,639,98"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a98d8072972deede8e8d38fd1d076c61f" title=" " alt="" coords="492,122,635,163"/>
+<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="488,187,639,229"/>
+<area shape="rect" href="unit__farm_8cpp.html#a6c62e301a80d6d7099baf2b27303203f" title=" " alt="" coords="480,253,647,280"/>
+<area shape="rect" href="unit__farm_8cpp.html#aaafbfe1577f8b7ddf5f41ebd46647cd2" title=" " alt="" coords="480,304,647,331"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,104,432,131"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,203,245,229"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,228,56,255"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,253,431,280"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,253,228,280"/>
 </map>
 </div>
 
@@ -877,13 +1087,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a4791c0309f7b5c968470d81abe7255de_icgraph.png" border="0" usemap="#aclass_farm_a4791c0309f7b5c968470d81abe7255de_icgraph" alt=""/></div>
 <map name="aclass_farm_a4791c0309f7b5c968470d81abe7255de_icgraph" id="aclass_farm_a4791c0309f7b5c968470d81abe7255de_icgraph">
-<area shape="rect" title=" " alt="" coords="665,71,819,98"/>
-<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="455,5,605,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a1ed7111dc68df966f09c655299990905" title=" " alt="" coords="443,71,617,98"/>
-<area shape="rect" href="unit__farm_8cpp.html#a28061cd6184131e30f95f1d22f3f0320" title=" " alt="" coords="443,122,617,149"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,97,395,123"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,97,211,123"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,97,56,123"/>
+<area shape="rect" title=" " alt="" coords="703,163,856,189"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="509,5,625,32"/>
+<area shape="rect" href="class_cattle_consult_screen.html#a0cdd343d4fd4537fb4a5fd8dd02a881a" title=" " alt="" coords="492,57,643,98"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a98d8072972deede8e8d38fd1d076c61f" title=" " alt="" coords="496,122,639,163"/>
+<area shape="rect" href="class_cattle_remove_screen.html#a4c6ad245955464b488d61050cbfde4b7" title=" " alt="" coords="492,187,643,229"/>
+<area shape="rect" href="unit__farm_8cpp.html#a1ed7111dc68df966f09c655299990905" title=" " alt="" coords="480,253,655,280"/>
+<area shape="rect" href="unit__farm_8cpp.html#a28061cd6184131e30f95f1d22f3f0320" title=" " alt="" coords="480,304,655,331"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,104,432,131"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,203,245,229"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,228,56,255"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,253,431,280"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,253,228,280"/>
 </map>
 </div>
 
@@ -935,7 +1150,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_farm_a06713072945c568b84ab411e7010ddb1_icgraph.png" border="0" usemap="#aclass_farm_a06713072945c568b84ab411e7010ddb1_icgraph" alt=""/></div>
 <map name="aclass_farm_a06713072945c568b84ab411e7010ddb1_icgraph" id="aclass_farm_a06713072945c568b84ab411e7010ddb1_icgraph">
 <area shape="rect" title=" " alt="" coords="104,5,212,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
 
@@ -972,14 +1187,14 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_farm_a8551ba881705694de18c12b47fcefdda_icgraph.png" border="0" usemap="#aclass_farm_a8551ba881705694de18c12b47fcefdda_icgraph" alt=""/></div>
 <map name="aclass_farm_a8551ba881705694de18c12b47fcefdda_icgraph" id="aclass_farm_a8551ba881705694de18c12b47fcefdda_icgraph">
 <area shape="rect" title=" " alt="" coords="676,143,871,170"/>
-<area shape="rect" href="class_cattle_birth_screen.html#a5d235e1a1dc1e84d0c723539bb38e6ff" title=" " alt="" coords="469,5,601,47"/>
-<area shape="rect" href="class_cattle_buy_screen.html#a800d2bc8fb38b65a4b0119f01c30cd26" title=" " alt="" coords="443,71,628,112"/>
+<area shape="rect" href="class_cattle_birth_screen.html#a2b844233bdc7e6987b46f4e73e2ef055" title=" " alt="" coords="469,5,601,47"/>
+<area shape="rect" href="class_cattle_buy_screen.html#a8431b95794836fe9b0c4696993d8ddfd" title=" " alt="" coords="443,71,628,112"/>
 <area shape="rect" href="class_cattle_birth_screen.html#a378ec9751a4ff8ec974992e7047fa32f" title=" " alt="" coords="449,136,621,177"/>
 <area shape="rect" href="class_cattle_buy_screen.html#a226db2d4367194625d699828d618931c" title=" " alt="" coords="456,201,615,243"/>
 <area shape="rect" href="unit__farm_8cpp.html#ad7fccfe4b01b9e204d5612f48050149d" title=" " alt="" coords="452,267,619,308"/>
 <area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,274,395,301"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,274,211,301"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,274,56,301"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="104,274,211,301"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,274,56,301"/>
 </map>
 </div>
 
@@ -1016,14 +1231,14 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_farm_a1acd8cc7886264e1e342ff18d50ff454_icgraph.png" border="0" usemap="#aclass_farm_a1acd8cc7886264e1e342ff18d50ff454_icgraph" alt=""/></div>
 <map name="aclass_farm_a1acd8cc7886264e1e342ff18d50ff454_icgraph" id="aclass_farm_a1acd8cc7886264e1e342ff18d50ff454_icgraph">
 <area shape="rect" title=" " alt="" coords="712,143,911,170"/>
-<area shape="rect" href="class_financial_record_screen.html#a8e4a73d843f8b4e35ef155e0f3b830b5" title=" " alt="" coords="471,5,635,47"/>
+<area shape="rect" href="class_financial_record_screen.html#afb90321b236d25827b413a88b516ff57" title=" " alt="" coords="471,5,635,47"/>
 <area shape="rect" href="class_cattle_buy_screen.html#a226db2d4367194625d699828d618931c" title=" " alt="" coords="474,71,633,112"/>
 <area shape="rect" href="class_financial_record_screen.html#ab8cd36639436e6ba4e3886210b69006c" title=" " alt="" coords="463,136,643,177"/>
 <area shape="rect" href="class_cattle_remove_screen.html#af3254dbc9d6920d5a849eda24e3a3982" title=" " alt="" coords="464,201,643,243"/>
 <area shape="rect" href="unit__farm_8cpp.html#ad6c1db878a6a82f1673111b46d7dbd00" title=" " alt="" coords="443,267,664,294"/>
 <area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,267,395,294"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,267,211,294"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,267,56,294"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="104,267,211,294"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,267,56,294"/>
 </map>
 </div>
 
@@ -1060,7 +1275,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_aa050913e0bdbd273d1e82eecedfb65fc_icgraph.png" border="0" usemap="#aclass_farm_aa050913e0bdbd273d1e82eecedfb65fc_icgraph" alt=""/></div>
 <map name="aclass_farm_aa050913e0bdbd273d1e82eecedfb65fc_icgraph" id="aclass_farm_aa050913e0bdbd273d1e82eecedfb65fc_icgraph">
-<area shape="rect" title=" " alt="" coords="733,689,847,716"/>
+<area shape="rect" title=" " alt="" coords="733,955,847,981"/>
 <area shape="rect" href="unit__cattle_8cpp.html#a9d6a2b404878aa65a9c29217da33d4b4" title=" " alt="" coords="484,5,683,32"/>
 <area shape="rect" href="unit__cattle_8cpp.html#a7019d1654a9b009315c22e42003f8dfa" title=" " alt="" coords="503,56,664,83"/>
 <area shape="rect" href="unit__cattle_8cpp.html#a368b09807fb16df5516dd8c115e4bf17" title=" " alt="" coords="513,107,654,133"/>
@@ -1089,11 +1304,22 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="unit__transaction_8cpp.html#a6b76813d50a4a3e1f564f34cc18f2afd" title=" " alt="" coords="481,1304,685,1331"/>
 <area shape="rect" href="unit__transaction_8cpp.html#a20a5de0637cc2516de41b17e65ff3ad4" title=" " alt="" coords="491,1355,675,1381"/>
 <area shape="rect" href="unit__transaction_8cpp.html#af875c5bdf7003c1b7b27d486c2f6a046" title=" " alt="" coords="497,1405,669,1432"/>
+<area shape="rect" href="unit__user_8cpp.html#a03a1f67eb20094a0742e30c818a313ea" title=" " alt="" coords="520,1456,647,1483"/>
+<area shape="rect" href="unit__user_8cpp.html#a8efc1d1efafd22dc3a81cda6c69b268f" title=" " alt="" coords="516,1507,651,1533"/>
+<area shape="rect" href="unit__user_8cpp.html#a4892863b518f1e2f939bdbfb81280d0a" title=" " alt="" coords="504,1557,663,1584"/>
+<area shape="rect" href="unit__user_8cpp.html#ab9d0835ca90230438cae82222bfe8281" title=" " alt="" coords="505,1608,662,1635"/>
+<area shape="rect" href="unit__user_8cpp.html#a0d6559f0a81a0014878dffe0517cf1de" title=" " alt="" coords="519,1659,647,1685"/>
+<area shape="rect" href="unit__user_8cpp.html#aaa1f71630ac00aea657e805545405ee7" title=" " alt="" coords="520,1709,647,1736"/>
+<area shape="rect" href="unit__user_8cpp.html#a5d0ec701a876dd3cbe6e5d38f6b29bc8" title=" " alt="" coords="516,1760,651,1787"/>
+<area shape="rect" href="unit__user_8cpp.html#a5d78edd704be875217ed37cbaf09a256" title=" " alt="" coords="504,1811,663,1837"/>
+<area shape="rect" href="unit__user_8cpp.html#a9421040e0439a98ddf3b0a4a46a0d3b7" title=" " alt="" coords="505,1861,662,1888"/>
+<area shape="rect" href="unit__user_8cpp.html#a473483c163e642c2228b19a1041e57ea" title=" " alt="" coords="519,1912,647,1939"/>
 <area shape="rect" href="unit__cattle_8cpp.html#adcc4d6f867258451aa13fe491fd5eef1" title=" " alt="" coords="275,411,417,437"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,841,211,868"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,841,56,868"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="278,841,414,868"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="104,1001,211,1028"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,1001,56,1028"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="278,867,414,893"/>
 <area shape="rect" href="unit__transaction_8cpp.html#a9f2f36e69d5b38b9d7d4240425ada186" title=" " alt="" coords="259,1136,433,1163"/>
+<area shape="rect" href="unit__user_8cpp.html#a1bd364eebc11877ba390937013dfed25" title=" " alt="" coords="278,1659,414,1685"/>
 </map>
 </div>
 
@@ -1137,13 +1363,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a7663deb98ca697b68e759b2ea08de440_icgraph.png" border="0" usemap="#aclass_farm_a7663deb98ca697b68e759b2ea08de440_icgraph" alt=""/></div>
 <map name="aclass_farm_a7663deb98ca697b68e759b2ea08de440_icgraph" id="aclass_farm_a7663deb98ca697b68e759b2ea08de440_icgraph">
-<area shape="rect" title=" " alt="" coords="657,71,836,112"/>
-<area shape="rect" href="class_financial_remove_screen.html#aebfb1998a037fca4a45e8ad78d20ce4a" title=" " alt="" coords="445,5,607,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#aa352d83781ad4ddff53f8737c7d9bca6" title=" " alt="" coords="443,71,609,112"/>
-<area shape="rect" href="unit__farm_8cpp.html#a198c8bee1548c2b0299410c5940e68ed" title=" " alt="" coords="443,136,609,177"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,111,395,138"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,111,211,138"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,111,56,138"/>
+<area shape="rect" title=" " alt="" coords="709,159,888,200"/>
+<area shape="rect" href="class_test_financial_record_screen_g_u_i.html#a05e5efadc3f9dc93ccc5a03d50e9aad0" title=" " alt="" coords="480,5,661,47"/>
+<area shape="rect" href="class_test_report_screen_g_u_i.html#a9da44ae015d2c82d822bc08e8d09f3d5" title=" " alt="" coords="497,71,645,112"/>
+<area shape="rect" href="functional__tests_8cpp.html#ad1f163fafadccbf88cfab8a5f3d8835b" title=" " alt="" coords="497,137,645,163"/>
+<area shape="rect" href="class_financial_remove_screen.html#aebfb1998a037fca4a45e8ad78d20ce4a" title=" " alt="" coords="490,188,651,229"/>
+<area shape="rect" href="unit__farm_8cpp.html#aa352d83781ad4ddff53f8737c7d9bca6" title=" " alt="" coords="487,253,654,295"/>
+<area shape="rect" href="unit__farm_8cpp.html#a198c8bee1548c2b0299410c5940e68ed" title=" " alt="" coords="487,319,654,360"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,174,432,201"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,210,245,237"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,235,56,262"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,261,431,287"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,261,228,287"/>
 </map>
 </div>
 
@@ -1187,13 +1418,17 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a13385d7b879853902271a44c58bf29ce_icgraph.png" border="0" usemap="#aclass_farm_a13385d7b879853902271a44c58bf29ce_icgraph" alt=""/></div>
 <map name="aclass_farm_a13385d7b879853902271a44c58bf29ce_icgraph" id="aclass_farm_a13385d7b879853902271a44c58bf29ce_icgraph">
-<area shape="rect" title=" " alt="" coords="685,71,857,98"/>
-<area shape="rect" href="class_financial_remove_screen.html#aebfb1998a037fca4a45e8ad78d20ce4a" title=" " alt="" coords="459,5,621,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#aa63815553e6e6d00d78f84b235db6dd2" title=" " alt="" coords="443,71,637,98"/>
-<area shape="rect" href="unit__farm_8cpp.html#a5cd679e5fa9dccbee441c24fb14751f2" title=" " alt="" coords="443,122,637,149"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,97,395,123"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,97,211,123"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,97,56,123"/>
+<area shape="rect" title=" " alt="" coords="723,130,895,157"/>
+<area shape="rect" href="class_test_financial_consult_screen_g_u_i.html#afe34dd4993ca7ac8f97d870266a748e5" title=" " alt="" coords="485,5,669,47"/>
+<area shape="rect" href="functional__tests_8cpp.html#ad1f163fafadccbf88cfab8a5f3d8835b" title=" " alt="" coords="503,71,651,98"/>
+<area shape="rect" href="class_financial_remove_screen.html#aebfb1998a037fca4a45e8ad78d20ce4a" title=" " alt="" coords="497,123,658,164"/>
+<area shape="rect" href="unit__farm_8cpp.html#aa63815553e6e6d00d78f84b235db6dd2" title=" " alt="" coords="480,189,675,215"/>
+<area shape="rect" href="unit__farm_8cpp.html#a5cd679e5fa9dccbee441c24fb14751f2" title=" " alt="" coords="480,239,675,266"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,105,432,131"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,138,245,165"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,163,56,190"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,189,431,215"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,189,228,215"/>
 </map>
 </div>
 
@@ -1237,13 +1472,16 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a20e4a46be675f2b7783115086b3214f0_icgraph.png" border="0" usemap="#aclass_farm_a20e4a46be675f2b7783115086b3214f0_icgraph" alt=""/></div>
 <map name="aclass_farm_a20e4a46be675f2b7783115086b3214f0_icgraph" id="aclass_farm_a20e4a46be675f2b7783115086b3214f0_icgraph">
-<area shape="rect" title=" " alt="" coords="657,78,868,105"/>
-<area shape="rect" href="class_financial_remove_screen.html#aebfb1998a037fca4a45e8ad78d20ce4a" title=" " alt="" coords="445,5,607,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a61d37304ccc317a8b5930cd166494fe5" title=" " alt="" coords="443,71,609,112"/>
-<area shape="rect" href="unit__farm_8cpp.html#a5412355e91f35ff2912b13baea6ede51" title=" " alt="" coords="443,136,609,177"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,111,395,138"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,111,211,138"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,111,56,138"/>
+<area shape="rect" title=" " alt="" coords="695,97,905,124"/>
+<area shape="rect" href="functional__tests_8cpp.html#ad1f163fafadccbf88cfab8a5f3d8835b" title=" " alt="" coords="489,5,637,32"/>
+<area shape="rect" href="class_financial_remove_screen.html#aebfb1998a037fca4a45e8ad78d20ce4a" title=" " alt="" coords="483,57,644,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#a61d37304ccc317a8b5930cd166494fe5" title=" " alt="" coords="480,122,647,163"/>
+<area shape="rect" href="unit__farm_8cpp.html#a5412355e91f35ff2912b13baea6ede51" title=" " alt="" coords="480,187,647,229"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,43,432,69"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,79,245,105"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,104,56,131"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,129,431,156"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,129,228,156"/>
 </map>
 </div>
 
@@ -1286,15 +1524,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a118a23cd18512714961e3055b9dd1643_icgraph.png" border="0" usemap="#aclass_farm_a118a23cd18512714961e3055b9dd1643_icgraph" alt=""/></div>
 <map name="aclass_farm_a118a23cd18512714961e3055b9dd1643_icgraph" id="aclass_farm_a118a23cd18512714961e3055b9dd1643_icgraph">
-<area shape="rect" title=" " alt="" coords="676,122,867,149"/>
-<area shape="rect" href="class_financial_remove_screen.html#aebfb1998a037fca4a45e8ad78d20ce4a" title=" " alt="" coords="455,5,616,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a20aacf25126ae2a9996daa0e5950c6b6" title=" " alt="" coords="443,71,628,98"/>
-<area shape="rect" href="unit__farm_8cpp.html#aacb852c3b16b649deb9b56c844b86f4b" title=" " alt="" coords="443,122,627,149"/>
-<area shape="rect" href="unit__farm_8cpp.html#a3b1fca5273d857fb0ce0066de34a07d7" title=" " alt="" coords="452,173,619,215"/>
-<area shape="rect" href="unit__farm_8cpp.html#af05a8bf0b7a3a2dfce7a393a62f6e740" title=" " alt="" coords="452,239,619,280"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,151,395,178"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,151,211,178"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,151,56,178"/>
+<area shape="rect" title=" " alt="" coords="713,148,904,175"/>
+<area shape="rect" href="functional__tests_8cpp.html#ad1f163fafadccbf88cfab8a5f3d8835b" title=" " alt="" coords="499,5,647,32"/>
+<area shape="rect" href="class_financial_remove_screen.html#aebfb1998a037fca4a45e8ad78d20ce4a" title=" " alt="" coords="492,57,653,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#a20aacf25126ae2a9996daa0e5950c6b6" title=" " alt="" coords="480,123,665,149"/>
+<area shape="rect" href="unit__farm_8cpp.html#aacb852c3b16b649deb9b56c844b86f4b" title=" " alt="" coords="481,173,665,200"/>
+<area shape="rect" href="unit__farm_8cpp.html#a3b1fca5273d857fb0ce0066de34a07d7" title=" " alt="" coords="489,225,656,266"/>
+<area shape="rect" href="unit__farm_8cpp.html#af05a8bf0b7a3a2dfce7a393a62f6e740" title=" " alt="" coords="489,290,656,331"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,64,432,91"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,123,245,149"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,148,56,175"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,173,431,200"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,173,228,200"/>
 </map>
 </div>
 
@@ -1338,13 +1579,300 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a786d1be415e2f09870b89be9a59f47e0_icgraph.png" border="0" usemap="#aclass_farm_a786d1be415e2f09870b89be9a59f47e0_icgraph" alt=""/></div>
 <map name="aclass_farm_a786d1be415e2f09870b89be9a59f47e0_icgraph" id="aclass_farm_a786d1be415e2f09870b89be9a59f47e0_icgraph">
-<area shape="rect" title=" " alt="" coords="657,78,836,105"/>
-<area shape="rect" href="class_financial_remove_screen.html#aebfb1998a037fca4a45e8ad78d20ce4a" title=" " alt="" coords="445,5,607,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a23d88d1bb436ec1fcddd83e75271dadd" title=" " alt="" coords="443,71,609,112"/>
-<area shape="rect" href="unit__farm_8cpp.html#a8efd4b42a88f1d702109a7659e5953ea" title=" " alt="" coords="443,136,609,177"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,111,395,138"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,111,211,138"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,111,56,138"/>
+<area shape="rect" title=" " alt="" coords="695,97,873,124"/>
+<area shape="rect" href="functional__tests_8cpp.html#ad1f163fafadccbf88cfab8a5f3d8835b" title=" " alt="" coords="489,5,637,32"/>
+<area shape="rect" href="class_financial_remove_screen.html#aebfb1998a037fca4a45e8ad78d20ce4a" title=" " alt="" coords="483,57,644,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#a23d88d1bb436ec1fcddd83e75271dadd" title=" " alt="" coords="480,122,647,163"/>
+<area shape="rect" href="unit__farm_8cpp.html#a8efd4b42a88f1d702109a7659e5953ea" title=" " alt="" coords="480,187,647,229"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,43,432,69"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,79,245,105"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,104,56,131"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,129,431,156"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,129,228,156"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af1eb7f11a8c9588efe9e65289c2e082b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1eb7f11a8c9588efe9e65289c2e082b">&#9670;&nbsp;</a></span>getUserDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString Farm::getUserDate </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_nickname</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the date of a registered <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a> in the database. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_nickname</td><td>the date of the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>QString - the content date attribute. <br  />
+ </dd></dl>
+
+<p>Implemented in <a class="el" href="class_farm_handle.html#a1fd1853dc38caff9f28b48c80e8c5e15">FarmHandle</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_farm_af1eb7f11a8c9588efe9e65289c2e082b_icgraph.png" border="0" usemap="#aclass_farm_af1eb7f11a8c9588efe9e65289c2e082b_icgraph" alt=""/></div>
+<map name="aclass_farm_af1eb7f11a8c9588efe9e65289c2e082b_icgraph" id="aclass_farm_af1eb7f11a8c9588efe9e65289c2e082b_icgraph">
+<area shape="rect" title=" " alt="" coords="687,163,819,189"/>
+<area shape="rect" href="functional__tests_8cpp.html#a86d2feca61fc275c1bdc4d08baac4ede" title=" " alt="" coords="505,5,614,32"/>
+<area shape="rect" href="class_user_edit_screen.html#af538c89ca29bbbd1ab99b22225f04b96" title=" " alt="" coords="492,57,627,98"/>
+<area shape="rect" href="class_user_query_screen.html#a5186ad35d34cc8ee65089c9e109199f8" title=" " alt="" coords="486,122,633,163"/>
+<area shape="rect" href="class_user_remove_screen.html#a85f9a4d81c85c27f5989dcd03dd870b7" title=" " alt="" coords="480,187,639,229"/>
+<area shape="rect" href="unit__farm_8cpp.html#a3c5f14f67bbaec95ce51990327aa550b" title=" " alt="" coords="482,253,637,280"/>
+<area shape="rect" href="unit__farm_8cpp.html#af0f17ba4f7059e3f8df1357558143fbf" title=" " alt="" coords="482,304,637,331"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,104,432,131"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,203,245,229"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,228,56,255"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,253,431,280"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,253,228,280"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a71797bba7d43932eac632abfd70eec54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71797bba7d43932eac632abfd70eec54">&#9670;&nbsp;</a></span>getUserName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString Farm::getUserName </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_nickname</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the name of a registered <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a> in the database. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_nickname</td><td>the name of the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>QString - the content name attribute. <br  />
+ </dd></dl>
+
+<p>Implemented in <a class="el" href="class_farm_handle.html#ae64d607c1d664f6ff19f9aae7f75b631">FarmHandle</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_farm_a71797bba7d43932eac632abfd70eec54_icgraph.png" border="0" usemap="#aclass_farm_a71797bba7d43932eac632abfd70eec54_icgraph" alt=""/></div>
+<map name="aclass_farm_a71797bba7d43932eac632abfd70eec54_icgraph" id="aclass_farm_a71797bba7d43932eac632abfd70eec54_icgraph">
+<area shape="rect" title=" " alt="" coords="689,195,828,222"/>
+<area shape="rect" href="class_test_user_edit_screen_g_u_i.html#a7da2d3f7d5e1dcb344b57b8af694bc94" title=" " alt="" coords="481,5,641,47"/>
+<area shape="rect" href="functional__tests_8cpp.html#a86d2feca61fc275c1bdc4d08baac4ede" title=" " alt="" coords="506,71,615,98"/>
+<area shape="rect" href="class_user_edit_screen.html#af538c89ca29bbbd1ab99b22225f04b96" title=" " alt="" coords="493,123,628,164"/>
+<area shape="rect" href="class_user_query_screen.html#a5186ad35d34cc8ee65089c9e109199f8" title=" " alt="" coords="487,188,634,229"/>
+<area shape="rect" href="class_user_remove_screen.html#a85f9a4d81c85c27f5989dcd03dd870b7" title=" " alt="" coords="481,253,640,295"/>
+<area shape="rect" href="unit__farm_8cpp.html#a28b00984bbef9c772caaa8fc06a24102" title=" " alt="" coords="480,319,641,346"/>
+<area shape="rect" href="unit__farm_8cpp.html#ab4216cdd761fcab7d465e54bc531a501" title=" " alt="" coords="480,370,641,397"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,170,432,197"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,269,245,295"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,294,56,321"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,319,431,346"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,319,228,346"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5f96a705c12df164b910d8141efe374d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f96a705c12df164b910d8141efe374d">&#9670;&nbsp;</a></span>getUserNickname()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString Farm::getUserNickname </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_nickname</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the nickname of a registered <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a> in the database. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_nickname</td><td>the nickname of the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>QString - the content nickname attribute. <br  />
+ </dd></dl>
+
+<p>Implemented in <a class="el" href="class_farm_handle.html#a28cf044f88a689e0b489fbc603ce70b7">FarmHandle</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_farm_a5f96a705c12df164b910d8141efe374d_icgraph.png" border="0" usemap="#aclass_farm_a5f96a705c12df164b910d8141efe374d_icgraph" alt=""/></div>
+<map name="aclass_farm_a5f96a705c12df164b910d8141efe374d_icgraph" id="aclass_farm_a5f96a705c12df164b910d8141efe374d_icgraph">
+<area shape="rect" title=" " alt="" coords="716,425,879,451"/>
+<area shape="rect" href="class_test_sign_up_screen_g_u_i.html#ad88b24122af1e955ef8ea1c4e399d7f6" title=" " alt="" coords="498,5,650,47"/>
+<area shape="rect" href="class_test_user_consult_screen_g_u_i.html#a4eea68c2c1975a3524285ac2ca734a26" title=" " alt="" coords="483,71,665,112"/>
+<area shape="rect" href="class_test_user_remove_screen_g_u_i.html#a092c5ebc262b6e08c70a3719dbff1fdd" title=" " alt="" coords="483,136,665,177"/>
+<area shape="rect" href="functional__tests_8cpp.html#a86d2feca61fc275c1bdc4d08baac4ede" title=" " alt="" coords="519,202,629,229"/>
+<area shape="rect" href="class_login_screen.html#a70c81600c1baff4960933ccd1a4f22e5" title=" " alt="" coords="480,253,668,295"/>
+<area shape="rect" href="class_user_edit_screen.html#af538c89ca29bbbd1ab99b22225f04b96" title=" " alt="" coords="507,319,641,360"/>
+<area shape="rect" href="class_user_query_screen.html#a5186ad35d34cc8ee65089c9e109199f8" title=" " alt="" coords="501,384,647,425"/>
+<area shape="rect" href="class_user_remove_screen.html#a85f9a4d81c85c27f5989dcd03dd870b7" title=" " alt="" coords="495,449,653,491"/>
+<area shape="rect" href="class_user_remove_screen.html#a40a837f6bc87dda78491dcda6fad419f" title=" " alt="" coords="495,515,653,556"/>
+<area shape="rect" href="class_user_edit_screen.html#a9c4789efdf020ae438cdd6edc80bd08c" title=" " alt="" coords="505,580,643,621"/>
+<area shape="rect" href="unit__farm_8cpp.html#aebf4129e522cec7632a06bcdae1ca08d" title=" " alt="" coords="501,646,647,673"/>
+<area shape="rect" href="unit__farm_8cpp.html#a19051657128e128f6aedaf2264ec2097" title=" " alt="" coords="502,697,646,723"/>
+<area shape="rect" href="unit__farm_8cpp.html#a809060ec486f78ab70a40cf1ed8d689a" title=" " alt="" coords="481,747,667,774"/>
+<area shape="rect" href="unit__farm_8cpp.html#a928bca2e7e4132ba4db371b39130d8a2" title=" " alt="" coords="481,798,667,825"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,425,432,451"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,646,245,673"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,671,56,698"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,697,431,723"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,697,228,723"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2f3412a472fcf499ba84499a3c4f5e96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f3412a472fcf499ba84499a3c4f5e96">&#9670;&nbsp;</a></span>getUserPassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString Farm::getUserPassword </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_nickname</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the password of a registered <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a> in the database. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_nickname</td><td>the password of the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>QString - the content password attribute. <br  />
+ </dd></dl>
+
+<p>Implemented in <a class="el" href="class_farm_handle.html#a723f13bf649480369ae746e8d61d1205">FarmHandle</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_farm_a2f3412a472fcf499ba84499a3c4f5e96_icgraph.png" border="0" usemap="#aclass_farm_a2f3412a472fcf499ba84499a3c4f5e96_icgraph" alt=""/></div>
+<map name="aclass_farm_a2f3412a472fcf499ba84499a3c4f5e96_icgraph" id="aclass_farm_a2f3412a472fcf499ba84499a3c4f5e96_icgraph">
+<area shape="rect" title=" " alt="" coords="716,129,879,156"/>
+<area shape="rect" href="functional__tests_8cpp.html#a86d2feca61fc275c1bdc4d08baac4ede" title=" " alt="" coords="519,5,629,32"/>
+<area shape="rect" href="class_login_screen.html#a70c81600c1baff4960933ccd1a4f22e5" title=" " alt="" coords="480,57,668,98"/>
+<area shape="rect" href="class_user_edit_screen.html#af538c89ca29bbbd1ab99b22225f04b96" title=" " alt="" coords="507,122,641,163"/>
+<area shape="rect" href="unit__farm_8cpp.html#acfb822758ba849ba31263fc70a0b3770" title=" " alt="" coords="482,188,666,215"/>
+<area shape="rect" href="unit__farm_8cpp.html#ae5600b4fa98341d85eb67da5891ff7f1" title=" " alt="" coords="482,239,666,265"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,72,432,99"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,137,245,164"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,163,56,189"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,188,431,215"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,188,228,215"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af5ba43fd2e316e1a0264d0469ffe0664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5ba43fd2e316e1a0264d0469ffe0664">&#9670;&nbsp;</a></span>getUserType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString Farm::getUserType </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_nickname</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the type of a registered <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a> in the database. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_nickname</td><td>the type of the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>QString - the content type attribute. <br  />
+ </dd></dl>
+
+<p>Implemented in <a class="el" href="class_farm_handle.html#ac67e9bd5f17d8e65861c7c66165ca045">FarmHandle</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_farm_af5ba43fd2e316e1a0264d0469ffe0664_icgraph.png" border="0" usemap="#aclass_farm_af5ba43fd2e316e1a0264d0469ffe0664_icgraph" alt=""/></div>
+<map name="aclass_farm_af5ba43fd2e316e1a0264d0469ffe0664_icgraph" id="aclass_farm_af5ba43fd2e316e1a0264d0469ffe0664_icgraph">
+<area shape="rect" title=" " alt="" coords="717,195,851,221"/>
+<area shape="rect" href="functional__tests_8cpp.html#a86d2feca61fc275c1bdc4d08baac4ede" title=" " alt="" coords="520,5,629,32"/>
+<area shape="rect" href="class_user_edit_screen.html#af538c89ca29bbbd1ab99b22225f04b96" title=" " alt="" coords="507,57,642,98"/>
+<area shape="rect" href="class_user_query_screen.html#a5186ad35d34cc8ee65089c9e109199f8" title=" " alt="" coords="501,122,648,163"/>
+<area shape="rect" href="class_user_remove_screen.html#a85f9a4d81c85c27f5989dcd03dd870b7" title=" " alt="" coords="495,187,654,229"/>
+<area shape="rect" href="class_home_screen.html#ad74bb0ad1ebc8115eb458c18acdbe29d" title=" " alt="" coords="480,253,669,294"/>
+<area shape="rect" href="unit__farm_8cpp.html#a3495cc53513734ea2e12d6e2d27bff97" title=" " alt="" coords="497,319,652,345"/>
+<area shape="rect" href="unit__farm_8cpp.html#acf9a4d91c3b2a473d379a8b30d3e7c31" title=" " alt="" coords="497,369,652,396"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,137,432,164"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,268,245,295"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,293,56,320"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,319,431,345"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,319,228,345"/>
 </map>
 </div>
 
@@ -1387,13 +1915,19 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a0553f0ab93db2696fa05a2dcba9e55aa_icgraph.png" border="0" usemap="#aclass_farm_a0553f0ab93db2696fa05a2dcba9e55aa_icgraph" alt=""/></div>
 <map name="aclass_farm_a0553f0ab93db2696fa05a2dcba9e55aa_icgraph" id="aclass_farm_a0553f0ab93db2696fa05a2dcba9e55aa_icgraph">
-<area shape="rect" title=" " alt="" coords="673,56,796,83"/>
-<area shape="rect" href="unit__cattle_8cpp.html#adcc4d6f867258451aa13fe491fd5eef1" title=" " alt="" coords="482,5,625,32"/>
-<area shape="rect" href="unit__transaction_8cpp.html#a9f2f36e69d5b38b9d7d4240425ada186" title=" " alt="" coords="259,56,433,83"/>
-<area shape="rect" href="unit__farm_8cpp.html#acf2465c6656fa2d9ac4936426069f881" title=" " alt="" coords="481,107,625,133"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,56,211,83"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,56,83"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="278,107,414,133"/>
+<area shape="rect" title=" " alt="" coords="712,260,835,287"/>
+<area shape="rect" href="gui__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="547,5,598,32"/>
+<area shape="rect" href="class_cattle_consult_screen.html#a0cdd343d4fd4537fb4a5fd8dd02a881a" title=" " alt="" coords="497,57,648,98"/>
+<area shape="rect" href="class_financial_consult_screen.html#aee37ebdedd45e33b9a56d5aa2ad97942" title=" " alt="" coords="493,122,652,163"/>
+<area shape="rect" href="class_report_screen.html#a818774a846355748a375c1aca923520e" title=" " alt="" coords="481,187,664,229"/>
+<area shape="rect" href="class_user_remove_screen.html#a40a837f6bc87dda78491dcda6fad419f" title=" " alt="" coords="493,253,652,294"/>
+<area shape="rect" href="unit__cattle_8cpp.html#adcc4d6f867258451aa13fe491fd5eef1" title=" " alt="" coords="275,319,417,345"/>
+<area shape="rect" href="unit__transaction_8cpp.html#a9f2f36e69d5b38b9d7d4240425ada186" title=" " alt="" coords="259,369,433,396"/>
+<area shape="rect" href="unit__user_8cpp.html#a1bd364eebc11877ba390937013dfed25" title=" " alt="" coords="278,420,414,447"/>
+<area shape="rect" href="unit__farm_8cpp.html#acf2465c6656fa2d9ac4936426069f881" title=" " alt="" coords="501,471,645,497"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="104,395,211,421"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,395,56,421"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="278,471,414,497"/>
 </map>
 </div>
 
@@ -1429,11 +1963,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_aa2e8f031dcbba5e81f8be3fef670ee90_icgraph.png" border="0" usemap="#aclass_farm_aa2e8f031dcbba5e81f8be3fef670ee90_icgraph" alt=""/></div>
 <map name="aclass_farm_aa2e8f031dcbba5e81f8be3fef670ee90_icgraph" id="aclass_farm_aa2e8f031dcbba5e81f8be3fef670ee90_icgraph">
-<area shape="rect" title=" " alt="" coords="631,5,749,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#adddcf8b958845ad92e8184adc3442148" title=" " alt="" coords="443,5,583,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,5,395,32"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,5,211,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="649,42,768,69"/>
+<area shape="rect" href="class_user_remove_screen.html#a40a837f6bc87dda78491dcda6fad419f" title=" " alt="" coords="443,5,601,47"/>
+<area shape="rect" href="unit__farm_8cpp.html#adddcf8b958845ad92e8184adc3442148" title=" " alt="" coords="452,71,592,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,71,395,98"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="104,71,211,98"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,71,56,98"/>
 </map>
 </div>
 
@@ -1469,11 +2004,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a0cfc73bdcc93e9e3d7a9e18ad14170ff_icgraph.png" border="0" usemap="#aclass_farm_a0cfc73bdcc93e9e3d7a9e18ad14170ff_icgraph" alt=""/></div>
 <map name="aclass_farm_a0cfc73bdcc93e9e3d7a9e18ad14170ff_icgraph" id="aclass_farm_a0cfc73bdcc93e9e3d7a9e18ad14170ff_icgraph">
-<area shape="rect" title=" " alt="" coords="632,5,751,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a49a515688058ff84dbe4331899e11192" title=" " alt="" coords="443,5,584,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,5,395,32"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,5,211,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="673,143,792,170"/>
+<area shape="rect" href="class_cattle_consult_screen.html#a0cdd343d4fd4537fb4a5fd8dd02a881a" title=" " alt="" coords="459,5,609,47"/>
+<area shape="rect" href="class_financial_consult_screen.html#aee37ebdedd45e33b9a56d5aa2ad97942" title=" " alt="" coords="455,71,613,112"/>
+<area shape="rect" href="class_report_screen.html#a818774a846355748a375c1aca923520e" title=" " alt="" coords="443,136,625,177"/>
+<area shape="rect" href="class_user_remove_screen.html#a40a837f6bc87dda78491dcda6fad419f" title=" " alt="" coords="455,201,613,243"/>
+<area shape="rect" href="unit__farm_8cpp.html#a49a515688058ff84dbe4331899e11192" title=" " alt="" coords="463,267,605,294"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,267,395,294"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="104,267,211,294"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,267,56,294"/>
 </map>
 </div>
 
@@ -1516,11 +2055,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a0a370ef89d4e4d3cac9cc68146e7a884_icgraph.png" border="0" usemap="#aclass_farm_a0a370ef89d4e4d3cac9cc68146e7a884_icgraph" alt=""/></div>
 <map name="aclass_farm_a0a370ef89d4e4d3cac9cc68146e7a884_icgraph" id="aclass_farm_a0a370ef89d4e4d3cac9cc68146e7a884_icgraph">
-<area shape="rect" title=" " alt="" coords="637,5,763,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a4aed24811f6d9e6be66eee9b2fc4daeb" title=" " alt="" coords="443,5,589,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,5,395,32"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,5,211,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="673,111,799,138"/>
+<area shape="rect" href="class_cattle_consult_screen.html#a0cdd343d4fd4537fb4a5fd8dd02a881a" title=" " alt="" coords="459,5,609,47"/>
+<area shape="rect" href="class_financial_consult_screen.html#aee37ebdedd45e33b9a56d5aa2ad97942" title=" " alt="" coords="455,71,613,112"/>
+<area shape="rect" href="class_report_screen.html#a818774a846355748a375c1aca923520e" title=" " alt="" coords="443,136,625,177"/>
+<area shape="rect" href="unit__farm_8cpp.html#a4aed24811f6d9e6be66eee9b2fc4daeb" title=" " alt="" coords="461,202,607,229"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,202,395,229"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="104,202,211,229"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,202,56,229"/>
 </map>
 </div>
 
@@ -1573,11 +2115,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_aa269c04c45275617c6a3c3304e5cd787_icgraph.png" border="0" usemap="#aclass_farm_aa269c04c45275617c6a3c3304e5cd787_icgraph" alt=""/></div>
 <map name="aclass_farm_aa269c04c45275617c6a3c3304e5cd787_icgraph" id="aclass_farm_aa269c04c45275617c6a3c3304e5cd787_icgraph">
-<area shape="rect" title=" " alt="" coords="716,5,919,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a5f181020901664188f7dbcde1e7cf529" title=" " alt="" coords="443,5,668,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,5,395,32"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,5,211,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="753,64,956,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="535,5,651,32"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a9036387b1877624c30d4fee492c7ffe5" title=" " alt="" coords="521,57,664,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#a5f181020901664188f7dbcde1e7cf529" title=" " alt="" coords="480,123,705,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
 </map>
 </div>
 
@@ -1630,11 +2176,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a70ce1b83df7fd7402d7003a49413fe5b_icgraph.png" border="0" usemap="#aclass_farm_a70ce1b83df7fd7402d7003a49413fe5b_icgraph" alt=""/></div>
 <map name="aclass_farm_a70ce1b83df7fd7402d7003a49413fe5b_icgraph" id="aclass_farm_a70ce1b83df7fd7402d7003a49413fe5b_icgraph">
-<area shape="rect" title=" " alt="" coords="679,5,845,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a53857d90824bc6cf2b51f0bfe461f36e" title=" " alt="" coords="443,5,631,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,5,395,32"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,5,211,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="716,64,883,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="516,5,632,32"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a9036387b1877624c30d4fee492c7ffe5" title=" " alt="" coords="503,57,645,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#a53857d90824bc6cf2b51f0bfe461f36e" title=" " alt="" coords="480,123,668,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
 </map>
 </div>
 
@@ -1687,11 +2237,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a9fa3782adb85cf0022fadfecf254c37f_icgraph.png" border="0" usemap="#aclass_farm_a9fa3782adb85cf0022fadfecf254c37f_icgraph" alt=""/></div>
 <map name="aclass_farm_a9fa3782adb85cf0022fadfecf254c37f_icgraph" id="aclass_farm_a9fa3782adb85cf0022fadfecf254c37f_icgraph">
-<area shape="rect" title=" " alt="" coords="659,5,805,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#af4833498ce47c4fe3546f77b632b774a" title=" " alt="" coords="443,5,611,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,5,395,32"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,5,211,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="696,64,843,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="506,5,622,32"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a9036387b1877624c30d4fee492c7ffe5" title=" " alt="" coords="493,57,635,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#af4833498ce47c4fe3546f77b632b774a" title=" " alt="" coords="480,123,648,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
 </map>
 </div>
 
@@ -1744,11 +2298,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_adfb4d3b361107f266236718fa67c9a2c_icgraph.png" border="0" usemap="#aclass_farm_adfb4d3b361107f266236718fa67c9a2c_icgraph" alt=""/></div>
 <map name="aclass_farm_adfb4d3b361107f266236718fa67c9a2c_icgraph" id="aclass_farm_adfb4d3b361107f266236718fa67c9a2c_icgraph">
-<area shape="rect" title=" " alt="" coords="665,5,819,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#ab50c465cf64c993c1c4cb80566ea27df" title=" " alt="" coords="443,5,617,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,5,395,32"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,5,211,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="703,31,856,57"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="509,5,625,32"/>
+<area shape="rect" href="unit__farm_8cpp.html#ab50c465cf64c993c1c4cb80566ea27df" title=" " alt="" coords="480,56,655,83"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,5,432,32"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,5,245,32"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,56,57"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,56,431,83"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,56,228,83"/>
 </map>
 </div>
 
@@ -1801,11 +2358,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_af30024c237a2f80be79a83e6fa91b16a_icgraph.png" border="0" usemap="#aclass_farm_af30024c237a2f80be79a83e6fa91b16a_icgraph" alt=""/></div>
 <map name="aclass_farm_af30024c237a2f80be79a83e6fa91b16a_icgraph" id="aclass_farm_af30024c237a2f80be79a83e6fa91b16a_icgraph">
-<area shape="rect" title=" " alt="" coords="661,5,811,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#aee8316f1188aa4182acbd384409d5f9c" title=" " alt="" coords="443,5,613,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,5,395,32"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,5,211,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="699,64,848,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="507,5,623,32"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a9036387b1877624c30d4fee492c7ffe5" title=" " alt="" coords="494,57,637,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#aee8316f1188aa4182acbd384409d5f9c" title=" " alt="" coords="480,123,651,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
 </map>
 </div>
 
@@ -1858,11 +2419,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_aa62eef7ef3f70960e74c986e41624307_icgraph.png" border="0" usemap="#aclass_farm_aa62eef7ef3f70960e74c986e41624307_icgraph" alt=""/></div>
 <map name="aclass_farm_aa62eef7ef3f70960e74c986e41624307_icgraph" id="aclass_farm_aa62eef7ef3f70960e74c986e41624307_icgraph">
-<area shape="rect" title=" " alt="" coords="665,5,817,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#ac2285b632a65e236f1b9a85c938f5696" title=" " alt="" coords="443,5,617,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,5,395,32"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,5,211,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="703,64,855,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="509,5,625,32"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a9036387b1877624c30d4fee492c7ffe5" title=" " alt="" coords="496,57,639,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#ac2285b632a65e236f1b9a85c938f5696" title=" " alt="" coords="480,123,655,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
 </map>
 </div>
 
@@ -1915,11 +2480,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a7ef5db4d3afeb58712acefc40237af6b_icgraph.png" border="0" usemap="#aclass_farm_a7ef5db4d3afeb58712acefc40237af6b_icgraph" alt=""/></div>
 <map name="aclass_farm_a7ef5db4d3afeb58712acefc40237af6b_icgraph" id="aclass_farm_a7ef5db4d3afeb58712acefc40237af6b_icgraph">
-<area shape="rect" title=" " alt="" coords="657,5,803,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#aaafbfe1577f8b7ddf5f41ebd46647cd2" title=" " alt="" coords="443,5,609,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,5,395,32"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,5,211,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="695,64,840,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="505,5,621,32"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a9036387b1877624c30d4fee492c7ffe5" title=" " alt="" coords="492,57,635,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#aaafbfe1577f8b7ddf5f41ebd46647cd2" title=" " alt="" coords="480,123,647,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
 </map>
 </div>
 
@@ -1972,11 +2541,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_ab17b0ca624b281af9370b7cb6907a668_icgraph.png" border="0" usemap="#aclass_farm_ab17b0ca624b281af9370b7cb6907a668_icgraph" alt=""/></div>
 <map name="aclass_farm_ab17b0ca624b281af9370b7cb6907a668_icgraph" id="aclass_farm_ab17b0ca624b281af9370b7cb6907a668_icgraph">
-<area shape="rect" title=" " alt="" coords="665,5,819,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a28061cd6184131e30f95f1d22f3f0320" title=" " alt="" coords="443,5,617,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,5,395,32"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,5,211,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="703,64,856,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#af4c4fb1dfa3cdec088f5c79df6b9237e" title="Functional tests." alt="" coords="509,5,625,32"/>
+<area shape="rect" href="class_cattle_edit_screen.html#a9036387b1877624c30d4fee492c7ffe5" title=" " alt="" coords="496,57,639,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#a28061cd6184131e30f95f1d22f3f0320" title=" " alt="" coords="480,123,655,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
 </map>
 </div>
 
@@ -2063,11 +2636,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a2bdaf173069f4042c5060a1ac8fd8778_icgraph.png" border="0" usemap="#aclass_farm_a2bdaf173069f4042c5060a1ac8fd8778_icgraph" alt=""/></div>
 <map name="aclass_farm_a2bdaf173069f4042c5060a1ac8fd8778_icgraph" id="aclass_farm_a2bdaf173069f4042c5060a1ac8fd8778_icgraph">
-<area shape="rect" title=" " alt="" coords="657,5,836,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a198c8bee1548c2b0299410c5940e68ed" title=" " alt="" coords="443,5,609,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,13,395,39"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,13,211,39"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" title=" " alt="" coords="695,27,873,69"/>
+<area shape="rect" href="functional__tests_8cpp.html#ad1f163fafadccbf88cfab8a5f3d8835b" title=" " alt="" coords="489,5,637,32"/>
+<area shape="rect" href="unit__farm_8cpp.html#a198c8bee1548c2b0299410c5940e68ed" title=" " alt="" coords="480,57,647,98"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,8,432,35"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,9,245,36"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,35,56,61"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,60,431,87"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,60,228,87"/>
 </map>
 </div>
 
@@ -2120,11 +2696,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a9510b9381808e1573ce14e5062f29677_icgraph.png" border="0" usemap="#aclass_farm_a9510b9381808e1573ce14e5062f29677_icgraph" alt=""/></div>
 <map name="aclass_farm_a9510b9381808e1573ce14e5062f29677_icgraph" id="aclass_farm_a9510b9381808e1573ce14e5062f29677_icgraph">
-<area shape="rect" title=" " alt="" coords="685,5,857,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a5cd679e5fa9dccbee441c24fb14751f2" title=" " alt="" coords="443,5,637,32"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,5,395,32"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,5,211,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title=" " alt="" coords="723,31,895,57"/>
+<area shape="rect" href="functional__tests_8cpp.html#ad1f163fafadccbf88cfab8a5f3d8835b" title=" " alt="" coords="503,5,651,32"/>
+<area shape="rect" href="unit__farm_8cpp.html#a5cd679e5fa9dccbee441c24fb14751f2" title=" " alt="" coords="480,56,675,83"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,5,432,32"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,5,245,32"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,56,57"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,56,431,83"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,56,228,83"/>
 </map>
 </div>
 
@@ -2177,11 +2756,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_ae1867284a7308e8afc45416e01e6b55a_icgraph.png" border="0" usemap="#aclass_farm_ae1867284a7308e8afc45416e01e6b55a_icgraph" alt=""/></div>
 <map name="aclass_farm_ae1867284a7308e8afc45416e01e6b55a_icgraph" id="aclass_farm_ae1867284a7308e8afc45416e01e6b55a_icgraph">
-<area shape="rect" title=" " alt="" coords="657,13,868,39"/>
-<area shape="rect" href="unit__farm_8cpp.html#a5412355e91f35ff2912b13baea6ede51" title=" " alt="" coords="443,5,609,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,13,395,39"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,13,211,39"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" title=" " alt="" coords="695,35,905,61"/>
+<area shape="rect" href="functional__tests_8cpp.html#ad1f163fafadccbf88cfab8a5f3d8835b" title=" " alt="" coords="489,5,637,32"/>
+<area shape="rect" href="unit__farm_8cpp.html#a5412355e91f35ff2912b13baea6ede51" title=" " alt="" coords="480,57,647,98"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,8,432,35"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,9,245,36"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,35,56,61"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,60,431,87"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,60,228,87"/>
 </map>
 </div>
 
@@ -2234,11 +2816,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a6d762fe1c3c9c9543f6c91401be97d29_icgraph.png" border="0" usemap="#aclass_farm_a6d762fe1c3c9c9543f6c91401be97d29_icgraph" alt=""/></div>
 <map name="aclass_farm_a6d762fe1c3c9c9543f6c91401be97d29_icgraph" id="aclass_farm_a6d762fe1c3c9c9543f6c91401be97d29_icgraph">
-<area shape="rect" title=" " alt="" coords="657,13,848,39"/>
-<area shape="rect" href="unit__farm_8cpp.html#af05a8bf0b7a3a2dfce7a393a62f6e740" title=" " alt="" coords="443,5,609,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,13,395,39"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,13,211,39"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" title=" " alt="" coords="695,35,885,61"/>
+<area shape="rect" href="functional__tests_8cpp.html#ad1f163fafadccbf88cfab8a5f3d8835b" title=" " alt="" coords="489,5,637,32"/>
+<area shape="rect" href="unit__farm_8cpp.html#af05a8bf0b7a3a2dfce7a393a62f6e740" title=" " alt="" coords="480,57,647,98"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,8,432,35"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,9,245,36"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,35,56,61"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,60,431,87"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,60,228,87"/>
 </map>
 </div>
 
@@ -2291,19 +2876,327 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_farm_a94684d633fb29e611ea0a172899f09b3_icgraph.png" border="0" usemap="#aclass_farm_a94684d633fb29e611ea0a172899f09b3_icgraph" alt=""/></div>
 <map name="aclass_farm_a94684d633fb29e611ea0a172899f09b3_icgraph" id="aclass_farm_a94684d633fb29e611ea0a172899f09b3_icgraph">
-<area shape="rect" title=" " alt="" coords="657,13,836,39"/>
-<area shape="rect" href="unit__farm_8cpp.html#a8efd4b42a88f1d702109a7659e5953ea" title=" " alt="" coords="443,5,609,47"/>
-<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="259,13,395,39"/>
-<area shape="rect" href="main__unit__test_8cpp.html#aee7502ddabe4ebd601564faaa2d0a5b8" title=" " alt="" coords="104,13,211,39"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" title=" " alt="" coords="695,35,873,61"/>
+<area shape="rect" href="functional__tests_8cpp.html#ad1f163fafadccbf88cfab8a5f3d8835b" title=" " alt="" coords="489,5,637,32"/>
+<area shape="rect" href="unit__farm_8cpp.html#a8efd4b42a88f1d702109a7659e5953ea" title=" " alt="" coords="480,57,647,98"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,8,432,35"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,9,245,36"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,35,56,61"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,60,431,87"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,60,228,87"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a77926a81ad972da07cff3d004c2a8ace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77926a81ad972da07cff3d004c2a8ace">&#9670;&nbsp;</a></span>setUserDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Farm::setUserDate </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_nickname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_date</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the date of a registered <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a> in the database. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_nickname</td><td>the nickname of the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+    <tr><td class="paramname">user_date</td><td>which will be set to the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_farm_handle.html#af8835f4e5a04dde5cd0883f77369ac30">FarmHandle</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_farm_a77926a81ad972da07cff3d004c2a8ace_icgraph.png" border="0" usemap="#aclass_farm_a77926a81ad972da07cff3d004c2a8ace_icgraph" alt=""/></div>
+<map name="aclass_farm_a77926a81ad972da07cff3d004c2a8ace_icgraph" id="aclass_farm_a77926a81ad972da07cff3d004c2a8ace_icgraph">
+<area shape="rect" title=" " alt="" coords="683,64,815,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#a86d2feca61fc275c1bdc4d08baac4ede" title=" " alt="" coords="503,5,612,32"/>
+<area shape="rect" href="class_user_edit_screen.html#a9c4789efdf020ae438cdd6edc80bd08c" title=" " alt="" coords="488,57,627,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#af0f17ba4f7059e3f8df1357558143fbf" title=" " alt="" coords="480,123,635,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac579108380284df9c5446cb9bf73d620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac579108380284df9c5446cb9bf73d620">&#9670;&nbsp;</a></span>setUserName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Farm::setUserName </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_nickname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the name of a registered <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a> in the database. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_nickname</td><td>the nickname of the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+    <tr><td class="paramname">user_name</td><td>which will be set to the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_farm_handle.html#a38c83425a1c03f4de41a409df0b7223a">FarmHandle</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_farm_ac579108380284df9c5446cb9bf73d620_icgraph.png" border="0" usemap="#aclass_farm_ac579108380284df9c5446cb9bf73d620_icgraph" alt=""/></div>
+<map name="aclass_farm_ac579108380284df9c5446cb9bf73d620_icgraph" id="aclass_farm_ac579108380284df9c5446cb9bf73d620_icgraph">
+<area shape="rect" title=" " alt="" coords="689,64,828,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#a86d2feca61fc275c1bdc4d08baac4ede" title=" " alt="" coords="506,5,615,32"/>
+<area shape="rect" href="class_user_edit_screen.html#a9c4789efdf020ae438cdd6edc80bd08c" title=" " alt="" coords="491,57,630,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#ab4216cdd761fcab7d465e54bc531a501" title=" " alt="" coords="480,123,641,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a67ce1f45c8de5a26662a6e7e766cab70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ce1f45c8de5a26662a6e7e766cab70">&#9670;&nbsp;</a></span>setUserNickname()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Farm::setUserNickname </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>actual_user_nickname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>new_user_nickname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the nickname of a registered <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a> in the database. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">actual_user_nickname</td><td>the nickname of the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+    <tr><td class="paramname">new_user_nickname</td><td>which will be set to the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_farm_handle.html#a9244905ef950116bd7e077d7ca5003ae">FarmHandle</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_farm_a67ce1f45c8de5a26662a6e7e766cab70_icgraph.png" border="0" usemap="#aclass_farm_a67ce1f45c8de5a26662a6e7e766cab70_icgraph" alt=""/></div>
+<map name="aclass_farm_a67ce1f45c8de5a26662a6e7e766cab70_icgraph" id="aclass_farm_a67ce1f45c8de5a26662a6e7e766cab70_icgraph">
+<area shape="rect" title=" " alt="" coords="713,64,876,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#a86d2feca61fc275c1bdc4d08baac4ede" title=" " alt="" coords="518,5,627,32"/>
+<area shape="rect" href="class_user_edit_screen.html#a9c4789efdf020ae438cdd6edc80bd08c" title=" " alt="" coords="503,57,642,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#a928bca2e7e4132ba4db371b39130d8a2" title=" " alt="" coords="480,123,665,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa48c0e774a2a48b98d2dea6cf2f61e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa48c0e774a2a48b98d2dea6cf2f61e28">&#9670;&nbsp;</a></span>setUserPassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Farm::setUserPassword </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_nickname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the password of a registered <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a> in the database. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_nickname</td><td>the nickname of the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+    <tr><td class="paramname">user_password</td><td>which will be set to the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_farm_handle.html#ac1cbc77543181c88321d6678811c20af">FarmHandle</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_farm_aa48c0e774a2a48b98d2dea6cf2f61e28_icgraph.png" border="0" usemap="#aclass_farm_aa48c0e774a2a48b98d2dea6cf2f61e28_icgraph" alt=""/></div>
+<map name="aclass_farm_aa48c0e774a2a48b98d2dea6cf2f61e28_icgraph" id="aclass_farm_aa48c0e774a2a48b98d2dea6cf2f61e28_icgraph">
+<area shape="rect" title=" " alt="" coords="712,64,875,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#a86d2feca61fc275c1bdc4d08baac4ede" title=" " alt="" coords="517,5,627,32"/>
+<area shape="rect" href="class_user_edit_screen.html#a9c4789efdf020ae438cdd6edc80bd08c" title=" " alt="" coords="503,57,641,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#ae5600b4fa98341d85eb67da5891ff7f1" title=" " alt="" coords="480,123,664,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa33b498efaf8e16887df200b48c1cc80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa33b498efaf8e16887df200b48c1cc80">&#9670;&nbsp;</a></span>setUserType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Farm::setUserType </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_nickname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>user_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the type of a registered <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a> in the database. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_nickname</td><td>the nickname of the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+    <tr><td class="paramname">user_type</td><td>which will be set to the current <a class="el" href="class_user.html" title="This Class represents a User for the GiroDeGado software.">User</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_farm_handle.html#af71be4c5185e0e16adc921953a3737c7">FarmHandle</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_farm_aa33b498efaf8e16887df200b48c1cc80_icgraph.png" border="0" usemap="#aclass_farm_aa33b498efaf8e16887df200b48c1cc80_icgraph" alt=""/></div>
+<map name="aclass_farm_aa33b498efaf8e16887df200b48c1cc80_icgraph" id="aclass_farm_aa33b498efaf8e16887df200b48c1cc80_icgraph">
+<area shape="rect" title=" " alt="" coords="683,64,816,91"/>
+<area shape="rect" href="functional__tests_8cpp.html#a86d2feca61fc275c1bdc4d08baac4ede" title=" " alt="" coords="503,5,612,32"/>
+<area shape="rect" href="class_user_edit_screen.html#a9c4789efdf020ae438cdd6edc80bd08c" title=" " alt="" coords="488,57,627,98"/>
+<area shape="rect" href="unit__farm_8cpp.html#acf9a4d91c3b2a473d379a8b30d3e7c31" title=" " alt="" coords="480,123,635,149"/>
+<area shape="rect" href="functional__tests_8cpp.html#a311d64946b9230ec9427d96b071f788d" title=" " alt="" coords="293,23,432,49"/>
+<area shape="rect" href="main__functional__test_8cpp.html#a997adf8ff4ee60a7e2e3baaf0d5e0e38" title=" " alt="" coords="104,39,245,65"/>
+<area shape="rect" href="api__tests_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" href="unit__farm_8cpp.html#a0926051e8cc08e4599f0e0b2d904fbb3" title=" " alt="" coords="295,89,431,116"/>
+<area shape="rect" href="main__unit__test_8cpp.html#aac3d0096a41d331fbc7660cba693e8d8" title=" " alt="" coords="121,89,228,116"/>
 </map>
 </div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>GiroDeGado/includes/<a class="el" href="farm_8h_source.html">farm.h</a></li>
-<li>GiroDeGado/lib/<a class="el" href="farm_impl_8cpp.html">farmImpl.cpp</a></li>
+<li>GiroDeGado/api/includes/<a class="el" href="farm_8h_source.html">farm.h</a></li>
+<li>GiroDeGado/api/lib/<a class="el" href="farm_impl_8cpp.html">farmImpl.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

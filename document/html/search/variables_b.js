@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['refcount_5f_1013',['refCount_',['../class_body.html#a70b46681762de310d6a3fba89ba2d721',1,'Body']]]
+  ['pimpl_5f_1648',['pImpl_',['../class_handle.html#a16021e57596d7369dfa1a9fadc35c06f',1,'Handle']]]
 ];
