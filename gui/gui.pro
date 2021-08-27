@@ -3,9 +3,9 @@ QT       += core gui sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
-#Cada um cria o seu proprio path
-#LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui/bin/debug/debug) #Marcus
-LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui/bin/debug/debug) #Mace
+
+LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui/bin/debug/debug) #Marcus
+#LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui/bin/debug/debug) #Mace
 #LIBS += -L$$quote(C:/Programas/git/GiroDeGado/gui/bin/debug/debug) #Carlos
 LIBS += -l$$quote(api)
 
@@ -94,5 +94,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    bd_giro.db \
-    bd_giro_tests.db
+    bd_giro.db

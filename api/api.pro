@@ -14,12 +14,7 @@ SOURCES += \
     lib/cattleImpl.cpp \
     lib/farmImpl.cpp \
     lib/transactionImpl.cpp \
-    lib/userImpl.cpp \
-    test/unit/main_unit_test.cpp \
-    test/unit/unit_cattle.cpp \
-    test/unit/unit_farm.cpp \
-    test/unit/unit_transaction.cpp \
-    test/unit/unit_user.cpp
+    lib/userImpl.cpp
 
 HEADERS += \
     includes/cattle.h \
@@ -31,12 +26,7 @@ HEADERS += \
     includes/transactionImpl.h \
     includes/user.h \
     includes/userImpl.h \
-    lib_global.h \
-    test/unit/main_unit_test.h \
-    test/unit/unit_cattle.h \
-    test/unit/unit_farm.h \
-    test/unit/unit_transaction.h \
-    test/unit/unit_user.h
+    lib_global.h
 
 # Default rules for deployment.
 unix {

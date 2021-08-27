@@ -1,0 +1,10 @@
+release/cattleImpl.o
+release/farmImpl.o
+release/transactionImpl.o
+release/userImpl.o
+release/main.o
+release/main_unit_test.o
+release/unit_cattle.o
+release/unit_farm.o
+release/unit_transaction.o
+release/unit_user.o

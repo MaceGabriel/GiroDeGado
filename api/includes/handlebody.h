@@ -11,7 +11,7 @@
 
 #include "lib_global.h"
 
-#define DEBUGING
+//#define DEBUGING
 #ifdef DEBUGING
 extern int numHandleCreated;
 extern int numHandleDeleted;
