@@ -1,38 +1,25 @@
-QT       += core gui sql
+QT       += core sql
+QT       -= gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 
-LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/api_tests/bin/debug/debug) #Marcus
+#LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/api_tests/bin/debug/debug) #Marcus
 #LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/api_tests/bin/debug/debug) #Mace
 #LIBS += -L$$quote(C:/Programas/git/GiroDeGado/api_tests/bin/debug/debug) #Carlos
-LIBS += -l$$quote(api)
+#LIBS += -l$$quote(api)
+
+LIBS += -L$$PWD/bin/debug/debug/ -lapi
+LIBS += -L$$PWD/bin/debug/release/ -lapi
+LIBS += -L$$PWD/bin/debug/ -lapi
 
 SOURCES += \
-    main.cpp \
-    test/unit/main_unit_test.cpp \
-    test/unit/unit_cattle.cpp \
-    test/unit/unit_farm.cpp \
-    test/unit/unit_transaction.cpp \
-    test/unit/unit_user.cpp
+    main.cpp
 
 HEADERS += \
-    ../api/includes/cattle.h \
-    ../api/includes/cattleImpl.h \
-    ../api/includes/farm.h \
-    ../api/includes/farmImpl.h \
-    ../api/includes/handlebody.h \
-    ../api/includes/transaction.h \
-    ../api/includes/transactionImpl.h \
-    ../api/includes/user.h \
-    ../api/includes/userImpl.h \
-    lib_global.h \
-    test/unit/main_unit_test.h \
-    test/unit/unit_cattle.h \
-    test/unit/unit_farm.h \
-    test/unit/unit_transaction.h \
-    test/unit/unit_user.h
+    ../api/test/unit/main_unit_test.h \
+    lib_global.h
 
 FORMS +=
 

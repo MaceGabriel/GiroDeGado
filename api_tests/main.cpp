@@ -1,12 +1,12 @@
-#include "../api/includes/farm.h"
 #include "../api/test/unit/main_unit_test.h"
 
+#include <QApplication>
 #include <QtSql>
 #include <QFileInfo>
 
 #define UNIT_TEST 1
 
-int main()
+int main(int argc, char* argv[])
 {
     QSqlDatabase bancoDeDados = QSqlDatabase::addDatabase("QSQLITE");
 
@@ -26,6 +26,8 @@ int main()
 
         bancoDeDados.close();
     }
+
+    QApplication a(argc, argv);
 
     delete f;
 

@@ -196,9 +196,9 @@ Makefile: ../../api_tests.pro D:/Programas/Qt/6.1.2/mingw81_64/mkspecs/win32-g++
 		D:/Programas/Qt/6.1.2/mingw81_64/mkspecs/features/yacc.prf \
 		D:/Programas/Qt/6.1.2/mingw81_64/mkspecs/features/lex.prf \
 		../../api_tests.pro \
+		D:/Programas/Qt/6.1.2/mingw81_64/lib/Qt6Sql.prl \
 		D:/Programas/Qt/6.1.2/mingw81_64/lib/Qt6Widgets.prl \
 		D:/Programas/Qt/6.1.2/mingw81_64/lib/Qt6Gui.prl \
-		D:/Programas/Qt/6.1.2/mingw81_64/lib/Qt6Sql.prl \
 		D:/Programas/Qt/6.1.2/mingw81_64/lib/Qt6Core.prl \
 		D:/Programas/Qt/6.1.2/mingw81_64/lib/Qt6EntryPoint.prl \
 		D:/Programas/Qt/6.1.2/mingw81_64/mkspecs/features/build_pass.prf
@@ -329,9 +329,9 @@ D:/Programas/Qt/6.1.2/mingw81_64/mkspecs/features/exceptions.prf:
 D:/Programas/Qt/6.1.2/mingw81_64/mkspecs/features/yacc.prf:
 D:/Programas/Qt/6.1.2/mingw81_64/mkspecs/features/lex.prf:
 ../../api_tests.pro:
+D:/Programas/Qt/6.1.2/mingw81_64/lib/Qt6Sql.prl:
 D:/Programas/Qt/6.1.2/mingw81_64/lib/Qt6Widgets.prl:
 D:/Programas/Qt/6.1.2/mingw81_64/lib/Qt6Gui.prl:
-D:/Programas/Qt/6.1.2/mingw81_64/lib/Qt6Sql.prl:
 D:/Programas/Qt/6.1.2/mingw81_64/lib/Qt6Core.prl:
 D:/Programas/Qt/6.1.2/mingw81_64/lib/Qt6EntryPoint.prl:
 D:/Programas/Qt/6.1.2/mingw81_64/mkspecs/features/build_pass.prf:
