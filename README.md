@@ -28,14 +28,9 @@ $ git clone https://github.com/MaceGabriel/GiroDeGado.git
 ### Edit build paths
 Open each of the repository projects in QT and edit the build paths.
 
-* Direct the debug to: The respective project folder + /bin/debug 
+* Direct the debug to: The respective project folder in the bin folder like /bin/gui/debug 
 
-* Direct the debug to: The respective project folder + /bin/release
-
-### Edit pro paths
-Open each of the repository projects in QT and edit the dll paths in the .pro files.
-
-Note: It is not necessary to perform this step in the api project.
+* Direct the release to: The respective project folder in the bin folder like /bin/gui/release 
 
 ### Run the project
 With all the steps described above properly performed, run the command qmake and rebuild in each of the projects and run the desired project.

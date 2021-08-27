@@ -5,14 +5,9 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 
-#LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/api_tests/bin/debug/debug) #Marcus
-#LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/api_tests/bin/debug/debug) #Mace
-#LIBS += -L$$quote(C:/Programas/git/GiroDeGado/api_tests/bin/debug/debug) #Carlos
-#LIBS += -l$$quote(api)
-
-LIBS += -L$$PWD/bin/debug/debug/ -lapi
-LIBS += -L$$PWD/bin/debug/release/ -lapi
-LIBS += -L$$PWD/bin/debug/ -lapi
+LIBS += -L$$PWD/../bin/api/debug/debug -lapi
+LIBS += -L$$PWD/../bin/api/debug/release -lapi
+LIBS += -L$$PWD/../bin/api/ -lapi
 
 SOURCES += \
     main.cpp
