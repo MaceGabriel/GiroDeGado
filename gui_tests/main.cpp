@@ -30,9 +30,13 @@ int main(int argc, char *argv[])
 
     //Path dinamico do banco de testes
     QString path_test = QDir::currentPath();
-    path_test = path_test + QString("/../../../gui/bd_giro_tests.db");
+    path_test = path_test + QString("/../../gui_tests/bd_giro_tests.db");
     bancoDeDados.setDatabaseName(path_test);
     bancoDeDados.open();
+
+    f->queryExec("delete from cattle");
+    f->queryExec("delete from financial");
+    f->queryExec("delete from users");
 
     f->createUser("admin", "ADM", "123", "04/08/1999", "Administrador");
 

@@ -3,10 +3,10 @@ QT       += core gui widgets testlib sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
-LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui_tests/bin/debug/debug) #Mace
-#LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/debug/debug) #Marcus
-#LIBS += -L$$quote(C:/Programas/git/GiroDeGado/gui/bin/debug/debug) #Carlos
-LIBS += -l$$quote(api)
+
+LIBS += -L$$PWD/../bin/api/debug -lapi
+LIBS += -L$$PWD/../bin/api/release -lapi
+LIBS += -L$$PWD/../bin/api/ -lapi
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -102,4 +102,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    ../gui/bd_giro_tests.db
+    bd_giro_tests.db

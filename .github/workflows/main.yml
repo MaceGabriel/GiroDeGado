@@ -1,0 +1,47 @@
+name: CI GiroDeGado
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+  workflow_dispatch:
+
+jobs:
+  API-CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: jurplel/install-qt-action@v2
+
+      - name: Build API
+        run: |
+          cd '${{ github.workspace }}/bin/api'
+          qmake ../../api/api.pro
+          make     
+
+      - name: Build Unit Tests
+        run: |
+          cd '${{ github.workspace }}/bin/api_tests'
+          qmake ../../api_tests/api_tests.pro
+          make
+
+     # - name: Build Gui Tests
+     #   run: |
+     #     cd '${{ github.workspace }}/bin/gui_tests'
+     #     qmake ../../gui_tests/gui_tests.pro
+     #     make  
+
+      - name: Run Unit Tests
+        run: |
+          cd '${{ github.workspace }}/bin/api_tests'
+          chmod +x ./ci_execution.sh
+          ./ci_execution.sh "./api_tests"
+
+     # - name: Run Gui Tests
+     #   run: |
+     #     cd '${{ github.workspace }}/bin/gui_tests'
+     #     chmod +x ./ci_execution.sh
+     #     ./ci_execution.sh "./gui_tests"

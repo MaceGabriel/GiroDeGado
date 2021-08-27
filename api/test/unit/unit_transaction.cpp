@@ -32,7 +32,8 @@ void unit_transaction_copy_constructor(){
 // Function for the Transaction class' destructor unit test.
 void unit_transaction_destructor(){
     std::cout << "TEST 3 - Default destructor of the Transaction class" << std::endl;
-    
+
+    #ifndef __unix__
     MEMORYSTATUSEX memInfoBefore;
     memInfoBefore.dwLength = sizeof(MEMORYSTATUSEX);
     GlobalMemoryStatusEx(&memInfoBefore);
@@ -50,6 +51,7 @@ void unit_transaction_destructor(){
     // Making assertion to verify if the memory usage after the creation and deletion
     // is the same as before the creation of Transaction object.
     assert(virtualMemUsedBefore == virtualMemUsedAfter);
+    #endif
 
     std::cout << "OK!" << std::endl;
 }

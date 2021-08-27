@@ -33,6 +33,7 @@ void unit_user_copy_constructor(){
 void unit_user_destructor(){
     std::cout << "TEST 3 - Default destructor of the User class" << std::endl;
     
+    #ifndef __unix__
     MEMORYSTATUSEX memInfoBefore;
     memInfoBefore.dwLength = sizeof(MEMORYSTATUSEX);
     GlobalMemoryStatusEx(&memInfoBefore);
@@ -50,6 +51,7 @@ void unit_user_destructor(){
     // Making assertion to verify if the memory usage after the creation and deletion
     // is the same as before the creation of User object.
     assert(virtualMemUsedBefore == virtualMemUsedAfter);
+    #endif
 
     std::cout << "OK!" << std::endl;
 }
