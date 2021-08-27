@@ -3,9 +3,10 @@ QT       += core gui widgets testlib sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
-LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui_tests/bin/debug/debug) #Mace
-#LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui_tests/bin/debug/debug) #Marcus
-LIBS += -l$$quote(api)
+
+LIBS += -L$$PWD/../bin/api/debug -lapi
+LIBS += -L$$PWD/../bin/api/release -lapi
+LIBS += -L$$PWD/../bin/api/ -lapi
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -24,6 +25,13 @@ SOURCES += \
     ../gui/entity/financialrecordscreen.cpp \
     ../gui/entity/financialremovescreen.cpp \
     ../gui/entity/homescreen.cpp \
+    ../gui/entity/loginscreen.cpp \
+    ../gui/entity/reportscreen.cpp \
+    ../gui/entity/signupscreen.cpp \
+    ../gui/entity/usereditscreen.cpp \
+    ../gui/entity/usermanagementscreen.cpp \
+    ../gui/entity/userqueryscreen.cpp \
+    ../gui/entity/userremovescreen.cpp \
     main.cpp \
     test/unit/cattle_birth_unit_test.cpp \
     test/unit/cattle_buy_unit_test.cpp \
@@ -36,7 +44,14 @@ SOURCES += \
     test/unit/financial_management_unit_test.cpp \
     test/unit/financial_record_unit_test.cpp \
     test/unit/financial_remove_unit_test.cpp \
-    test/unit/home_unit_test.cpp
+    test/unit/home_unit_test.cpp \
+    test/unit/login_unit_test.cpp \
+    test/unit/report_unit_test.cpp \
+    test/unit/signup_unit_test.cpp \
+    test/unit/user_consult_unit_test.cpp \
+    test/unit/user_edit_unit_test.cpp \
+    test/unit/user_management_unit_test.cpp \
+    test/unit/user_remove_unit_test.cpp
 
 HEADERS += \
     ../gui/entity/cattlebirthscreen.h \
@@ -51,6 +66,13 @@ HEADERS += \
     ../gui/entity/financialrecordscreen.h \
     ../gui/entity/financialremovescreen.h \
     ../gui/entity/homescreen.h \
+    ../gui/entity/loginscreen.h \
+    ../gui/entity/reportscreen.h \
+    ../gui/entity/signupscreen.h \
+    ../gui/entity/usereditscreen.h \
+    ../gui/entity/usermanagementscreen.h \
+    ../gui/entity/userqueryscreen.h \
+    ../gui/entity/userremovescreen.h \
     lib_global.h
 
 FORMS += \
@@ -65,7 +87,14 @@ FORMS += \
     ../gui/views/financialmanagementscreen.ui \
     ../gui/views/financialrecordscreen.ui \
     ../gui/views/financialremovescreen.ui \
-    ../gui/views/homescreen.ui
+    ../gui/views/homescreen.ui \
+    ../gui/views/loginscreen.ui \
+    ../gui/views/reportscreen.ui \
+    ../gui/views/signupscreen.ui \
+    ../gui/views/usereditscreen.ui \
+    ../gui/views/usermanagementscreen.ui \
+    ../gui/views/userqueryscreen.ui \
+    ../gui/views/userremovescreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -73,4 +102,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    ../gui/bd_giro_tests.db
+    bd_giro_tests.db

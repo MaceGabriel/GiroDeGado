@@ -6,7 +6,10 @@
 #ifndef UNIT_TRANSACTION
 #define UNIT_TRANSACTION
 
+#ifndef __unix__
 #include <windows.h>
+#endif
+
 #include <assert.h>
 #include <math.h>
 #include "../../includes/transactionImpl.h"

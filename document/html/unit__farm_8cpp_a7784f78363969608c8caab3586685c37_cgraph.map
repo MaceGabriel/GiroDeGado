@@ -1,8 +1,0 @@
-<map id="unit_farm_getAcquisitionDate" name="unit_farm_getAcquisitionDate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,196,83"/>
-<area shape="rect" id="node2" href="$class_farm.html#a34757068bc141eb75b25eeab4a15bc47" title=" " alt="" coords="265,5,392,32"/>
-<area shape="rect" id="node5" href="$class_farm.html#a2ec0efcdcfd2b8a41771e010a2b0adf4" title=" " alt="" coords="250,56,407,83"/>
-<area shape="rect" id="node6" href="$class_farm.html#a0a44edb29fa2d38738cbe6fdc82bbf7d" title=" " alt="" coords="244,107,413,133"/>
-<area shape="rect" id="node3" href="$class_farm_handle.html#a90e74daaf3db023f5afbe781ca80cac3" title=" " alt="" coords="461,5,628,32"/>
-<area shape="rect" id="node4" href="$class_farm_body.html#a0e6098aea46148c1cbf41feca990ab70" title=" " alt="" coords="676,5,832,32"/>
-</map>

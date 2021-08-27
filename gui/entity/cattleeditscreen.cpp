@@ -1,13 +1,15 @@
 #include "cattleeditscreen.h"
 #include "ui_cattleeditscreen.h"
 
-CattleEditScreen::CattleEditScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+CattleEditScreen::CattleEditScreen(QWidget *parent, QWidget* backScreen, QWidget* loginScreen, Farm* f, std::string current_user) :
     QDialog(parent),
     ui_(new Ui::CattleEditScreen)
 {
     setFixedSize(900, 600);
     farm_ = f;
-    this->backScreen_ = backScreen;
+    back_screen_ = backScreen;
+    login_screen_ = loginScreen;
+    current_user_ = current_user;
     ui_->setupUi(this);
 }
 
@@ -77,7 +79,7 @@ void CattleEditScreen::on_editButton_clicked()
         f->setCattleWeight(earring, weight);
         f->setCattleValue(earring, price);
 
-        backScreen_->show();
+        back_screen_->show();
         this->close();
     }
 }
@@ -85,7 +87,7 @@ void CattleEditScreen::on_editButton_clicked()
 
 void CattleEditScreen::on_backButton_clicked()
 {
-    backScreen_->show();
+    back_screen_->show();
     this->close();
 }
 

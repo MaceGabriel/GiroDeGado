@@ -1,9 +1,0 @@
-<map id="UnitFarm::unit_farm_addTransaction" name="UnitFarm::unit_farm_addTransaction">
-<area shape="rect" id="node1" title=" " alt="" coords="5,74,141,115"/>
-<area shape="rect" id="node2" href="$class_farm.html#a15e02ddbf132de55c840a8e23132525c" title=" " alt="" coords="255,5,337,32"/>
-<area shape="rect" id="node3" href="$class_farm.html#afd32bf380d505b5fb21cf0aa3cf09e44" title=" " alt="" coords="189,56,403,83"/>
-<area shape="rect" id="node4" href="$class_farm.html#a34757068bc141eb75b25eeab4a15bc47" title=" " alt="" coords="233,107,359,133"/>
-<area shape="rect" id="node7" href="$class_transaction.html#aeb278e9df83c17636bd1e9d9f8530f8f" title=" " alt="" coords="216,157,376,184"/>
-<area shape="rect" id="node5" href="$class_farm_handle.html#a90e74daaf3db023f5afbe781ca80cac3" title=" " alt="" coords="451,107,617,133"/>
-<area shape="rect" id="node6" href="$class_farm_body.html#a0e6098aea46148c1cbf41feca990ab70" title=" " alt="" coords="665,107,821,133"/>
-</map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unitfarm_745',['UnitFarm',['../class_unit_farm.html',1,'']]]
+  ['reportscreen_1086',['ReportScreen',['../class_report_screen.html',1,'ReportScreen'],['../class_ui_1_1_report_screen.html',1,'Ui::ReportScreen']]]
 ];

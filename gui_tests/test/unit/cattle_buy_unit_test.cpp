@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "../../../gui/entity/cattlebuyscreen.h"
+#include "../../../gui/entity/cattleregisterscreen.h"
 #include "../ui_cattlebuyscreen.h"
 
 // TESTE UNITARIO COMPORTAMENTAL (funcionalidade + transicoes)
@@ -30,7 +31,7 @@ private:
 };
 
 TestCattleBuyScreenGUI::TestCattleBuyScreenGUI(QWidget *parent, Farm* f):QObject(parent){
-    d = new CattleBuyScreen(nullptr, new CattleRegisterScreen(),f);
+    d = new CattleBuyScreen(parent, new CattleRegisterScreen(), nullptr, f, "");
 }
 
 void TestCattleBuyScreenGUI::casoDeUsoPrincipal_data(){

@@ -1,9 +1,0 @@
-<map id="unit_farm_setBirthDate" name="unit_farm_setBirthDate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,160,108"/>
-<area shape="rect" id="node2" href="$class_farm.html#a34757068bc141eb75b25eeab4a15bc47" title=" " alt="" coords="223,5,350,32"/>
-<area shape="rect" id="node5" href="$class_farm.html#a2ec0efcdcfd2b8a41771e010a2b0adf4" title=" " alt="" coords="208,56,365,83"/>
-<area shape="rect" id="node6" href="$class_farm.html#a720c8ffbd4f27cf9b091a8917a3fe9a6" title=" " alt="" coords="221,107,353,133"/>
-<area shape="rect" id="node7" href="$class_farm.html#a0529c144f014730b53b25ca8db8dd169" title=" " alt="" coords="221,157,353,184"/>
-<area shape="rect" id="node3" href="$class_farm_handle.html#a90e74daaf3db023f5afbe781ca80cac3" title=" " alt="" coords="413,5,580,32"/>
-<area shape="rect" id="node4" href="$class_farm_body.html#a0e6098aea46148c1cbf41feca990ab70" title=" " alt="" coords="628,5,784,32"/>
-</map>

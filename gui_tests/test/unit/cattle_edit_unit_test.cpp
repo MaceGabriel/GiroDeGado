@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "../../../gui/entity/cattleeditscreen.h"
+#include "../../../gui/entity/cattlemanagementscreen.h"
 #include "../ui_cattleeditscreen.h"
 
 // TESTE UNITARIO COMPORTAMENTAL (funcionalidade + transicoes)
@@ -31,13 +32,13 @@ private:
 
 TestCattleEditScreenGUI::TestCattleEditScreenGUI(QWidget *parent, Farm* f):QObject(parent){
     d.farm_ = f;
-    d.backScreen_ = new CattleManagementScreen();
+    d.back_screen_ = new CattleManagementScreen();
 }
 
 void TestCattleEditScreenGUI::casoDeUsoPrincipal_data(){
     // ENTRADA
     QTest::addColumn<QString>("Brinco");
-    QTest::addColumn<QPushButton*>("Botao");
+    QTest::addColumn<QPushButton*>("Ok");
     QTest::addColumn<QString>("Raca");
     QTest::addColumn<QString>("DataA");
     QTest::addColumn<QString>("DataB");
@@ -45,23 +46,17 @@ void TestCattleEditScreenGUI::casoDeUsoPrincipal_data(){
     QTest::addColumn<QString>("Mae");
     QTest::addColumn<QString>("Peso");
     QTest::addColumn<QString>("Valor");
+    QTest::addColumn<QPushButton*>("Editar");
 
     // SAIDA
-    QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton << "" << "" << "" << "" << "" << "" << "";
-    QTest::newRow("Edicao correta") << "20" << d.ui_->okButton << "Brangus" << "10/10/20" << "10/10/10" << "1" << "2" << "200" << "10000";
+    QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton << "" << "" << "" << "" << "" << "" << "" << d.ui_->backButton;
+    QTest::newRow("Edicao correta") << "1" << d.ui_->okButton << "Angus" << "10/10/20" << "14/10/10" << "1" << "2" << "200" << "10000" << d.ui_->editButton;
 }
 
 void TestCattleEditScreenGUI::casoDeUsoPrincipal(){
 
     QFETCH(QString, Brinco);
-    QFETCH(QPushButton*, Botao);
-    QFETCH(QString, Raca);
-    QFETCH(QString, DataA);
-    QFETCH(QString, DataB);
-    QFETCH(QString, Pai);
-    QFETCH(QString, Mae);
-    QFETCH(QString, Peso);
-    QFETCH(QString, Valor);
+    QFETCH(QPushButton*, Ok);
 
     QTimer::singleShot(500, this, SLOT(timeOut()));
 
@@ -88,14 +83,34 @@ void TestCattleEditScreenGUI::casoDeUsoPrincipal(){
     QVERIFY2(d.ui_->backButton, "Campo não buildado");
 
     QTest::keyClicks(d.ui_->inputEarring, Brinco);
-    QTest::mouseClick(Botao, Qt::LeftButton);
+    QTest::mouseClick(Ok, Qt::LeftButton);
+
+    d.ui_->inputBreed->clear();
+    d.ui_->inputDateA->clear();
+    d.ui_->inputDateB->clear();
+    d.ui_->inputFather->clear();
+    d.ui_->inputMother->clear();
+    d.ui_->inputWeight->clear();
+    d.ui_->inputPrice->clear();
+
+
+    QFETCH(QString, Raca);
+    QFETCH(QString, DataA);
+    QFETCH(QString, DataB);
+    QFETCH(QString, Pai);
+    QFETCH(QString, Mae);
+    QFETCH(QString, Peso);
+    QFETCH(QString, Valor);
+    QFETCH(QPushButton*, Editar);
+
     QTest::keyClicks(d.ui_->inputBreed, Raca);
     QTest::keyClicks(d.ui_->inputDateA, DataA);
     QTest::keyClicks(d.ui_->inputDateB, DataB);
-    QTest::keyClicks(d.ui_->inputWeight, Pai);
-    QTest::keyClicks(d.ui_->inputPrice, Mae);
+    QTest::keyClicks(d.ui_->inputFather, Pai);
+    QTest::keyClicks(d.ui_->inputMother, Mae);
     QTest::keyClicks(d.ui_->inputWeight, Peso);
     QTest::keyClicks(d.ui_->inputPrice, Valor);
+    QTest::mouseClick(Editar, Qt::LeftButton);
 
 
     QString earring = d.ui_->inputEarring->text();

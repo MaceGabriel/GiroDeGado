@@ -6,7 +6,10 @@
 #ifndef UNIT_CATTLE
 #define UNIT_CATTLE
 
+#ifndef __unix__
 #include <windows.h>
+#endif
+
 #include <assert.h>
 #include <math.h>
 #include "../../includes/cattleImpl.h"

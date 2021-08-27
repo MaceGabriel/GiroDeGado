@@ -1,13 +1,15 @@
 #include "financialconsultscreen.h"
 #include "ui_financialconsultscreen.h"
 
-FinancialConsultScreen::FinancialConsultScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+FinancialConsultScreen::FinancialConsultScreen(QWidget *parent, QWidget* backScreen, QWidget* loginScreen, Farm* f, std::string current_user) :
     QDialog(parent),
     ui_(new Ui::FinancialConsultScreen)
 {
     setFixedSize(900, 600);
     farm_ = f;
-    this->backScreen_ = backScreen;
+    back_screen_ = backScreen;
+    login_screen_ = loginScreen;
+    current_user_ = current_user;
     ui_->setupUi(this);
 }
 
@@ -66,7 +68,7 @@ void FinancialConsultScreen::on_okButton_clicked()
 
 void FinancialConsultScreen::on_backButton_clicked()
 {
-    backScreen_->show();
+    back_screen_->show();
     this->close();
 }
 

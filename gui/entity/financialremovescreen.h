@@ -7,7 +7,7 @@
 #define FINANCIALREMOVESCREEN_H
 
 #include <QDialog>
-#include "financialmanagementscreen.h"
+#include "../../api/includes/farm.h"
 
 /** 
  * \brief
@@ -26,7 +26,7 @@ public:
     /*!
         This is the default constructor for the FinancialRemove.
     */
-    explicit FinancialRemoveScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, Farm* f = nullptr);
+    explicit FinancialRemoveScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, QWidget* loginScreen = nullptr, Farm* f = nullptr, std::string current_user = "");
 
     /*!
         This is the default destructor for the FinancialRemove.
@@ -56,8 +56,10 @@ private slots:
 
 private:
     Ui::FinancialRemoveScreen *ui_; /*!< This attribute contains the ui for the FinancialRemove. */
-    QWidget* backScreen_; /*!< This attribute contains the reference of the back screen. */
+    QWidget* back_screen_; /*!< This attribute contains the reference of the back screen. */
+    QWidget* login_screen_; /*!< This attribute contains the reference of the login screen. */
     Farm* farm_; /*!< This attribute contains the the Farm. */
+    std::string current_user_; /*!< The nickname of the current user. */
 };
 
 #endif // FINANCIALREMOVESCREEN_H

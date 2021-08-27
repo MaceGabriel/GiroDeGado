@@ -70,6 +70,18 @@ void FarmBody::createTransaction(int number, double value, std::string descripti
     query_->exec();
 }
 
+void FarmBody::createUser(std::string nickname, std::string name, std::string password,
+                          std::string birth_date, std::string type){
+    query_->prepare("insert into users (nickname, name, password, birth_date, type)"
+                   "values (:nickname, :name, :password, :birth_date, :type)");
+    query_->bindValue(":nickname", QString::fromStdString(nickname));
+    query_->bindValue(":name", QString::fromStdString(name));
+    query_->bindValue(":password", QString::fromStdString(password));
+    query_->bindValue(":birth_date", QString::fromStdString(birth_date));
+    query_->bindValue(":type", QString::fromStdString(type));
+    query_->exec();
+}
+
 void FarmBody::deleteCattle(int cattle_earring){
     QString earring = QString::number(cattle_earring);
 
@@ -80,6 +92,12 @@ void FarmBody::deleteTransaction(int transaction_number){
     QString number = QString::number(transaction_number);
 
     query_->exec("delete from financial where number="+number);
+}
+
+void FarmBody::deleteUser(std::string user_nickname){
+    QString nickname = QString::fromStdString(user_nickname);
+
+    query_->exec("delete from users where nickname='"+nickname+"'");
 }
 
 void FarmBody::setCattleEarring(int actual_cattle_earring, int new_cattle_earring){
@@ -400,6 +418,131 @@ QString FarmBody::getCattleValue(int cattle_earring) const{
     if(count > 0){
         query_->first();
         return query_->value(8).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
+}
+
+void FarmBody::setUserNickname(std::string actual_user_nickname, std::string new_user_nickname){
+    QString actual_nickname = QString::fromStdString(actual_user_nickname);
+    QString new_nickname = QString::fromStdString(new_user_nickname);
+
+    query_->exec("update users set nickname='"+new_nickname+"' where nickname='"+actual_nickname+"'");
+}
+
+QString FarmBody::getUserNickname(std::string user_nickname) const{
+    QString nickname = QString::fromStdString(user_nickname);
+
+    query_->exec("select * from users where nickname='"+nickname+"'");
+    int count = 0;
+    while(query_->next()){
+        count++;
+    }
+    if(count > 0){
+        query_->first();
+        return query_->value(1).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
+}
+
+void FarmBody::setUserName(std::string user_nickname, std::string user_name){
+    QString nickname = QString::fromStdString(user_nickname);
+    QString name = QString::fromStdString(user_name);
+
+    query_->exec("update users set name='"+name+"' where nickname='"+nickname+"'");
+}
+
+QString FarmBody::getUserName(std::string user_nickname) const{
+    QString nickname = QString::fromStdString(user_nickname);
+
+    query_->exec("select * from users where nickname='"+nickname+"'");
+    int count = 0;
+    while(query_->next()){
+        count++;
+    }
+    if(count > 0){
+        query_->first();
+        return query_->value(2).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
+}
+
+void FarmBody::setUserPassword(std::string user_nickname, std::string user_password){
+    QString nickname = QString::fromStdString(user_nickname);
+    QString password = QString::fromStdString(user_password);
+
+    query_->exec("update users set password='"+password+"' where nickname='"+nickname+"'");
+}
+
+QString FarmBody::getUserPassword(std::string user_nickname) const{
+    QString nickname = QString::fromStdString(user_nickname);
+
+    query_->exec("select * from users where nickname='"+nickname+"'");
+    int count = 0;
+    while(query_->next()){
+        count++;
+    }
+    if(count > 0){
+        query_->first();
+        return query_->value(3).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
+}
+
+void FarmBody::setUserDate(std::string user_nickname, std::string user_date){
+    QString nickname = QString::fromStdString(user_nickname);
+    QString date = QString::fromStdString(user_date);
+
+    query_->exec("update users set birth_date='"+date+"' where nickname='"+nickname+"'");
+}
+
+QString FarmBody::getUserDate(std::string user_nickname) const{
+    QString nickname = QString::fromStdString(user_nickname);
+
+    query_->exec("select * from users where nickname='"+nickname+"'");
+    int count = 0;
+    while(query_->next()){
+        count++;
+    }
+    if(count > 0){
+        query_->first();
+        return query_->value(4).toString();
+    }
+    else{
+        QString empty("");
+        return empty;
+    }
+}
+
+void FarmBody::setUserType(std::string user_nickname, std::string user_type){
+    QString nickname = QString::fromStdString(user_nickname);
+    QString type = QString::fromStdString(user_type);
+    
+    query_->exec("update users set type='"+type+"' where nickname='"+nickname+"'");
+}
+
+QString FarmBody::getUserType(std::string user_nickname) const{
+    QString nickname = QString::fromStdString(user_nickname);
+
+    query_->exec("select * from users where nickname='"+nickname+"'");
+    int count = 0;
+    while(query_->next()){
+        count++;
+    }
+    if(count > 0){
+        query_->first();
+        return query_->value(5).toString();
     }
     else{
         QString empty("");

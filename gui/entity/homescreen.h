@@ -6,24 +6,30 @@
 #ifndef HOMESCREEN_H
 #define HOMESCREEN_H
 
-#include <QMainWindow>
+#include <QDialog>
+#include <QMessageBox>
+#include <iostream>
 #include <string>
 #include "../../api/includes/farm.h"
 
-/** 
+/**
  * \brief
  * This screen represents the program home.
 */
-QT_BEGIN_NAMESPACE
-namespace Ui { class HomeScreen; }
-QT_END_NAMESPACE
 
-class HomeScreen : public QMainWindow
+namespace Ui {
+class HomeScreen;
+}
+
+class HomeScreen : public QDialog
 {
     Q_OBJECT
     friend class TestHomeScreenGUI;
 public:
-    HomeScreen(QWidget *parent = nullptr, Farm* f = nullptr);
+    /*!
+        This is the default constructor for the Screen Home.
+    */
+    HomeScreen(QWidget *parent = nullptr, QWidget* backScreen = nullptr, QWidget* loginScreen = nullptr, Farm* f = nullptr, std::string current_user = "");
 
     /*!
         This is the default destructor for the Screen Home.
@@ -35,7 +41,7 @@ public:
     */
     Farm* getFarm();
 
-private slots:    
+private slots:
     /*!
         Function that redirects to the cattle management screen.
     */
@@ -47,12 +53,20 @@ private slots:
     void on_financialButton_clicked();
 
     /*!
-        Function that close the program.
+        Function that logout of the program.
     */
-    void on_exitButton_clicked();
+    void on_logoutButton_clicked();
+
+    /*!
+        Function that redirects to the user management screen.
+    */
+    void on_userButton_clicked();
 
 private:
     Ui::HomeScreen *ui_; /*!< This attribute contains the ui for the Home. */
+    QWidget* back_screen_; /*!< This attribute contains the reference of the back screen. */
+    QWidget* login_screen_; /*!< This attribute contains the reference of the login screen. */
     Farm* farm_; /*!< This attribute contains the the Farm. */
+    std::string current_user_; /*!< The nickname of the current user. */
 };
 #endif // HOMESCREEN_H

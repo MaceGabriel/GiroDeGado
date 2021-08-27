@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "../../../gui/entity/financialconsultscreen.h"
+#include "../../../gui/entity/financialmanagementscreen.h"
 #include "../ui_financialconsultscreen.h"
 
 // TESTE UNITARIO COMPORTAMENTAL (funcionalidade + transicoes)
@@ -30,7 +31,7 @@ private:
 };
 
 TestFinancialConsultScreenGUI::TestFinancialConsultScreenGUI(QWidget *parent, Farm* f):QObject(parent){
-    d = new FinancialConsultScreen(nullptr, new FinancialManagementScreen(), f);
+    d = new FinancialConsultScreen(parent, new FinancialManagementScreen(), nullptr, f, "");
 }
 
 void TestFinancialConsultScreenGUI::casoDeUsoPrincipal_data(){

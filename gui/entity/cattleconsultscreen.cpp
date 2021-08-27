@@ -1,13 +1,15 @@
 #include "cattleconsultscreen.h"
 #include "ui_cattleconsultscreen.h"
 
-CattleConsultScreen::CattleConsultScreen(QWidget *parent, QWidget* backScreen, Farm* f) :
+CattleConsultScreen::CattleConsultScreen(QWidget *parent, QWidget* backScreen, QWidget* loginScreen, Farm* f, std::string current_user) :
     QDialog(parent),
     ui_(new Ui::CattleConsultScreen)
 {
     setFixedSize(900, 600);
     farm_ = f;
-    this->backScreen_ = backScreen;
+    back_screen_ = backScreen;
+    login_screen_ = loginScreen;
+    current_user_ = current_user;
     ui_->setupUi(this);
 }
 
@@ -117,7 +119,7 @@ void CattleConsultScreen::on_okButton_clicked()
 
 void CattleConsultScreen::on_backButton_clicked()
 {
-    backScreen_->show();
+    back_screen_->show();
     this->close();
 }
 

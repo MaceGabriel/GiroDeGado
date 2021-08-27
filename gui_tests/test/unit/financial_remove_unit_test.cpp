@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "../../../gui/entity/financialremovescreen.h"
+#include "../../../gui/entity/financialmanagementscreen.h"
 #include "../ui_financialremovescreen.h"
 
 // TESTE UNITARIO COMPORTAMENTAL (funcionalidade + transicoes)
@@ -31,7 +32,7 @@ private:
 
 TestFinancialRemoveScreenGUI::TestFinancialRemoveScreenGUI(QWidget *parent, Farm* f):QObject(parent){
     d.farm_ = f;
-    d.backScreen_ = new FinancialManagementScreen();
+    d.back_screen_ = new FinancialManagementScreen();
 }
 
 void TestFinancialRemoveScreenGUI::casoDeUsoPrincipal_data(){

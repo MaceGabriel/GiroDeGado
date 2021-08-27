@@ -6,7 +6,10 @@
 #ifndef UNIT_FARM
 #define UNIT_FARM
 
+#ifndef __unix__
 #include <windows.h>
+#endif
+
 #include <assert.h>
 #include <math.h>
 #include "../../includes/farmImpl.h"
@@ -25,6 +28,11 @@ void unit_farm_createCattle(Farm* f);
   Function prototype for the Farm class' method createTransaction() unit test.
 */
 void unit_farm_createTransaction(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method createUser() unit test.
+*/
+void unit_farm_createUser(Farm* f);
 
 /*!
   Function prototype for the Farm class' method getQuery() unit test.
@@ -187,6 +195,56 @@ void unit_farm_getTransactionCattleEarring(Farm* f);
 void unit_farm_setTransactionCattleEarring(Farm* f);
 
 /*!
+  Function prototype for the Farm class' method getUserNickname() unit test.
+*/
+void unit_farm_getUserNickname(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setUserNickname() unit test.
+*/
+void unit_farm_setUserNickname(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getUserName() unit test.
+*/
+void unit_farm_getUserName(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setUserName() unit test.
+*/
+void unit_farm_setUserName(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getUserPassword() unit test.
+*/
+void unit_farm_getUserPassword(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setUserPassword() unit test.
+*/
+void unit_farm_setUserPassword(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getUserDate() unit test.
+*/
+void unit_farm_getUserDate(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setUserDate() unit test.
+*/
+void unit_farm_setUserDate(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method getUserType() unit test.
+*/
+void unit_farm_getUserType(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method setUserType() unit test.
+*/
+void unit_farm_setUserType(Farm* f);
+
+/*!
   Function prototype for the Farm class' method getLastEarringAvailable() unit test.
 */
 void unit_farm_getLastEarringAvailable(Farm* f);
@@ -205,6 +263,11 @@ void unit_farm_deleteCattle(Farm* f);
   Function prototype for the Farm class' method deleteTransaction() unit test.
 */
 void unit_farm_deleteTransaction(Farm* f);
+
+/*!
+  Function prototype for the Farm class' method deleteUser() unit test.
+*/
+void unit_farm_deleteUser(Farm* f);
 
 /*!
   Function prototype for the function that runs all the unit tests of the Farm class.

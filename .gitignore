@@ -1,0 +1,10 @@
+/.vscode
+/bin/api/debug/*
+/bin/api/release/*
+/bin/api_tests/debug/*
+/bin/api_tests/release/*
+/bin/gui/debug/*
+/bin/gui/release/*
+/bin/gui_tests/debug/*
+/bin/gui_tests/release/*
+*.exe

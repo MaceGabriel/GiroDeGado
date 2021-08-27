@@ -3,10 +3,10 @@ QT       += core gui sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
-#Cada um cria o seu proprio path
-LIBS += -L$$quote(C:/Users/marcu/Downloads/UFOP/Engenharia/Projeto/GiroDeGado/gui/bin/debug/debug) #Marcus
-#LIBS += -L$$quote(C:/Users/Gabriel Mace/Desktop/Faculdade/20.2/Engenharia de Software/Trabalho em grupo/GiroDeGado/gui/bin/debug/debug) #Mace
-LIBS += -l$$quote(api)
+
+LIBS += -L$$PWD/../bin/api/debug -lapi
+LIBS += -L$$PWD/../bin/api/release -lapi
+LIBS += -L$$PWD/../bin/api/ -lapi
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -25,7 +25,14 @@ SOURCES += \
     entity/financialrecordscreen.cpp \
     entity/financialremovescreen.cpp \
     entity/homescreen.cpp \
-    main.cpp \
+    entity/loginscreen.cpp \
+    entity/reportscreen.cpp \
+    entity/signupscreen.cpp \
+    entity/userqueryscreen.cpp \
+    entity/userremovescreen.cpp \
+    entity/usereditscreen.cpp \
+    entity/usermanagementscreen.cpp \
+    main.cpp
 
 HEADERS += \
     ../api/includes/cattle.h \
@@ -35,6 +42,8 @@ HEADERS += \
     ../api/includes/handlebody.h \
     ../api/includes/transaction.h \
     ../api/includes/transactionImpl.h \
+    ../api/includes/user.h \
+    ../api/includes/userImpl.h \
     ../api/test/unit/main_unit_test.h \
     entity/cattlebirthscreen.h \
     entity/cattlebuyscreen.h \
@@ -48,6 +57,13 @@ HEADERS += \
     entity/financialrecordscreen.h \
     entity/financialremovescreen.h \
     entity/homescreen.h \
+    entity/loginscreen.h \
+    entity/reportscreen.h \
+    entity/signupscreen.h \
+    entity/userqueryscreen.h \
+    entity/userremovescreen.h \
+    entity/usereditscreen.h \
+    entity/usermanagementscreen.h \
     lib_global.h
 
 FORMS += \
@@ -62,7 +78,14 @@ FORMS += \
     views/financialmanagementscreen.ui \
     views/financialrecordscreen.ui \
     views/financialremovescreen.ui \
-    views/homescreen.ui
+    views/homescreen.ui \
+    views/loginscreen.ui \
+    views/reportscreen.ui \
+    views/userqueryscreen.ui \
+    views/userremovescreen.ui \
+    views/usereditscreen.ui \    
+    views/signupscreen.ui \
+    views/usermanagementscreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -70,5 +93,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    bd_giro.db \
-    bd_giro_tests.db
+    bd_giro.db
