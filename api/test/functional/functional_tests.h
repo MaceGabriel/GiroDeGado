@@ -8,15 +8,8 @@
 
 #include <assert.h>
 #include <math.h>
+#include <iostream>
 #include "../../includes/farm.h"
-
-#define DEBUGING
-#ifdef DEBUGING
-    int numHandleCreated = 0;
-    int numHandleDeleted = 0;
-    int numBodyCreated = 0;
-    int numBodyDeleted = 0;
-#endif
 
 //! Functional tests 
 /**
@@ -32,6 +25,11 @@ void functional_cattle(Farm* f);
   Function prototype for the functional test for creating, editing, reading and deleting a transaction.
 */
 void functional_transaction(Farm* f);
+
+/*!
+  Function prototype for the functional test for creating, editing, reading and deleting a user.
+*/
+void functional_user(Farm* f);
 
 /*!
   Function prototype for the function that runs all the functional tests.

@@ -81,6 +81,42 @@ void functional_transaction(Farm* f){
     std::cout << "OK!" << std::endl;
 }
 
+// Function for the user test for creating, editing, reading and deleting a transaction.
+void functional_user(Farm* f){
+    std::cout << "TEST 3 - Creating, editing, reading and deleting a user" << std::endl;
+
+    // Creating a user
+    f->createUser("jo_silva","Joao","123","01/01/2000","Funcionario");
+
+    // Editing a transaction
+    f->setUserNickname("jo_silva", "jo_silva20");
+    f->setUserName("jo_silva20", "Joao Silva");
+    f->setUserPassword("jo_silva20", "1234");
+    f->setUserDate("jo_silva20", "01/03/2000");
+    f->setUserType("jo_silva20", "Administrador");
+
+    // Reading data from a transaction
+    QString nickname = f->getUserNickname("jo_silva20");
+    QString name = f->getUserName("jo_silva20");
+    QString password = f->getUserPassword("jo_silva20");
+    QString date = f->getUserDate("jo_silva20");
+    QString type = f->getUserType("jo_silva20");
+
+    assert(nickname == "jo_silva20");
+    assert(name == "Joao Silva");
+    assert(password == "1234");
+    assert(date == "01/03/2000");
+    assert(type == "Administrador");
+
+    // Deleting a transaction
+    f->deleteUser("jo_silva20");
+
+    QString nickname_2 = f->getUserNickname("jo_silva20");
+    assert(nickname_2 == "");
+
+    std::cout << "OK!" << std::endl;
+}
+
 // Function for the function that runs all the functional tests.
 void run_functional_tests(Farm* f){
     // Calling all the functional test functions.
@@ -88,10 +124,9 @@ void run_functional_tests(Farm* f){
     // because of the Farm* f, created for testing purposes.
 
     functional_cattle(f);
-    assert(numHandleCreated == numHandleDeleted+1);
-    assert(numBodyCreated == numBodyDeleted+1);
 
     functional_transaction(f);
-    assert(numHandleCreated == numHandleDeleted+1);
-    assert(numBodyCreated == numBodyDeleted+1);
+
+    functional_user(f);
+
 }

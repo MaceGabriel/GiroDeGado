@@ -43,7 +43,6 @@ void TestSignUpScreenGUI::casoDeUsoPrincipal_data(){
     // ENTRADA
     QTest::addColumn<QString>("Nome");
     QTest::addColumn<QString>("DataB");
-    //QTest::addColumn<QString>("Tipo");
     QTest::addColumn<QString>("Usuario");
     QTest::addColumn<QString>("Senha");
     QTest::addColumn<QPushButton*>("Botao");
@@ -58,7 +57,6 @@ void TestSignUpScreenGUI::casoDeUsoPrincipal(){
 
     QFETCH(QString, Nome);
     QFETCH(QString, DataB);
-    //QFETCH(QString, Tipo);
     QFETCH(QString, Usuario);
     QFETCH(QString, Senha);
     QFETCH(QPushButton*, Botao);
@@ -82,14 +80,13 @@ void TestSignUpScreenGUI::casoDeUsoPrincipal(){
 
     QTest::keyClicks(d->ui_->inputName, Nome);
     QTest::keyClicks(d->ui_->dateEdit, DataB);
-    //QTest::keyClicks(d->ui_->userType, Tipo);
     QTest::keyClicks(d->ui_->inputNickname, Usuario);
     QTest::keyClicks(d->ui_->inputPassword, Senha);
     QTest::mouseClick(Botao, Qt::LeftButton);
 
     QString user = d->ui_->dateEdit->text();
     //std::cout<<user.toStdString()<<std::endl;
-    //QCOMPARE(d->farm_->getUserNickname(user.to), User);
+    QCOMPARE(d->farm_->getUserNickname(user.toUtf8().constData()), Usuario);
 
 }
 
