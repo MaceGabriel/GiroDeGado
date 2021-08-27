@@ -27,7 +27,6 @@ private slots:
 private:
     UserEditScreen d;
     QString msgResult;
-    //bool dialogoAberto;
 };
 
 TestUserEditScreenGUI::TestUserEditScreenGUI(QWidget *parent, Farm* f):QObject(parent){
@@ -44,13 +43,11 @@ void TestUserEditScreenGUI::casoDeUsoPrincipal_data(){
     QTest::addColumn<QPushButton*>("Botao");
     QTest::addColumn<QString>("Nome");
     QTest::addColumn<QString>("DataB");
-    //QTest::addColumn<QString>("Tipo");
     QTest::addColumn<QString>("NovoUsuario");
     QTest::addColumn<QString>("Senha");
     QTest::addColumn<QPushButton*>("Confirmar");
 
     // SAIDA
-    //QTest::newRow("Botao de Voltar") << "" << d.ui_->backButton << "" << "" << "" << "" << "" << d.ui_->backButton;
     QTest::newRow("Edicao correta") << "user1" << d.ui_->okButton << "Mateus" << "02/10/20" << "user2" << "1234" << d.ui_->signButton;
 
 }
@@ -91,21 +88,18 @@ void TestUserEditScreenGUI::casoDeUsoPrincipal(){
 
     QFETCH(QString, Nome);
     QFETCH(QString, DataB);
-    //QFETCH(QString, Tipo);
     QFETCH(QString, NovoUsuario);
     QFETCH(QString, Senha);
 
     QFETCH(QPushButton*, Confirmar);
     QTest::keyClicks(d.ui_->inputName, Nome);
     QTest::keyClicks(d.ui_->dateEdit, DataB);
-    //QTest::keyClicks(d.ui_->inputDateB, DataB);
     QTest::keyClicks(d.ui_->inputNewNickname, NovoUsuario);
     QTest::keyClicks(d.ui_->inputPassword, Senha);
     QTest::mouseClick(Confirmar, Qt::LeftButton);
 
 
     QCOMPARE(d.farm_->getUserName(NovoUsuario.toUtf8().toStdString()), Nome);
-    //QCOMPARE(d.farm_->getUserNickname(User.toUtf8().toStdString()), "");
 }
 
 void TestUserEditScreenGUI::timeOut(){

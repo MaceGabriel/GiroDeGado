@@ -14,6 +14,7 @@ SOURCES += \
     main.cpp
 
 HEADERS += \
+    ../api/test/functional/main_functional_test.h \
     ../api/test/unit/main_unit_test.h \
     lib_global.h
 
