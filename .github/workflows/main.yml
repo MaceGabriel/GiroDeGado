@@ -28,11 +28,11 @@ jobs:
           qmake ../../api_tests/api_tests.pro
           make
 
-     # - name: Build Gui Tests
-     #   run: |
-     #     cd '${{ github.workspace }}/bin/gui_tests'
-     #     qmake ../../gui_tests/gui_tests.pro
-     #     make  
+      - name: Build Gui Tests
+        run: |
+          cd '${{ github.workspace }}/bin/gui_tests'
+          qmake ../../gui_tests/gui_tests.pro
+          make  
 
       - name: Run Unit Tests
         run: |
@@ -40,8 +40,8 @@ jobs:
           chmod +x ./ci_execution.sh
           ./ci_execution.sh "./api_tests"
 
-     # - name: Run Gui Tests
-     #   run: |
-     #     cd '${{ github.workspace }}/bin/gui_tests'
-     #     chmod +x ./ci_execution.sh
-     #     ./ci_execution.sh "./gui_tests"
+      - name: Run Gui Tests
+        run: |
+          cd '${{ github.workspace }}/bin/gui_tests'
+          chmod +x ./ci_execution.sh
+          ./ci_execution.sh "./gui_tests"
