@@ -1,8 +1,10 @@
-QT       += core sql gui
+QT       += core sql
+QT       -= gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
+CONFIG -= app_bundle
 
 LIBS += -L$$PWD/../bin/api/debug -lapi
 LIBS += -L$$PWD/../bin/api/release -lapi

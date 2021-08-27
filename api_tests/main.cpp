@@ -27,8 +27,6 @@ int main(int argc, char* argv[])
         bancoDeDados.close();
     }
 
-    QApplication a(argc, argv);
-
     delete f;
 
     return 0;
