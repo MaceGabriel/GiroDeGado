@@ -46,6 +46,7 @@ SOURCES += \
     test/unit/financial_remove_unit_test.cpp \
     test/unit/home_unit_test.cpp \
     test/unit/login_unit_test.cpp \
+    test/unit/report_unit_test.cpp \
     test/unit/signup_unit_test.cpp \
     test/unit/user_consult_unit_test.cpp \
     test/unit/user_edit_unit_test.cpp \

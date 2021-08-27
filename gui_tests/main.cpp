@@ -16,6 +16,7 @@
 #include "test/unit/user_consult_unit_test.cpp"
 #include "test/unit/user_edit_unit_test.cpp"
 #include "test/unit/user_remove_unit_test.cpp"
+#include "test/unit/report_unit_test.cpp"
 
 #include <QtSql/QtSql>
 #include <QApplication>
@@ -37,11 +38,11 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
 
-    //Teste para a tela Login - FAZER
+    //Teste para a tela Login
     TestLoginScreenGUI login(nullptr, f);
     QTest::qExec(&login);
 
-    //Teste para a tela Home    
+    //Teste para a tela Home
     TestHomeScreenGUI home(nullptr,f);
     QTest::qExec(&home);
 
@@ -89,6 +90,10 @@ int main(int argc, char *argv[])
     TestFinancialRemoveScreenGUI finanRemo(nullptr,f);
     QTest::qExec(&finanRemo);
 
+    //Teste unitário da tela de Relatorio
+    TestReportScreenGUI report(nullptr,f);
+    QTest::qExec(&report);
+
     //Teste unitário da tela de Gerencia de Usuarios
     TestUserManagementScreenGUI userManag(nullptr,f);
     QTest::qExec(&userManag);
@@ -101,7 +106,7 @@ int main(int argc, char *argv[])
     TestUserConsultScreenGUI userConsu(nullptr,f);
     QTest::qExec(&userConsu);
 
-    //Teste para a tela de Edicao de Usuarios - FAZER
+    //Teste para a tela de Edicao de Usuarios
     TestUserEditScreenGUI userEdit(nullptr,f);
     QTest::qExec(&userEdit);
 
@@ -110,8 +115,8 @@ int main(int argc, char *argv[])
     QTest::qExec(&userRemo);
 
     f->queryExec("delete from cattle");
-    f->queryExec("delete from transaction");
-    f->queryExec("delete from user");
+    f->queryExec("delete from financial");
+    f->queryExec("delete from users");
 
     bancoDeDados.close();
 

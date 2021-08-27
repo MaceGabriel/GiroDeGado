@@ -38,8 +38,8 @@ void TestLoginScreenGUI::casoDeUsoPrincipal_data(){
 
 
     // ENTRADA
-    QTest::addColumn<QString>("User");
-    QTest::addColumn<QString>("Password");
+    QTest::addColumn<QString>("Usuario");
+    QTest::addColumn<QString>("Senha");
     QTest::addColumn<QPushButton*>("Button");
     // SAIDA
 
@@ -52,8 +52,8 @@ void TestLoginScreenGUI::casoDeUsoPrincipal_data(){
 void TestLoginScreenGUI::casoDeUsoPrincipal(){
 
 
-    QFETCH(QString, User);
-    QFETCH(QString, Password);
+    QFETCH(QString, Usuario);
+    QFETCH(QString, Senha);
     QFETCH(QPushButton*, Button);
 
     QTimer::singleShot(500, this, SLOT(timeOut()));
@@ -67,8 +67,8 @@ void TestLoginScreenGUI::casoDeUsoPrincipal(){
     QVERIFY2(d->ui_->loginButton, "Campo não buildado");
     QVERIFY2(d->ui_->exitButton, "Campo não buildado");
 
-    QTest::keyClicks(d->ui_->inputUser, User);
-    QTest::keyClicks(d->ui_->inputPassword, Password);
+    QTest::keyClicks(d->ui_->inputUser, Usuario);
+    QTest::keyClicks(d->ui_->inputPassword, Senha);
     QTest::mouseClick(Button, Qt::LeftButton);
 
     QCOMPARE(d->isVisible(),false);

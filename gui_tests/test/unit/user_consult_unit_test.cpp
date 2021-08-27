@@ -40,7 +40,7 @@ TestUserConsultScreenGUI::TestUserConsultScreenGUI(QWidget *parent, Farm* f):QOb
 void TestUserConsultScreenGUI::casoDeUsoPrincipal_data(){
 
     // ENTRADA
-    QTest::addColumn<QString>("User");
+    QTest::addColumn<QString>("Usuario");
     QTest::addColumn<QPushButton*>("Botao");
 
     // SAIDA
@@ -52,7 +52,7 @@ void TestUserConsultScreenGUI::casoDeUsoPrincipal_data(){
 void TestUserConsultScreenGUI::casoDeUsoPrincipal(){
 
 
-    QFETCH(QString, User);
+    QFETCH(QString, Usuario);
     QFETCH(QPushButton*, Botao);
 
     QTimer::singleShot(500, this, SLOT(timeOut()));
@@ -65,11 +65,11 @@ void TestUserConsultScreenGUI::casoDeUsoPrincipal(){
     QVERIFY2(d.ui_->userQueryTable, "Campo não buildado");
     QVERIFY2(d.ui_->backButton, "Campo não buildado");
 
-    QTest::keyClicks(d.ui_->inputNickname, User);
+    QTest::keyClicks(d.ui_->inputNickname, Usuario);
     QTest::mouseClick(Botao, Qt::LeftButton);
 
     QString user = d.ui_->userQueryTable->item(0,0)->text();
-    QCOMPARE(d.farm_->getUserNickname(user.toUtf8().toStdString()), User);
+    QCOMPARE(d.farm_->getUserNickname(user.toUtf8().toStdString()), Usuario);
 
 }
 

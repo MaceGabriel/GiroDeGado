@@ -40,9 +40,9 @@ TestUserRemoveScreenGUI::TestUserRemoveScreenGUI(QWidget *parent, Farm* f):QObje
 void TestUserRemoveScreenGUI::casoDeUsoPrincipal_data(){
 
     // ENTRADA
-    QTest::addColumn<QString>("User");
+    QTest::addColumn<QString>("Usuario");
     QTest::addColumn<QPushButton*>("Botao");
-    QTest::addColumn<QPushButton*>("Remove");
+    QTest::addColumn<QPushButton*>("Remover");
 
     // SAIDA
     QTest::newRow("Botao de Voltar") <<  "" << d.ui_->backButton << d.ui_->backButton;
@@ -54,9 +54,9 @@ void TestUserRemoveScreenGUI::casoDeUsoPrincipal_data(){
 void TestUserRemoveScreenGUI::casoDeUsoPrincipal(){
 
 
-    QFETCH(QString, User);
+    QFETCH(QString, Usuario);
     QFETCH(QPushButton*, Botao);
-    QFETCH(QPushButton*, Remove);
+    QFETCH(QPushButton*, Remover);
 
     QTimer::singleShot(500, this, SLOT(timeOut()));
 
@@ -68,12 +68,12 @@ void TestUserRemoveScreenGUI::casoDeUsoPrincipal(){
     QVERIFY2(d.ui_->removeButton, "Campo não buildado");
     QVERIFY2(d.ui_->backButton, "Campo não buildado");
 
-    QTest::keyClicks(d.ui_->inputNickname, User);
+    QTest::keyClicks(d.ui_->inputNickname, Usuario);
     QTest::mouseClick(Botao, Qt::LeftButton);    
-    QTest::mouseClick(Remove, Qt::LeftButton);
+    QTest::mouseClick(Remover, Qt::LeftButton);
 
 
-    QCOMPARE(d.farm_->getUserNickname(User.toUtf8().toStdString()), "");
+    QCOMPARE(d.farm_->getUserNickname(Usuario.toUtf8().toStdString()), "");
 }
 
 void TestUserRemoveScreenGUI::timeOut(){
