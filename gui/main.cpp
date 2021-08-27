@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
 
     //Path dinamico do banco oficial
     QString path_ofc = QDir::currentPath();
-    path_ofc = path_ofc + QString("/../../../gui/bd_giro.db");
+    path_ofc = path_ofc + QString("/../../gui/bd_giro.db");
     std::cout << path_ofc.toStdString() << std::endl;
 
     bancoDeDados.setDatabaseName(path_ofc);

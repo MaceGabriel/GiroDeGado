@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
     if(UNIT_TEST){
         //Path dinamico do banco de testes
         QString path_test = QDir::currentPath();
-        path_test = path_test + QString("/../../../api_tests/bd_giro_tests.db");
+        path_test = path_test + QString("/../../api_tests/bd_giro_tests.db");
 
         bancoDeDados.setDatabaseName(path_test);
         bancoDeDados.open();

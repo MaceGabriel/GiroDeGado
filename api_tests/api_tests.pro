@@ -5,8 +5,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 
-LIBS += -L$$PWD/../bin/api/debug/debug -lapi
-LIBS += -L$$PWD/../bin/api/debug/release -lapi
+LIBS += -L$$PWD/../bin/api/debug -lapi
+LIBS += -L$$PWD/../bin/api/release -lapi
 LIBS += -L$$PWD/../bin/api/ -lapi
 
 SOURCES += \
