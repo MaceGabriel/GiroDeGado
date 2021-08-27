@@ -1,0 +1,59 @@
+name: CI GiroDeGado
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+  workflow_dispatch:
+
+jobs:
+  API-CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: jurplel/install-qt-action@v2
+
+      - name: Build API
+        run: |
+          cd '${{ github.workspace }}/bin/API'
+          qmake ../../API/API.pro
+          make     
+
+      - name: Build Unit Tests
+        run: |
+          cd '${{ github.workspace }}/bin/UNIT'
+          qmake ../../UNIT/UNIT.pro
+          make
+
+     # - name: Build Functional Tests
+     #   run: |
+     #     cd '${{ github.workspace }}/bin/FUNCTIONAL'
+     #     qmake ../../FUNCTIONAL/FUNCTIONAL.pro
+     #     make    
+
+     # - name: Build Gui Tests
+     #   run: |
+     #     cd '${{ github.workspace }}/bin/FUNCTIONAL'
+     #     qmake ../../FUNCTIONAL/FUNCTIONAL.pro
+     #     make  
+
+      - name: Run Unit Tests
+        run: |
+          cd '${{ github.workspace }}/bin/UNIT'
+          chmod +x ./ci_execution.sh
+          ./ci_execution.sh "./UNIT"
+
+     # - name: Run Functional Tests
+     #   run: |
+     #     cd '${{ github.workspace }}/bin/FUNCTIONAL'
+     #     chmod +x ./ci_execution.sh
+     #     ./ci_execution.sh "./FUNCTIONAL"
+
+     # - name: Run Gui Tests
+     #   run: |
+     #     cd '${{ github.workspace }}/bin/FUNCTIONAL'
+     #     chmod +x ./ci_execution.sh
+     #     ./ci_execution.sh "./FUNCTIONAL"
