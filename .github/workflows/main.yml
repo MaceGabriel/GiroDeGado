@@ -18,7 +18,10 @@ jobs:
 
       - name: Build API
         run: |
+          pwd
           cd '${{ github.workspace }}/bin/api/debug'
+          ls
+          pwd
           qmake ../../../api/api.pro
           make     
 
