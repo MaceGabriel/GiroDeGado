@@ -18,30 +18,30 @@ jobs:
 
       - name: Build API
         run: |
-          cd '${{ github.workspace }}/bin/api'
-          qmake ../../api/api.pro
+          cd '${{ github.workspace }}/bin/api/debug'
+          qmake ../../../api/api.pro
           make     
 
       - name: Build Unit Tests
         run: |
-          cd '${{ github.workspace }}/bin/api_tests'
-          qmake ../../api_tests/api_tests.pro
+          cd '${{ github.workspace }}/bin/api_tests/debug'
+          qmake ../../../api_tests/api_tests.pro
           make
 
      # - name: Build Gui Tests
      #   run: |
-     #     cd '${{ github.workspace }}/bin/gui_tests'
-     #     qmake ../../gui_tests/gui_tests.pro
+     #     cd '${{ github.workspace }}/bin/gui_tests/debug'
+     #     qmake ../../../gui_tests/gui_tests.pro
      #     make  
 
       - name: Run Unit Tests
         run: |
-          cd '${{ github.workspace }}/bin/api_tests'
+          cd '${{ github.workspace }}/bin/api_tests/debug'
           chmod +x ./ci_execution.sh
-          ./ci_execution.sh "./api_tests"
+          ./ci_execution.sh "./api_tests/debug/api_tests"
 
      # - name: Run Gui Tests
      #   run: |
-     #     cd '${{ github.workspace }}/bin/gui_tests'
+     #     cd '${{ github.workspace }}/bin/gui_tests/debug'
      #     chmod +x ./ci_execution.sh
-     #     ./ci_execution.sh "./gui_tests"
+     #     ./ci_execution.sh "./gui_tests/debug/gui_tests"
